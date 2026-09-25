@@ -1,0 +1,18 @@
+{
+  "is_error": false,
+  "duration_ms": 286609,
+  "num_turns": 24,
+  "author": "Official Claude Code, Opus 5.5",
+  "access": "Claude Pro; native /usage confirmed usage credits off before launch",
+  "response_sha256": "f43964710dea61cb8ce11bf1bbaadc52affb24a09ae3746e3192d44e767c2bc9",
+  "report_sha256": "4406a67383b8413a496f32b3b3e7192eeaa683d92e1131a4f99118a16d097705",
+  "scope": "read/search only; fork of existing independent-review session",
+  "review": "Codex review in research/research_reset.md",
+  "billing_note": "API-equivalent accounting in CLI output is not an invoice; no API key or paid fallback enabled",
+  "models": [
+    "claude-opus-5-5",
+    "claude-haiku-4-5-20251001"
+  ],
+  "request_sha256": "c4bc144c49b4634ca95a9b04f0fb8a1d1c4be5b3076fe8c3a4c5ef2766cb5f04",
+  "note": "Original independent report preserved verbatim. Corrections and governing decision are in research/research_reset.md; request reviewed by distinct Codex independent_review before launch."
+}

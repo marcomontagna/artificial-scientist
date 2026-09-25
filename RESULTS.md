@@ -1,5 +1,15 @@
 # Results
 
+## Current decision — selector line frozen
+
+Claude’s independent review and Codex’s [preserved reproduction](research/selector_review_response.md) support freezing v1/v2 and deferring further selector tuning/factorial studies. On 80 return-to-simple worlds, v2 contracts in all 80 but predicts worse than the matched mixture in 79. Its mean final-phase log loss is 0.528574 versus 0.516833. Faster checks reduce earlier penalties without establishing a new method.
+
+One reviewed recreation completed in 23.81 seconds; all 29 existing tests pass. [Seed status](research/seed_registry.md): 0–4 and 100–119 are inspected development data; reserved seeds 1000–1049 remain unused. The supplied correct-lag reference’s roughly 0.01 advantage is **not** a theoretical upper bound on all selectors. The original review is preserved with this explicit correction. No new learner or v3 was implemented.
+
+[The research reset](research/research_reset.md) compares three Claude proposals and provisionally selects causal-model falsification for feasibility work only. No new learner, active-intervention experiment or novelty clearance resulted.
+
+The entries below record earlier stages. Their original next-step suggestions are superseded by [current next steps](NEXT_STEPS.md).
+
 ## Reversible-context v2 — September 25
 
 **What learns:** these are probabilistic count-table predictors, not neural networks. Observations update their conditional probabilities; a hand-written selector chooses among a supplied set of history features and learning speeds. V2 adds a faster lag-1 expert and reversible choice. It does not invent features or choose experiments. [Design fixed before running](experiments/adaptive_state_v2.md).
@@ -19,7 +29,7 @@ Mean post-change log loss (lower is better; structural row averages all 20 seed�
 
 **Tradeoff:** v2 activated useful memory at tick 704 in nine structural worlds and tick 768 in eleven; v1 did so at 704 in nineteen and 768 in one. Consequently, correct-lag occupancy after the change fell from 82.13% to 76.80%, and structural prediction was worse than both v1 and the matched mixture. Stable/noise loss also slightly worsened versus v1. The narrow predefined screen passes (aggregate structural penalty 0.01814 <=0.02); this does not mean v2 is the best predictor. For structural lag 2 alone, its penalty versus matched mixture is about 0.02023, above that threshold if applied per lag rather than as preregistered aggregate.
 
-**Decisions and cost:** v2 made 20 expansions and 57 slow/fast switches, with no observed contraction or sparse-lag reselection. Contraction passes a controlled unit test; neither contraction nor sparse-lag reselection was observed in this run. There is no explicit sparse-to-different-sparse reselection test yet. A return-to-simple and changed-lag experiment is still needed. Per-world switches, mean dwell time and correct-lag occupancy are in [decisions](results/adaptive_state_v2_dev/decisions.json); all changes are in [events](results/adaptive_state_v2_dev/events.json). Average structural post-change storage was 915.6 logical slots for v2 versus 147.6 for the matched mixture and 649.6 for v1. All shadows/loss buffers are counted; no RAM or efficiency claim.
+**Decisions and cost:** v2 made 20 expansions and 57 slow/fast switches, with no observed contraction or sparse-lag reselection. Contraction passes a controlled unit test; neither contraction nor sparse-lag reselection was observed in this run. There is no explicit sparse-to-different-sparse reselection test yet. At this stage return-to-simple and changed-lag behavior had not been tested; the later review reproduction above tests the former. Per-world switches, mean dwell time and correct-lag occupancy are in [decisions](results/adaptive_state_v2_dev/decisions.json); all changes are in [events](results/adaptive_state_v2_dev/events.json). Average structural post-change storage was 915.6 logical slots for v2 versus 147.6 for the matched mixture and 649.6 for v1. All shadows/loss buffers are counted; no RAM or efficiency claim.
 
 [Config](results/adaptive_state_v2_dev/config.json), [per-lag/seed summaries](results/adaptive_state_v2_dev/summary.json), [screen](results/adaptive_state_v2_dev/diagnostic.json), [timings](results/adaptive_state_v2_dev/timings.json), [provenance](results/adaptive_state_v2_dev/metadata.json). Clean source revision `ef425ff`, all package/protocol/config/CSV hashes preserved. Raw CSV stays in ignored `results/runs/adaptive_state_v2_dev_20260925`. Reproduce into a fresh directory:
 
@@ -27,7 +37,7 @@ Mean post-change log loss (lower is better; structural row averages all 20 seed�
 python3 -m artificial_scientist.adaptive_state_v2 --config experiments/adaptive_state_v2.json --output results/runs/adaptive_v2_reproduction
 ```
 
-No settings changed after this run, no reserved seeds used, no novel-method/causal-diagnosis claim. The follow-up should test return-to-simple and changed-lag worlds, and separate the contribution of fast adaptation from reversibility before further complexity. Mixture prediction remains the stronger comparison here.
+No settings changed after this run, no reserved seeds used, no novel-method/causal-diagnosis claim. The original follow-up proposal was return-to-simple/changed-lag worlds and a factorial comparison; the later review decision supersedes it. Mixture prediction remains the stronger comparison here.
 
 ## Adaptive-context prototype — September 25
 
@@ -56,7 +66,7 @@ The monitor-only ablation exactly matches short-memory predictions, while paying
 python3 -m artificial_scientist.adaptive_state --config experiments/adaptive_state_v1.json --output results/runs/adaptive_v1_reproduction
 ```
 
-No threshold was adjusted after this run. Existing development seeds were already inspected in v0; all findings are exploratory. Held-out seeds remain unused. There is no neural learner, active intervention, transfer, calibrated inadequacy test, learned feature generator, recurrent comparison or faithful context-tree reproduction. The most useful next experiment is to distinguish ordinary parameter adaptation from a need for more history.
+No threshold was adjusted after this run. Existing development seeds were already inspected in v0; all findings are exploratory. Held-out seeds remain unused. There is no neural learner, active intervention, transfer, calibrated inadequacy test, learned feature generator, recurrent comparison or faithful context-tree reproduction. At that stage the proposed next experiment was to distinguish ordinary parameter adaptation from a need for more history.
 
 ## Multi-universe development run — September 25
 

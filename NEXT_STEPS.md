@@ -1,9 +1,11 @@
 # Next steps
 
-[V2 is complete](RESULTS.md): parameter-only false expansions fell from 5/5 to 0/5, and all 20 structural worlds ended with the correct active lag. Slower activation worsened structural prediction relative to v1; the matched mixture remains better. No extra spending or held-out evaluation.
+**The research pass is complete.** V1/v2 are frozen. Their reproducible negative result is useful, but further selector tuning is not the current research direction.
 
-1. Freeze v1/v2 as reference runs. Design return-to-simple and changed-lag worlds to test actual contraction/reselection; the current worlds do not exercise these capabilities.
-2. Independently preregister a small factorial ablation: fast simple alternative on/off × reversible selection on/off. Both changed between v1 and v2, so this run cannot isolate their contributions. Compare prediction quality, false expansions, switching, recovery delay and full monitoring costs.
-3. Before superiority or efficiency claims, add stronger context-tree and recurrent comparisons, genuinely adaptive resource allocation, new law families and uncertainty estimates. Keep reserved seeds untouched until the design is ready.
+**Provisional question:** can a learner choose experiments that reveal its causal assumptions are wrong, while keeping false alarms controlled? This is an evaluation candidate, not a novelty claim. [Three candidates and the reviewed decision](research/research_reset.md).
 
-The model currently learns conditional probabilities and selects supplied history features/learning speeds. No neural network, learned feature generator or active experiment selection yet. Codex coordinates with independent agent reviews; Claude can critique the next protocol. Current runs are finished, not ongoing training jobs.
+1. Specify and independently review the tiny three-variable causal-world feasibility check. Establish which hidden-confounder worlds are observationally indistinguishable yet separable by interventions, and verify the sequential-test assumptions. Do not interpret approximate information rates as power guarantees.
+2. Only if that check is useful, preregister a budget-matched comparison of random/round-robin, graph-information, predictive-information and falsification-oriented actions, with prediction loss, false alarms, horizon power and censored detection times.
+3. Implement the known inference/test baselines after protocol review. Active causal learning is the replication control; cross-world transfer is deferred. If no meaningful distinction survives prior-art comparison, label the work replication rather than inventing novelty.
+
+No new learner was built in this pass. [Reproduction results](research/selector_review_response.md) and [seed registry](research/seed_registry.md) are saved; reserved sequence-world seeds 1000–1049 remain unused. Claude proposed the candidates, Codex challenged them, and a distinct Codex reviewer checks the final artifacts. No extra spending.

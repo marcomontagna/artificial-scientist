@@ -1,0 +1,87 @@
+{
+  "revision": "7660d320043cc9a2ecd84b670a63513d629c55fb",
+  "dirty": true,
+  "python": "3.9.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "artificial_scientist/__init__.py": "ef9b1afc8f7e90153bc797c75dba2fb71a13b7d330ba76d078435e23b82f9a3d",
+    "artificial_scientist/adaptive_state.py": "26127f9bce3d63e46efdb730899bb6552505698db7c212e9ae38036e28138aa9",
+    "artificial_scientist/adaptive_state_v2.py": "ddc2dc7717274f9b262b28edd6d6a0c1cc742e71bd16330d7ead1758ca5a16ce",
+    "artificial_scientist/baselines.py": "cf7c3d6de6475d0c1e9313eed127f19d23b24ff690cb4f09beb3456838575c73",
+    "artificial_scientist/environment.py": "c0392fb0741144d05be13c0be2f7293fd20e4b7344e9c49caefea15734070bb2",
+    "artificial_scientist/metrics.py": "8c92545a404868b926ce2c9f8ec9919e263fe643d079ff1f5b627ff6c2ffcdba",
+    "artificial_scientist/run.py": "dbe6a373937761697ada734d36f224eff74f1759f2ed43c5e3e91f978d92c1be",
+    "artificial_scientist/sequence_worlds.py": "f62aed3fd38a644a8fd75d72b2d39d282506e00b59448623c5ddebdb1f09380d",
+    "experiments/selector_review_probes.py": "89dda7467e470723a59f9e5a6b0471b79e85f629f3f243db645c3243129d55f8",
+    "experiments/adaptive_state_v2.json": "468b44abea4d9bde6200e9d8be239c707fef35a2541fd3ea8e1b3c0b81e7423e",
+    "research/claude_independent_review.md": "9c4745c2434322159ad05fe8b516eb6296f0ebc9e33647561b1fb8fe7e59b4b1"
+  },
+  "settings": {
+    "steps": 1200,
+    "change_at": 600,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "discount": 0.99,
+    "fast_discount": 0.9,
+    "share": 0.01,
+    "gain_window": 128,
+    "check_every": 64,
+    "gain_threshold": 5.991464547107982
+  },
+  "seed_groups": {
+    "original_dev": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "claude_inspected_dev": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ]
+  },
+  "provenance": "Recreated from Claude description; original scratch script unavailable",
+  "probability_oracle": "privileged evaluator probability; not competitor",
+  "sparse_reference": "privileged correct lag; trained from tick 0; no change knowledge",
+  "return_schedule": {
+    "steps": 1800,
+    "structural_start": 600,
+    "stable_return": 1200
+  },
+  "seed_status": "development/previously inspected; reserved seeds untouched",
+  "timeout_seconds": 540,
+  "output_limit_bytes": 20000000,
+  "aggregation": "conditions averaged within seed; SE across seeds; case wins correlated",
+  "status": "completed",
+  "elapsed_seconds": 23.812298084000002,
+  "sources_unchanged": true,
+  "artifact_sha256": {
+    "seed_condition_means.json": "4a1074d305a790bcb596d96167a73a298c0bd7070c0c3d86506b03b6ba98c544",
+    "event_summary.json": "080879031ef06f7406b69cb5a4ed621e421508faeda2e5c8deb65a5c62c9691b",
+    "comparisons.json": "317ee5db0fddb76d66a5935af94ab298a36a7b06b63c213f6838b4b8f9550300"
+  }
+}
