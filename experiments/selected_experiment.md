@@ -1,5 +1,7 @@
 # Selected experiment: acquisition objectives under hidden shifts
 
+> Historical EPIG/EIG protocol, retained as optional groundwork. Superseded as the active target by [current direction](../research/direction.md). No representation-revision protocol has passed review yet.
+
 Protocol v1, 2026-09-25. Author: Codex primary. Research design only; not implemented or run. This is a replication/stress test of known acquisition ideas, not evidence of a novel paradigm. Implementation begins tomorrow after user review. Any substantive revision must be logged before test evaluation.
 
 ## Question and preregistered decision
