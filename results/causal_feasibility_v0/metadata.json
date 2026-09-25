@@ -1,0 +1,20 @@
+{
+  "revision": "14e722734c4e8e5666037e96d07701fa754ffeea",
+  "dirty": false,
+  "python": "3.9.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "elapsed_seconds": 0.118096541,
+  "source_sha256": {
+    "artificial_scientist/causal_feasibility.py": "4d3136fa2eabfe173333736d900b721300ecb2b2baab7ae35a1d015272a6dc6e",
+    "experiments/causal_feasibility_v0.md": "5b9e2027720b344408d352d3554ea5252a476e1f6b51cc0ed3265b606b0672c0",
+    "tests/test_causal_feasibility.py": "2fed8d416dfbb2acd0543a031ac6d77ec11610bf547e977ebc45b0b2ae12055f"
+  },
+  "sources_unchanged": true,
+  "seeds": "none; deterministic population distributions",
+  "artifact_sha256": {
+    "summary.json": "6ee3f1266d7afc3fd4431400235dbed15eb3723e95928a9917a31c22adf74eb4",
+    "graph_fits.json": "08891947be0cb4ce8382e9e3d681a0f1d13cb8c24a6962e0b9c33fa50e74f89a",
+    "config.json": "a3cf8ca5fb82f661bb2d23744a24024e64e466d441089fafb70523a694de1fcc",
+    "gate.json": "65d4ad57cb7ffa797a6047a69bf434cb595f6d451769338ad819b6ee6455a607"
+  }
+}

@@ -1,11 +1,9 @@
 # Next steps
 
-**The research pass is complete.** V1/v2 are frozen. Their reproducible negative result is useful, but further selector tuning is not the current research direction.
+**Causal-world feasibility passed.** The exact calculation matched all 65 expected cases; 37 tests pass. [Result and limits](research/causal_feasibility_result.md). V1/v2 remain frozen. No novelty claim or active causal learning agent yet.
 
-**Provisional question:** can a learner choose experiments that reveal its causal assumptions are wrong, while keeping false alarms controlled? This is an evaluation candidate, not a novelty claim. [Three candidates and the reviewed decision](research/research_reset.md).
+1. Preregister and independently review a small finite-sample check of known sequential diagnostics under fixed, non-privileged action schedules. Define the alternative prediction model, null/world distribution, sample budget, false-alarm guarantee, power target, stopping rule and censored outcomes. Keep weak/no-separation controls. Population KL alone does not settle sample requirements.
+2. Test whether the chosen statistic has useful power at the budget. The saturated per-regime alternative may need too many observations; compare justified, normalized alternatives under the same designs before adding adaptive policies. Do not tune on the final evaluation worlds.
+3. If that gate passes, compare random/round-robin, graph-information, predictive-information and falsification-oriented policies with equal action budgets and disclosed compute. Report prediction loss as well as detection. Transfer, law changes, neural representations and model repair remain later questions.
 
-1. Specify and independently review the tiny three-variable causal-world feasibility check. Establish which hidden-confounder worlds are observationally indistinguishable yet separable by interventions, and verify the sequential-test assumptions. Do not interpret approximate information rates as power guarantees.
-2. Only if that check is useful, preregister a budget-matched comparison of random/round-robin, graph-information, predictive-information and falsification-oriented actions, with prediction loss, false alarms, horizon power and censored detection times.
-3. Implement the known inference/test baselines after protocol review. Active causal learning is the replication control; cross-world transfer is deferred. If no meaningful distinction survives prior-art comparison, label the work replication rather than inventing novelty.
-
-No new learner was built in this pass. [Reproduction results](research/selector_review_response.md) and [seed registry](research/seed_registry.md) are saved; reserved sequence-world seeds 1000–1049 remain unused. Claude proposed the candidates, Codex challenged them, and a distinct Codex reviewer checks the final artifacts. No extra spending.
+Claude participates in design/code reviews; a different agent checks fixes and final reports. Keep work local, bounded and within existing subscriptions. No additional spending. Sequence-world reserved seeds 1000–1049 remain unused; the completed causal check used no seeds.

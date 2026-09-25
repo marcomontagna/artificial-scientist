@@ -1,12 +1,18 @@
 # Results
 
+## Causal-world feasibility — September 25
+
+The [reviewed calculation](research/causal_feasibility_result.md) passed all 65 population comparisons across 13 worlds and five fixed action mixtures, enumerating all 25 observed-only DAGs. Passive and pair-only designs have zero separation; informative mixtures have positive separation for nonzero confounding. The in-class controls remain zero. This matches the independently derived mathematical reference; it is code/foundations validation, not novel science or learned behavior.
+
+All 37 tests passed. One full calculation completed in 0.118 seconds from clean source `14e7227`; source/config/artifact hashes are preserved. No samples or seeds, finite-sample power experiment, adaptive causal policy, or causal model repair. Claude reviewed design/code and a separate Codex reviewer verified fixes. The next gate is a preregistered finite-sample diagnostic check, before adaptive action policies.
+
 ## Current decision — selector line frozen
 
 Claude’s independent review and Codex’s [preserved reproduction](research/selector_review_response.md) support freezing v1/v2 and deferring further selector tuning/factorial studies. On 80 return-to-simple worlds, v2 contracts in all 80 but predicts worse than the matched mixture in 79. Its mean final-phase log loss is 0.528574 versus 0.516833. Faster checks reduce earlier penalties without establishing a new method.
 
-One reviewed recreation completed in 23.81 seconds; all 29 existing tests pass. [Seed status](research/seed_registry.md): 0–4 and 100–119 are inspected development data; reserved seeds 1000–1049 remain unused. The supplied correct-lag reference’s roughly 0.01 advantage is **not** a theoretical upper bound on all selectors. The original review is preserved with this explicit correction. No new learner or v3 was implemented.
+One reviewed recreation completed in 23.81 seconds; all 29 tests present at that stage passed. [Seed status](research/seed_registry.md): 0–4 and 100–119 are inspected development data; reserved seeds 1000–1049 remain unused. The supplied correct-lag reference’s roughly 0.01 advantage is **not** a theoretical upper bound on all selectors. The original review is preserved with this explicit correction. No new learner or v3 was implemented.
 
-[The research reset](research/research_reset.md) compares three Claude proposals and provisionally selects causal-model falsification for feasibility work only. No new learner, active-intervention experiment or novelty clearance resulted.
+[The research reset](research/research_reset.md) compares three Claude proposals and provisionally selects causal-model falsification for feasibility work only. At that research-reset stage, no new learner, active-intervention experiment or novelty clearance resulted; the later population check above adds mathematical/implementation evidence only.
 
 The entries below record earlier stages. Their original next-step suggestions are superseded by [current next steps](NEXT_STEPS.md).
 
