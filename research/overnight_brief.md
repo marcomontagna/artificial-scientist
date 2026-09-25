@@ -23,3 +23,11 @@ Engineer only interfaces, seeding, configs, logs, baselines, metrics, and tests 
 
 ## Stage 5: synthesize (last 30 minutes; finish within 6 hours)
 RESULTS.md: question; prior-art assessment; chosen comparison; exact commands/configs/revision; environment; completed and blocked tasks; tests; seed-level results/artifact paths; uncertainty; failures; critic objections; evidence-supported conclusion and limits. NEXT_STEPS.md: ranked next experiments, strongest remaining objection, expected information gained, estimated local cost, and go/no-go decision. Link all reports from README if helpful. Report absence of evidence honestly. Stop at the deadline, even with partial results.
+
+## Mandatory independent review
+
+The user requires a different agent to review every newly written or materially changed code file, research note, prompt, report, or other artifact before it is finalized. Record reviewer identity, reviewed paths, findings, fixes, and remaining limitations in research/review_log.md. A distinct Codex agent may review if Claude is unavailable; label it honestly and do not imply cross-model review. Authors must not certify their own work. If no separate reviewer is available, keep affected artifacts explicitly marked draft/unreviewed and report the blocker. Review subsequent material fixes as well. Reviewer findings themselves are reviewed by the receiving director; avoid an infinite review chain.
+
+## Zero additional spending and bounded effort
+
+The user explicitly prohibits purchases, subscriptions, paid APIs, cloud jobs, new paid services, and any additional charges. Use only already available access within existing limits; never buy credits or enable paid fallback. If billing status is unclear, do not launch the external service. Conserve tokens: one focused research pass and one independent review, no open-ended agent loops or redundant searches. Increase reasoning only for a concrete difficult decision, not routine work.

@@ -23,3 +23,11 @@ Do not tune on held-out seeds or use hidden changes to trigger an ordinary basel
 
 ## Resource limits
 Default overnight wall-clock cap: 6 hours from launch; save reports during the final 30 minutes. Experiment process cap: 10 minutes each; aggregate experiment runtime at most 60 minutes. One experiment process at a time, target at most 2 GB working memory and 500 MB new disk usage. Enforce timeouts with the orchestrator when available; otherwise only run bounded small loops. Stop heavy work on memory pressure or unexpected growth. At deadline write partial results and stop.
+
+## Mandatory independent review
+
+The user requires a different agent to review every newly written or materially changed code file, research note, prompt, report, or other artifact before it is finalized. Record reviewer identity, reviewed paths, findings, fixes, and remaining limitations in research/review_log.md. A distinct Codex agent may review if Claude is unavailable; label it honestly and do not imply cross-model review. Authors must not certify their own work. If no separate reviewer is available, keep affected artifacts explicitly marked draft/unreviewed and report the blocker. Review subsequent material fixes as well. Reviewer findings themselves are reviewed by the receiving director; avoid an infinite review chain.
+
+## Zero additional spending and bounded effort
+
+The user explicitly prohibits purchases, subscriptions, paid APIs, cloud jobs, new paid services, and any additional charges. Use only already available access within existing limits; never buy credits or enable paid fallback. If billing status is unclear, do not launch the external service. Conserve tokens: one focused research pass and one independent review, no open-ended agent loops or redundant searches. Increase reasoning only for a concrete difficult decision, not routine work.
