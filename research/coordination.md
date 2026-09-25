@@ -26,3 +26,6 @@ Codex researcher delivered the 12-source map and search log. Independent Codex r
 ## Research-only continuation
 
 User requested completion of research now, with implementation tomorrow. Codex primary owns focused_prior_art.md, candidate_gaps.md, decision.md, selected_experiment.md and report synchronization. A distinct Codex research_critic owns critique.md, independently checked six related sources and reviewed the primary’s four design documents. No Claude participation is implied. Selected known-method stress test; no novelty clearance or new experiment execution.
+
+## Direction update — September 25
+User confirmed the multiple-universe artificial-scientist goal and requested concise repo/Notion synchronization. Codex primary owns direction.md and documentation notices, README/NEXT_STEPS and Notion summary for this pass. A distinct Codex reviewer reviews all changes before publication. No code or experiments are part of this pass. Historical ownership/EPIG decisions above are superseded for this documentation update; Hermes/Claude delivery remains unverified.

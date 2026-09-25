@@ -1,5 +1,7 @@
 # Research decision for tomorrow
 
+> Historical decision, superseded by [current direction](direction.md). Candidate 2 remains optional replication groundwork; representation revision across procedural universes is now the candidate for focused review. Do not start the old implementation plan by default.
+
 2026-09-25. Director for this pass: Codex primary, with a distinct Codex adversarial reviewer. Hermes/Claude participation is not assumed.
 
 **Select candidate 2 as a replication/stress test of existing acquisition methods. No candidate has passed a methodological novelty gate.** The useful question is whether predictive-information acquisition retains an advantage under hidden changes and wrong likelihood assumptions, after separating acquisition from an identical adaptive predictor.
