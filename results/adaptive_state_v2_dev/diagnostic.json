@@ -1,0 +1,11 @@
+{
+  "parameter_expansion_v1": 5,
+  "parameter_expansion_v2": 0,
+  "final_structural_correct": 20,
+  "structural_penalty_vs_matched": 0.01814228394472884,
+  "stable_penalty_vs_slow": 0.000999307139330985,
+  "stable_expansions": 0,
+  "noise_expansions": 0,
+  "screen_passed": true,
+  "label": "exploratory engineering screen, not confirmation"
+}

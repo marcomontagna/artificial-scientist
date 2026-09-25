@@ -1,5 +1,34 @@
 # Results
 
+## Reversible-context v2 — September 25
+
+**What learns:** these are probabilistic count-table predictors, not neural networks. Observations update their conditional probabilities; a hand-written selector chooses among a supplied set of history features and learning speeds. V2 adds a faster lag-1 expert and reversible choice. It does not invent features or choose experiments. [Design fixed before running](experiments/adaptive_state_v2.md).
+
+All 29 tests and the original smoke check passed. One reviewed run scored 252,000 predictions across 35 worlds: five seeds × three controls, plus five seeds × four explicitly balanced structural lags. Runtime about 2.93 seconds. Seeds and noise streams are shared across conditions, so the 35 cases are correlated development cases, not independent replications. The original v1 outputs remain unchanged; v1 was also evaluated on the expanded world set for a paired comparison.
+
+Mean post-change log loss (lower is better; structural row averages all 20 seed–lag cases equally):
+
+| World | Slow lag 1 | Fast lag 1 | V1 | Original sparse mixture | Matched mixture | V2 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Stable | 0.5056 | 0.5317 | 0.5056 | 0.5062 | 0.5072 | 0.5066 |
+| Parameter change | 0.5795 | 0.5542 | 0.5804 | 0.5647 | 0.5400 | 0.5613 |
+| Noise | 0.7125 | 0.7211 | 0.7125 | 0.7117 | 0.7091 | 0.7143 |
+| Structural, all lags | 0.7127 | 0.7106 | 0.5568 | 0.5475 | 0.5472 | 0.5653 |
+
+**Improvement:** parameter worlds with any unnecessary expansion fell from 5/5 in v1 to 0/5 in v2. V2 had zero sparse selections in stable/noise controls, and the correct structural lag was active before the final observation in 20/20 structural worlds. No sparse selection preceded the hidden change.
+
+**Tradeoff:** v2 activated useful memory at tick 704 in nine structural worlds and tick 768 in eleven; v1 did so at 704 in nineteen and 768 in one. Consequently, correct-lag occupancy after the change fell from 82.13% to 76.80%, and structural prediction was worse than both v1 and the matched mixture. Stable/noise loss also slightly worsened versus v1. The narrow predefined screen passes (aggregate structural penalty 0.01814 <=0.02); this does not mean v2 is the best predictor. For structural lag 2 alone, its penalty versus matched mixture is about 0.02023, above that threshold if applied per lag rather than as preregistered aggregate.
+
+**Decisions and cost:** v2 made 20 expansions and 57 slow/fast switches, with no observed contraction or sparse-lag reselection. Contraction passes a controlled unit test; neither contraction nor sparse-lag reselection was observed in this run. There is no explicit sparse-to-different-sparse reselection test yet. A return-to-simple and changed-lag experiment is still needed. Per-world switches, mean dwell time and correct-lag occupancy are in [decisions](results/adaptive_state_v2_dev/decisions.json); all changes are in [events](results/adaptive_state_v2_dev/events.json). Average structural post-change storage was 915.6 logical slots for v2 versus 147.6 for the matched mixture and 649.6 for v1. All shadows/loss buffers are counted; no RAM or efficiency claim.
+
+[Config](results/adaptive_state_v2_dev/config.json), [per-lag/seed summaries](results/adaptive_state_v2_dev/summary.json), [screen](results/adaptive_state_v2_dev/diagnostic.json), [timings](results/adaptive_state_v2_dev/timings.json), [provenance](results/adaptive_state_v2_dev/metadata.json). Clean source revision `ef425ff`, all package/protocol/config/CSV hashes preserved. Raw CSV stays in ignored `results/runs/adaptive_state_v2_dev_20260925`. Reproduce into a fresh directory:
+
+```sh
+python3 -m artificial_scientist.adaptive_state_v2 --config experiments/adaptive_state_v2.json --output results/runs/adaptive_v2_reproduction
+```
+
+No settings changed after this run, no reserved seeds used, no novel-method/causal-diagnosis claim. The follow-up should test return-to-simple and changed-lag worlds, and separate the contribution of fast adaptation from reversibility before further complexity. Mixture prediction remains the stronger comparison here.
+
 ## Adaptive-context prototype — September 25
 
 The [reviewed v1 design](experiments/adaptive_state_v1.md) is implemented and has run once. It starts predicting from the latest bit, monitors four sparse history alternatives, and activates one extra history feature when its trailing prediction advantage crosses a fixed threshold. All 22 tests and the original smoke check passed. Five development seeds, four worlds and six learners produced 144,000 predictions in approximately 1.68 seconds. The experiment finished; the viewer replays its recorded data.

@@ -8,11 +8,13 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. First test whether it can recognize insufficient predictive state and selectively add useful memory/state. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
-## First adaptive learner run
+## Current model and result
 
-The [adaptive-context prototype](experiments/adaptive_state_v1.md) now makes its own one-time choice to use an older observation. In five development worlds requiring extra history it selected the correct lag; it also expanded unnecessarily in all five parameter-change worlds. A sparse-model mixture predicted better on the structural worlds. All 22 tests pass; see [results and limitations](RESULTS.md). All shadow models remain allocated, so this demonstrates active context selection, not memory savings or a novel architecture.
+The learner is a set of small probabilistic predictors that learn conditional probabilities from observations. A selector chooses among supplied history features and learning speeds; it is not a neural network and does not invent features. The [v2 prototype](experiments/adaptive_state_v2.md) can reverse its choice. It eliminated parameter-only false expansions in this five-seed run, but delayed useful expansions and predicted worse than v1 on structural worlds. The matched mixture still predicts better. All 29 tests pass; see [results and limits](RESULTS.md). All trial models remain allocated, so no memory savings are demonstrated.
 
 ## Replay the recorded universes
+
+Open the [v2 comparison report](visualization/v2_report.html) for outcomes, decisions and memory-selection timelines across all 35 worlds. It reads saved data and runs no learning job. Regenerate with `python3 visualization/export_v2_report.py` after reproducing the v2 run into `results/runs/adaptive_state_v2_dev_20260925`.
 
 Open [the adaptive replay](visualization/adaptive_replay.html) in a browser to choose a world, seed and tick. See predictions, error, total logical storage and exactly when the learner activates an older lag. It is recorded data, not a live training job. Download/open the file locally; GitHub displays its source. The [original baseline replay](visualization/replay.html) is preserved.
 

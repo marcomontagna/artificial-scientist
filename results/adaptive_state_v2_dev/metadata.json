@@ -1,0 +1,21 @@
+{
+  "revision": "ef425ff6250fa8d64264d28e59adea19e2437874",
+  "dirty": false,
+  "python": "3.9.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "elapsed_seconds": 2.927258917,
+  "config_sha256": "468b44abea4d9bde6200e9d8be239c707fef35a2541fd3ea8e1b3c0b81e7423e",
+  "predictions_sha256": "ad9c482197b8da164ee882ec26a2ebc79b9fec2b5a1b76d8b5400bf25e0bd080",
+  "source_sha256": {
+    "artificial_scientist/__init__.py": "ef9b1afc8f7e90153bc797c75dba2fb71a13b7d330ba76d078435e23b82f9a3d",
+    "artificial_scientist/adaptive_state.py": "26127f9bce3d63e46efdb730899bb6552505698db7c212e9ae38036e28138aa9",
+    "artificial_scientist/adaptive_state_v2.py": "ddc2dc7717274f9b262b28edd6d6a0c1cc742e71bd16330d7ead1758ca5a16ce",
+    "artificial_scientist/baselines.py": "cf7c3d6de6475d0c1e9313eed127f19d23b24ff690cb4f09beb3456838575c73",
+    "artificial_scientist/environment.py": "c0392fb0741144d05be13c0be2f7293fd20e4b7344e9c49caefea15734070bb2",
+    "artificial_scientist/metrics.py": "8c92545a404868b926ce2c9f8ec9919e263fe643d079ff1f5b627ff6c2ffcdba",
+    "artificial_scientist/run.py": "dbe6a373937761697ada734d36f224eff74f1759f2ed43c5e3e91f978d92c1be",
+    "artificial_scientist/sequence_worlds.py": "f62aed3fd38a644a8fd75d72b2d39d282506e00b59448623c5ddebdb1f09380d",
+    "experiments/adaptive_state_v2.md": "9ba6cc1525a5b137d1b30118356db3131fcf33f88f494860c20a077117fb0ad3"
+  },
+  "purpose": "exploratory reversible expert selection, no novelty/efficiency claim"
+}
