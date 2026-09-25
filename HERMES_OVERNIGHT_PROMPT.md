@@ -28,3 +28,11 @@ Set a deadline six hours from launch, or earlier if I provide one. Reserve the f
 
 MORNING DELIVERABLES
 Update RESULTS.md with the selected question, closest prior art, novelty status, protocol, exact reproduction commands, tests run and outcomes, linked raw artifacts, seed-level comparisons/uncertainty, failed attempts, deviations, remaining objections and limitations. Distinguish completed work from proposals. Update NEXT_STEPS.md with ranked tests, the strongest unresolved objection, expected information gain, local cost and go/no-go criteria. Summarize what changed and what did not get done. Never fabricate sources, metrics, agent participation or completed runs. Stop by the deadline with an honest, reviewable research package.
+
+## Mandatory independent review
+
+The user requires a different agent to review every newly written or materially changed code file, research note, prompt, report, or other artifact before it is finalized. Record reviewer identity, reviewed paths, findings, fixes, and remaining limitations in research/review_log.md. A distinct Codex agent may review if Claude is unavailable; label it honestly and do not imply cross-model review. Authors must not certify their own work. If no separate reviewer is available, keep affected artifacts explicitly marked draft/unreviewed and report the blocker. Review subsequent material fixes as well. Reviewer findings themselves are reviewed by the receiving director; avoid an infinite review chain.
+
+## Zero additional spending and bounded effort
+
+The user explicitly prohibits purchases, subscriptions, paid APIs, cloud jobs, new paid services, and any additional charges. Use only already available access within existing limits; never buy credits or enable paid fallback. If billing status is unclear, do not launch the external service. Conserve tokens: one focused research pass and one independent review, no open-ended agent loops or redundant searches. Increase reasoning only for a concrete difficult decision, not routine work.
