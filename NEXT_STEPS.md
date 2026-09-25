@@ -1,10 +1,9 @@
 # Next steps
 
-Current direction: [multiple universes and adaptive predictive state](research/direction.md). The earlier EPIG/EIG implementation plan is superseded; retain it as optional replication groundwork.
+The [first multi-universe baseline run](RESULTS.md) is complete and independently reviewed at protocol/code level. Four world types, three known baselines, 14 passing tests; five development seeds only. No novelty claim.
 
-1. Independently check the closest model-order-selection, adaptive state-space and representation-revision work. Distinguish a research gap from replication.
-2. Specify a tiny procedural universe benchmark: structural memory changes, coefficient-only changes, noise and no-change controls. Keep observations fixed initially; reserve test worlds before tuning.
-3. Review one falsifiable protocol with fair simple/adaptive/recurrent baselines and explicit prediction, sample and cumulative resource criteria. Decide proceed, revise or stop.
-4. After review, implement the smallest local comparison; require another agent's code review, meaningful tests and bounded runs. Report negative results and limitations.
+1. Specify one evidence-triggered state-expansion candidate, including what it must store to detect missing information. Count shadow-model, replay and selection overhead.
+2. Add sparse-lag/model-order and expressive recurrent comparators. The [prior-art check](research/state_revision_prior_art.md) explains why fixed dense context alone is insufficient.
+3. Independently review and preregister prediction/resource thresholds, development tuning and held-out world evaluation before testing the candidate. Keep the current five-seed run descriptive.
 
-Architecture remains open; no mandatory neural network or MLX. No new learner or experiment was executed during this direction update. Keep reports short; no additional spending. Hermes/Claude participation requires recorded evidence.
+Codex coordinates directly; Claude can independently review through manual handoff. Hermes is no longer required. Architecture remains open. Keep reports short, all work in Documents/Projects/artificial-scientist, no extra spending. Do not run reserved seeds yet.

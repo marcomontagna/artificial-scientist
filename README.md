@@ -8,6 +8,10 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. First test whether it can recognize insufficient predictive state and selectively add useful memory/state. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
+## First multi-universe baseline run
+
+The [v0 sequence-world benchmark](experiments/state_revision_v0.md) now runs locally with three known context baselines. See [results](RESULTS.md). Four world types and 14 passing tests validate the setup; no new adaptive learner or novelty claim. Codex now coordinates directly, with independent review; Hermes instructions below are optional historical tooling.
+
 ## Questions worth testing
 
 - Can probabilistic predictions remain calibrated under distribution shift?
@@ -55,9 +59,9 @@ Map approximately 2016–2026 literature through the actual run date, plus found
 
 Predefine the falsifier, baselines, primary metric, seed split, interventions, and compute budget before results. Separate development from held-out evaluation. Report seed-level outcomes, effect sizes and uncertainty, ablations, failures, and resource costs. Calibration requires reliability analysis; low log loss alone does not establish calibration. Observational prediction alone does not establish causality.
 
-## Overnight workflow
+## Current workflow
 
-Use [the Hermes prompt](HERMES_OVERNIGHT_PROMPT.md). Hermes directs; Codex maps prior work and builds reusable infrastructure; Claude critiques the proposal and tests its claims. Give each agent explicit file ownership. If a tool or agent is unavailable, record that honestly and continue the feasible work. No agent is launched merely by creating this repository.
+Codex coordinates research and implementation directly, with a different agent reviewing each substantive artifact. Claude may review through manual handoff; distinct Codex reviewers are identified honestly when used. Give workers explicit file ownership. The [Hermes prompt](HERMES_OVERNIGHT_PROMPT.md) is retained as optional historical tooling, not the current coordinator.
 
 ## License
 
