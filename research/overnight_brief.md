@@ -1,5 +1,7 @@
 # Overnight research brief
 
+> Current assignment: read [direction](direction.md) and [next steps](../NEXT_STEPS.md) first. Preserve multiple universes; conduct a focused novelty/methodology pass on adaptive predictive state before new implementation. The stages below are a reusable workflow, not an instruction to rerun completed broad research.
+
 ## Morning outcome
 Identify the strongest falsifiable question that is not obviously a reproduction of existing work. Document the closest prior art, compare three candidate gaps with counterarguments, choose one minimal experiment if a gap survives, implement only safe reusable infrastructure and baselines, and write RESULTS.md and NEXT_STEPS.md. No requirement to discover novelty tonight.
 
