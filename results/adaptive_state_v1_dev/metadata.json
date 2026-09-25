@@ -1,0 +1,20 @@
+{
+  "revision": "bb87ef3b76ef41ca0939d836810077cd19df5e84",
+  "dirty": false,
+  "python": "3.9.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "elapsed_seconds": 1.6800235419999998,
+  "config_sha256": "a36fe402af604248b8e4d235ea570999112b67fbf537e5971d70516407cf5edd",
+  "predictions_sha256": "3ead7d73d70117259d55a31e7bf6548deccbc02b1278650c3fa13b3112db7f0a",
+  "source_sha256": {
+    "artificial_scientist/__init__.py": "ef9b1afc8f7e90153bc797c75dba2fb71a13b7d330ba76d078435e23b82f9a3d",
+    "artificial_scientist/adaptive_state.py": "26127f9bce3d63e46efdb730899bb6552505698db7c212e9ae38036e28138aa9",
+    "artificial_scientist/baselines.py": "cf7c3d6de6475d0c1e9313eed127f19d23b24ff690cb4f09beb3456838575c73",
+    "artificial_scientist/environment.py": "c0392fb0741144d05be13c0be2f7293fd20e4b7344e9c49caefea15734070bb2",
+    "artificial_scientist/metrics.py": "8c92545a404868b926ce2c9f8ec9919e263fe643d079ff1f5b627ff6c2ffcdba",
+    "artificial_scientist/run.py": "dbe6a373937761697ada734d36f224eff74f1759f2ed43c5e3e91f978d92c1be",
+    "artificial_scientist/sequence_worlds.py": "f62aed3fd38a644a8fd75d72b2d39d282506e00b59448623c5ddebdb1f09380d",
+    "experiments/adaptive_state_v1.md": "a41611b386242f983fbe5c975f423c17a0c5da09f960efc5f0b93862c38b007c"
+  },
+  "purpose": "exploratory sparse-context activation; no novelty/efficiency claim"
+}

@@ -8,13 +8,15 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. First test whether it can recognize insufficient predictive state and selectively add useful memory/state. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
-## First multi-universe baseline run
+## First adaptive learner run
 
-The [v0 sequence-world benchmark](experiments/state_revision_v0.md) now runs locally with three known context baselines. See [results](RESULTS.md). Four world types and 14 passing tests validate the setup; no new adaptive learner or novelty claim. Codex now coordinates directly, with independent review.
+The [adaptive-context prototype](experiments/adaptive_state_v1.md) now makes its own one-time choice to use an older observation. In five development worlds requiring extra history it selected the correct lag; it also expanded unnecessarily in all five parameter-change worlds. A sparse-model mixture predicted better on the structural worlds. All 22 tests pass; see [results and limitations](RESULTS.md). All shadow models remain allocated, so this demonstrates active context selection, not memory savings or a novel architecture.
 
 ## Replay the recorded universes
 
-Open [the offline viewer](visualization/replay.html) in a browser to choose a world, seed and tick, and compare outcomes, predictions, error and logical storage. Download/open the file locally; GitHub displays its source. This is recorded data, not a live learner. To regenerate it from this checkout’s local raw run: `python3 visualization/export_replay.py`. A fresh clone can first reproduce the configured development run into `results/runs/state_revision_v0_dev_20260925`; no held-out data or paid service is needed.
+Open [the adaptive replay](visualization/adaptive_replay.html) in a browser to choose a world, seed and tick. See predictions, error, total logical storage and exactly when the learner activates an older lag. It is recorded data, not a live training job. Download/open the file locally; GitHub displays its source. The [original baseline replay](visualization/replay.html) is preserved.
+
+Regenerate with `python3 visualization/export_adaptive_replay.py`. In a fresh clone, first run `python3 -m artificial_scientist.adaptive_state --config experiments/adaptive_state_v1.json --output results/runs/adaptive_state_v1_dev_20260925`. If reproducing into another fresh directory, pass it to the exporter with `--run`. No held-out data or paid service is needed.
 
 ## Questions worth testing
 
