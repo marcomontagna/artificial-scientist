@@ -6,7 +6,7 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 ## Current direction
 
-The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. The passive context-selection line is now frozen after independent review; the next question must involve choosing informative actions, with strong baselines and a falsifiable benefit. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
+The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. Understanding is the objective: improve predictions, uncertainty and explanations by choosing informative experiments; a win/lose reward is optional. The passive context-selection line is now frozen after independent review; the next question must involve choosing informative actions, with strong baselines and a falsifiable benefit. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
 ## Current model and result
 
