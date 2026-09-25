@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "complete": true,
+  "primary_power_pass": true,
+  "null_audit_required": false,
+  "null_debug_cells": [],
+  "completed_episodes": 6000,
+  "expected_episodes": 6000,
+  "interpretation": "exploratory supplied-family diagnostic feasibility; not novelty or action-policy evidence"
+}

@@ -1,10 +1,16 @@
 # Results
 
+## Finite-sample causal diagnostic — September 25
+
+The [reviewed study](research/causal_diagnostic_result.md) completed 6,000 episodes and 2.4 million observations in 24.309 seconds from clean committed source `5d77412`. All 45 tests passed. The prespecified structured mixture detected strong model failures in 198–200/200 trials per cell, versus 6–16/200 for KT; all six primary lower Wilson bounds exceed 0.80. Medium cases yielded only 8–15/200 detections, weak cases zero, and the biased-common-cause stress case zero for the primary. All null cells had zero observed alarms; this does not prove uniform validity.
+
+The diagnostic benefits from a supplied family of explanations. It learns mixture weights/probabilities but does not choose experiments, invent models or establish novelty. No tuning followed results. Next is a reviewed tiny interactive universe focused on understanding without requiring a win/lose reward. [Full summaries](results/causal_diagnostic_v0/summary.json) and [current next steps](NEXT_STEPS.md).
+
 ## Causal-world feasibility — September 25
 
 The [reviewed calculation](research/causal_feasibility_result.md) passed all 65 population comparisons across 13 worlds and five fixed action mixtures, enumerating all 25 observed-only DAGs. Passive and pair-only designs have zero separation; informative mixtures have positive separation for nonzero confounding. The in-class controls remain zero. This matches the independently derived mathematical reference; it is code/foundations validation, not novel science or learned behavior.
 
-All 37 tests passed. One full calculation completed in 0.118 seconds from clean source `14e7227`; source/config/artifact hashes are preserved. No samples or seeds, finite-sample power experiment, adaptive causal policy, or causal model repair. Claude reviewed design/code and a separate Codex reviewer verified fixes. The next gate is a preregistered finite-sample diagnostic check, before adaptive action policies.
+All 37 tests passed. One full calculation completed in 0.118 seconds from clean source `14e7227`; source/config/artifact hashes are preserved. At that population-check stage there were no samples or seeds, finite-sample power experiment, adaptive causal policy, or causal model repair. Claude reviewed design/code and a separate Codex reviewer verified fixes. Its proposed finite-sample follow-up is now completed above; adaptive action policies remain unimplemented.
 
 ## Current decision — selector line frozen
 
