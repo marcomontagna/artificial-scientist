@@ -1,8 +1,10 @@
 # Coordination ledger
 
-Status: scaffold prepared; overnight agents have not been launched.
+Status: scaffold and bounded first literature pass completed by Codex; separate Codex review completed. User reports Hermes/Claude running; this repo has not yet verified their participation.
 
 Hermes should record start/deadline, available tools/agents, repo root, resource limits, and baseline git status here. Assign ownership before writes.
+
+Original overnight template (superseded by current handoff ownership below):
 
 | Owner | Files | State |
 | --- | --- | --- |
@@ -15,4 +17,8 @@ Use repo-relative paths; research files above live under research/ except the ro
 
 ## September 25 setup and first-phase work
 
-The user authorized Codex to begin prior-art research and required independent agent review of all created artifacts. Codex primary is publishing the scaffold and coordinating. A separate Codex reviewer owns research/scaffold_review.md; a Codex research worker owns research/prior_art.md and research/search_log.md. Hermes and Claude have not been launched. All new artifacts need distinct-agent review before finalization.
+The user authorized Codex to begin prior-art research and required independent agent review of all created artifacts. Codex primary is publishing the scaffold and coordinating. A separate Codex reviewer owns research/scaffold_review.md; a Codex research worker owns research/prior_art.md and research/search_log.md. Codex did not launch Hermes or Claude; their activity is user-reported and acknowledgment remains unverified. All new artifacts need distinct-agent review before finalization.
+
+## Handoff status
+
+Codex researcher delivered the 12-source map and search log. Independent Codex reviewer checked four close sources, reviewed claims, and found no blocking issues; coverage remains incomplete. Codex primary reviewed the reviewer report. HERMES_HANDOFF.md gives Hermes a zero-additional-cost acknowledgment/Claude-critique task. No acknowledgment has been verified. A one-time Notion report update is scheduled September 26 at 20:00 America/Chicago.
