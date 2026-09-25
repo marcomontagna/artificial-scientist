@@ -6,4 +6,4 @@ The [first multi-universe baseline run](RESULTS.md) is complete and independentl
 2. Add sparse-lag/model-order and expressive recurrent comparators. The [prior-art check](research/state_revision_prior_art.md) explains why fixed dense context alone is insufficient.
 3. Independently review and preregister prediction/resource thresholds, development tuning and held-out world evaluation before testing the candidate. Keep the current five-seed run descriptive.
 
-Codex coordinates directly; Claude can independently review through manual handoff. Hermes is no longer required. Architecture remains open. Keep reports short, all work in Documents/Projects/artificial-scientist, no extra spending. Do not run reserved seeds yet.
+Codex coordinates directly; Claude can independently review through manual handoff. Architecture remains open. Keep reports short, all work in Documents/Projects/artificial-scientist, no extra spending. Do not run reserved seeds yet.

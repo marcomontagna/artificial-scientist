@@ -10,7 +10,7 @@ The goal is a learner that investigates unfamiliar systems across **multiple pro
 
 ## First multi-universe baseline run
 
-The [v0 sequence-world benchmark](experiments/state_revision_v0.md) now runs locally with three known context baselines. See [results](RESULTS.md). Four world types and 14 passing tests validate the setup; no new adaptive learner or novelty claim. Codex now coordinates directly, with independent review; Hermes instructions below are optional historical tooling.
+The [v0 sequence-world benchmark](experiments/state_revision_v0.md) now runs locally with three known context baselines. See [results](RESULTS.md). Four world types and 14 passing tests validate the setup; no new adaptive learner or novelty claim. Codex now coordinates directly, with independent review.
 
 ## Replay the recorded universes
 
@@ -25,7 +25,7 @@ Open [the offline viewer](visualization/replay.html) in a browser to choose a wo
 - Which causal or world-model assumptions are identifiable from the available observations and interventions?
 - How quickly can a learner adapt when an unannounced environment law changes, and at what cost on stationary tasks?
 
-These are directions, not novelty claims. Start with [the overnight brief](research/overnight_brief.md), map the closest prior art, and select one narrow question before building a new method.
+These are directions, not novelty claims. Start with [the research workflow](research/workflow.md), map the closest prior art, and select one narrow question before building a new method.
 
 ## Start locally
 
@@ -45,7 +45,7 @@ The smoke run compares a constant 0.5 predictor, a cumulative Beta-Bernoulli pre
 
 | Path | Purpose |
 | --- | --- |
-| `research/` | Literature map, candidate gaps, critique, experiment preregistration, coordination |
+| `research/` | Literature map, candidate gaps, critique, experiment preregistration and review records |
 | `environments/` | Environment specifications and assumptions |
 | `baselines/` | Baseline definitions and fair-comparison requirements |
 | `metrics/` | Scoring conventions and evaluation guidance |
@@ -55,7 +55,7 @@ The smoke run compares a constant 0.5 predictor, a cumulative Beta-Bernoulli pre
 | `results/` | Small tracked smoke output and ignored per-run artifacts |
 | `RESULTS.md` / `NEXT_STEPS.md` | Honest evidence summary and next decisions |
 | `AGENTS.md` / `CLAUDE.md` | Codex and Claude Code working agreements |
-| `HERMES_OVERNIGHT_PROMPT.md` | Paste-ready research-director instructions |
+| `visualization/` | Offline replay of recorded worlds and baseline predictions |
 
 ## Research standards
 
@@ -65,7 +65,7 @@ Predefine the falsifier, baselines, primary metric, seed split, interventions, a
 
 ## Current workflow
 
-Codex coordinates research and implementation directly, with a different agent reviewing each substantive artifact. Claude may review through manual handoff; distinct Codex reviewers are identified honestly when used. Give workers explicit file ownership. The [Hermes prompt](HERMES_OVERNIGHT_PROMPT.md) is retained as optional historical tooling, not the current coordinator.
+Codex coordinates research and implementation directly, with a different agent reviewing each substantive artifact. Claude may review through manual handoff; distinct Codex reviewers are identified honestly when used. Give workers explicit file ownership.
 
 ## License
 

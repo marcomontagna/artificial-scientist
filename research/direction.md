@@ -17,9 +17,9 @@ Demonstrate that the structural-change condition really requires additional pred
 A small neural network trained from scratch may learn representations and predictions; probabilistic or simpler mathematical models may work better for the first test. Compare alternatives. No pretrained LLM inside the initial experimental learner. Codex/Claude assist research and engineering. MLX is optional, never mandatory.
 
 ## Next gate and longer path
-First audit close work on model-order selection, adaptive state-space models and representation revision; then independently review one falsifiable protocol. Only then implement and run a bounded local experiment. Active experiment choice, raw pixels, richer universes and visual planetary simulations are later stages, conditional on useful evidence.
+The initial prior-art audit and baseline protocol are complete; see state_revision_prior_art.md and ../RESULTS.md. Next specify and independently review a state-expansion candidate and stronger comparators before implementation and held-out evaluation. Active experiment choice, raw pixels, richer universes and visual planetary simulations are later stages, conditional on useful evidence.
 
-The earlier EPIG/EIG protocol is retained as optional replication groundwork, not the current implementation target. Existing smoke results validate infrastructure only; no multiple-universe or adaptive-state result exists yet.
+The earlier EPIG/EIG protocol is retained as optional replication groundwork, not the current implementation target. The four-world development benchmark and offline replay now validate known baselines. No selective state-expansion learner or novelty claim has been demonstrated.
 
 ## Working agreement
-Codex develops the protocol and implementation; Claude is the intended independent critic when available; Hermes coordinates explicit handoffs when connected. A distinct Codex reviewer can substitute, identified honestly. Every substantive artifact receives another agent's review. Keep reports short, work inside this repo, use existing access only, and incur no additional spending. Stop at usage limits; never enable paid fallback.
+Codex coordinates the protocol and implementation; Claude is the intended independent critic when available. A distinct Codex reviewer can substitute, identified honestly. Every substantive artifact receives another agent's review. Keep reports short, work inside this repo, use existing access only, and incur no additional spending. Stop at usage limits; never enable paid fallback.
