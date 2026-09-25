@@ -25,4 +25,8 @@ Raw evidence: [config](results/scaffold_smoke/config.json), [predictions](result
 
 ## Pending overnight work
 
-Literature mapping, three candidate gaps, independent Claude critique, research-question selection, preregistration, active interventions, causal/world-model methods and learned representations have not been completed. No overnight agents have been launched. Follow research/overnight_brief.md and replace this section with real findings, including failures and blockers.
+A bounded first literature pass is complete: [12 primary-source anchors and four close comparisons](research/prior_art.md), with [search history and exclusions](research/search_log.md). A separate Codex reviewer checked the scaffold, reproduced the recorded results and reviewed the literature claims; see [review](research/scaffold_review.md). No supported novelty claim emerged. A candidate follow-up is diagnostic action selection under hidden changes, but active change detection, dual control and nonstationary bandits remain necessary prior-art checks.
+
+Three fully assessed candidate gaps, independent Claude critique, research-question selection, preregistration, active interventions, causal/world-model methods and learned representations remain pending. The user reports Hermes and Claude are running; Codex prepared [a scoped handoff](HERMES_HANDOFF.md), but has not verified their acceptance or contributions. Codex used one research worker and one separate reviewer. No paid external agent run was initiated.
+
+The initial first-phase pass is deliberately bounded to conserve tokens. The [Notion activity report](https://app.notion.com/p/3e61202c798281d3bb93d2e241f1f009) has a one-time update scheduled for September 26, 2026 at 8 p.m. America/Chicago. All further work must respect the user’s zero-additional-spending rule and independent-review requirement.
