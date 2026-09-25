@@ -1,10 +1,12 @@
-# Next steps
+# Tomorrow’s starting point
 
-1. Hermes may acknowledge `HERMES_HANDOFF.md` and assign Claude one bounded critique using existing access only. No additional charges or paid fallback. Record actual participation; do not assume receipt.
-2. Before claiming novelty, search active change detection, controlled sensing, dual control and nonstationary bandits. These are the strongest unresolved prior-art objections in the first map. Cost: a short read-only literature pass within existing access.
-3. Compare exactly three candidate gaps with counterarguments, then select a falsifiable question only if it survives. The current diagnostic-action idea is provisional. Cost: synthesis and independent review, not model training.
-4. If justified, preregister an equal-budget comparison with stationary controls, held-out shifts, an adaptive change-aware baseline and policy-independent evaluation queries. Go only if the design separates experiment selection from ordinary forgetting; otherwise do a labeled replication/control.
-5. Keep the scaffold small. Do not add learned representations or a new architecture until the question requires them. Every new substantive artifact must receive separate-agent review.
-6. Review the scheduled Notion evidence update on September 26, 2026 at 8 p.m. America/Chicago. The Mac and Codex must remain available for local follow-up. Report inaccessible work honestly.
+Research decision phase is complete; implementation is intentionally deferred. Read [decision](research/decision.md), [three candidates](research/candidate_gaps.md), [independent critique](research/critique.md), and [protocol](experiments/selected_experiment.md).
 
-Completed: repository scaffold; seven passing tests; independently reproduced smoke results; a bounded 12-source literature map and separate Codex review. No research novelty, active learner or causal representation claim is established. Hermes/Claude contributions remain unverified until acknowledgment or artifacts arrive.
+1. Review candidate 2 with the user: a known-method stress test of predictive versus parameter information under hidden shifts and wrong likelihood assumptions. No novelty claim.
+2. Implement the separate finite-state runner and exact acquisition rules without changing the existing smoke experiment. Use standard-library CPU code; no paid services, model training or mandatory MLX.
+3. Have a distinct agent review the implementation, especially same-state independent EPIG draws, tick-wise filtering, leakage, paired randomness and evaluation independence.
+4. Run tests and the tiny development timing check; then freeze the specified development choices before held-out evaluation. Follow the resource caps and preregistered failure criteria. Do not optimize after seeing test outcomes.
+5. Report all conditions, stationary costs, uncertainty and nonrecoveries. If the practical threshold fails, accept a negative/inconclusive result. A toy success does not establish novelty or superiority over R-IDeA/controlled-sensing methods.
+6. Before any future methodological novelty claim, audit R-IDeA and latest controlled-sensing methods in depth. Representation learning remains deferred until identifying assumptions and need are demonstrated.
+
+The one-time Notion report remains scheduled September 26, 2026 at 20:00 America/Chicago. Hermes/Claude activity remains unverified; do not duplicate their work if an acknowledgment appears. No new implementation or experiment was run during this research-only continuation.

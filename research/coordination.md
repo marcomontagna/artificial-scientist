@@ -22,3 +22,7 @@ The user authorized Codex to begin prior-art research and required independent a
 ## Handoff status
 
 Codex researcher delivered the 12-source map and search log. Independent Codex reviewer checked four close sources, reviewed claims, and found no blocking issues; coverage remains incomplete. Codex primary reviewed the reviewer report. HERMES_HANDOFF.md gives Hermes a zero-additional-cost acknowledgment/Claude-critique task. No acknowledgment has been verified. A one-time Notion report update is scheduled September 26 at 20:00 America/Chicago.
+
+## Research-only continuation
+
+User requested completion of research now, with implementation tomorrow. Codex primary owns focused_prior_art.md, candidate_gaps.md, decision.md, selected_experiment.md and report synchronization. A distinct Codex research_critic owns critique.md, independently checked six related sources and reviewed the primary’s four design documents. No Claude participation is implied. Selected known-method stress test; no novelty clearance or new experiment execution.
