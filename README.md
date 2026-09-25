@@ -4,6 +4,10 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 **This is a research experiment, not an AGI claim.** We are not training a frontier language model, claiming a novel architecture, or claiming that combining familiar techniques creates a new paradigm. A well-supported negative result is a successful outcome. The name describes the experimental learning loop, not demonstrated scientific autonomy.
 
+## Current direction
+
+The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. First test whether it can recognize insufficient predictive state and selectively add useful memory/state. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
+
 ## Questions worth testing
 
 - Can probabilistic predictions remain calibrated under distribution shift?

@@ -1,5 +1,7 @@
 # Live handoff for Hermes and Claude
 
+> CURRENT HANDOFF: The previous initial-map assignment below is historical. Read research/direction.md and NEXT_STEPS.md. Assign one bounded Claude critique of adaptive predictive state across procedural universes, including model-order-selection prior art and fair baselines. Return the report for independent review; do not implement the old EPIG plan by default. Record actual acknowledgment; delivery is not assumed.
+
 Updated September 25, 2026. The user says Hermes and Claude are running and asked Hermes to check Codex's work. This document is a task handoff, not evidence that either agent has read or accepted it.
 
 Repository: https://github.com/marcomontagna/artificial-scientist
