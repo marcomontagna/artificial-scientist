@@ -12,6 +12,10 @@ The goal is a learner that investigates unfamiliar systems across **multiple pro
 
 The [v0 sequence-world benchmark](experiments/state_revision_v0.md) now runs locally with three known context baselines. See [results](RESULTS.md). Four world types and 14 passing tests validate the setup; no new adaptive learner or novelty claim. Codex now coordinates directly, with independent review; Hermes instructions below are optional historical tooling.
 
+## Replay the recorded universes
+
+Open [the offline viewer](visualization/replay.html) in a browser to choose a world, seed and tick, and compare outcomes, predictions, error and logical storage. Download/open the file locally; GitHub displays its source. This is recorded data, not a live learner. To regenerate it from this checkout’s local raw run: `python3 visualization/export_replay.py`. A fresh clone can first reproduce the configured development run into `results/runs/state_revision_v0_dev_20260925`; no held-out data or paid service is needed.
+
 ## Questions worth testing
 
 - Can probabilistic predictions remain calibrated under distribution shift?
