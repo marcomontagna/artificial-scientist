@@ -1,5 +1,29 @@
 # Results
 
+## Multi-universe development run — September 25
+
+Implemented the reviewed [v0 protocol](experiments/state_revision_v0.md): four sequence-world types, short/long context predictors and a discounted fixed-share order mixture. All 14 unit tests passed; the existing smoke run also completed. Independent Codex research and code reviewers approved the protocol and implementation. No Hermes or Claude execution is attributed.
+
+Five development seeds × four conditions × 1,200 observations × three baselines = 72,000 scored predictions. Approximate runner time: 0.59 seconds. Mean post-change log loss (lower is better; descriptive development results):
+
+| World | Order 1 | Order 5 | Order mixture |
+| --- | ---: | ---: | ---: |
+| Stable | 0.5056 | 0.5438 | 0.5112 |
+| Parameter change | 0.5795 | 0.5691 | 0.5509 |
+| Noise | 0.7125 | 0.7267 | 0.7130 |
+| Added history dependency | 0.7130 | 0.5681 | 0.5668 |
+
+The structural worlds expose a weakness of short context; long context has a cost in stable worlds. This motivates a comparison but does not demonstrate a new adaptive learner, statistical superiority, calibration, cross-family generalization or resource savings. The mixture maintains all component models. No neural model, expansion trigger, active experimentation or transfer has been implemented. Held-out seeds were not used.
+
+Tracked [seed-level summaries](results/state_revision_v0_dev/summary.json), [configuration](results/state_revision_v0_dev/config.json) and [metadata](results/state_revision_v0_dev/metadata.json). Full predictions remain locally in ignored `results/runs/state_revision_v0_dev_20260925/predictions.csv`; reproduce using the command below with a fresh output path. Metadata records the precommit revision, dirty state and exact new module hash.
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 -m artificial_scientist.sequence_worlds --config experiments/state_revision_v0.json --output results/runs/state_revision_v0_reproduction
+```
+
+### Earlier activity (historical)
+
 > Current direction update: [multiple universes and adaptive predictive state](research/direction.md). The earlier EPIG selection below is historical optional groundwork. No new code, tests or experiments were run for this documentation update; the new candidate has no empirical result or novelty clearance.
 
 ## Scaffold validation
@@ -39,4 +63,4 @@ At the user’s request, Codex completed the decision-oriented research now and 
 
 [Exactly three candidate questions](research/candidate_gaps.md) were compared: diagnostic sensing, predictive versus parameter information under misspecification, and representation revision. [Decision](research/decision.md): select the second as a replication/stress test, not a novel method. The [pre-experiment protocol](experiments/selected_experiment.md) specifies shared filtering, acquisition policies, law table, hidden shifts, matched/misspecified conditions, held-out schedules, metric, falsifier, seed-level uncertainty, and resource caps. A separate Codex critic reviewed sources and design; timing, tuning and recovery ambiguities were corrected.
 
-This supersedes the earlier pending-research section: the three-candidate comparison, research decision and protocol are now complete for tomorrow’s discussion. The literature search remains bounded, not exhaustive. No new algorithm or experiment was implemented or run; previous smoke numbers remain the only local empirical results. No additional paid services were initiated.
+This supersedes the earlier pending-research section: the three-candidate comparison, research decision and protocol are now complete for tomorrow’s discussion. The literature search remains bounded, not exhaustive. At that historical stage no new algorithm or experiment was implemented or run; the multi-universe run at the top of this report now adds empirical development evidence. No additional paid services were initiated.

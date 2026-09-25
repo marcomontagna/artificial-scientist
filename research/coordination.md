@@ -1,8 +1,8 @@
 # Coordination ledger
 
-Status: scaffold and bounded first literature pass completed by Codex; separate Codex review completed. User reports Hermes/Claude running; this repo has not yet verified their participation.
+Status: Codex coordinates directly at the user’s request. The first multi-universe baseline run is complete; separate Codex research/code/artifact reviews completed. No Hermes/Claude participation is attributed.
 
-Hermes should record start/deadline, available tools/agents, repo root, resource limits, and baseline git status here. Assign ownership before writes.
+The active coordinator records scope, tools, ownership and bounded runs here. Earlier Hermes entries below are historical.
 
 Original overnight template (superseded by current handoff ownership below):
 
@@ -29,3 +29,6 @@ User requested completion of research now, with implementation tomorrow. Codex p
 
 ## Direction update — September 25
 User confirmed the multiple-universe artificial-scientist goal and requested concise repo/Notion synchronization. Codex primary owns direction.md and documentation notices, README/NEXT_STEPS and Notion summary for this pass. A distinct Codex reviewer reviews all changes before publication. No code or experiments are part of this pass. Historical ownership/EPIG decisions above are superseded for this documentation update; Hermes/Claude delivery remains unverified.
+
+## Direct coordination — September 25
+User explicitly discontinued Hermes coordination for this work. Codex primary now owns protocol, implementation and report updates; distinct Codex research_critic reviews research/design, and a separate reviewer checks implementation. Existing ownership rules naming Hermes are superseded by this user instruction. Local and fetched remote history contained no new Hermes changes at start (local 0029e3e, remote 465846e); working tree clean. First deliverable is a bounded multi-universe calibration benchmark, not a novel learner.
