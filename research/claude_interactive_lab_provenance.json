@@ -1,0 +1,14 @@
+{
+  "author": "Claude Code Opus 5.5",
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "duration_ms": 79861,
+  "num_turns": 4,
+  "is_error": false,
+  "access": "Existing Pro subscription, credits previously verified off; no paid fallback",
+  "request_sha256": "ae6f774e309791bdc6859273f2e518a3dbf91ec00406472d581726a9b7ff0899",
+  "response_sha256": "1ac716d27dbbe1812959a11397cb4832336dd2aff23dce4b4d0f81a51f814332",
+  "report_sha256": "5591576e11b8d66204b477d951144f29c00a29b8010a0f318fa036740c4185f7",
+  "reviewed_version": "Initial plan; fixes reviewed separately before implementation"
+}
