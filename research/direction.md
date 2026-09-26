@@ -14,6 +14,12 @@ Use a procedural generator of small worlds with different hidden rules: stable m
 
 Separate development worlds from held-out evaluation. Start with fresh learners in each world; later test transfer across worlds against fresh-start controls. Different seeds test variation within a family; held-out rule families test broader generalization. Neither alone establishes universal scientific discovery.
 
+## Current step: equations and their limits
+
+The [three-study equation sequence](overnight_equation_report.md) is complete. It supplies six monomials, fits explicit formulas, tests term evidence on independent observations, and separately challenges a fixed full quadratic model across domains. Recovery failed its noise gate; the later confirmation and domain checks passed their own screens. Those checks do not retroactively repair the fitter or establish novel scientific discovery.
+
+Claude’s final review redirected the next step: first establish one valid selected/refitted equation with untouched checks, then test whether learner-chosen challenge locations save observations against fixed local/wide/random schedules. Subsecond CPU savings are not a meaningful target here. Any later grammar expansion must face ordinary model-selection and always-large baselines; it remains supplied model-class revision, not invented mathematics. Keep untouched evaluation data and count all experiments/refits. No fourth study runs under the completed overnight sequence; [next steps](../NEXT_STEPS.md) is a proposal awaiting a fixed reviewed protocol.
+
 ## Historical first question — now frozen
 Can a learner detect insufficient predictive state, expand it selectively, and recover accurate predictions with lower cumulative memory/compute or fewer observations than strong alternatives?
 

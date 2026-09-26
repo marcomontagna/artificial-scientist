@@ -64,6 +64,22 @@
         "results/runs/equation_claude_plan3_20260926/response.json": "fcd56ed2eff200aa38b67d2b5c5c110e67ae3cb76d2d175853bf9fd132969004",
         "research/claude_equation_plan3.md": "9c0f5d7a1ffade5b87859c470f8e7e4a68bd2b49d65da6e85b0aef2b5b2830dd"
       }
+    },
+    {
+      "stage": "final",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "duration_ms": 132055,
+      "num_turns": 12,
+      "is_error": false,
+      "raw_directory": "results/runs/equation_claude_final_20260926",
+      "report": "research/claude_equation_final.md",
+      "sha256": {
+        "results/runs/equation_claude_final_20260926/request.txt": "86631308655deb8ee55f15e93345c2a08bededb861535d40a1c033582fa84f47",
+        "results/runs/equation_claude_final_20260926/response.json": "d18208db92160e63dce7c6df40348b7e63fa54e95e09848508c0da55367639f5",
+        "research/claude_equation_final.md": "839b7bfe10fac24750619245c0c80ba046f6a0056db4cc7755cd9628b5cc24c8"
+      }
     }
   ]
 }

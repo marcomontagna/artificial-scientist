@@ -1,5 +1,11 @@
 # Results
 
+## Three equation studies — September 26
+
+The [short overnight report](research/overnight_equation_report.md) covers840development datasets across three separately reviewed runs;90tests pass. Stage1 recovery **failed**:9/20noise cases produced nonzero formulas. Stage2 confirmation passed: noise false-claim datasets fell32/100→0/100 and quadratic15/100→0/100, with198/200true quadratic terms retained. Stage3 domain challenge passed: uncertainty-aware rejection rose10/40→40/40 for exponential and26/40→40/40 for cubic; correct-model controls stayed2/40 perarm. Crude wide-domain rejection was29/40 on those controls.
+
+Supplied grammar, known Gaussian noise, fixed outside-family functions and correlated controls limit the conclusions. The stages are distinct components: confirmation filters claims, and fixed-full-model domain-test guarantees do not apply automatically to selected sparse formulas. No active acquisition, grammar revision, neural/RL training or novelty was demonstrated in this sequence. All three runs and numerical evidence were independently audited; the original failure is preserved. [Study1](research/equation_stage1_result.md) · [Study2](research/equation_stage2_result.md) · [Study3](research/equation_stage3_result.md) · [Reproduction](research/equation_reproduction.md).
+
 ## Stateful room — September 26
 
 The [reviewed stateful learner](research/stateful_room_result.md) completed640episodes/61,440actions from clean source`e6978fd`;65tests pass. Mean primary prediction loss: two-step planning0.50067, greedy0.51214, random0.60726nats. Both pooled thresholds and all six per-world harm guards pass. The noise control is worse than random; fixed cycle is best in two designed worlds but fails coverage in the third. Hidden-memory stress remains incompletely modeled.

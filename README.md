@@ -6,9 +6,17 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 ## Current direction
 
-The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. Understanding is the objective: improve predictions, uncertainty and explanations by choosing informative experiments; a win/lose reward is optional. The passive context-selection line is now frozen after independent review; the next question must involve choosing informative actions, with strong baselines and a falsifiable benefit. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
+The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. Understanding is the objective: improve predictions, uncertainty and explanations by choosing informative experiments; a win/lose reward is optional. The earlier context-selection line is frozen. The current priority is explicit equations: fit a hypothesis, test its terms, challenge where it applies, and eventually revise it through informative experiments. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
-## Current learner and visualization
+## Latest: equations, evidence and falsification
+
+[Three reviewed equation studies](research/overnight_equation_report.md) are complete; **90 tests pass**. A small model fits coefficients and selects among six supplied monomials. It outputs formulas such as `y ≈ -0.8360u + 0.6315u²`; it does not invent variables or operators.
+
+The first recovery screen **failed** because noise produced spurious formulas. Independent term confirmation then reduced noise false-claim datasets from32/100 to0/100, retaining198/200 true quadratic terms. A separate fixed-full-model test detected wrong exponential/cubic approximations in40/40 wide-domain audits, versus10/40 and26/40 locally. These are known statistical components, not a new autonomous scientist or a trained RL policy. The first failure remains a failure; the later stages do not repair its fitted predictions.
+
+Claude Opus5.5 reviewed each stage; separate agents reviewed code and independently audited all numerical evidence. [Short report](research/overnight_equation_report.md) · [Reproduce](research/equation_reproduction.md) · [Next steps](NEXT_STEPS.md). The equation studies are finished, not running in the background. Existing visualizations below show the earlier interactive learners.
+
+## Previous stateful learner and visualization
 
 The [stateful room learner](research/stateful_room_result.md) explores a power switch and door whose state persists between actions. It learns transition and blocked-action probabilities from observations, then plans two experiments ahead. No door-rule library or neural network; its visible state representation and table structure are supplied.
 

@@ -1,6 +1,6 @@
 # Seed status
 
-Updated September 25, 2026. This records actual inspection for the v0/v1/v2 sequence-world family, not the seed plan for every future environment.
+Updated September 26, 2026. This records actual inspection for the v0/v1/v2 sequence-world family, not the seed plan for every future environment.
 
 - **0–4:** inspected development seeds in the original runs, Claude review and Codex reproduction.
 - **100–119:** first inspected in Claude's independent review; reused for review reproduction, including return-to-simple worlds. They are development data, never future held-out data.
@@ -30,3 +30,15 @@ Shared numerical seeds across world/schedule cells create correlated comparisons
 - **490:**20episode resource/correctness smoke, inspected.
 - **500–531:**640episode full study, now inspected development data; no held-out confirmation or post-result tuning.
 - Replay uses the first2declaredseeds500/501 across all5worlds/4policies; overview includes all32. Primary intervals describe policy/tie randomness in fixed worlds, not independent new law families. Sequence seeds1000–1049 remain unused.
+
+## Equation sequence — September 26
+
+- **7/11:** synthetic numerical/unit fixtures; forced runner failures are patched to these fixture data and do not sample the smoke label.
+- **590:** stage1 five-dataset resource smoke, inspected.
+- **600–619:** stage1 full100dataset study, now inspected development data. Published examples use first2declaredseeds600/601 across all5families.
+- **690:** stage2 five-dataset resource smoke, inspected.
+- **700–799:** stage2 full500dataset study, now inspected development data. The former active-acquisition draft using700–719 was never implemented or sampled; it is deferred and those seeds are no longer available as new data. The short report's formula is from the firstdeclaredseed700.
+- **840:** stage3 six-dataset/12audit resource smoke, inspected.
+- **850–889:** stage3 full240dataset/480audit study, now inspected development data. Both arms share training observations, base audit coordinates and noise. The three correct-model controls are duplicate residual checks; outside families use fixed functions across random designs, not40new functions.
+
+No post-result tuning or held-out confirmation. The separate sequence-family reserve1000–1049 remains unused. New seeds alone would not establish generalization to new law families.

@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "passed": true,
+  "control_guards": {
+    "affine_local": true,
+    "affine_wide": true,
+    "sparse_quadratic_local": true,
+    "sparse_quadratic_wide": true,
+    "noise_only_local": true,
+    "noise_only_wide": true
+  },
+  "gain_conditions": {
+    "exponential": true,
+    "cubic": true
+  },
+  "limitation": "known full-model Gaussian diagnostic; fixed outside functions; a local ceiling can fail the comparative gain screen"
+}
