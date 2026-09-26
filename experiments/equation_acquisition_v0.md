@@ -1,6 +1,6 @@
-# Equation acquisition v0 — provisional stage 2, not approved for sampling
+# Equation acquisition v0 — deferred, not implemented or sampled
 
-Proceed only after stage1 result and this plan receive Claude review. Freeze the equation fitting/grammar/selection from stage1; do not change its penalty based on observed recovery. This asks whether choosing experiments improves independent predictions, not whether RL or symbolic discovery is novel.
+Deferred after stage1 failed its recovery screen (noise-only nonzero9/20>8/20). Preserved as an independently reviewed proposal, not an executed experiment. The next stage instead diagnoses formula claims using independent evidence. Freeze the equation fitting/grammar/selection from stage1; do not change its penalty based on observed recovery. This asks whether choosing experiments improves independent predictions, not whether RL or symbolic discovery is novel.
 
 ## Controlled comparison
 Use the same five world families and coefficient-generating distribution, six-term basis and size0..3search as stage1, but fresh development seeds700..719 and observation sigma=.15. This deliberately fixes a smaller fitting budget and more noise before any stage2 outcomes; compare policies within this stage, not performance changes from stage1. Total perpolicy16fitting observations plus16independent audit observations. Five policies: random, maximin, d_optimal, disagreement, total_variance. Full500episodes (20seeds×5families×5policies), each learner identical.

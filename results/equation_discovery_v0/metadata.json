@@ -1,0 +1,57 @@
+{
+  "revision": "c0aa24677cc9749528354906108820c93f0c4c96",
+  "dirty": false,
+  "status": "completed",
+  "mode": "full",
+  "source_sha256": {
+    "artificial_scientist/equation_discovery.py": "82feba277134e44585e9928e60a88bd1a2a86931104c88b0ab37801d9c2001ec",
+    "tests/test_equation_discovery.py": "5fcf27418a6f5df37a89c556c1168be51f9ca4d27e47a5940d7ccd9ab3708c14",
+    "experiments/equation_discovery_v0.md": "52abcb8b7aa4e7c5063b90fee727f369e78d4736576472e2b5d2a94ee0d4a866",
+    "artificial_scientist/run.py": "dbe6a373937761697ada734d36f224eff74f1759f2ed43c5e3e91f978d92c1be"
+  },
+  "config_sha256": "1e2dd9aa919bce8fa61873dfd3dde5da2c5d4610f533c70372c63db0cc89585c",
+  "smoke_evidence": {
+    "path": "results/runs/equation_discovery_v0_smoke_20260926",
+    "projected_full_seconds": 1.1307500099999999,
+    "projected_full_bytes": 3617940.0,
+    "metadata_sha256": "dfef05a6d5f9dd3c14ee23523cfab23aa6e95d68db87c209b69a88de7c11a337"
+  },
+  "python": "3.9.6",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619
+  ],
+  "external_timeout_seconds": 150,
+  "schema_version": 1,
+  "sources_unchanged": true,
+  "completed_episodes": 100,
+  "expected_episodes": 100,
+  "completed_observations": 4000,
+  "elapsed_seconds": 0.313632542,
+  "artifact_sha256": {
+    "summary.json": "38e60844ee7a7021e8b4c31a67168618b67235fe4c3fe9f58014bcdf921b5ac3",
+    "config.json": "1e2dd9aa919bce8fa61873dfd3dde5da2c5d4610f533c70372c63db0cc89585c",
+    "decision.json": "c7e81ef79fe0599fef470265f75ec49709d3b1d55a1dcbab90f17f9b4baceef3",
+    "episodes.jsonl": "fcd537114166725f1054e0bfc1a0c5616a342d3be3a42b49055497d840e1d754"
+  },
+  "artifact_bytes": 1870359
+}

@@ -1,0 +1,3153 @@
+{
+  "completed_keys": [
+    [
+      600,
+      "affine"
+    ],
+    [
+      600,
+      "sparse_quadratic"
+    ],
+    [
+      600,
+      "sine"
+    ],
+    [
+      600,
+      "exponential"
+    ],
+    [
+      600,
+      "noise_only"
+    ],
+    [
+      601,
+      "affine"
+    ],
+    [
+      601,
+      "sparse_quadratic"
+    ],
+    [
+      601,
+      "sine"
+    ],
+    [
+      601,
+      "exponential"
+    ],
+    [
+      601,
+      "noise_only"
+    ],
+    [
+      602,
+      "affine"
+    ],
+    [
+      602,
+      "sparse_quadratic"
+    ],
+    [
+      602,
+      "sine"
+    ],
+    [
+      602,
+      "exponential"
+    ],
+    [
+      602,
+      "noise_only"
+    ],
+    [
+      603,
+      "affine"
+    ],
+    [
+      603,
+      "sparse_quadratic"
+    ],
+    [
+      603,
+      "sine"
+    ],
+    [
+      603,
+      "exponential"
+    ],
+    [
+      603,
+      "noise_only"
+    ],
+    [
+      604,
+      "affine"
+    ],
+    [
+      604,
+      "sparse_quadratic"
+    ],
+    [
+      604,
+      "sine"
+    ],
+    [
+      604,
+      "exponential"
+    ],
+    [
+      604,
+      "noise_only"
+    ],
+    [
+      605,
+      "affine"
+    ],
+    [
+      605,
+      "sparse_quadratic"
+    ],
+    [
+      605,
+      "sine"
+    ],
+    [
+      605,
+      "exponential"
+    ],
+    [
+      605,
+      "noise_only"
+    ],
+    [
+      606,
+      "affine"
+    ],
+    [
+      606,
+      "sparse_quadratic"
+    ],
+    [
+      606,
+      "sine"
+    ],
+    [
+      606,
+      "exponential"
+    ],
+    [
+      606,
+      "noise_only"
+    ],
+    [
+      607,
+      "affine"
+    ],
+    [
+      607,
+      "sparse_quadratic"
+    ],
+    [
+      607,
+      "sine"
+    ],
+    [
+      607,
+      "exponential"
+    ],
+    [
+      607,
+      "noise_only"
+    ],
+    [
+      608,
+      "affine"
+    ],
+    [
+      608,
+      "sparse_quadratic"
+    ],
+    [
+      608,
+      "sine"
+    ],
+    [
+      608,
+      "exponential"
+    ],
+    [
+      608,
+      "noise_only"
+    ],
+    [
+      609,
+      "affine"
+    ],
+    [
+      609,
+      "sparse_quadratic"
+    ],
+    [
+      609,
+      "sine"
+    ],
+    [
+      609,
+      "exponential"
+    ],
+    [
+      609,
+      "noise_only"
+    ],
+    [
+      610,
+      "affine"
+    ],
+    [
+      610,
+      "sparse_quadratic"
+    ],
+    [
+      610,
+      "sine"
+    ],
+    [
+      610,
+      "exponential"
+    ],
+    [
+      610,
+      "noise_only"
+    ],
+    [
+      611,
+      "affine"
+    ],
+    [
+      611,
+      "sparse_quadratic"
+    ],
+    [
+      611,
+      "sine"
+    ],
+    [
+      611,
+      "exponential"
+    ],
+    [
+      611,
+      "noise_only"
+    ],
+    [
+      612,
+      "affine"
+    ],
+    [
+      612,
+      "sparse_quadratic"
+    ],
+    [
+      612,
+      "sine"
+    ],
+    [
+      612,
+      "exponential"
+    ],
+    [
+      612,
+      "noise_only"
+    ],
+    [
+      613,
+      "affine"
+    ],
+    [
+      613,
+      "sparse_quadratic"
+    ],
+    [
+      613,
+      "sine"
+    ],
+    [
+      613,
+      "exponential"
+    ],
+    [
+      613,
+      "noise_only"
+    ],
+    [
+      614,
+      "affine"
+    ],
+    [
+      614,
+      "sparse_quadratic"
+    ],
+    [
+      614,
+      "sine"
+    ],
+    [
+      614,
+      "exponential"
+    ],
+    [
+      614,
+      "noise_only"
+    ],
+    [
+      615,
+      "affine"
+    ],
+    [
+      615,
+      "sparse_quadratic"
+    ],
+    [
+      615,
+      "sine"
+    ],
+    [
+      615,
+      "exponential"
+    ],
+    [
+      615,
+      "noise_only"
+    ],
+    [
+      616,
+      "affine"
+    ],
+    [
+      616,
+      "sparse_quadratic"
+    ],
+    [
+      616,
+      "sine"
+    ],
+    [
+      616,
+      "exponential"
+    ],
+    [
+      616,
+      "noise_only"
+    ],
+    [
+      617,
+      "affine"
+    ],
+    [
+      617,
+      "sparse_quadratic"
+    ],
+    [
+      617,
+      "sine"
+    ],
+    [
+      617,
+      "exponential"
+    ],
+    [
+      617,
+      "noise_only"
+    ],
+    [
+      618,
+      "affine"
+    ],
+    [
+      618,
+      "sparse_quadratic"
+    ],
+    [
+      618,
+      "sine"
+    ],
+    [
+      618,
+      "exponential"
+    ],
+    [
+      618,
+      "noise_only"
+    ],
+    [
+      619,
+      "affine"
+    ],
+    [
+      619,
+      "sparse_quadratic"
+    ],
+    [
+      619,
+      "sine"
+    ],
+    [
+      619,
+      "exponential"
+    ],
+    [
+      619,
+      "noise_only"
+    ]
+  ],
+  "cells": [
+    {
+      "world": "affine",
+      "method": "constant",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.9036093161882902,
+        "extrapolation_mse": 5.569584603268123,
+        "audit_mse": 0.8903006062630784,
+        "coefficient_rmse": 0.6487315992987562
+      },
+      "mean_complexity": 1,
+      "total_fit_seconds": 0.0004901240000000362
+    },
+    {
+      "world": "affine",
+      "method": "linear",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "false_inclusion": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0004474351855361748,
+        "extrapolation_mse": 0.0019220327566697964,
+        "audit_mse": 0.00323342430595775,
+        "coefficient_rmse": 0.011466652417926243
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.0009150000000000408
+    },
+    {
+      "world": "affine",
+      "method": "dense",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 1,
+          "n": 20,
+          "rate": 0.05,
+          "wilson95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0018794670156058073,
+        "extrapolation_mse": 0.0578849718040857,
+        "audit_mse": 0.0039787798827197445,
+        "coefficient_rmse": 0.03948033742363552
+      },
+      "mean_complexity": 6,
+      "total_fit_seconds": 0.0020471690000000986
+    },
+    {
+      "world": "affine",
+      "method": "sparse",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "false_inclusion": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0004474351855361748,
+        "extrapolation_mse": 0.0019220327566697964,
+        "audit_mse": 0.00323342430595775,
+        "coefficient_rmse": 0.011466652417926243
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.03069612199999997
+    },
+    {
+      "world": "sparse_quadratic",
+      "method": "constant",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 18,
+          "n": 20,
+          "rate": 0.9,
+          "wilson95": [
+            0.6989663547715128,
+            0.9721335187862319
+          ]
+        },
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.3249051120601385,
+        "extrapolation_mse": 7.925263182378405,
+        "audit_mse": 0.4034752518250358,
+        "coefficient_rmse": 0.5702104907010201
+      },
+      "mean_complexity": 1,
+      "total_fit_seconds": 0.0005267930000000254
+    },
+    {
+      "world": "sparse_quadratic",
+      "method": "linear",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.21319762678947662,
+        "extrapolation_mse": 7.328907926827269,
+        "audit_mse": 0.25632650096677295,
+        "coefficient_rmse": 0.5259867591513283
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.0009466259999999366
+    },
+    {
+      "world": "sparse_quadratic",
+      "method": "dense",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 1,
+          "n": 20,
+          "rate": 0.05,
+          "wilson95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0018794670156057995,
+        "extrapolation_mse": 0.05788497180408557,
+        "audit_mse": 0.0039787798827197384,
+        "coefficient_rmse": 0.03948033742363545
+      },
+      "mean_complexity": 6,
+      "total_fit_seconds": 0.0021840830000001005
+    },
+    {
+      "world": "sparse_quadratic",
+      "method": "sparse",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 15,
+          "n": 20,
+          "rate": 0.75,
+          "wilson95": [
+            0.531299122381256,
+            0.8881382985923343
+          ]
+        },
+        "false_inclusion": {
+          "count": 5,
+          "n": 20,
+          "rate": 0.25,
+          "wilson95": [
+            0.11186170140766569,
+            0.468700877618744
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0005152468380950657,
+        "extrapolation_mse": 0.01515555951861416,
+        "audit_mse": 0.002968724741937315,
+        "coefficient_rmse": 0.018633569390517083
+      },
+      "mean_complexity": 2.1,
+      "total_fit_seconds": 0.03030150000000003
+    },
+    {
+      "world": "sine",
+      "method": "constant",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.616336686768623,
+        "extrapolation_mse": 1.0449974010543372,
+        "audit_mse": 0.5671417204739004
+      },
+      "mean_complexity": 1,
+      "total_fit_seconds": 0.0004929590000000775
+    },
+    {
+      "world": "sine",
+      "method": "linear",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.25842874769612223,
+        "extrapolation_mse": 3.809377834958295,
+        "audit_mse": 0.2756429099986328
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.0008924600000000671
+    },
+    {
+      "world": "sine",
+      "method": "dense",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.7978857052219063,
+        "extrapolation_mse": 22.03110934283314,
+        "audit_mse": 0.7029245756067699
+      },
+      "mean_complexity": 6,
+      "total_fit_seconds": 0.0020745029999999984
+    },
+    {
+      "world": "sine",
+      "method": "sparse",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.5080759451356615,
+        "extrapolation_mse": 11.235450749242098,
+        "audit_mse": 0.5554503578197603
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.030348498999999918
+    },
+    {
+      "world": "exponential",
+      "method": "constant",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.5383819557317625,
+        "extrapolation_mse": 9.064391945767046,
+        "audit_mse": 0.566961716113194
+      },
+      "mean_complexity": 1,
+      "total_fit_seconds": 0.0005661279999999436
+    },
+    {
+      "world": "exponential",
+      "method": "linear",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.03902819798295995,
+        "extrapolation_mse": 3.5095802540608103,
+        "audit_mse": 0.04775895616591374
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.000988293999999952
+    },
+    {
+      "world": "exponential",
+      "method": "dense",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 1,
+          "n": 20,
+          "rate": 0.05,
+          "wilson95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.00366481943459376,
+        "extrapolation_mse": 0.9914571688129882,
+        "audit_mse": 0.006592373640806998
+      },
+      "mean_complexity": 6,
+      "total_fit_seconds": 0.002125832000000029
+    },
+    {
+      "world": "exponential",
+      "method": "sparse",
+      "n": 20,
+      "proportions": {
+        "exact_support": null,
+        "false_inclusion": null,
+        "audit_rejected": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.03902819798295995,
+        "extrapolation_mse": 3.5095802540608103,
+        "audit_mse": 0.04775895616591374
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.030763499999999964
+    },
+    {
+      "world": "noise_only",
+      "method": "constant",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.00012357993632163084,
+        "extrapolation_mse": 0.00012357993632163084,
+        "audit_mse": 0.0028531948001505117,
+        "coefficient_rmse": 0.0034356751381352073
+      },
+      "mean_complexity": 1,
+      "total_fit_seconds": 0.0004935400000000353
+    },
+    {
+      "world": "noise_only",
+      "method": "linear",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.00044743518553617577,
+        "extrapolation_mse": 0.0019220327566697984,
+        "audit_mse": 0.003233424305957751,
+        "coefficient_rmse": 0.011466652417926259
+      },
+      "mean_complexity": 3,
+      "total_fit_seconds": 0.0009127909999999129
+    },
+    {
+      "world": "noise_only",
+      "method": "dense",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "false_inclusion": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        },
+        "audit_rejected": {
+          "count": 1,
+          "n": 20,
+          "rate": 0.05,
+          "wilson95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ]
+        },
+        "nonzero_selection": {
+          "count": 20,
+          "n": 20,
+          "rate": 1.0,
+          "wilson95": [
+            0.8388748419471806,
+            1.0
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0018794670156058058,
+        "extrapolation_mse": 0.05788497180408563,
+        "audit_mse": 0.003978779882719745,
+        "coefficient_rmse": 0.039480337423635485
+      },
+      "mean_complexity": 6,
+      "total_fit_seconds": 0.002086624000000023
+    },
+    {
+      "world": "noise_only",
+      "method": "sparse",
+      "n": 20,
+      "proportions": {
+        "exact_support": {
+          "count": 11,
+          "n": 20,
+          "rate": 0.55,
+          "wilson95": [
+            0.34208534245034233,
+            0.7418021417443759
+          ]
+        },
+        "false_inclusion": {
+          "count": 9,
+          "n": 20,
+          "rate": 0.45,
+          "wilson95": [
+            0.2581978582556243,
+            0.6579146575496577
+          ]
+        },
+        "audit_rejected": {
+          "count": 0,
+          "n": 20,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.16112515805281938
+          ]
+        },
+        "nonzero_selection": {
+          "count": 9,
+          "n": 20,
+          "rate": 0.45,
+          "wilson95": [
+            0.2581978582556243,
+            0.6579146575496577
+          ]
+        }
+      },
+      "means": {
+        "interpolation_mse": 0.0003519161075167606,
+        "extrapolation_mse": 0.01065073192283375,
+        "audit_mse": 0.002918238260177101,
+        "coefficient_rmse": 0.012081331986858405
+      },
+      "mean_complexity": 0.5,
+      "total_fit_seconds": 0.03020528999999996
+    }
+  ],
+  "paired": [
+    {
+      "world": "affine",
+      "comparator": "linear",
+      "metric": "interpolation_mse",
+      "mean_difference": 0.0,
+      "seed_se": 0.0,
+      "normal95": [
+        0.0,
+        0.0
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.0
+        },
+        {
+          "seed": 601,
+          "difference": 0.0
+        },
+        {
+          "seed": 602,
+          "difference": 0.0
+        },
+        {
+          "seed": 603,
+          "difference": 0.0
+        },
+        {
+          "seed": 604,
+          "difference": 0.0
+        },
+        {
+          "seed": 605,
+          "difference": 0.0
+        },
+        {
+          "seed": 606,
+          "difference": 0.0
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 0.0
+        },
+        {
+          "seed": 609,
+          "difference": 0.0
+        },
+        {
+          "seed": 610,
+          "difference": 0.0
+        },
+        {
+          "seed": 611,
+          "difference": 0.0
+        },
+        {
+          "seed": 612,
+          "difference": 0.0
+        },
+        {
+          "seed": 613,
+          "difference": 0.0
+        },
+        {
+          "seed": 614,
+          "difference": 0.0
+        },
+        {
+          "seed": 615,
+          "difference": 0.0
+        },
+        {
+          "seed": 616,
+          "difference": 0.0
+        },
+        {
+          "seed": 617,
+          "difference": 0.0
+        },
+        {
+          "seed": 618,
+          "difference": 0.0
+        },
+        {
+          "seed": 619,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "world": "affine",
+      "comparator": "linear",
+      "metric": "extrapolation_mse",
+      "mean_difference": 0.0,
+      "seed_se": 0.0,
+      "normal95": [
+        0.0,
+        0.0
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.0
+        },
+        {
+          "seed": 601,
+          "difference": 0.0
+        },
+        {
+          "seed": 602,
+          "difference": 0.0
+        },
+        {
+          "seed": 603,
+          "difference": 0.0
+        },
+        {
+          "seed": 604,
+          "difference": 0.0
+        },
+        {
+          "seed": 605,
+          "difference": 0.0
+        },
+        {
+          "seed": 606,
+          "difference": 0.0
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 0.0
+        },
+        {
+          "seed": 609,
+          "difference": 0.0
+        },
+        {
+          "seed": 610,
+          "difference": 0.0
+        },
+        {
+          "seed": 611,
+          "difference": 0.0
+        },
+        {
+          "seed": 612,
+          "difference": 0.0
+        },
+        {
+          "seed": 613,
+          "difference": 0.0
+        },
+        {
+          "seed": 614,
+          "difference": 0.0
+        },
+        {
+          "seed": 615,
+          "difference": 0.0
+        },
+        {
+          "seed": 616,
+          "difference": 0.0
+        },
+        {
+          "seed": 617,
+          "difference": 0.0
+        },
+        {
+          "seed": 618,
+          "difference": 0.0
+        },
+        {
+          "seed": 619,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "world": "affine",
+      "comparator": "dense",
+      "metric": "interpolation_mse",
+      "mean_difference": -0.0014320318300696324,
+      "seed_se": 0.000488977555638124,
+      "normal95": [
+        -0.0023904102283687856,
+        -0.00047365343177047906
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -0.00032631421075967227
+        },
+        {
+          "seed": 601,
+          "difference": -0.0001398996155969236
+        },
+        {
+          "seed": 602,
+          "difference": -0.007093014334210686
+        },
+        {
+          "seed": 603,
+          "difference": -0.0006900928118307907
+        },
+        {
+          "seed": 604,
+          "difference": -0.002608357637524617
+        },
+        {
+          "seed": 605,
+          "difference": -0.003953849031242784
+        },
+        {
+          "seed": 606,
+          "difference": -0.00010334805526987962
+        },
+        {
+          "seed": 607,
+          "difference": -0.00048548028095797357
+        },
+        {
+          "seed": 608,
+          "difference": -0.0006474030419037825
+        },
+        {
+          "seed": 609,
+          "difference": -0.00044485107050044436
+        },
+        {
+          "seed": 610,
+          "difference": -0.00020110890674229472
+        },
+        {
+          "seed": 611,
+          "difference": -9.838331766931995e-05
+        },
+        {
+          "seed": 612,
+          "difference": -0.0008732265021363557
+        },
+        {
+          "seed": 613,
+          "difference": -0.0005239718144575945
+        },
+        {
+          "seed": 614,
+          "difference": -0.00034469237934753056
+        },
+        {
+          "seed": 615,
+          "difference": -0.00043531941823579505
+        },
+        {
+          "seed": 616,
+          "difference": -0.000718949997611014
+        },
+        {
+          "seed": 617,
+          "difference": -0.0002185530906614805
+        },
+        {
+          "seed": 618,
+          "difference": -0.0073299310687368075
+        },
+        {
+          "seed": 619,
+          "difference": -0.0014038900159969029
+        }
+      ]
+    },
+    {
+      "world": "affine",
+      "comparator": "dense",
+      "metric": "extrapolation_mse",
+      "mean_difference": -0.05596293904741591,
+      "seed_se": 0.017504527897312994,
+      "normal95": [
+        -0.09027118329252601,
+        -0.0216546948023058
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -0.016727962177795024
+        },
+        {
+          "seed": 601,
+          "difference": -0.003920765768918661
+        },
+        {
+          "seed": 602,
+          "difference": -0.3317064594874327
+        },
+        {
+          "seed": 603,
+          "difference": -0.015503579825494317
+        },
+        {
+          "seed": 604,
+          "difference": -0.08684361388101589
+        },
+        {
+          "seed": 605,
+          "difference": -0.06743672826815063
+        },
+        {
+          "seed": 606,
+          "difference": -0.007075583792444433
+        },
+        {
+          "seed": 607,
+          "difference": -0.03570493207442353
+        },
+        {
+          "seed": 608,
+          "difference": -0.029132326842188548
+        },
+        {
+          "seed": 609,
+          "difference": -0.03643507473299021
+        },
+        {
+          "seed": 610,
+          "difference": -0.014015791322357165
+        },
+        {
+          "seed": 611,
+          "difference": -0.012089873111341519
+        },
+        {
+          "seed": 612,
+          "difference": -0.06915660080335229
+        },
+        {
+          "seed": 613,
+          "difference": -0.017332679287081248
+        },
+        {
+          "seed": 614,
+          "difference": -0.024492964902916078
+        },
+        {
+          "seed": 615,
+          "difference": -0.01768112266200647
+        },
+        {
+          "seed": 616,
+          "difference": -0.025808802747203964
+        },
+        {
+          "seed": 617,
+          "difference": -0.010501265479104072
+        },
+        {
+          "seed": 618,
+          "difference": -0.17615792323120294
+        },
+        {
+          "seed": 619,
+          "difference": -0.12153473055089845
+        }
+      ]
+    },
+    {
+      "world": "sparse_quadratic",
+      "comparator": "linear",
+      "metric": "interpolation_mse",
+      "mean_difference": -0.21268237995138156,
+      "seed_se": 0.02756356556454964,
+      "normal95": [
+        -0.2667059757434073,
+        -0.15865878415935583
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -0.24863646352352414
+        },
+        {
+          "seed": 601,
+          "difference": -0.25740982811786606
+        },
+        {
+          "seed": 602,
+          "difference": -0.11474934946474795
+        },
+        {
+          "seed": 603,
+          "difference": -0.5052803690625168
+        },
+        {
+          "seed": 604,
+          "difference": -0.18159570757213084
+        },
+        {
+          "seed": 605,
+          "difference": -0.47781701929311327
+        },
+        {
+          "seed": 606,
+          "difference": -0.31295302624140986
+        },
+        {
+          "seed": 607,
+          "difference": -0.3388568381951402
+        },
+        {
+          "seed": 608,
+          "difference": -0.06995946043649025
+        },
+        {
+          "seed": 609,
+          "difference": -0.18953235195639923
+        },
+        {
+          "seed": 610,
+          "difference": -0.09925963135059712
+        },
+        {
+          "seed": 611,
+          "difference": -0.22107799606716289
+        },
+        {
+          "seed": 612,
+          "difference": -0.17919808360477482
+        },
+        {
+          "seed": 613,
+          "difference": -0.24826495311311148
+        },
+        {
+          "seed": 614,
+          "difference": -0.16785447541970763
+        },
+        {
+          "seed": 615,
+          "difference": -0.0935982342378531
+        },
+        {
+          "seed": 616,
+          "difference": -0.16914688813630738
+        },
+        {
+          "seed": 617,
+          "difference": -0.07850049064037903
+        },
+        {
+          "seed": 618,
+          "difference": -0.07001634501754586
+        },
+        {
+          "seed": 619,
+          "difference": -0.2299400875768535
+        }
+      ]
+    },
+    {
+      "world": "sparse_quadratic",
+      "comparator": "linear",
+      "metric": "extrapolation_mse",
+      "mean_difference": -7.313752367308655,
+      "seed_se": 0.8004033158168495,
+      "normal95": [
+        -8.882514039416119,
+        -5.74499069520119
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -4.539452489072831
+        },
+        {
+          "seed": 601,
+          "difference": -8.319905628073473
+        },
+        {
+          "seed": 602,
+          "difference": -3.6257960835712866
+        },
+        {
+          "seed": 603,
+          "difference": -9.790587444451907
+        },
+        {
+          "seed": 604,
+          "difference": -5.496479269448907
+        },
+        {
+          "seed": 605,
+          "difference": -9.776052009499194
+        },
+        {
+          "seed": 606,
+          "difference": -14.252148780411662
+        },
+        {
+          "seed": 607,
+          "difference": -11.63006925444565
+        },
+        {
+          "seed": 608,
+          "difference": -4.336338376967412
+        },
+        {
+          "seed": 609,
+          "difference": -6.3802347675034525
+        },
+        {
+          "seed": 610,
+          "difference": -4.222148506674025
+        },
+        {
+          "seed": 611,
+          "difference": -13.2493196001663
+        },
+        {
+          "seed": 612,
+          "difference": -5.090860749416075
+        },
+        {
+          "seed": 613,
+          "difference": -11.94604979569595
+        },
+        {
+          "seed": 614,
+          "difference": -7.688284695240987
+        },
+        {
+          "seed": 615,
+          "difference": -5.434739722902931
+        },
+        {
+          "seed": 616,
+          "difference": -8.442290378747778
+        },
+        {
+          "seed": 617,
+          "difference": -2.6412032759958524
+        },
+        {
+          "seed": 618,
+          "difference": -1.7429373908591523
+        },
+        {
+          "seed": 619,
+          "difference": -7.670149127028267
+        }
+      ]
+    },
+    {
+      "world": "sparse_quadratic",
+      "comparator": "dense",
+      "metric": "interpolation_mse",
+      "mean_difference": -0.0013642201775107337,
+      "seed_se": 0.0005119272194337557,
+      "normal95": [
+        -0.0023675790903066284,
+        -0.0003608612647148393
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -7.162941240267855e-05
+        },
+        {
+          "seed": 601,
+          "difference": -0.000282587987237109
+        },
+        {
+          "seed": 602,
+          "difference": -0.007364479716558304
+        },
+        {
+          "seed": 603,
+          "difference": -0.0008235062922729864
+        },
+        {
+          "seed": 604,
+          "difference": -0.00101440547658352
+        },
+        {
+          "seed": 605,
+          "difference": -0.00568076765017675
+        },
+        {
+          "seed": 606,
+          "difference": -0.0001275635799854283
+        },
+        {
+          "seed": 607,
+          "difference": -0.0004415214163796061
+        },
+        {
+          "seed": 608,
+          "difference": -0.0008574929643942272
+        },
+        {
+          "seed": 609,
+          "difference": 0.0002610290170682438
+        },
+        {
+          "seed": 610,
+          "difference": -0.0005420847806255588
+        },
+        {
+          "seed": 611,
+          "difference": -0.00035017578856294177
+        },
+        {
+          "seed": 612,
+          "difference": -0.0009011015146832493
+        },
+        {
+          "seed": 613,
+          "difference": -0.0006670583150944905
+        },
+        {
+          "seed": 614,
+          "difference": -0.0003149243294603596
+        },
+        {
+          "seed": 615,
+          "difference": -0.00043183309665900454
+        },
+        {
+          "seed": 616,
+          "difference": -0.0004506092840264198
+        },
+        {
+          "seed": 617,
+          "difference": 0.0005396571650059863
+        },
+        {
+          "seed": 618,
+          "difference": -0.006611755433829327
+        },
+        {
+          "seed": 619,
+          "difference": -0.001151592693356945
+        }
+      ]
+    },
+    {
+      "world": "sparse_quadratic",
+      "comparator": "dense",
+      "metric": "extrapolation_mse",
+      "mean_difference": -0.04272941228547141,
+      "seed_se": 0.018104298084155004,
+      "normal95": [
+        -0.07821318449579272,
+        -0.007245640075150106
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.004249414876735715
+        },
+        {
+          "seed": 601,
+          "difference": -0.004463148542958023
+        },
+        {
+          "seed": 602,
+          "difference": -0.3320328176281584
+        },
+        {
+          "seed": 603,
+          "difference": -0.015813212616870857
+        },
+        {
+          "seed": 604,
+          "difference": -0.024651366091847787
+        },
+        {
+          "seed": 605,
+          "difference": -0.06972560510398947
+        },
+        {
+          "seed": 606,
+          "difference": -0.007116129813316861
+        },
+        {
+          "seed": 607,
+          "difference": -0.032042733912730874
+        },
+        {
+          "seed": 608,
+          "difference": -0.03047255807789102
+        },
+        {
+          "seed": 609,
+          "difference": 0.016214369897633175
+        },
+        {
+          "seed": 610,
+          "difference": 0.004031472632711922
+        },
+        {
+          "seed": 611,
+          "difference": -0.011853271110800617
+        },
+        {
+          "seed": 612,
+          "difference": -0.0653067415453984
+        },
+        {
+          "seed": 613,
+          "difference": -0.01705196402741007
+        },
+        {
+          "seed": 614,
+          "difference": -0.015758236531152547
+        },
+        {
+          "seed": 615,
+          "difference": -0.009844823218249322
+        },
+        {
+          "seed": 616,
+          "difference": -0.015656473863442766
+        },
+        {
+          "seed": 617,
+          "difference": 0.03422290476678832
+        },
+        {
+          "seed": 618,
+          "difference": -0.16335640775559396
+        },
+        {
+          "seed": 619,
+          "difference": -0.09816091804348637
+        }
+      ]
+    },
+    {
+      "world": "sine",
+      "comparator": "linear",
+      "metric": "interpolation_mse",
+      "mean_difference": 0.24964719743953928,
+      "seed_se": 0.14759106469543276,
+      "normal95": [
+        -0.039625973803430026,
+        0.5389203686825086
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -0.044935426881994533
+        },
+        {
+          "seed": 601,
+          "difference": 0.5097153399258304
+        },
+        {
+          "seed": 602,
+          "difference": 0.5792019232757941
+        },
+        {
+          "seed": 603,
+          "difference": 0.004021616893082336
+        },
+        {
+          "seed": 604,
+          "difference": 0.03155037634910052
+        },
+        {
+          "seed": 605,
+          "difference": 2.9609108192388613
+        },
+        {
+          "seed": 606,
+          "difference": 0.024428253489294477
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 0.09074940593924968
+        },
+        {
+          "seed": 609,
+          "difference": -0.0022583771346992854
+        },
+        {
+          "seed": 610,
+          "difference": 0.12089121133474373
+        },
+        {
+          "seed": 611,
+          "difference": 0.09066270029512039
+        },
+        {
+          "seed": 612,
+          "difference": -0.006076064613350252
+        },
+        {
+          "seed": 613,
+          "difference": 0.06772554975880299
+        },
+        {
+          "seed": 614,
+          "difference": 0.01305332518680652
+        },
+        {
+          "seed": 615,
+          "difference": 0.01991215799276433
+        },
+        {
+          "seed": 616,
+          "difference": 0.27716208925067853
+        },
+        {
+          "seed": 617,
+          "difference": 0.016081058053145497
+        },
+        {
+          "seed": 618,
+          "difference": 0.03069421425281238
+        },
+        {
+          "seed": 619,
+          "difference": 0.20945377618474226
+        }
+      ]
+    },
+    {
+      "world": "sine",
+      "comparator": "linear",
+      "metric": "extrapolation_mse",
+      "mean_difference": 7.426072914283804,
+      "seed_se": 3.8236483018867973,
+      "normal95": [
+        -0.06814004696205522,
+        14.920285875529663
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 5.977094427980358
+        },
+        {
+          "seed": 601,
+          "difference": 13.6291569137888
+        },
+        {
+          "seed": 602,
+          "difference": 11.662406143601329
+        },
+        {
+          "seed": 603,
+          "difference": 1.1051999332583433
+        },
+        {
+          "seed": 604,
+          "difference": 0.0158559837275698
+        },
+        {
+          "seed": 605,
+          "difference": 78.00731786267738
+        },
+        {
+          "seed": 606,
+          "difference": 1.0943795285412508
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 2.9492576721490567
+        },
+        {
+          "seed": 609,
+          "difference": 2.3214612750550208
+        },
+        {
+          "seed": 610,
+          "difference": 1.9436954410059761
+        },
+        {
+          "seed": 611,
+          "difference": 2.4246620705701476
+        },
+        {
+          "seed": 612,
+          "difference": 0.0772836151582661
+        },
+        {
+          "seed": 613,
+          "difference": 2.0989640227453386
+        },
+        {
+          "seed": 614,
+          "difference": 1.4729376140493482
+        },
+        {
+          "seed": 615,
+          "difference": 2.105503423116175
+        },
+        {
+          "seed": 616,
+          "difference": 9.424539723717555
+        },
+        {
+          "seed": 617,
+          "difference": 1.308112156198407
+        },
+        {
+          "seed": 618,
+          "difference": 1.6536953622678765
+        },
+        {
+          "seed": 619,
+          "difference": 9.249935116067867
+        }
+      ]
+    },
+    {
+      "world": "sine",
+      "comparator": "dense",
+      "metric": "interpolation_mse",
+      "mean_difference": -0.28980976008624476,
+      "seed_se": 0.18521016938254112,
+      "normal95": [
+        -0.6528150216465884,
+        0.07319550147409887
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.00819821167955409
+        },
+        {
+          "seed": 601,
+          "difference": -0.43399345410885415
+        },
+        {
+          "seed": 602,
+          "difference": -3.74849791825377
+        },
+        {
+          "seed": 603,
+          "difference": 0.004259772415804747
+        },
+        {
+          "seed": 604,
+          "difference": 0.04431782722355426
+        },
+        {
+          "seed": 605,
+          "difference": 0.030331382352521086
+        },
+        {
+          "seed": 606,
+          "difference": -0.01790949161630459
+        },
+        {
+          "seed": 607,
+          "difference": -0.013046064990407835
+        },
+        {
+          "seed": 608,
+          "difference": -0.048145041488794116
+        },
+        {
+          "seed": 609,
+          "difference": -0.0405495892459356
+        },
+        {
+          "seed": 610,
+          "difference": -0.11883746140766699
+        },
+        {
+          "seed": 611,
+          "difference": 0.006595681433558875
+        },
+        {
+          "seed": 612,
+          "difference": -0.10303809975133288
+        },
+        {
+          "seed": 613,
+          "difference": -0.23502227368692596
+        },
+        {
+          "seed": 614,
+          "difference": -0.15095101440708594
+        },
+        {
+          "seed": 615,
+          "difference": -0.008473365174542946
+        },
+        {
+          "seed": 616,
+          "difference": -0.14214338925171122
+        },
+        {
+          "seed": 617,
+          "difference": -0.013126263779623337
+        },
+        {
+          "seed": 618,
+          "difference": -0.4840277534165409
+        },
+        {
+          "seed": 619,
+          "difference": -0.3321368962503915
+        }
+      ]
+    },
+    {
+      "world": "sine",
+      "comparator": "dense",
+      "metric": "extrapolation_mse",
+      "mean_difference": -10.795658593591043,
+      "seed_se": 6.011127331564964,
+      "normal95": [
+        -22.577251669942733,
+        0.9859344827606478
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.21238166846683804
+        },
+        {
+          "seed": 601,
+          "difference": -15.261529785485937
+        },
+        {
+          "seed": 602,
+          "difference": -123.49776314881937
+        },
+        {
+          "seed": 603,
+          "difference": 0.6638862182045884
+        },
+        {
+          "seed": 604,
+          "difference": -5.6167342761067705
+        },
+        {
+          "seed": 605,
+          "difference": -5.890951336763209
+        },
+        {
+          "seed": 606,
+          "difference": -2.3451291683838997
+        },
+        {
+          "seed": 607,
+          "difference": -1.551234857229431
+        },
+        {
+          "seed": 608,
+          "difference": -3.8207378254012596
+        },
+        {
+          "seed": 609,
+          "difference": -1.1676639082894509
+        },
+        {
+          "seed": 610,
+          "difference": -9.640835585272427
+        },
+        {
+          "seed": 611,
+          "difference": -2.552900160152187
+        },
+        {
+          "seed": 612,
+          "difference": -3.897228727291173
+        },
+        {
+          "seed": 613,
+          "difference": -10.73622759729007
+        },
+        {
+          "seed": 614,
+          "difference": -5.441509566731856
+        },
+        {
+          "seed": 615,
+          "difference": -0.468833712009296
+        },
+        {
+          "seed": 616,
+          "difference": -5.588564715868676
+        },
+        {
+          "seed": 617,
+          "difference": -0.6111365006328024
+        },
+        {
+          "seed": 618,
+          "difference": -12.53531480595608
+        },
+        {
+          "seed": 619,
+          "difference": -6.165144080808389
+        }
+      ]
+    },
+    {
+      "world": "exponential",
+      "comparator": "linear",
+      "metric": "interpolation_mse",
+      "mean_difference": 0.0,
+      "seed_se": 0.0,
+      "normal95": [
+        0.0,
+        0.0
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.0
+        },
+        {
+          "seed": 601,
+          "difference": 0.0
+        },
+        {
+          "seed": 602,
+          "difference": 0.0
+        },
+        {
+          "seed": 603,
+          "difference": 0.0
+        },
+        {
+          "seed": 604,
+          "difference": 0.0
+        },
+        {
+          "seed": 605,
+          "difference": 0.0
+        },
+        {
+          "seed": 606,
+          "difference": 0.0
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 0.0
+        },
+        {
+          "seed": 609,
+          "difference": 0.0
+        },
+        {
+          "seed": 610,
+          "difference": 0.0
+        },
+        {
+          "seed": 611,
+          "difference": 0.0
+        },
+        {
+          "seed": 612,
+          "difference": 0.0
+        },
+        {
+          "seed": 613,
+          "difference": 0.0
+        },
+        {
+          "seed": 614,
+          "difference": 0.0
+        },
+        {
+          "seed": 615,
+          "difference": 0.0
+        },
+        {
+          "seed": 616,
+          "difference": 0.0
+        },
+        {
+          "seed": 617,
+          "difference": 0.0
+        },
+        {
+          "seed": 618,
+          "difference": 0.0
+        },
+        {
+          "seed": 619,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "world": "exponential",
+      "comparator": "linear",
+      "metric": "extrapolation_mse",
+      "mean_difference": 0.0,
+      "seed_se": 0.0,
+      "normal95": [
+        0.0,
+        0.0
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.0
+        },
+        {
+          "seed": 601,
+          "difference": 0.0
+        },
+        {
+          "seed": 602,
+          "difference": 0.0
+        },
+        {
+          "seed": 603,
+          "difference": 0.0
+        },
+        {
+          "seed": 604,
+          "difference": 0.0
+        },
+        {
+          "seed": 605,
+          "difference": 0.0
+        },
+        {
+          "seed": 606,
+          "difference": 0.0
+        },
+        {
+          "seed": 607,
+          "difference": 0.0
+        },
+        {
+          "seed": 608,
+          "difference": 0.0
+        },
+        {
+          "seed": 609,
+          "difference": 0.0
+        },
+        {
+          "seed": 610,
+          "difference": 0.0
+        },
+        {
+          "seed": 611,
+          "difference": 0.0
+        },
+        {
+          "seed": 612,
+          "difference": 0.0
+        },
+        {
+          "seed": 613,
+          "difference": 0.0
+        },
+        {
+          "seed": 614,
+          "difference": 0.0
+        },
+        {
+          "seed": 615,
+          "difference": 0.0
+        },
+        {
+          "seed": 616,
+          "difference": 0.0
+        },
+        {
+          "seed": 617,
+          "difference": 0.0
+        },
+        {
+          "seed": 618,
+          "difference": 0.0
+        },
+        {
+          "seed": 619,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "world": "exponential",
+      "comparator": "dense",
+      "metric": "interpolation_mse",
+      "mean_difference": 0.035363378548366194,
+      "seed_se": 0.002560657859305,
+      "normal95": [
+        0.03034458136739896,
+        0.040382175729333426
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.02794679999999923
+        },
+        {
+          "seed": 601,
+          "difference": 0.03142138361884407
+        },
+        {
+          "seed": 602,
+          "difference": 0.05919753046432438
+        },
+        {
+          "seed": 603,
+          "difference": 0.025246396682694613
+        },
+        {
+          "seed": 604,
+          "difference": 0.0432512445939879
+        },
+        {
+          "seed": 605,
+          "difference": 0.06862289827915088
+        },
+        {
+          "seed": 606,
+          "difference": 0.03064374818133193
+        },
+        {
+          "seed": 607,
+          "difference": 0.03270177090550951
+        },
+        {
+          "seed": 608,
+          "difference": 0.02701493198862973
+        },
+        {
+          "seed": 609,
+          "difference": 0.031230578902908965
+        },
+        {
+          "seed": 610,
+          "difference": 0.036360075009157763
+        },
+        {
+          "seed": 611,
+          "difference": 0.026846225636533595
+        },
+        {
+          "seed": 612,
+          "difference": 0.024268206715954498
+        },
+        {
+          "seed": 613,
+          "difference": 0.03139414527378138
+        },
+        {
+          "seed": 614,
+          "difference": 0.03643014043513032
+        },
+        {
+          "seed": 615,
+          "difference": 0.03279645891551922
+        },
+        {
+          "seed": 616,
+          "difference": 0.03288263576489459
+        },
+        {
+          "seed": 617,
+          "difference": 0.033043894904504746
+        },
+        {
+          "seed": 618,
+          "difference": 0.027478510622282487
+        },
+        {
+          "seed": 619,
+          "difference": 0.04848999407218404
+        }
+      ]
+    },
+    {
+      "world": "exponential",
+      "comparator": "dense",
+      "metric": "extrapolation_mse",
+      "mean_difference": 2.5181230852478222,
+      "seed_se": 0.06325108081353839,
+      "normal95": [
+        2.3941532448700547,
+        2.64209292562559
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 2.368823149700023
+        },
+        {
+          "seed": 601,
+          "difference": 2.474486185967034
+        },
+        {
+          "seed": 602,
+          "difference": 3.152786562150261
+        },
+        {
+          "seed": 603,
+          "difference": 2.484119540599418
+        },
+        {
+          "seed": 604,
+          "difference": 2.591461856361979
+        },
+        {
+          "seed": 605,
+          "difference": 2.609941920953359
+        },
+        {
+          "seed": 606,
+          "difference": 2.6729064689134194
+        },
+        {
+          "seed": 607,
+          "difference": 2.285281084503927
+        },
+        {
+          "seed": 608,
+          "difference": 2.6712097278728226
+        },
+        {
+          "seed": 609,
+          "difference": 2.2270847213903524
+        },
+        {
+          "seed": 610,
+          "difference": 2.144730725619735
+        },
+        {
+          "seed": 611,
+          "difference": 2.3696115799631006
+        },
+        {
+          "seed": 612,
+          "difference": 2.3513202996981843
+        },
+        {
+          "seed": 613,
+          "difference": 2.6018048214552794
+        },
+        {
+          "seed": 614,
+          "difference": 3.071999040321624
+        },
+        {
+          "seed": 615,
+          "difference": 2.1740413096470417
+        },
+        {
+          "seed": 616,
+          "difference": 2.383939938295528
+        },
+        {
+          "seed": 617,
+          "difference": 2.8533247932290573
+        },
+        {
+          "seed": 618,
+          "difference": 2.688713974148576
+        },
+        {
+          "seed": 619,
+          "difference": 2.184874004165725
+        }
+      ]
+    },
+    {
+      "world": "noise_only",
+      "comparator": "linear",
+      "metric": "interpolation_mse",
+      "mean_difference": -9.551907801941511e-05,
+      "seed_se": 0.00010232540177174719,
+      "normal95": [
+        -0.00029607318019563066,
+        0.00010503502415680041
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.000269965474571741
+        },
+        {
+          "seed": 601,
+          "difference": -0.0001706025502027283
+        },
+        {
+          "seed": 602,
+          "difference": -0.00032188259914478886
+        },
+        {
+          "seed": 603,
+          "difference": -0.00014780960807614667
+        },
+        {
+          "seed": 604,
+          "difference": 0.0002137850556341567
+        },
+        {
+          "seed": 605,
+          "difference": -0.0018181999501507536
+        },
+        {
+          "seed": 606,
+          "difference": -2.6668216941734535e-05
+        },
+        {
+          "seed": 607,
+          "difference": -3.6527523005421555e-05
+        },
+        {
+          "seed": 608,
+          "difference": -0.00021183858852363827
+        },
+        {
+          "seed": 609,
+          "difference": 0.0003451423539397708
+        },
+        {
+          "seed": 610,
+          "difference": 0.00014060776620193507
+        },
+        {
+          "seed": 611,
+          "difference": -0.0003169514443974156
+        },
+        {
+          "seed": 612,
+          "difference": 0.00027313952824617503
+        },
+        {
+          "seed": 613,
+          "difference": -0.00017601512981567382
+        },
+        {
+          "seed": 614,
+          "difference": -0.00017006061644454906
+        },
+        {
+          "seed": 615,
+          "difference": -0.0002363147893783735
+        },
+        {
+          "seed": 616,
+          "difference": 0.0002625632882534139
+        },
+        {
+          "seed": 617,
+          "difference": 7.141138925850863e-05
+        },
+        {
+          "seed": 618,
+          "difference": -2.9439085201502023e-05
+        },
+        {
+          "seed": 619,
+          "difference": 0.00017531368478872233
+        }
+      ]
+    },
+    {
+      "world": "noise_only",
+      "comparator": "linear",
+      "metric": "extrapolation_mse",
+      "mean_difference": 0.008728699166163952,
+      "seed_se": 0.0030857561352606493,
+      "normal95": [
+        0.002680728275979572,
+        0.014776670056348331
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.02152269656972379
+        },
+        {
+          "seed": 601,
+          "difference": -0.0011308876854058852
+        },
+        {
+          "seed": 602,
+          "difference": -0.0021310001539513747
+        },
+        {
+          "seed": 603,
+          "difference": -0.0008260228149777749
+        },
+        {
+          "seed": 604,
+          "difference": 0.01978057540881554
+        },
+        {
+          "seed": 605,
+          "difference": -0.00471933068218055
+        },
+        {
+          "seed": 606,
+          "difference": -0.00012847534099719396
+        },
+        {
+          "seed": 607,
+          "difference": -0.0002196771769172815
+        },
+        {
+          "seed": 608,
+          "difference": -0.0014028232705483857
+        },
+        {
+          "seed": 609,
+          "difference": 0.03980477880004301
+        },
+        {
+          "seed": 610,
+          "difference": 0.022598452230575505
+        },
+        {
+          "seed": 611,
+          "difference": -0.002095708836782204
+        },
+        {
+          "seed": 612,
+          "difference": 0.02078729957447027
+        },
+        {
+          "seed": 613,
+          "difference": -0.0009004049899608901
+        },
+        {
+          "seed": 614,
+          "difference": -0.0007194447816736244
+        },
+        {
+          "seed": 615,
+          "difference": -0.0007471803105752306
+        },
+        {
+          "seed": 616,
+          "difference": 0.009945615843522809
+        },
+        {
+          "seed": 617,
+          "difference": 0.03463226589171355
+        },
+        {
+          "seed": 618,
+          "difference": -9.225005418842837e-05
+        },
+        {
+          "seed": 619,
+          "difference": 0.020615505102573376
+        }
+      ]
+    },
+    {
+      "world": "noise_only",
+      "comparator": "dense",
+      "metric": "interpolation_mse",
+      "mean_difference": -0.0015275509080890453,
+      "seed_se": 0.0005302538391525277,
+      "normal95": [
+        -0.0025668293354920947,
+        -0.0004882724806859961
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": -5.63487361879304e-05
+        },
+        {
+          "seed": 601,
+          "difference": -0.0003105021657996343
+        },
+        {
+          "seed": 602,
+          "difference": -0.007414896933355499
+        },
+        {
+          "seed": 603,
+          "difference": -0.0008379024199069468
+        },
+        {
+          "seed": 604,
+          "difference": -0.002394572581890432
+        },
+        {
+          "seed": 605,
+          "difference": -0.00577204898139355
+        },
+        {
+          "seed": 606,
+          "difference": -0.00013001627221161896
+        },
+        {
+          "seed": 607,
+          "difference": -0.0005220078039633875
+        },
+        {
+          "seed": 608,
+          "difference": -0.0008592416304274178
+        },
+        {
+          "seed": 609,
+          "difference": -9.970871656066562e-05
+        },
+        {
+          "seed": 610,
+          "difference": -6.050114054035531e-05
+        },
+        {
+          "seed": 611,
+          "difference": -0.0004153347620667361
+        },
+        {
+          "seed": 612,
+          "difference": -0.0006000869738901766
+        },
+        {
+          "seed": 613,
+          "difference": -0.0006999869442732675
+        },
+        {
+          "seed": 614,
+          "difference": -0.0005147529957920897
+        },
+        {
+          "seed": 615,
+          "difference": -0.0006716342076141626
+        },
+        {
+          "seed": 616,
+          "difference": -0.00045638670935759965
+        },
+        {
+          "seed": 617,
+          "difference": -0.00014714170140297774
+        },
+        {
+          "seed": 618,
+          "difference": -0.007359370153938288
+        },
+        {
+          "seed": 619,
+          "difference": -0.001228576331208171
+        }
+      ]
+    },
+    {
+      "world": "noise_only",
+      "comparator": "dense",
+      "metric": "extrapolation_mse",
+      "mean_difference": -0.04723423988125188,
+      "seed_se": 0.01814678998402126,
+      "normal95": [
+        -0.08280129468494574,
+        -0.011667185077558026
+      ],
+      "per_seed": [
+        {
+          "seed": 600,
+          "difference": 0.004794734391928825
+        },
+        {
+          "seed": 601,
+          "difference": -0.005051653454324098
+        },
+        {
+          "seed": 602,
+          "difference": -0.3338374596413862
+        },
+        {
+          "seed": 603,
+          "difference": -0.01632960264047212
+        },
+        {
+          "seed": 604,
+          "difference": -0.06706303847219969
+        },
+        {
+          "seed": 605,
+          "difference": -0.07215605895033064
+        },
+        {
+          "seed": 606,
+          "difference": -0.007204059133441729
+        },
+        {
+          "seed": 607,
+          "difference": -0.03592460925134053
+        },
+        {
+          "seed": 608,
+          "difference": -0.030535150112736942
+        },
+        {
+          "seed": 609,
+          "difference": 0.0033697040670529685
+        },
+        {
+          "seed": 610,
+          "difference": 0.008582660908218354
+        },
+        {
+          "seed": 611,
+          "difference": -0.014185581948123801
+        },
+        {
+          "seed": 612,
+          "difference": -0.0483693012288819
+        },
+        {
+          "seed": 613,
+          "difference": -0.018233084277042167
+        },
+        {
+          "seed": 614,
+          "difference": -0.02521240968458986
+        },
+        {
+          "seed": 615,
+          "difference": -0.018428302972581356
+        },
+        {
+          "seed": 616,
+          "difference": -0.015863186903681117
+        },
+        {
+          "seed": 617,
+          "difference": 0.024131000412609488
+        },
+        {
+          "seed": 618,
+          "difference": -0.17625017328539053
+        },
+        {
+          "seed": 619,
+          "difference": -0.1009192254483246
+        }
+      ]
+    }
+  ],
+  "interval_scope": "descriptive variation in declared development seeds, not general law discovery"
+}
