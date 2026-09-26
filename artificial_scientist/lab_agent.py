@@ -23,7 +23,7 @@ class Investigator:
     def __init__(self, initial, policy='active', seed=0, proposal='enumerate'):
         if policy not in ('active', 'random', 'coverage'):
             raise ValueError('unknown policy')
-        if proposal not in ('enumerate', 'guided'):
+        if proposal not in ('enumerate', 'guided', 'guided-partial'):
             raise ValueError('unknown proposal mode')
         self.proposal = proposal
         self.residual_records = []
@@ -31,7 +31,7 @@ class Investigator:
         self.residual_epoch = 0
         self.escape_cursor = 0
         self.origins = {}
-        self.search_cost = dict(candidate_fits=0, feature_evaluations=0, refits=0)
+        self.search_cost = dict(candidate_fits=0, feature_evaluations=0, projection_feature_evaluations=0, projection_calls=0, refits=0)
         self.policy = policy
         self.rng = random.Random(seed)
         self.observation = initial
@@ -121,12 +121,12 @@ class Investigator:
             raise ValueError('outcome timing violates public contract')
         errors = []
         incumbent = self.final_model()
-        if self.proposal == 'guided' and incumbent.id != self.residual_incumbent:
+        if self.proposal != 'enumerate' and incumbent.id != self.residual_incumbent:
             self.residual_records = []
             self.residual_incumbent = incumbent.id
             self.residual_epoch += 1
         incumbent_prediction = next(p for p in self.pending['predictions'] if p['model_id'] == incumbent.id)
-        previous_row_count = len(training_rows(self.history)) if self.proposal == 'guided' else 0
+        previous_row_count = len(training_rows(self.history)) if self.proposal != 'enumerate' else 0
         mature = [m for m in self.models if len(m.errors) >= 3]
         prior_best = self.final_model() if mature else None
         prior_error = sum(prior_best.errors) / len(prior_best.errors) if prior_best else None
@@ -142,7 +142,7 @@ class Investigator:
         if action.kind == 'reset':
             self.home_noise.append((outcome.x ** 2 + outcome.y ** 2) / 2)
         rows = training_rows(self.history)
-        if self.proposal == 'guided':
+        if self.proposal != 'enumerate':
             for axis, (inputs, target) in zip(('x', 'y'), rows[previous_row_count:]):
                 self.residual_records.append(dict(step=self.steps-1, axis=axis, inputs=inputs,
                     model_id=incumbent.id, incumbent_epoch=self.residual_epoch, coefficient_version=incumbent_prediction['coefficients'],
@@ -156,26 +156,26 @@ class Investigator:
                 updated.append(dict(model_id=model.id, before=list(model.coefficients), after=list(coefficients)))
                 model.coefficients = coefficients
         added, removed = [], []
-        search = dict(mode=self.proposal, candidate_fits=0, feature_evaluations=0)
+        search = dict(mode=self.proposal, candidate_fits=0, feature_evaluations=0, projection_feature_evaluations=0, projection_calls=0)
         noise = sum(self.home_noise) / len(self.home_noise)
         best_latest = next((e['squared_error'] for e in errors if prior_best and e['model_id'] == prior_best.id), 0.0)
         surprise = prior_error is not None and best_latest > max(4 * prior_error, 8 * noise, 1e-4)
         trigger = 'prediction_failure' if surprise else 'scheduled_search'
         if (self.steps % 4 == 0 or surprise) and self.steps - self.last_proposal_step >= 2 and len(rows) >= 4:
             try:
-                if self.proposal == 'guided':
+                if self.proposal != 'enumerate':
                     new, self.escape_cursor = guided_propose(rows, self.seen_structures, incumbent,
-                        self.residual_records, self.escape_cursor, deadline=deadline, audit=search)
+                        self.residual_records, self.escape_cursor, deadline=deadline, audit=search, partial=self.proposal == 'guided-partial')
                 else:
                     new = propose(rows, self.seen_structures, deadline=deadline, audit=search)
             except TimeoutError:
-                for key in ('candidate_fits', 'feature_evaluations'):
+                for key in ('candidate_fits', 'feature_evaluations', 'projection_feature_evaluations', 'projection_calls'):
                     self.search_cost[key] += search[key]
                 self.pending = None
                 return errors, dict(added=[], removed=[], updated=updated, trigger=trigger, search=search, incomplete='proposal search CPU cap')
-            for key in ('candidate_fits', 'feature_evaluations'):
+            for key in ('candidate_fits', 'feature_evaluations', 'projection_feature_evaluations', 'projection_calls'):
                 self.search_cost[key] += search[key]
-            if self.proposal == 'guided':
+            if self.proposal != 'enumerate':
                 for record in search['candidates']:
                     if record['selected']:
                         self.origins[record['model_id']] = dict(proposed_after_step=self.steps-1, base_model_id=incumbent.id, feature=record['feature'], origin=record['origin'])

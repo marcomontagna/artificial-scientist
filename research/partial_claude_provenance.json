@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-5-5",
+  "scope": "Read-only diagnosis/design critique; suggested partial association instead of draft grouping",
+  "access": "Official CLI; previously verified Pro access; no paid API fallback",
+  "is_error": false,
+  "sha256": {
+    "results/runs/diversity_claude_20260926/request.txt": "44d59bb5f63ec962da3f555afe2064348a39a4ffc43328ad92ddf69d81a7b29b",
+    "results/runs/diversity_claude_20260926/response.json": "1160ec7da5c611fcacc868cd04488c691d2b57bc41b6fc11b221d743ba3a7103",
+    "research/claude_partial_review.md": "cd1326d677ed8fe2b076a9700d907487dd1c070e5c8b1c6b7217c9a541a9d09b"
+  }
+}

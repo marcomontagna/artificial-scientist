@@ -145,7 +145,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--variant', choices=('development', 'challenge', 'noise'), default='development')
     parser.add_argument('--seed', type=int, default=260926)
-    parser.add_argument('--proposal', choices=('enumerate', 'guided'), default='enumerate')
+    parser.add_argument('--proposal', choices=('enumerate', 'guided', 'guided-partial'), default='enumerate')
     parser.add_argument('--policies', nargs='+', choices=('active', 'random', 'coverage'), default=['active', 'random', 'coverage'])
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
