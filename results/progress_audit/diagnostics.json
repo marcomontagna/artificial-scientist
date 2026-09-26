@@ -1,0 +1,232 @@
+{
+  "kind": "read-only saved-trace audit; no world runs or learner changes",
+  "source_commit": "6d9c19008dd0bfe67165e420ac1b40bcc156ddf1",
+  "method": "Reconstruct public Transition records, compute existing training_rows and fixed v+u fit; count saved model presence/choice diagnostics; recompute axis error from saved evaluation predictions. Steps are zero-based. Remove-one-model diagnostics renormalize fixed weights, not retraining or causal-benefit tests.",
+  "files": {
+    "results/runs/partial_v1_challenge_guided/active/trace.json": "e97fdfd3a1887e5521a6412c8d299beabcbd2cdc2fa7afd828bb9ee67e35a051",
+    "results/runs/partial_v1_challenge_guided-partial/active/trace.json": "37fdf9aa53e0e1ba5f257ae82092be7eb0c5ea3d0bb34e5508dfd539d4870cab",
+    "results/tool_lab_v1/summary.json": "cdc1d2772ac80797c4bf7422e80759a6687db95bbefe93ff00ab6ca4ce24a7fa",
+    "results/guided_v1/summary.json": "603ff57f0f2df2064b5cfcb2d7ff084dc99e7f85a8e9fafffe0571259db2a2ba",
+    "results/partial_v1/summary.json": "dbc1e1ba6e59eec2a4b491311d1645fbb7f0e7895e9bd903a3b6111a39953e32"
+  },
+  "challenge": {
+    "guided": {
+      "eligible_training_transitions": 36,
+      "formula": "delta = 0.769821*v + 0.29507*u; p_next = p + delta; v_next = delta (per axis)",
+      "final_coefficients": [
+        0.7698211392481582,
+        0.2950702334329058
+      ],
+      "refit_all_history_coefficients": [
+        0.7698211392481582,
+        0.2950702334329058
+      ],
+      "first_added_step": 39,
+      "presence_at_decisions": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "choice_changed_if_model_removed_steps": [
+        40,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "removed_at_steps": [],
+      "early_weights": [
+        {
+          "step": 40,
+          "weight": 0.04193877007119095
+        },
+        {
+          "step": 41,
+          "weight": 0.041726247807940535
+        },
+        {
+          "step": 42,
+          "weight": 0.04192076234771464
+        },
+        {
+          "step": 43,
+          "weight": 0.7990929057834623
+        },
+        {
+          "step": 44,
+          "weight": 0.7939167987125566
+        },
+        {
+          "step": 45,
+          "weight": 0.7956563082396237
+        },
+        {
+          "step": 46,
+          "weight": 0.7917303321140292
+        },
+        {
+          "step": 47,
+          "weight": 1.0
+        }
+      ],
+      "post_step11_wait_actions": 10,
+      "axis_mse": {
+        "x": 0.05186969857570038,
+        "y": 0.0013012170213827453
+      }
+    },
+    "guided-partial": {
+      "eligible_training_transitions": 33,
+      "formula": "delta = 0.769724*v + 0.293692*u; p_next = p + delta; v_next = delta (per axis)",
+      "final_coefficients": [
+        0.7697243617230787,
+        0.29369166997719587
+      ],
+      "refit_all_history_coefficients": [
+        0.7697243617230787,
+        0.29369166997719587
+      ],
+      "first_added_step": 11,
+      "presence_at_decisions": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "choice_changed_if_model_removed_steps": [
+        12,
+        15,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        45,
+        47
+      ],
+      "removed_at_steps": [],
+      "early_weights": [
+        {
+          "step": 12,
+          "weight": 0.067143466308003
+        },
+        {
+          "step": 13,
+          "weight": 0.0692548239314784
+        },
+        {
+          "step": 14,
+          "weight": 0.053333144239000346
+        },
+        {
+          "step": 15,
+          "weight": 0.8387009677130612
+        },
+        {
+          "step": 16,
+          "weight": 0.7235489943607337
+        },
+        {
+          "step": 17,
+          "weight": 0.7739739159981263
+        },
+        {
+          "step": 18,
+          "weight": 0.7981397104987417
+        },
+        {
+          "step": 19,
+          "weight": 0.9996141384344804
+        }
+      ],
+      "post_step11_wait_actions": 13,
+      "axis_mse": {
+        "x": 0.05257921195948852,
+        "y": 0.0012156264762471546
+      }
+    }
+  },
+  "progress_metrics": {
+    "development": {
+      "enumerate_active": 0.0012366504540847892,
+      "guided_active": 0.00028810168902201986,
+      "partial_active": 0.0002632237085480289,
+      "original_random": 0.0002617783455411766,
+      "original_coverage": 0.0006753961561911417
+    },
+    "challenge": {
+      "enumerate_active": 0.0264773178178445,
+      "guided_active": 0.05317091559708312,
+      "partial_active": 0.053794838435735674,
+      "original_random": 0.2317633410890977,
+      "original_coverage": 0.021287692366341638
+    },
+    "noise": {
+      "enumerate_active": 0.11884741299262122,
+      "guided_active": 0.11967441159161042,
+      "partial_active": 0.11975947918741259,
+      "original_random": 0.11957671236682899,
+      "original_coverage": 0.11884741299262122
+    }
+  }
+}

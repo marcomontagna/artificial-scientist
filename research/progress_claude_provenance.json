@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-5-5",
+  "scope": "Bounded critique of coordinator-supplied facts and proposed milestone; no independent file audit or tool use",
+  "access": "Previously verified subscription with extra usage disabled; official CLI with API credentials removed, no paid fallback",
+  "is_error": false,
+  "sha256": {
+    "results/runs/progress_review_20260926/request.txt": "6ed5cf40f2e8e077a54642b43071797820b359596a356f47ef8f6a39eeea2b46",
+    "results/runs/progress_review_20260926/response.json": "9323587c00713c7188c15b8736ee776b4db4b9cc37236bfb131f5acb047b7e09",
+    "research/claude_progress_review.md": "dd9f412afe975ec48d640a62cf9581beefc9dec541277ba95b8e30669208bd71"
+  }
+}

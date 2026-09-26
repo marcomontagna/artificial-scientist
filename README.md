@@ -10,7 +10,7 @@ One persistent physical laboratory: first a single object moving in 2D, with hid
 
 **Current status: the first connected learner is implemented and its bounded demonstration is complete.** It proposes formulas, predicts before acting, chooses tools and revises its explanations. Thirty-two tests pass. No experiment is currently running. Conditioning its guided proposals makes a useful model appear earlier, but does not improve harder-world prediction. Both guided modes remain optional; enumeration stays the default. No discovery or novelty claim.
 
-[Latest: earlier proposals without better harder-world prediction](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [First-loop results](research/tool_lab_result.md)
+[Latest: are we actually improving?](research/progress_assessment.md) · [Last experiment](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [First-loop results](research/tool_lab_result.md)
 
 The earlier disconnected studies remain in the [archive](archive/README.md); their raw runs are untouched.
 
