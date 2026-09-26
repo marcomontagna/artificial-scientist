@@ -8,13 +8,15 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. Understanding is the objective: improve predictions, uncertainty and explanations by choosing informative experiments; a win/lose reward is optional. The earlier context-selection line is frozen. The current priority is explicit equations: fit a hypothesis, test its terms, challenge where it applies, and eventually revise it through informative experiments. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
-## Latest: equations, evidence and falsification
+## Latest: one equation, independent checks
 
-[Three reviewed equation studies](research/overnight_equation_report.md) are complete; **90 tests pass**. A small model fits coefficients and selects among six supplied monomials. It outputs formulas such as `y ≈ -0.8360u + 0.6315u²`; it does not invent variables or operators.
+[The integrated equation study](research/equation_pipeline_result.md) is complete: **480 datasets, 1,440 candidates; 96 tests pass**. The learner selects polynomial terms on A, refits on independent B, and checks that frozen equation on C. Its predefined integration screen passes. It confirms all strong true terms, but only49%/39% of weaker affine/quadratic terms, versus63%/60% for ordinary pooled BIC. Pooled BIC also has lower mean prediction MSE in all four polynomial families. Splitting supports the current whole-form test; it is not a demonstrated prediction advantage.
 
-The first recovery screen **failed** because noise produced spurious formulas. Independent term confirmation then reduced noise false-claim datasets from32/100 to0/100, retaining198/200 true quadratic terms. A separate fixed-full-model test detected wrong exponential/cubic approximations in40/40 wide-domain audits, versus10/40 and26/40 locally. These are known statistical components, not a new autonomous scientist or a trained RL policy. The first failure remains a failure; the later stages do not repair its fitted predictions.
+No false term was confirmed in any in-family/noise cell (each0/60); zero observed is not zero risk. Known Gaussian noise and supplied polynomial grammar remain major assumptions. There is no trained RL policy or novelty claim. Next, following Claude’s critique: review a minimal reject–revise–fresh-check loop with stronger inference and ordinary-selection baselines.
 
-Claude Opus5.5 reviewed each stage; separate agents reviewed code and independently audited all numerical evidence. [Short report](research/overnight_equation_report.md) · [Reproduce](research/equation_reproduction.md) · [Next steps](NEXT_STEPS.md). The equation studies are finished, not running in the background. Existing visualizations below show the earlier interactive learners.
+**Correction:** random-stream overlap affects the earlier domain study's aggregate uncertainty claims. Its counts remain descriptive; old data are preserved. [Erratum](research/equation_domain_rng_erratum.md). The current pipeline fixes the stream-spacing defect and tests against recurrence.
+
+[Current result](research/equation_pipeline_result.md) · [Earlier three studies](research/overnight_equation_report.md) · [Next steps](NEXT_STEPS.md). Execution is finished. Existing visualizations below replay the earlier interactive learners.
 
 ## Previous stateful learner and visualization
 

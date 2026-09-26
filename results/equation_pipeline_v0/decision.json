@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "hard_integration_pass": true,
+  "practical_screen_pass": true,
+  "false_term_guards": {
+    "strong_affine_selected_refit": true,
+    "strong_affine_fixed_full": true,
+    "strong_affine_pooled_bic": true,
+    "strong_quadratic_selected_refit": true,
+    "strong_quadratic_fixed_full": true,
+    "strong_quadratic_pooled_bic": true,
+    "weak_affine_selected_refit": true,
+    "weak_affine_fixed_full": true,
+    "weak_affine_pooled_bic": true,
+    "weak_quadratic_selected_refit": true,
+    "weak_quadratic_fixed_full": true,
+    "weak_quadratic_pooled_bic": true,
+    "noise_only_selected_refit": true,
+    "noise_only_fixed_full": true,
+    "noise_only_pooled_bic": true
+  },
+  "strong_recall_guards": {
+    "strong_affine": true,
+    "strong_quadratic": true
+  },
+  "full_null_warning_worlds": [],
+  "limitation": "known-method integration; no novelty or simultaneous calibration claim"
+}

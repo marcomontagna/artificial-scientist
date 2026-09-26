@@ -1,5 +1,13 @@
 # Results
 
+## Integrated equation pipeline — September 26
+
+[Same-equation study](research/equation_pipeline_result.md): **480 datasets / 1,440 candidates / 30,720 observations**, clean source`1ef9ae5`;96tests pass. Both fixed integration/practical screens pass. Independent refit confirms180/180 strong affine and115/115 strong quadratic terms, but only88/180 weak affine and45/115 weak quadratic, versus114/180 and69/115 for pooled BIC. Pooled BIC has lower mean prediction MSE in all four polynomial families; its whole-form test is unavailable under the present derivation. No superiority or novelty claim.
+
+Each in-family/noise cell has0/60 falsely confirmed datasets for each pipeline. The selected strong-model adequacy test rejects6/60 per family; the duplicated full-model control rejects5/60. Three fixed outside functions are rejected60/60 each. Known-noise assumptions and wide uncertainty remain; paired/duplicate worlds must not be pooled.
+
+**Historical correction:** the earlier domain study has38cross-seed random-stream collisions; aggregate independence-based intervals are unsupported. Counts remain descriptive and raw evidence unchanged. [Erratum](research/equation_domain_rng_erratum.md). Current stream keys are separated and regression-tested.
+
 ## Three equation studies — September 26
 
 The [short overnight report](research/overnight_equation_report.md) covers840development datasets across three separately reviewed runs;90tests pass. Stage1 recovery **failed**:9/20noise cases produced nonzero formulas. Stage2 confirmation passed: noise false-claim datasets fell32/100→0/100 and quadratic15/100→0/100, with198/200true quadratic terms retained. Stage3 domain challenge passed: uncertainty-aware rejection rose10/40→40/40 for exponential and26/40→40/40 for cubic; correct-model controls stayed2/40 perarm. Crude wide-domain rejection was29/40 on those controls.
