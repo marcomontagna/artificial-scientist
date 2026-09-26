@@ -1,0 +1,254 @@
+{
+  "development": {
+    "guided": {
+      "run": {
+        "variant": "development",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 53,
+            "training_cost": 80,
+            "formula": "delta = 0.817131*v + 0.417184*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 99,
+              "feature_evaluations": 3640,
+              "projection_feature_evaluations": 0,
+              "projection_calls": 0,
+              "refits": 381
+            },
+            "metrics": {
+              "learned": 0.00028810168902201986,
+              "persistence": 0.4842455054325599,
+              "home": 0.48554009542623766,
+              "linear": 0.00024272542577987797
+            },
+            "cpu_seconds": 0.432093
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": 11
+    },
+    "guided-partial": {
+      "run": {
+        "variant": "development",
+        "seed": 260926,
+        "proposal": "guided-partial",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 50,
+            "training_cost": 80,
+            "formula": "delta = 0.81744*v + 0.419899*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 91,
+              "feature_evaluations": 2800,
+              "projection_feature_evaluations": 408,
+              "projection_calls": 830,
+              "refits": 357
+            },
+            "metrics": {
+              "learned": 0.0002632237085480289,
+              "persistence": 0.4842455054325599,
+              "home": 0.48554009542623766,
+              "linear": 0.0002556929196122119
+            },
+            "cpu_seconds": 0.38739700000000005
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": 11
+    }
+  },
+  "challenge": {
+    "guided": {
+      "run": {
+        "variant": "challenge",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 52,
+            "training_cost": 80,
+            "formula": "delta = 0.769821*v + 0.29507*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 55,
+              "feature_evaluations": 1240,
+              "projection_feature_evaluations": 0,
+              "projection_calls": 0,
+              "refits": 370
+            },
+            "metrics": {
+              "learned": 0.05317091559708312,
+              "persistence": 0.3790924781053629,
+              "home": 0.38162510189267385,
+              "linear": 0.10420538439205237
+            },
+            "cpu_seconds": 0.36642399999999997
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": 39
+    },
+    "guided-partial": {
+      "run": {
+        "variant": "challenge",
+        "seed": 260926,
+        "proposal": "guided-partial",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 51,
+            "training_cost": 80,
+            "formula": "delta = 0.769724*v + 0.293692*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 76,
+              "feature_evaluations": 1920,
+              "projection_feature_evaluations": 252,
+              "projection_calls": 650,
+              "refits": 362
+            },
+            "metrics": {
+              "learned": 0.053794838435735674,
+              "persistence": 0.3790924781053629,
+              "home": 0.38162510189267385,
+              "linear": 0.06223568478526676
+            },
+            "cpu_seconds": 0.375361
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": 11
+    }
+  },
+  "noise": {
+    "guided": {
+      "run": {
+        "variant": "noise",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 74,
+            "training_cost": 80,
+            "formula": "delta = -0.966275*p; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 74,
+              "feature_evaluations": 1840,
+              "projection_feature_evaluations": 0,
+              "projection_calls": 0,
+              "refits": 532
+            },
+            "metrics": {
+              "learned": 0.11967441159161042,
+              "persistence": 0.16724790482262744,
+              "home": 0.12008694707289493,
+              "linear": 0.1558031179267065
+            },
+            "cpu_seconds": 0.7605729999999999
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": 59
+    },
+    "guided-partial": {
+      "run": {
+        "variant": "noise",
+        "seed": 260926,
+        "proposal": "guided-partial",
+        "source_commit": "3acb2ff357285859e2fff9aca100e153c6929019",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 74,
+            "training_cost": 80,
+            "formula": "delta = -0.973095*p; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 63,
+              "feature_evaluations": 1680,
+              "projection_feature_evaluations": 112,
+              "projection_calls": 446,
+              "refits": 532
+            },
+            "metrics": {
+              "learned": 0.11975947918741259,
+              "persistence": 0.16724790482262744,
+              "home": 0.12008694707289493,
+              "linear": 0.1653646895014087
+            },
+            "cpu_seconds": 0.764938
+          }
+        }
+      },
+      "first_v_plus_u_added_step_zero_based": null
+    }
+  }
+}

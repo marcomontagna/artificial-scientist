@@ -1,9 +1,7 @@
-# Next step: understand a guided-search failure
+# Next step: connect earlier explanations to better experiments
 
-The observation-guided proposer is implemented. It links recorded prediction failures to a shortlist of local formula changes and then to actual experiment choices. [Results](research/guided_proposal_result.md) · [Replay](results/guided_v1/replay.html). All runs are finished.
+The one diagnosed scoring repair is implemented and tested. It advances the motion-plus-push proposal from step 39 to 11, but final harder-world prediction does not improve. [Results](research/partial_proposal_result.md) · [Replay](results/partial_v1/replay.html). All runs are finished; enumeration remains the default and both guided modes are optional.
 
-Guided search uses fewer candidate fits and improves the simple-world check, but roughly doubles error on the harder world. Keep it opt-in; enumeration remains the default. This is a meaningful selective-search mechanism, not proof that copying human reasoning is better.
+Inspect the saved harder-world runs to understand what happens after the earlier proposal: which models retain influence, what evidence their subsequent experiments collect, and where their predictions fail. Distinguish insufficient model representation from poor data collection or fitting before choosing one further change. These are hypotheses, not diagnosed causes. Review the evidence and proposed change with Claude, then independently review any implementation.
 
-Inspect why the useful motion/input approximation appears only after action 39 in the harder-world trace. Incumbent changes, sparse one-tick evidence, permanent exclusions and the limited representation are hypotheses to examine, not diagnosed causes. Review one concrete repair with Claude before further code or runs. Preserve both controls and all failures; no additional sweep or detached statistical study.
-
-The goal remains an investigator that uses observations to build and test useful explanations. A new primitive, neural model or RL policy should solve a demonstrated limitation. No extra spending.
+The goal remains an investigator that observes, proposes explanations, chooses informative experiments and revises its understanding. No new world suite, wider sweep, neural network or RL policy without a demonstrated need. Preserve controls and failures. No extra spending.

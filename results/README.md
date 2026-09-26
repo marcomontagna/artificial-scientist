@@ -1,6 +1,8 @@
 # Results and traces
 
-`guided_v1/` contains the latest six-run selective-proposal comparison, source/raw hashes and a self-contained evidence-to-choice replay. The default enumeration control exactly reproduces v1 behavior. [Latest result](../research/guided_proposal_result.md). Raw data remain under ignored `runs/guided_v1_*`; no prior output was overwritten.
+`partial_v1/` contains the latest six-run conditioning repair comparison, full prefix diagnosis, raw hashes and harder-world replay. Earlier proposal timing did not improve harder-world prediction. [Latest report](../research/partial_proposal_result.md). Raw runs are preserved under ignored `runs/partial_v1_*`.
+
+`guided_v1/` contains the earlier six-run selective-proposal comparison, source/raw hashes and a self-contained evidence-to-choice replay. The default enumeration control exactly reproduces v1 behavior. [Earlier result](../research/guided_proposal_result.md). Raw data remain under ignored `runs/guided_v1_*`; no prior output was overwritten.
 
 `tool_lab_v1/` contains the first connected investigator’s compact summaries, raw-file hashes and self-contained development/active replay. [Result report](../research/tool_lab_result.md).
 

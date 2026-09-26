@@ -1,8 +1,14 @@
 # Results
 
-**Latest: observation-guided hypothesis proposals implemented; results are mixed.** Twenty-eight tests pass. Guided prediction error improved in the simple world (0.001237 → 0.000288), worsened in the harder world (0.026477 → 0.053171), and was slightly worse in noise. Proposal fits fell sharply, but that alone is not a practical success. Enumeration remains the default.
+**Latest: one proposal-scoring failure repaired, without a harder-world prediction gain.** The useful motion-plus-push model enters at step 11 instead of 39, but final harder-world error rises slightly (0.053171 → 0.053795). Simple-world error improves slightly; noise error worsens slightly. Keep the repair optional. Thirty-two tests passed; six runs completed without tuning.
 
-[Latest report](research/guided_proposal_result.md) · [Evidence → proposal → choice replay](results/guided_v1/replay.html) · [Next decision](NEXT_STEPS.md).
+[Latest report](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [Next step](NEXT_STEPS.md).
+
+## Earlier observation-guided comparison
+
+**Observation-guided hypothesis proposals implemented; results are mixed.** Twenty-eight tests pass. Guided prediction error improved in the simple world (0.001237 → 0.000288), worsened in the harder world (0.026477 → 0.053171), and was slightly worse in noise. Proposal fits fell sharply, but that alone is not a practical success. Enumeration remains the default.
+
+[Earlier report](research/guided_proposal_result.md) · [Evidence → proposal → choice replay](results/guided_v1/replay.html) · [Next decision](NEXT_STEPS.md).
 
 The selective mechanism was reviewed by Claude and independently audited. No human-cognition, causal-discovery or novelty claim. These are previously inspected developmental checks, not independent confirmation. Runs are finished; no extra spending.
 

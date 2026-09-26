@@ -1,0 +1,1493 @@
+{
+  "source_trace": "results/runs/guided_v1_challenge_guided/active/trace.json",
+  "source_sha256": "409860c4a1d4917cf04d43fd5cd67c0283b23d9ce92a63c659b138a35c13109f",
+  "last_available_step": 11,
+  "modes": {
+    "guided": {
+      "search": {
+        "mode": "guided",
+        "candidate_fits": 8,
+        "feature_evaluations": 200,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "diagnosis": {
+          "base_model_id": "u",
+          "evidence": [
+            {
+              "step": 7,
+              "axis": "x",
+              "inputs": {
+                "p": -0.19231273024592724,
+                "v": -0.4204752334757681,
+                "u": 1.0,
+                "lag_u": -1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.21961912560159794
+              ],
+              "residual": -0.15467908159537777,
+              "prediction": 0.0273063953556707,
+              "observed": -0.12737268623970707
+            },
+            {
+              "step": 7,
+              "axis": "y",
+              "inputs": {
+                "p": 0.23500396993857642,
+                "v": -0.023301706316511128,
+                "u": 0.0,
+                "lag_u": 1.2246467991473532e-16,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.21961912560159794
+              ],
+              "residual": -0.04315526041465553,
+              "prediction": 0.23500396993857642,
+              "observed": 0.19184870952392089
+            },
+            {
+              "step": 8,
+              "axis": "x",
+              "inputs": {
+                "p": -0.12737268623970707,
+                "v": 0.06494004400622017,
+                "u": 1.0,
+                "lag_u": 1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.18414308569531654
+              ],
+              "residual": 0.22012412360540967,
+              "prediction": 0.056770399455609466,
+              "observed": 0.27689452306101914
+            },
+            {
+              "step": 8,
+              "axis": "y",
+              "inputs": {
+                "p": 0.19184870952392089,
+                "v": -0.04315526041465553,
+                "u": 0.0,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.18414308569531654
+              ],
+              "residual": -0.029351472154866942,
+              "prediction": 0.19184870952392089,
+              "observed": 0.16249723736905394
+            },
+            {
+              "step": 9,
+              "axis": "x",
+              "inputs": {
+                "p": 0.27689452306101914,
+                "v": 0.40426720930072624,
+                "u": -1.0,
+                "lag_u": 1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.22521025302529354
+              ],
+              "residual": 0.18058892643551488,
+              "prediction": 0.051684270035725594,
+              "observed": 0.23227319647124048
+            },
+            {
+              "step": 9,
+              "axis": "y",
+              "inputs": {
+                "p": 0.16249723736905394,
+                "v": -0.029351472154866942,
+                "u": 1.2246467991473532e-16,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.22521025302529354
+              ],
+              "residual": -0.017852433556967445,
+              "prediction": 0.16249723736905397,
+              "observed": 0.14464480381208653
+            },
+            {
+              "step": 10,
+              "axis": "x",
+              "inputs": {
+                "p": 0.23227319647124048,
+                "v": -0.04462132658977866,
+                "u": 0.0,
+                "lag_u": -1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.026548768106818554,
+              "prediction": 0.23227319647124048,
+              "observed": 0.20572442836442192
+            },
+            {
+              "step": 10,
+              "axis": "y",
+              "inputs": {
+                "p": 0.14464480381208653,
+                "v": -0.017852433556967418,
+                "u": 0.0,
+                "lag_u": 1.2246467991473532e-16,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.036601671246636394,
+              "prediction": 0.14464480381208653,
+              "observed": 0.10804313256545013
+            },
+            {
+              "step": 11,
+              "axis": "x",
+              "inputs": {
+                "p": 0.20572442836442192,
+                "v": -0.026548768106818554,
+                "u": -1.8369701987210297e-16,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.15930775850391987,
+              "prediction": 0.2057244283644219,
+              "observed": 0.046416669860502024
+            },
+            {
+              "step": 11,
+              "axis": "y",
+              "inputs": {
+                "p": 0.10804313256545013,
+                "v": -0.036601671246636394,
+                "u": -1.0,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.0814459766974852,
+              "prediction": -0.08877308161839202,
+              "observed": -0.17021905831587722
+            }
+          ],
+          "associations": [
+            {
+              "feature": "v",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.7429704102771881,
+              "conditioning_terms": [],
+              "score": 0.7429704102771881,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "v",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.17161723315577376,
+              "conditioning_terms": [],
+              "score": 0.17161723315577376,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "u",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.21051283319582664,
+              "conditioning_terms": [],
+              "score": -0.21051283319582664,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "u",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656531,
+              "conditioning_terms": [],
+              "score": 0.9212190455656531,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "lag_u",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.8059160382405326,
+              "conditioning_terms": [],
+              "score": 0.8059160382405326,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "lag_u",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "p",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.050292385387126055,
+              "conditioning_terms": [],
+              "score": 0.050292385387126055,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "p",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [],
+              "score": 0.5025225128423566,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "1",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.07433382053075152,
+              "conditioning_terms": [],
+              "score": 0.07433382053075152,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "1",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.8880151685193933,
+              "conditioning_terms": [],
+              "score": -0.8880151685193933,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.03630576117727976,
+              "conditioning_terms": [],
+              "score": 0.03630576117727976,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.17161723315577376,
+              "conditioning_terms": [],
+              "score": -0.17161723315577376,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.5307862095026382,
+              "conditioning_terms": [],
+              "score": 0.5307862095026382,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656529,
+              "conditioning_terms": [],
+              "score": -0.9212190455656529,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.07802930769854435,
+              "conditioning_terms": [],
+              "score": -0.07802930769854435,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [],
+              "score": 0.5025225128423566,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.6432456969350042,
+              "conditioning_terms": [],
+              "score": 0.6432456969350042,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.10461127260473758,
+              "conditioning_terms": [],
+              "score": 0.10461127260473758,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.025619159521606025,
+              "conditioning_terms": [],
+              "score": 0.025619159521606025,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [],
+              "score": 0.5025225128423566,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.018778019069600197,
+              "conditioning_terms": [],
+              "score": -0.018778019069600197,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.14914349118296258,
+              "conditioning_terms": [],
+              "score": -0.14914349118296258,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.08955307593075926,
+              "conditioning_terms": [],
+              "score": 0.08955307593075926,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656531,
+              "conditioning_terms": [],
+              "score": -0.9212190455656531,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.11885837617623872,
+              "conditioning_terms": [],
+              "score": 0.11885837617623872,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.310530177327732,
+              "conditioning_terms": [],
+              "score": -0.310530177327732,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.5307862095026381,
+              "conditioning_terms": [],
+              "score": 0.5307862095026381,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656531,
+              "conditioning_terms": [],
+              "score": -0.9212190455656531,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.47003813002169825,
+              "conditioning_terms": [],
+              "score": -0.47003813002169825,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656533,
+              "conditioning_terms": [],
+              "score": 0.9212190455656533,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.049762994286763895,
+              "conditioning_terms": [],
+              "score": 0.049762994286763895,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.3996900313344708,
+              "conditioning_terms": [],
+              "score": 0.3996900313344708,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*abs(v))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.6683802983019919,
+              "conditioning_terms": [],
+              "score": 0.6683802983019919,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*abs(v))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.14914349118296258,
+              "conditioning_terms": [],
+              "score": 0.14914349118296258,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*abs(u))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.2105128331958267,
+              "conditioning_terms": [],
+              "score": -0.2105128331958267,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*abs(u))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656531,
+              "conditioning_terms": [],
+              "score": 0.9212190455656531,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(p*abs(p))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.18279594257172882,
+              "conditioning_terms": [],
+              "score": 0.18279594257172882,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*abs(p))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.3996900313344708,
+              "conditioning_terms": [],
+              "score": 0.3996900313344708,
+              "shares_sensor_inputs": true
+            }
+          ],
+          "selected_features": [
+            "(u*p)",
+            "u",
+            "(v*u)",
+            "(u*u)",
+            "(u*abs(u))",
+            "abs(u)",
+            "1",
+            "lag_u",
+            "v",
+            "(v*abs(v))",
+            "positive(v)",
+            "p",
+            "abs(p)",
+            "positive(p)",
+            "(p*p)",
+            "(p*abs(p))",
+            "(v*p)"
+          ],
+          "reason": "Associations suggest local edits, not mechanisms; noise and adaptive sampling can create them."
+        },
+        "candidates": [
+          {
+            "model_id": "u+(u*p)",
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "association_score": 0.9212190455656533,
+            "training_score": 0.010109194840940312,
+            "selected": true
+          },
+          {
+            "model_id": "u+(v*u)",
+            "origin": "residual_association",
+            "feature": "(v*u)",
+            "association_score": 0.9212190455656531,
+            "training_score": 0.010242748429022314,
+            "selected": false
+          },
+          {
+            "model_id": "(v*u)",
+            "origin": "residual_association",
+            "feature": "(v*u)",
+            "association_score": 0.9212190455656531,
+            "training_score": 0.023226774526637572,
+            "selected": false
+          },
+          {
+            "model_id": "u+(u*u)",
+            "origin": "residual_association",
+            "feature": "(u*u)",
+            "association_score": 0.9212190455656531,
+            "training_score": 0.010333593790693669,
+            "selected": false
+          },
+          {
+            "model_id": "(u*u)",
+            "origin": "residual_association",
+            "feature": "(u*u)",
+            "association_score": 0.9212190455656531,
+            "training_score": 0.023133813274967188,
+            "selected": false
+          },
+          {
+            "model_id": "u+(u*abs(u))",
+            "origin": "residual_association",
+            "feature": "(u*abs(u))",
+            "association_score": 0.9212190455656531,
+            "training_score": 0.010431853040871956,
+            "selected": false
+          },
+          {
+            "model_id": "u+abs(u)",
+            "origin": "residual_association",
+            "feature": "abs(u)",
+            "association_score": 0.9212190455656529,
+            "training_score": 0.01021359370482584,
+            "selected": true
+          },
+          {
+            "model_id": "1",
+            "origin": "scheduled_escape",
+            "feature": null,
+            "association_score": null,
+            "training_score": 0.022994506004928406,
+            "selected": false
+          }
+        ],
+        "rejected_by_size": 0,
+        "excluded_edits": 2,
+        "escape_cursor_before": 4,
+        "escape_structures_checked": 1,
+        "escape_cursor_after": 5,
+        "no_candidates": false,
+        "shortlist": [
+          "u+(u*p)",
+          "u+(v*u)",
+          "(v*u)",
+          "u+(u*u)",
+          "(u*u)",
+          "u+(u*abs(u))",
+          "u+abs(u)",
+          "1"
+        ]
+      },
+      "models": [
+        {
+          "id": "u+(u*p)",
+          "formula": "delta = 0.224967*u + -0.163976*(u*p); p_next = p + delta; v_next = delta (per axis)",
+          "coefficients": [
+            0.22496679915900467,
+            -0.1639755406674872
+          ],
+          "terms": [
+            "u",
+            [
+              "mul",
+              "u",
+              "p"
+            ]
+          ],
+          "complexity": 9,
+          "prequential_mse": null,
+          "validated_predictions": 0
+        },
+        {
+          "id": "u+abs(u)",
+          "formula": "delta = 0.209814*u + 0.0142164*abs(u); p_next = p + delta; v_next = delta (per axis)",
+          "coefficients": [
+            0.2098136369839095,
+            0.01421635485329035
+          ],
+          "terms": [
+            "u",
+            [
+              "abs",
+              "u"
+            ]
+          ],
+          "complexity": 8,
+          "prequential_mse": null,
+          "validated_predictions": 0
+        }
+      ]
+    },
+    "guided-partial": {
+      "search": {
+        "mode": "guided-partial",
+        "candidate_fits": 8,
+        "feature_evaluations": 200,
+        "projection_feature_evaluations": 20,
+        "projection_calls": 86,
+        "diagnosis": {
+          "base_model_id": "u",
+          "evidence": [
+            {
+              "step": 7,
+              "axis": "x",
+              "inputs": {
+                "p": -0.19231273024592724,
+                "v": -0.4204752334757681,
+                "u": 1.0,
+                "lag_u": -1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.21961912560159794
+              ],
+              "residual": -0.15467908159537777,
+              "prediction": 0.0273063953556707,
+              "observed": -0.12737268623970707
+            },
+            {
+              "step": 7,
+              "axis": "y",
+              "inputs": {
+                "p": 0.23500396993857642,
+                "v": -0.023301706316511128,
+                "u": 0.0,
+                "lag_u": 1.2246467991473532e-16,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.21961912560159794
+              ],
+              "residual": -0.04315526041465553,
+              "prediction": 0.23500396993857642,
+              "observed": 0.19184870952392089
+            },
+            {
+              "step": 8,
+              "axis": "x",
+              "inputs": {
+                "p": -0.12737268623970707,
+                "v": 0.06494004400622017,
+                "u": 1.0,
+                "lag_u": 1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.18414308569531654
+              ],
+              "residual": 0.22012412360540967,
+              "prediction": 0.056770399455609466,
+              "observed": 0.27689452306101914
+            },
+            {
+              "step": 8,
+              "axis": "y",
+              "inputs": {
+                "p": 0.19184870952392089,
+                "v": -0.04315526041465553,
+                "u": 0.0,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.18414308569531654
+              ],
+              "residual": -0.029351472154866942,
+              "prediction": 0.19184870952392089,
+              "observed": 0.16249723736905394
+            },
+            {
+              "step": 9,
+              "axis": "x",
+              "inputs": {
+                "p": 0.27689452306101914,
+                "v": 0.40426720930072624,
+                "u": -1.0,
+                "lag_u": 1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.22521025302529354
+              ],
+              "residual": 0.18058892643551488,
+              "prediction": 0.051684270035725594,
+              "observed": 0.23227319647124048
+            },
+            {
+              "step": 9,
+              "axis": "y",
+              "inputs": {
+                "p": 0.16249723736905394,
+                "v": -0.029351472154866942,
+                "u": 1.2246467991473532e-16,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.22521025302529354
+              ],
+              "residual": -0.017852433556967445,
+              "prediction": 0.16249723736905397,
+              "observed": 0.14464480381208653
+            },
+            {
+              "step": 10,
+              "axis": "x",
+              "inputs": {
+                "p": 0.23227319647124048,
+                "v": -0.04462132658977866,
+                "u": 0.0,
+                "lag_u": -1.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.026548768106818554,
+              "prediction": 0.23227319647124048,
+              "observed": 0.20572442836442192
+            },
+            {
+              "step": 10,
+              "axis": "y",
+              "inputs": {
+                "p": 0.14464480381208653,
+                "v": -0.017852433556967418,
+                "u": 0.0,
+                "lag_u": 1.2246467991473532e-16,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.036601671246636394,
+              "prediction": 0.14464480381208653,
+              "observed": 0.10804313256545013
+            },
+            {
+              "step": 11,
+              "axis": "x",
+              "inputs": {
+                "p": 0.20572442836442192,
+                "v": -0.026548768106818554,
+                "u": -1.8369701987210297e-16,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.15930775850391987,
+              "prediction": 0.2057244283644219,
+              "observed": 0.046416669860502024
+            },
+            {
+              "step": 11,
+              "axis": "y",
+              "inputs": {
+                "p": 0.10804313256545013,
+                "v": -0.036601671246636394,
+                "u": -1.0,
+                "lag_u": 0.0,
+                "one": 1.0
+              },
+              "model_id": "u",
+              "incumbent_epoch": 2,
+              "coefficient_version": [
+                0.19681621418384215
+              ],
+              "residual": -0.0814459766974852,
+              "prediction": -0.08877308161839202,
+              "observed": -0.17021905831587722
+            }
+          ],
+          "associations": [
+            {
+              "feature": "v",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.7429704102771881,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.9259725497897765,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "v",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.17161723315577376,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.4459076863038256,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "u",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.21051283319582664,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "u",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656531,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "lag_u",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.8059160382405326,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.7964312193268839,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "lag_u",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "p",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.050292385387126055,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.35968222663621136,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "p",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.5226078650904699,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "1",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.07433382053075152,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.12384984442712137,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "1",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.8880151685193933,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.8576989062490533,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.03630576117727976,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0017184178838261213,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.17161723315577376,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.4459076863038256,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.5307862095026382,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.6045125817411858,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656529,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "abs(p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.07802930769854435,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.6025492723009762,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "abs(p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.5226078650904699,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.6432456969350042,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.738070305751026,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.10461127260473758,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.6045125817411858,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.0,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.025619159521606025,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.533989177671488,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "positive(p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.5025225128423566,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.5226078650904699,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*v)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.018778019069600197,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.056253328672265485,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*v)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.14914349118296258,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.39106400938034414,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.08955307593075926,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.15037748577225388,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656531,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.11885837617623872,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.04409116225882462,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.310530177327732,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.14330091707147283,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*u)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.5307862095026381,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.6045125817411858,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*u)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": -0.9212190455656531,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.47003813002169825,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.448222555366029,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656533,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*p)",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.049762994286763895,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.3813695366630481,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*p)",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.3996900313344708,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.5649843953880967,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*abs(v))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.6683802983019919,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.9017201290735324,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(v*abs(v))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.14914349118296258,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.39106400938034414,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(u*abs(u))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": -0.2105128331958267,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(u*abs(u))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.9212190455656531,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": 0.0,
+              "shares_sensor_inputs": false
+            },
+            {
+              "feature": "(p*abs(p))",
+              "axis": "x",
+              "count": 5,
+              "raw_score": 0.18279594257172882,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.0575823934221967,
+              "shares_sensor_inputs": true
+            },
+            {
+              "feature": "(p*abs(p))",
+              "axis": "y",
+              "count": 5,
+              "raw_score": 0.3996900313344708,
+              "conditioning_terms": [
+                "u"
+              ],
+              "score": -0.5649843953880967,
+              "shares_sensor_inputs": true
+            }
+          ],
+          "selected_features": [
+            "v",
+            "(v*abs(v))",
+            "1",
+            "lag_u",
+            "positive(v)",
+            "abs(u)",
+            "positive(u)",
+            "(u*u)",
+            "abs(p)",
+            "(p*p)",
+            "(p*abs(p))",
+            "positive(p)",
+            "p",
+            "(u*p)",
+            "abs(v)",
+            "(v*v)"
+          ],
+          "reason": "Associations suggest local edits, not mechanisms; noise and adaptive sampling can create them."
+        },
+        "candidates": [
+          {
+            "model_id": "v+u",
+            "origin": "residual_association",
+            "feature": "v",
+            "association_score": 0.9259725497897765,
+            "training_score": 0.00439991217296726,
+            "selected": true
+          },
+          {
+            "model_id": "u+(v*abs(v))",
+            "origin": "residual_association",
+            "feature": "(v*abs(v))",
+            "association_score": 0.9017201290735324,
+            "training_score": 0.006581530275407382,
+            "selected": false
+          },
+          {
+            "model_id": "(v*abs(v))",
+            "origin": "residual_association",
+            "feature": "(v*abs(v))",
+            "association_score": 0.9017201290735324,
+            "training_score": 0.023105219338671865,
+            "selected": false
+          },
+          {
+            "model_id": "u+1",
+            "origin": "residual_association",
+            "feature": "1",
+            "association_score": 0.8576989062490533,
+            "training_score": 0.010165811092577968,
+            "selected": false
+          },
+          {
+            "model_id": "1",
+            "origin": "residual_association",
+            "feature": "1",
+            "association_score": 0.8576989062490533,
+            "training_score": 0.022994506004928406,
+            "selected": false
+          },
+          {
+            "model_id": "u+lag_u",
+            "origin": "residual_association",
+            "feature": "lag_u",
+            "association_score": 0.7964312193268839,
+            "training_score": 0.005712502676720219,
+            "selected": true
+          },
+          {
+            "model_id": "u+positive(v)",
+            "origin": "residual_association",
+            "feature": "positive(v)",
+            "association_score": 0.738070305751026,
+            "training_score": 0.006760179329006207,
+            "selected": false
+          },
+          {
+            "model_id": "abs(v)",
+            "origin": "scheduled_escape",
+            "feature": null,
+            "association_score": null,
+            "training_score": 0.023126317335988078,
+            "selected": false
+          }
+        ],
+        "rejected_by_size": 0,
+        "excluded_edits": 2,
+        "escape_cursor_before": 4,
+        "escape_structures_checked": 2,
+        "escape_cursor_after": 6,
+        "no_candidates": false,
+        "shortlist": [
+          "v+u",
+          "u+(v*abs(v))",
+          "(v*abs(v))",
+          "u+1",
+          "1",
+          "u+lag_u",
+          "u+positive(v)",
+          "abs(v)"
+        ]
+      },
+      "models": [
+        {
+          "id": "v+u",
+          "formula": "delta = 0.663747*v + 0.295511*u; p_next = p + delta; v_next = delta (per axis)",
+          "coefficients": [
+            0.6637472627896865,
+            0.2955113490615743
+          ],
+          "terms": [
+            "v",
+            "u"
+          ],
+          "complexity": 7,
+          "prequential_mse": null,
+          "validated_predictions": 0
+        },
+        {
+          "id": "u+lag_u",
+          "formula": "delta = 0.250936*u + 0.137774*lag_u; p_next = p + delta; v_next = delta (per axis)",
+          "coefficients": [
+            0.2509358844269252,
+            0.13777400359070885
+          ],
+          "terms": [
+            "u",
+            "lag_u"
+          ],
+          "complexity": 7,
+          "prequential_mse": null,
+          "validated_predictions": 0
+        }
+      ]
+    }
+  }
+}

@@ -68,3 +68,7 @@ Development, challenge and noise each use sensor seed 260926 (same supplied seed
 ## Guided proposal v1 — September 26, 2026
 
 Reused the already inspected laboratory seed 260926 and existing evaluator offsets in six active-policy runs (enumerate/guided × development/challenge/noise). These are developmental comparisons, not fresh independent confirmation. Implementation d567435 was frozen before execution; no subsequent tuning or extra sampling. Original runs preserved.
+
+## Conditioned guided proposal v1 — September 26, 2026
+
+Reused seed 260926 and the existing evaluator in six active-policy runs (guided/guided-partial × development/challenge/noise), frozen clean source 3acb2ff. The preceding saved-prefix diagnosis used only original challenge events through step 11. All are inspected developmental evidence; no independent confirmation, post-result tuning or additional sampling. Earlier raw outputs preserved.

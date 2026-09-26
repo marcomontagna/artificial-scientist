@@ -8,9 +8,9 @@ The ambition is an unexpected, useful insight—a “Move 37” moment. That is 
 
 One persistent physical laboratory: first a single object moving in 2D, with hidden motion rules. The agent can observe, push, wait and reset. It keeps a notebook, proposes executable models from declared building blocks, makes predictions before acting, and revises models that fail. We supply an interface and learning machinery, not a catalogue containing the correct world explanations.
 
-**Current status: the first connected learner is implemented and its bounded demonstration is complete.** It proposes formulas, predicts before acting, chooses tools and revises its explanations. Twenty-eight tests pass. No experiment is currently running. Its observation-guided proposal option improves the simple-world check but worsens the harder-world result; the enumerating learner remains the default. Neither version establishes a discovery or novelty claim.
+**Current status: the first connected learner is implemented and its bounded demonstration is complete.** It proposes formulas, predicts before acting, chooses tools and revises its explanations. Thirty-two tests pass. No experiment is currently running. Conditioning its guided proposals makes a useful model appear earlier, but does not improve harder-world prediction. Both guided modes remain optional; enumeration stays the default. No discovery or novelty claim.
 
-[Latest: observation-guided proposals and mixed results](research/guided_proposal_result.md) · [Guided replay](results/guided_v1/replay.html) · [First-loop results](research/tool_lab_result.md)
+[Latest: earlier proposals without better harder-world prediction](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [First-loop results](research/tool_lab_result.md)
 
 The earlier disconnected studies remain in the [archive](archive/README.md); their raw runs are untouched.
 
@@ -30,6 +30,6 @@ Run the local prototype from the repository root (Python 3.9+, no runtime depend
 .venv/bin/python -m artificial_scientist.lab_run --variant development --output results/runs/my_fresh_run
 ```
 
-Use a new output directory; the laboratory command runs active, random and coverage exploration and generates their saved replays. For evidence-guided local proposals, add `--proposal guided --policies active`; the default remains `enumerate`. [Guided design and limitations](research/guided_proposal_design.md) · [Implementation assumptions](research/tool_lab_implementation.md) · [Workflow](research/workflow.md). [Lessons retained](research/lessons.md) · [Closest references](research/references.md).
+Use a new output directory; the laboratory command runs active, random and coverage exploration and generates their saved replays. For evidence-guided local proposals, add `--proposal guided --policies active`; use `--proposal guided-partial` for the conditioned variant. The default remains `enumerate`. [Guided design and limitations](research/guided_proposal_design.md) · [Implementation assumptions](research/tool_lab_implementation.md) · [Workflow](research/workflow.md). [Lessons retained](research/lessons.md) · [Closest references](research/references.md).
 
 MIT; see [LICENSE](LICENSE). Archived third-party references keep their original attribution.
