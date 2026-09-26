@@ -1,0 +1,21 @@
+{
+  "access": "Previously verified Claude Pro subscription, usage credits off; official read-only CLI, no paid fallback",
+  "reviews": [
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "duration_ms": 124862,
+      "num_turns": 8,
+      "is_error": false,
+      "raw_directory": "results/runs/pipeline_claude_plan_20260926",
+      "report": "research/claude_pipeline_plan.md",
+      "sha256": {
+        "results/runs/pipeline_claude_plan_20260926/request.txt": "ed5a10629da94912110873b60d7d8a658032b95f212c5aeece1de1b1babed644",
+        "results/runs/pipeline_claude_plan_20260926/response.json": "413af551b6f3c156e2a5836182038ab700a5a30cf91e2ee04f06551d1eb6359a",
+        "research/claude_pipeline_plan.md": "e854091ed4388483234561401086eea8b0764a62ce689229d8e78b17d10ad58a"
+      }
+    }
+  ]
+}

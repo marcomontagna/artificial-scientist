@@ -1,5 +1,7 @@
 # Reproducing the three equation studies
 
+**Historical reproduction warning:** the domain study has [cross-seed RNG reuse](equation_domain_rng_erratum.md). These commands preserve/reproduce that historical design; they are not a corrected independent replication, and its aggregate intervals lack validated coverage. Use the new pipeline protocol for its distinct integration question.
+
 Run from the repository root in a clean, independently reviewed checkout. No installation, API key or paid service is needed. These commands repeat already inspected development seeds, not held-out evaluation. Do not change thresholds or regenerate outcomes to seek a passing screen.
 
 Protocols: [equation fitting](../experiments/equation_discovery_v0.md), [independent term confirmation](../experiments/equation_confirmation_v0.md), [domain challenge](../experiments/equation_domain_v0.md).

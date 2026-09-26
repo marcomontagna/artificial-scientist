@@ -1,5 +1,7 @@
 # Domain challenge v0 — result
 
+**Erratum:** [38 cross-seed RNG collisions](equation_domain_rng_erratum.md) were found during the next protocol review. Counts and the engineering screen remain descriptive; the independence-based aggregate intervals below are not validated uncertainty estimates. Raw artifacts remain unchanged.
+
 **The fixed comparative screen passed.** This is a numerical/Monte Carlo validation of known regression theory: wider tests exposed the designed wrong quadratic approximations while the uncertainty-aware test retained the same observed false-rejection rate on correct polynomial controls. Supplied variables, known Gaussian noise and strong in-class coefficients favor the method.
 
 | Fixed family, 40 designs each | Local rejections | Wide rejections | Mean theoretical power, local / wide |
@@ -11,9 +13,9 @@
 | Sparse quadratic | 2/40 | 2/40 | 5% / 5% |
 | Noise | 2/40 | 2/40 | 5% / 5% |
 
-The paired wide-minus-local gains were 75 percentage points for exponential (descriptive normal 95% interval 61.4–88.6) and 35 points for cubic (20.0–50.0). Both point estimates pass the prespecified 30-point threshold; this is not evidence that the population cubic gain exceeds 30 points. The wide test rejected 30 exponential and 14 cubic cases that the local test did not. Sine already reached the local detection ceiling.
+The paired wide-minus-local gains were 75 percentage points for exponential (previously calculated normal interval61.4–88.6; coverage unvalidated due to RNG reuse) and 35 points for cubic (previously calculated interval20.0–50.0; same limitation). Both point estimates pass the prespecified 30-point threshold; this is not evidence that the population cubic gain exceeds 30 points. The wide test rejected 30 exponential and 14 cubic cases that the local test did not. Sine already reached the local detection ceiling.
 
-For each correct-model control, the crude audit-MSE threshold rejected 29/40 wide tests versus 2/40 with coefficient uncertainty included. That is the intended counterexample: extrapolation amplifies estimation error even when the mathematical family is correct. The three controls share design and noise and yield identical residual checks up to rounding, so they provide only 40 calibration realizations per arm, not 120. A 2/40 rate has a Wilson 95% interval of 1.4–16.5%; this small run does not empirically establish calibration. A 40/40 detection rate has interval 91.2–100%.
+For each correct-model control, the crude audit-MSE threshold rejected 29/40 wide tests versus 2/40 with coefficient uncertainty included. That is the intended counterexample: extrapolation amplifies estimation error even when the mathematical family is correct. The three controls share design and noise and yield identical residual checks up to rounding, so they provide only40recorded datasets per arm, not120independent replications. The previously calculated Wilson intervals were1.4–16.5% for2/40 and91.2–100% for40/40; their coverage is unvalidated due to RNG reuse. This small correlated run does not empirically establish calibration.
 
 The fixed full quadratic fit uses 24 observations. Each arm then uses 16 fresh observations: 40 per arm, 56 unique per paired dataset. Local audit coordinates lie in [-1,1]^2; wide coordinates are twice the same base coordinates. Audit noise is paired. Fits and domain choices never change after outcomes.
 

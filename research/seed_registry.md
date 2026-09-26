@@ -42,3 +42,5 @@ Shared numerical seeds across world/schedule cells create correlated comparisons
 - **850–889:** stage3 full240dataset/480audit study, now inspected development data. Both arms share training observations, base audit coordinates and noise. The three correct-model controls are duplicate residual checks; outside families use fixed functions across random designs, not40new functions.
 
 No post-result tuning or held-out confirmation. The separate sequence-family reserve1000–1049 remains unused. New seeds alone would not establish generalization to new law families.
+
+**Domain-study erratum:** offsets10100009/10100011 overlap across38different seeds850–889. Those artifacts are correlated across seeds; prior aggregate independence-based intervals are not validated. See research/equation_domain_rng_erratum.md. Earlier raw records remain untouched.

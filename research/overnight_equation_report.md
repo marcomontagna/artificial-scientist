@@ -1,5 +1,7 @@
 # Overnight report — September 26, 2026
 
+**Later correction:** the third study has [cross-seed RNG reuse](equation_domain_rng_erratum.md). Its counts remain recorded, but aggregate independence-based uncertainty claims are withdrawn. Studies1/2 are unaffected by this particular issue.
+
 **Three validation studies completed; 90 tests pass.** They separately test equation fitting, term evidence and domain challenges. No single selected equation completed the whole sequence. Inputs and six monomials are supplied, Gaussian noise is known, and nonzero coefficients are large relative to noise. This is not yet an autonomous scientist.
 
 | Study | Finding | Fixed screen |
