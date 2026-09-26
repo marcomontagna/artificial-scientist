@@ -76,3 +76,28 @@ class HarnessTests(unittest.TestCase):
             with patch.object(revision_run,'make_revision_world',return_value=FakeWorld()),patch.object(revision_run,'source_info',return_value={}):
                 result=revision_run.investigate('fixture','active',7,Path(directory)/'time',cpu_seconds=1e-12)
             self.assertEqual(result['status'],'incomplete_cpu_cap');self.assertEqual(result['training_cost'],0)
+
+    def test_external_diagnostics_use_actual_decision_candidate(self):
+        incumbent=VectorModel(('v',),True,(0.,))
+        worse=VectorModel(('one',),True,(1.,))
+        best=VectorModel(('u',),True,(0.,))
+        cycle=dict(id=0,models=[m.snapshot() for m in (incumbent,worse,best)],
+                   best_alternative=worse.id,accepted=False,selected_id=incumbent.id,check_rule='confirm_long')
+        with patch.object(revision_run,'make_revision_world',side_effect=lambda *a:FakeWorld()),patch.object(revision_run,'linear_reference',return_value=incumbent):
+            result=revision_run.evaluation(incumbent,[],[cycle],'fixture',7,float('inf'))
+        d=result['decision_diagnostics'][0]
+        self.assertEqual(d['candidate_id'],worse.id)
+        self.assertGreater(d['external_candidate_mse'],d['external_incumbent_mse'])
+        self.assertFalse(d['harmful_accepted']);self.assertFalse(d['useful_accepted']);self.assertFalse(d['missed_useful'])
+        self.assertIn('NOT the two-stage',result['agreement'][0]['meaning'])
+        cycle['accepted']=True;cycle['selected_id']=worse.id
+        with patch.object(revision_run,'make_revision_world',side_effect=lambda *a:FakeWorld()),patch.object(revision_run,'linear_reference',return_value=incumbent):
+            result=revision_run.evaluation(worse,[],[cycle],'fixture',7,float('inf'))
+        self.assertTrue(result['decision_diagnostics'][0]['harmful_accepted'])
+
+    def test_invalid_rule_rejected_before_output_creation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory)/'unused'
+            with self.assertRaises(ValueError):revision_run.investigate('fixture','active',7,output,check_rule='invalid')
+            with self.assertRaises(ValueError):revision_run.investigate('fixture','legacy',7,output,check_rule='confirm_long')
+            self.assertFalse(output.exists())

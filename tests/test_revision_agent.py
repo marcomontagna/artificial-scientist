@@ -112,3 +112,118 @@ class RevisionAgentTests(unittest.TestCase):
         with patch('artificial_scientist.revision_agent.propose') as proposer,patch('artificial_scientist.revision_agent.fit_model',side_effect=lambda m,h,deadline,audit:m):
             self.step(b,(100,100))
         proposer.assert_not_called()
+
+
+class ConfirmationRuleTests(unittest.TestCase):
+    def agent(self, rule, models=None):
+        a=RevisionInvestigator(Observation(0,0,0),check_rule=rule)
+        models=models or [VectorModel(('v',),True,(1.,)),VectorModel(('one',),True,(0.,))]
+        a.incumbent=models[0];a.steps=6
+        a.cycle=dict(id=0,models=models,snapshots=[m.snapshot() for m in models],
+                     trigger={},audit={},losses={m.id:[] for m in models},check_steps=[])
+        return a
+
+    def step(self,a,x=0.):
+        plan=a.plan(80-2*a.steps);tick=a.observation.tick
+        result=a.accept([Observation(tick+1,x,0.),Observation(tick+2,x,0.)])
+        return plan,result
+
+    @staticmethod
+    def no_refit(model,history,deadline,audit):
+        return model
+
+    def test_fixed_suffix_actions_ignore_outcomes_and_frozen_tapes_are_sliced(self):
+        a,b=self.agent('confirm_long'),self.agent('confirm_long')
+        for _ in range(4):
+            self.step(a);self.step(b)
+        frozen=a.cycle['confirmation_plan']
+        self.assertEqual(frozen,b.cycle['confirmation_plan'])
+        self.assertEqual(len(frozen['actions']),8)
+        self.assertEqual(len(frozen['experiment_indexes']),4)
+        with patch('artificial_scientist.revision_agent.fit_model',side_effect=self.no_refit):
+            for pair in range(4):
+                pa,_=self.step(a,float(pair));pb,_=self.step(b,-100.*pair)
+                self.assertEqual(pa['actions'],pb['actions'])
+                self.assertEqual(pa['chosen'],frozen['experiment_indexes'][pair])
+                self.assertEqual(pa['check_stage'],'confirmation')
+                self.assertEqual(pa['prediction_origin'],'confirmation_start_frozen_tape')
+                for p,source in zip(pa['predictions'],frozen['predictions']):
+                    self.assertEqual(p['tape'],source['tape'][pair*2:pair*2+2])
+                self.assertEqual(pa['predictions'],pb['predictions'])
+        self.assertEqual(len(a.cycles),1)
+        self.assertEqual(len(a.cycles[0]['position_losses'][a.cycles[0]['incumbent_id']]),16)
+
+    def test_short_tapes_restart_but_full_plan_does_not_mutate(self):
+        a=self.agent('confirm_short')
+        for _ in range(4):self.step(a)
+        frozen=a.cycle['confirmation_plan']
+        self.step(a,10.)
+        p=a.plan(80-2*a.steps)
+        self.assertEqual(p['prediction_origin'],'current_observed_start')
+        self.assertEqual(p['predictions'],p['options'][p['chosen']]['predictions'])
+        self.assertNotEqual(p['predictions'][0]['tape'],frozen['predictions'][0]['tape'][2:4])
+        p['confirmation_plan']['actions'].clear()
+        self.assertEqual(len(a.pending['confirmation_plan']['actions']),8)
+        self.assertEqual(len(frozen['actions']),8)
+
+    def test_split_winner_cannot_swap_to_better_confirmation_alternative(self):
+        old=VectorModel(('v',),True,(3.,))
+        first=VectorModel(('one',),True,(0.,))
+        other=VectorModel(('p',),True,(1.,))
+        fixed={old.id:3.,first.id:0.,other.id:1.}
+        def predict(m,o,h,actions):return [(fixed[m.id],0.) for _ in actions]
+        outcomes={}
+        with patch.object(VectorModel,'predict_tape',predict),patch('artificial_scientist.revision_agent.fit_model',side_effect=self.no_refit):
+            for rule in ('pooled','confirm_short','confirm_long'):
+                a=self.agent(rule,[old,first,other])
+                for _ in range(4):self.step(a,0.)
+                self.assertEqual(a.cycle['screening']['winner_id'],first.id)
+                for _ in range(4):self.step(a,1.2)
+                outcomes[rule]=a.cycles[0]
+        self.assertEqual(outcomes['pooled']['best_alternative'],other.id)
+        for rule in ('confirm_short','confirm_long'):
+            self.assertEqual(outcomes[rule]['best_alternative'],first.id)
+            self.assertTrue(outcomes[rule]['accepted'])
+
+    def test_failed_screen_can_be_rescued_only_by_pooled(self):
+        old=VectorModel(('v',),True,(1.,));new=VectorModel(('one',),True,(2.,))
+        def predict(m,o,h,actions):return [(1. if m.id==old.id else 2.,0.) for _ in actions]
+        with patch.object(VectorModel,'predict_tape',predict),patch('artificial_scientist.revision_agent.fit_model',side_effect=self.no_refit):
+            for rule in ('pooled','confirm_short','confirm_long'):
+                a=self.agent(rule,[old,new])
+                for _ in range(4):self.step(a,1.2)
+                self.assertFalse(a.cycle['screening']['passed'])
+                for _ in range(3):
+                    self.step(a,2.);self.assertEqual(a.cycles,[])
+                    self.assertEqual(a.incumbent.id,old.id)
+                self.step(a,2.)
+                self.assertEqual(a.cycles[0]['accepted'],rule=='pooled')
+                self.assertTrue(a.cycles[0]['confirmation_passed'])
+
+    def test_nonoriginal_trigger_requires_sixteen_remaining_units(self):
+        alternative=VectorModel(('one',),True,(10.,))
+        for steps,expected in ((31,True),(32,False)):
+            a=RevisionInvestigator(Observation(2*steps,0,0),check_rule='confirm_long')
+            a.steps=steps;a.recent=[100]*5
+            with patch('artificial_scientist.revision_agent.fit_model',side_effect=self.no_refit),patch('artificial_scientist.revision_agent.propose',return_value=([alternative],{})) as proposer:
+                self.step(a,100.)
+            self.assertEqual(proposer.called,expected)
+
+    def test_confirmation_completion_timeout_preserves_final_decision(self):
+        a=self.agent('confirm_long')
+        for _ in range(7):self.step(a)
+        def timeout(m,h,deadline,audit):
+            audit.update(candidate_fits=1,feature_evaluations=7)
+            raise TimeoutError('injected final refit')
+        with patch('artificial_scientist.revision_agent.fit_model',side_effect=timeout):
+            _,result=self.step(a)
+        self.assertIn('incomplete',result)
+        self.assertEqual(result['revision']['check_rule'],'confirm_long')
+        self.assertEqual(len(result['revision']['check_steps']),8)
+        self.assertEqual(len(a.cycles),1)
+        self.assertEqual(a.work['refits'],1)
+        self.assertIsNone(a.pending)
+
+    def test_unknown_rule_rejected(self):
+        with self.assertRaises(ValueError):
+            RevisionInvestigator(Observation(0,0,0),check_rule='mystery')

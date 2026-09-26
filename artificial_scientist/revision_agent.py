@@ -18,9 +18,12 @@ def clone(value):
 
 
 class RevisionInvestigator:
-    def __init__(self, initial, policy='active', seed=0):
+    def __init__(self, initial, policy='active', seed=0, check_rule='original'):
         if policy not in ('active', 'random', 'coverage', 'no-revision'):
             raise ValueError('unknown revision policy')
+        if check_rule not in ('original', 'pooled', 'confirm_short', 'confirm_long'):
+            raise ValueError('unknown check rule')
+        self.check_rule = check_rule
         self.policy = policy
         self.rng = random.Random(seed)
         self.observation = initial
@@ -63,11 +66,26 @@ class RevisionInvestigator:
         else:
             index = max(range(9), key=lambda i:(options[i]['score'], -i))
             reason = 'frozen-model disagreement above assumed noise plus coverage per cost'
+        confirmation = self.cycle.get('confirmation_plan') if self.cycle else None
+        offset = 2*(len(self.cycle['check_steps'])-4) if confirmation else None
+        chosen_predictions = options[index]['predictions']
+        prediction_origin = 'current_observed_start'
+        if confirmation:
+            index = confirmation['experiment_indexes'][offset//2]
+            chosen_predictions = options[index]['predictions']
+            reason = 'precommitted coverage confirmation; outcomes cannot change suffix actions'
+            if self.check_rule == 'confirm_long':
+                chosen_predictions = [dict(model_id=p['model_id'], tape=p['tape'][offset:offset+2])
+                                      for p in confirmation['predictions']]
+                prediction_origin = 'confirmation_start_frozen_tape'
         self.pending = clone(dict(step=self.steps, before=asdict(self.observation),
             phase='check' if self.cycle else 'explore', cycle_id=self.cycle['id'] if self.cycle else None,
             incumbent_id=self.incumbent.id, models=[m.snapshot() for m in models],
-            chosen=index, actions=options[index]['actions'], predictions=options[index]['predictions'],
-            options=options, reason=reason, failure_threshold=self.threshold, home_variance=self.noise))
+            chosen=index, actions=options[index]['actions'], predictions=chosen_predictions,
+            options=options, reason=reason, failure_threshold=self.threshold, home_variance=self.noise,
+            check_rule=self.check_rule, check_stage=('confirmation' if confirmation else 'screening') if self.cycle else 'explore',
+            confirmation_plan=confirmation, confirmation_offset=offset,
+            prediction_origin=prediction_origin, option_prediction_origin='current_observed_start'))
         return clone(self.pending)
 
     def accept(self, outcomes, deadline=float('inf')):
@@ -91,8 +109,9 @@ class RevisionInvestigator:
             if outcome.tick != before.tick + action.cost:
                 raise ValueError('outcome timing does not match experiment')
             before = outcome
-        losses = {p['model_id']:sum((xy[0]-o.x)**2+(xy[1]-o.y)**2 for xy,o in zip(p['tape'], outcomes))/2
-                  for p in self.pending['predictions']}
+        position_losses = {p['model_id']:[(xy[0]-o.x)**2+(xy[1]-o.y)**2
+                           for xy,o in zip(p['tape'], outcomes)] for p in self.pending['predictions']}
+        losses = {ident:sum(values)/2 for ident,values in position_losses.items()}
         self._partial = dict(losses=losses, revision=None)
         before = self.observation
         for action, outcome in zip(actions, outcomes):
@@ -104,8 +123,20 @@ class RevisionInvestigator:
         if self.cycle:
             for ident, error in losses.items():
                 self.cycle['losses'][ident].append(error)
+            self.cycle.setdefault('position_losses', {m.id:[] for m in self.cycle['models']})
+            for ident, values in position_losses.items():
+                self.cycle['position_losses'][ident].extend(values)
             self.cycle['check_steps'].append(self.steps-1)
-            if len(self.cycle['check_steps']) == 4:
+            if self.check_rule != 'original':
+                if len(self.cycle['check_steps']) == 4:
+                    self._prepare_confirmation()
+                    change = dict(screening_complete=True, cycle_id=self.cycle['id'],
+                                  screening=clone(self.cycle['screening']),
+                                  confirmation_plan=clone(self.cycle['confirmation_plan']))
+                    self._partial['revision'] = clone(change)
+                elif len(self.cycle['check_steps']) == 8:
+                    change = self._finish_confirmation(deadline)
+            elif len(self.cycle['check_steps']) == 4:
                 means = {k:sum(v)/len(v) for k,v in self.cycle['losses'].items()}
                 incumbent = self.cycle['models'][0]
                 alternatives = self.cycle['models'][1:]
@@ -117,7 +148,8 @@ class RevisionInvestigator:
                     proposal_audit=self.cycle['audit'], check_steps=self.cycle['check_steps'],
                     mean_squared_error=means, incumbent_id=incumbent.id, best_alternative=best.id,
                     required_margin=margin, accepted=accepted, selected_id=self.incumbent.id,
-                    decision_before_refit=True, frozen_through_history_length=len(self.history))
+                    decision_before_refit=True, frozen_through_history_length=len(self.history),
+                    check_rule=self.check_rule, position_losses=clone(self.cycle['position_losses']))
                 self._partial['revision'] = clone(record)
                 self.cycles.append(clone(record)); change = clone(record)
                 self.cycle = None; self.recent=[]; self.last_check_end=self.steps
@@ -127,7 +159,7 @@ class RevisionInvestigator:
             self._refit(deadline)
             enough = len(self.recent)==5 and sum(e>self.threshold for e in self.recent)>=3
             if (self.policy!='no-revision' and self.steps>=6 and enough and len(self.cycles)<2
-                    and self.steps-self.last_check_end>=6 and 80-2*self.steps>=8):
+                    and self.steps-self.last_check_end>=6 and 80-2*self.steps>=(8 if self.check_rule=='original' else 16)):
                 trigger = dict(after_step=self.steps-1, history_length=len(self.history),
                                recent_errors=list(self.recent), threshold=self.threshold)
                 audit={}
@@ -147,6 +179,71 @@ class RevisionInvestigator:
                     self.cycles.append(clone(change));self.last_check_end=self.steps;self.recent=[]
         self.pending=None
         return dict(losses=losses, revision=change, incumbent_after=self.incumbent.snapshot())
+
+    @staticmethod
+    def _margin(incumbent, alternative, means):
+        return max(.15*means[incumbent.id],
+                   .0001*max(1,alternative.parameter_count-incumbent.parameter_count))
+
+    def _prepare_confirmation(self):
+        """Freeze the screening winner and all eight future actions before use."""
+        cycle = self.cycle
+        means = {k:sum(v)/len(v) for k,v in cycle['losses'].items()}
+        incumbent = cycle['models'][0]
+        winner = min(cycle['models'][1:], key=lambda m:(means[m.id],m.id))
+        margin = self._margin(incumbent,winner,means)
+        cycle['screening'] = dict(winner_id=winner.id, mean_squared_error=means,
+            required_margin=margin, passed=means[incumbent.id]-means[winner.id]>margin,
+            position_losses=clone(cycle['position_losses']))
+        visits = list(self.visits)
+        indexes = []
+        for _ in range(4):
+            index = min(range(9),key=lambda i:(visits[i],i))
+            indexes.append(index);visits[index]+=1
+        actions = tuple(a for index in indexes for a in experiments()[index])
+        cycle['confirmation_plan'] = clone(dict(
+            start=asdict(self.observation), history_length=len(self.history),
+            previous_transition=asdict(self.history[-1]) if self.history else None,
+            visits_before=list(self.visits), visits_after_virtual=visits,
+            experiment_indexes=indexes, actions=[asdict(a) for a in actions],
+            models=[m.snapshot() for m in cycle['models']],
+            predictions=[dict(model_id=m.id,tape=m.predict_tape(self.observation,self.history,actions))
+                         for m in cycle['models']],
+            interpretation='fixed actions; full tape is scored only by confirm_long'))
+
+    def _finish_confirmation(self, deadline):
+        cycle = self.cycle
+        incumbent = cycle['models'][0]
+        pooled = {k:sum(v)/len(v) for k,v in cycle['losses'].items()}
+        suffix = {k:sum(v[4:])/4 for k,v in cycle['losses'].items()}
+        if self.check_rule == 'pooled':
+            winner = min(cycle['models'][1:],key=lambda m:(pooled[m.id],m.id))
+            decision_means = pooled
+        else:
+            winner = next(m for m in cycle['models'] if m.id==cycle['screening']['winner_id'])
+            decision_means = suffix
+        margin = self._margin(incumbent,winner,decision_means)
+        passed = decision_means[incumbent.id]-decision_means[winner.id]>margin
+        accepted = passed and (self.check_rule=='pooled' or cycle['screening']['passed'])
+        self.incumbent = winner if accepted else incumbent
+        record = dict(id=cycle['id'],trigger=cycle['trigger'],models=cycle['snapshots'],
+            proposal_audit=cycle['audit'],check_steps=cycle['check_steps'],
+            check_rule=self.check_rule,mean_squared_error=decision_means,
+            pooled_mean_squared_error=pooled,confirmation_mean_squared_error=suffix,
+            screening=cycle['screening'],confirmation_plan=cycle['confirmation_plan'],
+            position_losses=cycle['position_losses'],
+            confirmation_position_losses={k:v[8:] for k,v in cycle['position_losses'].items()},
+            incumbent_id=incumbent.id,best_alternative=winner.id,
+            required_margin=margin,decision_batch_passed=passed,
+            confirmation_required_margin=self._margin(incumbent,winner,suffix),
+            confirmation_passed=suffix[incumbent.id]-suffix[winner.id]>self._margin(incumbent,winner,suffix),
+            accepted=accepted,selected_id=self.incumbent.id,decision_before_refit=True,
+            frozen_through_history_length=len(self.history))
+        self._partial['revision'] = clone(record)
+        self.cycles.append(clone(record))
+        self.cycle=None;self.recent=[];self.last_check_end=self.steps
+        self._refit(deadline)
+        return clone(record)
 
     def _refit(self, deadline):
         audit={}

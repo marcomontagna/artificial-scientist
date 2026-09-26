@@ -47,10 +47,20 @@ def evaluation(model, history, cycles, variant, seed, deadline):
             predictions=predictions,prediction_hash=frozen_hash,actual=[asdict(a) for a in actual],squared_errors=errors,cost=world.consumed))
     metrics={name:sum(v for r in records for v in r['squared_errors'][name])/sum(len(r['actual']) for r in records) for name in models}
     agreement=[]
+    decision_diagnostics=[]
     for cycle in cycles:
         if not cycle.get('models'):continue
         inc=VectorModel.from_snapshot(cycle['models'][0]);alts=[VectorModel.from_snapshot(s) for s in cycle['models'][1:]]
         key=lambda ident:'cycle%d:%s'%(cycle['id'],ident)
+        candidate=next(m for m in alts if m.id==cycle['best_alternative'])
+        incumbent_error=metrics[key(inc.id)];candidate_error=metrics[key(candidate.id)]
+        candidate_margin=max(.15*incumbent_error,.0001*max(1,candidate.parameter_count-inc.parameter_count))
+        useful=incumbent_error-candidate_error>candidate_margin
+        decision_diagnostics.append(dict(cycle_id=cycle['id'],check_rule=cycle.get('check_rule','original'),
+            candidate_id=candidate.id,accepted=cycle['accepted'],external_incumbent_mse=incumbent_error,
+            external_candidate_mse=candidate_error,external_required_margin=candidate_margin,
+            harmful_accepted=cycle['accepted'] and candidate_error>incumbent_error,
+            useful_accepted=cycle['accepted'] and useful,missed_useful=(not cycle['accepted']) and useful))
         best=min(alts,key=lambda m:(metrics[key(m.id)],m.id))
         margin=max(.15*metrics[key(inc.id)],.0001*max(1,best.parameter_count-inc.parameter_count))
         accepted=metrics[key(inc.id)]-metrics[key(best.id)]>margin
@@ -59,10 +69,10 @@ def evaluation(model, history, cycles, variant, seed, deadline):
             external_best_alternative=best.id,external_alternative_mse=metrics[key(best.id)],
             external_required_margin=margin,external_accepted=accepted,external_selected_id=selected,
             same_accept_reject=accepted==cycle['accepted'],same_selected_model=selected==cycle['selected_id'],
-            meaning='Post-run comparison using same adoption margin on frozen pre-check snapshots; different intervention distribution, not causal truth.'))
+            meaning='Posthoc best-alternative single-batch margin on frozen snapshots; NOT the two-stage adoption rule. Different intervention distribution, not causal truth.'))
     return dict(metrics={k:metrics[k] for k in ('learned','vector_linear')},
         snapshot_metrics={k:v for k,v in metrics.items() if k.startswith('cycle')},records=records,
-        tool_cost=sum(r['cost'] for r in records),reference=reference.snapshot(),agreement=agreement,
+        tool_cost=sum(r['cost'] for r in records),reference=reference.snapshot(),agreement=agreement,decision_diagnostics=decision_diagnostics,
         warning='Separate outcomes never affect adoption; reused evaluator design and three noise seeds are descriptive.')
 
 
@@ -73,9 +83,11 @@ def source_info():
         source_sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)})
 
 
-def investigate(variant,policy,seed,output,cpu_seconds=120):
+def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'):
     if not 0<cpu_seconds<=120:raise ValueError('invalid CPU cap')
     if policy not in ('active','random','coverage','no-revision','legacy'):raise ValueError('unknown policy')
+    if check_rule not in ('original','pooled','confirm_short','confirm_long'):raise ValueError('unknown check rule')
+    if policy=='legacy' and check_rule!='original':raise ValueError('legacy has no revision check rule')
     output=Path(output)
     if output.exists():raise FileExistsError('fresh output required')
     provenance=source_info()
@@ -83,8 +95,8 @@ def investigate(variant,policy,seed,output,cpu_seconds=120):
     start=time.process_time();deadline=start+cpu_seconds
     world=make_revision_world(seed,variant)
     legacy=policy=='legacy'
-    agent=Investigator(world.initial,'active',seed+700001) if legacy else RevisionInvestigator(world.initial,policy,seed+700001)
-    trace=dict(schema_version=1,variant=variant,policy=policy,seed=seed,world_source_commit=WORLD_COMMIT,
+    agent=Investigator(world.initial,'active',seed+700001) if legacy else RevisionInvestigator(world.initial,policy,seed+700001,check_rule=check_rule)
+    trace=dict(schema_version=2,variant=variant,policy=policy,seed=seed,check_rule=check_rule,world_source_commit=WORLD_COMMIT,
         initial=asdict(world.initial),events=[],cycles=[],status='running',caps={'training':80,'evaluation':68,'cpu_seconds':cpu_seconds,'trace_bytes':MAX_BYTES},
         assumptions='Supplied initial v/u structure for revision policies; known zero home, weak noise floor, bounded predefined revision operators; no calibrated confidence.')
     journal_bytes=0
@@ -123,7 +135,9 @@ def investigate(variant,policy,seed,output,cpu_seconds=120):
         work=agent.search_cost if legacy else agent.work,
         incomplete_cycle=None if legacy or not agent.cycle else dict(id=agent.cycle['id'],
             models=agent.cycle['snapshots'],trigger=agent.cycle['trigger'],check_steps=agent.cycle['check_steps'],
-            losses=agent.cycle['losses'],proposal_audit=agent.cycle['audit']))
+            losses=agent.cycle['losses'],proposal_audit=agent.cycle['audit'],check_rule=check_rule,
+            position_losses=agent.cycle.get('position_losses'),screening=agent.cycle.get('screening'),
+            confirmation_plan=agent.cycle.get('confirmation_plan')))
     if not trace['status'].startswith('incomplete'):
         try:trace['evaluation']=evaluation(model,agent.history,trace['cycles'],variant,seed,deadline)
         except TimeoutError:trace['status']='incomplete_evaluation_cpu_cap'
@@ -132,7 +146,7 @@ def investigate(variant,policy,seed,output,cpu_seconds=120):
     encoded=json.dumps(trace,allow_nan=False).encode()
     if len(encoded)+journal_bytes>MAX_BYTES:raise RuntimeError('raw artifact cap exceeded')
     (output/'trace.json').write_bytes(encoded)
-    summary=dict(provenance,variant=variant,policy=policy,seed=seed,status=trace['status'],
+    summary=dict(provenance,variant=variant,policy=policy,seed=seed,check_rule=check_rule,status=trace['status'],
         training_cost=world.consumed,tool_actions=len(agent.history),experiments=len(trace['events']),
         evaluation_cost=trace.get('evaluation',{}).get('tool_cost'),metrics=trace.get('evaluation',{}).get('metrics'),
         formula=model.formula,selected_model=model.snapshot(),cycles=len(trace['cycles']),
@@ -150,7 +164,8 @@ def main():
     p.add_argument('--variant',choices=('control','challenge','stress'),required=True)
     p.add_argument('--policy',choices=('active','random','coverage','no-revision','legacy'),default='active')
     p.add_argument('--seed',type=int,default=270001);p.add_argument('--output',required=True)
-    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output)
+    p.add_argument('--check-rule',choices=('original','pooled','confirm_short','confirm_long'),default='original')
+    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output,check_rule=args.check_rule)
     print(json.dumps(r,indent=2))
     if r['status']!='budget_complete':raise SystemExit(2)
 

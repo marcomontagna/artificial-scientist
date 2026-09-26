@@ -1,0 +1,10 @@
+{
+  "model": "claude-opus-5-5",
+  "scope": "Design critique of supplied text; no tools",
+  "access": "Previously verified subscription, no API credentials/paid fallback",
+  "sha256": {
+    "results/runs/followup_a_design_claude/request.txt": "0ab8852f0e51f4d170a20f351c93dc57d56bfaab38644d72bb3bedc287275155",
+    "results/runs/followup_a_design_claude/response.json": "36b86b0caac0c76f38da153e2c807644c1bf89f4afecbd032f47f4f9472b9664",
+    "research/claude_followup_a_design.md": "37a2e13d1e912241236d73a790a80119523ee0fabcbd569d3b1f32a1f9248926"
+  }
+}

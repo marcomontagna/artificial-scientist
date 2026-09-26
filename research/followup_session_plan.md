@@ -1,0 +1,9 @@
+# Two-hour follow-up session
+
+User authorization: September26,2026,20:32UTC; sync target22:32UTC (17:32America/Chicago). Continue through a few bounded experiments, with Claude reviewing each design and result, plus a separate literature agent. This explicit request supersedes the previous stop-after-one-study instruction for this session only. No extra spending, no paid fallback, no indefinite chain. Stop starting runs at22:15UTC and reserve final time for review/report. Scheduled one-time thread check-in created with id artificial-scientist-two-hour-sync.
+
+Aim for three informative cycles, not three arbitrary tweaks. First examine selection-versus-confirmation and prediction-horizon effects with frozen candidates and matched costs. Choose subsequent designs from those results and primary-source research, documenting limitations rather than silently tuning. At least two prospective comparisons if feasible; do not claim three completed if a review or access limit blocks them. Each cycle freezes protocol/source before sampling, preserves controls/failures and receives independent code/result review. Aggregate simulator budget remains60minutes,120CPU seconds/run, one process at a time,500MB artifact target. No learner source access to evaluator outcomes or hidden laws.
+
+The first proposed comparison keeps worlds, proposal operators, fitting and external evaluation fixed. It compares original short checks with equal-cost pooled, fresh-confirmation short and fresh-confirmation continuous-horizon checks. It does not purport to repair missing delayed state. The next cycle is not selected yet.
+
+Status: literature and first design reviewed; first implementation reviewed and default compatibility passed, awaiting frozen prospective runs. Existing revision_v1 results remain unchanged. This session will end with a concise cumulative report, updated Notion and actual contributions/provenance.
