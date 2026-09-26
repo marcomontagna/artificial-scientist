@@ -23,3 +23,10 @@ Shared numerical seeds across world/schedule cells create correlated comparisons
 - **390:**24episode resource smoke; previously inspected causal development seed, not new or held out.
 - **400–439:**960episode study, now inspected development data.
 - Replay embeds first3declaredseeds400/401/402, all six worlds and four policies; full overview includes all40. No seed selection by effect and no post-result tuning.
+
+## Stateful room v0
+
+- **7/11:** synthetic unit fixtures.
+- **490:**20episode resource/correctness smoke, inspected.
+- **500–531:**640episode full study, now inspected development data; no held-out confirmation or post-result tuning.
+- Replay uses the first2declaredseeds500/501 across all5worlds/4policies; overview includes all32. Primary intervals describe policy/tie randomness in fixed worlds, not independent new law families. Sequence seeds1000–1049 remain unused.

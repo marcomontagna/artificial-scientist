@@ -1,5 +1,11 @@
 # Results
 
+## Stateful room — September 26
+
+The [reviewed stateful learner](research/stateful_room_result.md) completed640episodes/61,440actions from clean source`e6978fd`;65tests pass. Mean primary prediction loss: two-step planning0.50067, greedy0.51214, random0.60726nats. Both pooled thresholds and all six per-world harm guards pass. The noise control is worse than random; fixed cycle is best in two designed worlds but fails coverage in the third. Hidden-memory stress remains incompletely modeled.
+
+The learner estimates transition probabilities without a supplied door-rule library; its state representation and table form remain supplied. This demonstrates bounded shallow coverage-planning benefit, not new scientific reasoning, neural representation learning or novel RL. Claude reviewed the protocol; separate agents reviewed implementation and results. [Recorded room replay](visualization/stateful_room.html) · [next steps](NEXT_STEPS.md).
+
 ## Interactive laboratory — September 25
 
 The [first active-learning prototype](research/interactive_lab_result.md) completed960episodes/46,080experiments in6.249seconds;54tests pass. Mean excess query loss over the four supplied-library worlds improved by0.02018nats versus random and0.01394 versus round-robin. Both fixed primary thresholds pass; descriptive seed-level intervals are reported in the full result.
