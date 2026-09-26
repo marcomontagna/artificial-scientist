@@ -1,4 +1,6 @@
-# Seed status
+# Historical seed status
+
+This ledger is preserved as provenance for retired studies. The new laboratory has not sampled any seeds; choose and record a fresh range when its implementation is ready. See [archive](../archive/README.md).
 
 Updated September 26, 2026. This records actual inspection for the v0/v1/v2 sequence-world family, not the seed plan for every future environment.
 

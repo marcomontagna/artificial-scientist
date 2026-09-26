@@ -1,1 +1,1 @@
-"""Minimal research plumbing; no learned scientist or novelty claim."""
+"""Tool-based investigations of simulated worlds; laboratory implementation pending."""

@@ -1,9 +1,0 @@
-{
-  "revision": "ea5a06c5ae3b3884e4481f5ea14ae37d1a844344",
-  "dirty": true,
-  "python": "3.9.6",
-  "platform": "macOS-27.0-arm64-arm-64bit",
-  "elapsed_seconds": 0.034397375,
-  "config_sha256": "42d6d170dd716d27c1d7454a7368689d01016eac69aa344ee5e97c9242bf86d2",
-  "purpose": "plumbing smoke test; not novelty evidence"
-}

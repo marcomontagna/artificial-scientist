@@ -1,43 +1,21 @@
-# Project direction — September 26, 2026
+# Direction: investigate an unfamiliar world
 
-## Destination
-Build a small artificial scientist that enters an unfamiliar system, explores the effects of its actions, forms competing explanations, predicts with uncertainty, chooses informative experiments, and revises inadequate explanations. **Understanding is the primary objective; winning or an external reward is optional.** This is an aspiration, not demonstrated autonomy or an AGI claim.
+The goal is an artificial scientist that uses experiments to improve its understanding. It should enter a world without its governing equations, maintain competing explanations, choose what to try, predict outcomes, learn from failures, and express useful regularities as inspectable models or formulas.
 
-The user's chess example means learning through interaction without being handed the game rules, piece semantics or an opponent model. The environment enforces what can happen; attempted actions and outcomes provide evidence. In a simulated universe, the same loop should discover useful regularities without a win/lose condition. A sensor/action interface and learning machinery must still be supplied; this is not learning from literally no assumptions.
+The user's “Move 37” ambition means finding a useful experiment or explanation that we did not script as the solution. It is an aspiration. Surprise becomes interesting when it yields reproducible predictive or practical benefit on fresh interventions; rarity or a compelling story is insufficient.
 
-Measure understanding through prediction on independent experiments, calibrated uncertainty, efficient acquisition of informative evidence, and models that remain useful across new settings. Explicit equations are a desired output: propose a compact relationship, state where it has been tested, expose uncertainty and failure cases, and revise it when new experiments disagree. Accurate predictions alone do not establish a true or unique explanation. Raw surprise is not sufficient: irreducible noise must not become the exploration objective. Different models may fit all available evidence, so preserve uncertainty rather than claim a unique discovered law.
+## What we supply
 
-An optional task objective can later use the learned model for planning, including winning a game. That is distinct from the core scientific objective. In simulations, discoveries can include non-obvious consequences of the implemented rules; claims about the real universe require independent real-world evidence.
+A sensor/action interface, memory, a model-building language, search and planning machinery, an investigation objective, and finite budgets. Tools alone cannot supply those. Cartesian coordinates, time, mathematical primitives, noise assumptions and reset privileges are explicit inductive assumptions. We do not give the learner a finite catalogue of complete correct world rules.
 
-## Multiple universes are central
-Use a procedural generator of small worlds with different hidden rules: stable motion, changed coefficients, delayed dependencies, hidden state and noise. Learners see observations and permitted actions, not world identities, equations or change times. Human-designed generators and learning machinery still impose assumptions.
+## First system
 
-Separate development worlds from held-out evaluation. Start with fresh learners in each world; later test transfer across worlds against fresh-start controls. Different seeds test variation within a family; held-out rule families test broader generalization. Neither alone establishes universal scientific discovery.
+A persistent 2D laboratory with one movable object. Observe noisy positions; push, wait and reset through the permitted interface. Infer temporal regularities, compose candidate predictive programs, and choose experiments that distinguish useful explanations. Preserve uncertainty and admit when the toolbox cannot explain observations. [Concrete first design](tool_lab.md).
 
-## Current step: equations and their limits
+Understanding is primary. A later target-reaching task can test whether a learned explanation enables useful planning, without making winning the definition of intelligence. Multiple universes and transfer remain the destination, after one coherent loop works.
 
-The [reject–revise–fresh-check study](equation_revision_result.md) now implements one evidence-triggered expansion from a supplied quadratic grammar to one cubic term, followed by independent refitting and fresh validation. Its hard checks pass, but its practical utility screen fails against efficient pooled fitting. It is a working component, not novel discovery or demonstrated sample efficiency. Missed weak terms and nonrejected wrong exponential formulas show why validation cannot certify true laws.
+## Focus
 
-Freeze this small grammar line rather than enlarging it to force a win. The next question must identify a concrete task where experiment choice or revision can add value beyond efficient ordinary estimation, then survive a focused prior-art and baseline review. [Next steps](../NEXT_STEPS.md) records that decision. The earlier [same-equation integration](equation_pipeline_result.md) and [RNG erratum](equation_domain_rng_erratum.md) remain preserved. No additional study follows automatically.
+Known components are welcome. We do not need to invent regression or establish paper-level novelty before building the prototype. Any later novelty claim must face the [closest prior work](references.md) and serious alternatives. The previous disconnected statistical exercises are [retired](../archive/README.md); their failures remain evidence, not the active roadmap.
 
-## Historical first question — now frozen
-Can a learner detect insufficient predictive state, expand it selectively, and recover accurate predictions with lower cumulative memory/compute or fewer observations than strong alternatives?
-
-Demonstrate that the structural-change condition really requires additional predictive information. Include coefficient-only, no-change and noise controls. Compare minimal-state, always-large-state, expressive recurrent and appropriate adaptive/model-order-selection baselines. Fix observation streams initially and disclose data, tuning, capacity and compute budgets. Predefine the accuracy/resource tradeoff before evaluation. Adding memory is not automatically concept invention.
-
-## Architecture remains open
-A small neural network trained from scratch may learn representations and predictions; probabilistic or simpler mathematical models may work better for the first test. Compare alternatives. No pretrained LLM inside the initial experimental learner. Codex/Claude assist research and engineering. MLX is optional, never mandatory.
-
-## Next gate and longer path
-The first two context selectors have run and are frozen after Claude’s review and Codex’s reproduction; see [the response](selector_review_response.md). They select supplied experts and do not choose experiments. Return-to-simple reproduction confirms contraction but no predictive benefit over the mixture. Do not build v3 or extend selector ablations without a separately justified question.
-
-The completed [research pass](research_reset.md) provisionally selects detecting wrong causal assumptions through chosen interventions, starting with mathematical and small-world feasibility. That [population check](causal_feasibility_result.md) now passes. The [finite-sample diagnostic check](causal_diagnostic_result.md) is now complete: its strong-case gate passes but the mismatched-family stress case fails. It is one component study, not the project destination. The [interactive switch laboratory](interactive_lab_result.md) now implements that loop: experiment choice, observation, Bayesian updating and independent-query evaluation. It improves the primary supplied-library comparison but loses on the pure-noise control; the flexible fallback is supplied, not invented. The [stateful room comparison](stateful_room_result.md) now learns transition tables without a supplied rule library and shows a small benefit from two-step planning over greedy exploration. Noise and hidden memory expose limits. The user then prioritized constructing and testing explicit equations. The bounded September26 equation sequence follows that direction; the history-aware baseline is deferred. Supplied state channels and mathematical building blocks remain major assumptions. Do not continue an open-ended chain of isolated diagnostic studies. No candidate is novelty-cleared. Multiple universes remain central. New methods need a precise unresolved difference and independent review before implementation; a negative novelty decision is acceptable.
-
-The earlier EPIG/EIG protocol is retained as optional replication groundwork, not the current implementation target. The development benchmark now includes adaptive context selectors and balanced structural-lag cases. Its full shadow bank is present from the start; it does not demonstrate lower total memory, invented features or scientific novelty.
-
-## Working agreement
-Codex coordinates the protocol and implementation; Claude is the intended independent critic when available. A distinct Codex reviewer can substitute, identified honestly. Every substantive artifact receives another agent's review. Keep reports short, work inside this repo, use existing access only, and incur no additional spending. Stop at usage limits; never enable paid fallback.
-
-## Close reference points
-
-[MuZero](https://arxiv.org/abs/1911.08265) learns models used for reward/value-guided planning; [DreamerV3](https://arxiv.org/abs/2301.04104) learns world models and behavior through imagined outcomes. These establish substantial overlap with the broad learn-through-interaction vision. They do not establish that our implementation discovers rules, chooses informative experiments or transfers to arbitrary worlds. Here the primary goal is improved understanding; a defensible contribution still needs a narrow comparison with existing discovery/experimental-design methods. Primary abstracts checked September25,2026; no comprehensive new literature review is claimed.
+Current status: design and cleanup independently reviewed; no new laboratory implementation or study. No promised AGI, universal discovery or guaranteed breakthrough.

@@ -1,3 +1,5 @@
-# Results and provenance
+# Investigation records
 
-`scaffold_smoke/` is the small tracked baseline plumbing check. `runs/` is ignored: use fresh directories for experiment runs. Preserve config, predictions, summary, revision/dirty state, Python/platform and elapsed time. Never overwrite a prior run. Promote only small, reviewed, relevant artifacts to tracked paths and link them from RESULTS.md. Results from the toy cannot establish novelty or general intelligence.
+`results/runs/` contains ignored local raw records from earlier work; the cleanup leaves them untouched. They are historical evidence, not an active laboratory or background process.
+
+Tracked historical summaries moved out of the active checkout and remain available at the [archive snapshot](../archive/README.md). New laboratory traces will use fresh directories and record actual tools, frozen predictions, observations and model changes. No new laboratory run exists yet.

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "artificial-scientist-experiments"
 version = "0.1.0"
-description = "Small reproducible experiments in prediction and adaptation"
+description = "A tool-using learner for investigating unfamiliar simulated worlds"
 requires-python = ">=3.9"
 dependencies = []
 license = {file = "LICENSE"}

@@ -1,0 +1,16 @@
+{
+  "access": "Previously verified Claude Pro subscription, usage credits off; official read-only CLI, no paid fallback",
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "duration_ms": 71898,
+  "num_turns": 12,
+  "is_error": false,
+  "raw_directory": "results/runs/direction_reset_claude_20260926",
+  "report": "research/claude_direction_reset.md",
+  "sha256": {
+    "results/runs/direction_reset_claude_20260926/request.txt": "dbd46974665f214a0863a29a53b0e89a687a50b1bad4d858ba11af10ebce20f2",
+    "results/runs/direction_reset_claude_20260926/response.json": "35ba2aa91fd6d8089bf3dfe392199fe8db07a2a3c99f45a70bc887ef4f5bc656",
+    "research/claude_direction_reset.md": "82d380dbe9ce6c2d922c7a9f0762660415e47759acaabca8565d55a2273322f4"
+  }
+}
