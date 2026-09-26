@@ -5,6 +5,37 @@ from . import lab_models as old
 
 VARIABLES=('p','v','u','lag_u','one','other_p','other_v','other_u','other_lag_u')
 LIMIT=1000.
+MAX_LAG=16
+
+
+def lag_menu():
+    return tuple(('lag',name,k) for k in range(2,MAX_LAG+1) for name in ('u','other_u'))
+
+
+def expression(term):
+    if isinstance(term,str):
+        return old.expression(term)
+    if term[0]=='lag':
+        return 'lag(%s,%d)'%(term[1],term[2])
+    if term[0]=='mul':
+        return '('+expression(term[1])+'*'+expression(term[2])+')'
+    return term[0]+'('+expression(term[1])+')'
+
+
+def advance_inputs(buffer,action):
+    if action.kind=='reset':
+        return [(0.,0.)]*MAX_LAG
+    push=old.impulse(action)
+    for tick in range(action.cost):
+        buffer=(buffer+[push if tick==0 else (0.,0.)])[-MAX_LAG:]
+    return buffer
+
+
+def input_history(history):
+    buffer=[(0.,0.)]*MAX_LAG
+    for transition in history:
+        buffer=advance_inputs(buffer,transition.action)
+    return buffer
 
 
 def restore(term):
@@ -18,6 +49,10 @@ def nodes(term,depth=0):
         if term not in VARIABLES:
             raise ValueError('unknown variable')
         return 1
+    if isinstance(term,tuple) and term and term[0]=='lag':
+        if len(term)!=3 or term[1] not in ('u','other_u') or type(term[2]) is not int or not 1<=term[2]<=MAX_LAG:
+            raise ValueError('invalid input lag')
+        return 3
     if not isinstance(term,tuple) or not term or term[0] not in ('abs','positive','mul') or len(term)!=(3 if term[0]=='mul' else 2):
         raise ValueError('invalid expression')
     return 1+sum(nodes(x,depth+1) for x in term[1:])
@@ -28,6 +63,9 @@ def value(term,inputs):
     def run(t):
         if isinstance(t,str):
             result=inputs[t]
+        elif t[0]=='lag':
+            axis=inputs['_axis'] if t[1]=='u' else 1-inputs['_axis']
+            result=inputs['_input_history'][-t[2]][axis]
         elif t[0]=='abs':
             result=abs(run(t[1]))
         elif t[0]=='positive':
@@ -40,19 +78,22 @@ def value(term,inputs):
     return run(term)
 
 
-def inputs_for(pos,vel,push,lag,axis):
+def inputs_for(pos,vel,push,lag,axis,buffer=None):
     other=1-axis
+    buffer=[(0.,0.)]*(MAX_LAG-1)+[lag] if buffer is None else buffer
     return dict(p=pos[axis],v=vel[axis],u=push[axis],lag_u=lag[axis],one=1.,
-                other_p=pos[other],other_v=vel[other],other_u=push[other],other_lag_u=lag[other])
+                other_p=pos[other],other_v=vel[other],other_u=push[other],other_lag_u=lag[other],
+                _axis=axis,_input_history=tuple(buffer))
 
 
 class VectorModel:
     max_terms=4
+    max_nodes=40
 
     def __init__(self,terms,shared,coefficients):
         self.terms=tuple(restore(t) for t in terms)
         self.shared=shared
-        if type(shared) is not bool or len(self.terms)>self.max_terms or sum(nodes(t) for t in self.terms)>40:
+        if type(shared) is not bool or len(self.terms)>self.max_terms or sum(nodes(t) for t in self.terms)>self.max_nodes:
             raise ValueError('vector program exceeds declared budget')
         if len(set(self.terms))!=len(self.terms):
             raise ValueError('duplicate term')
@@ -65,7 +106,7 @@ class VectorModel:
 
     @property
     def id(self):
-        return ('shared:' if self.shared else 'untied:')+('+'.join(old.expression(t) for t in self.terms) or 'zero')
+        return ('shared:' if self.shared else 'untied:')+('+'.join(expression(t) for t in self.terms) or 'zero')
 
     @property
     def parameter_count(self):
@@ -74,7 +115,7 @@ class VectorModel:
     @property
     def formula(self):
         rows=(self.coefficients,self.coefficients) if self.shared else self.coefficients
-        return '; '.join('delta_'+axis+' = '+(' + '.join('%.6g*%s'%(c,old.expression(t)) for c,t in zip(row,self.terms)) or '0') for axis,row in zip(('x','y'),rows))
+        return '; '.join('delta_'+axis+' = '+(' + '.join('%.6g*%s'%(c,expression(t)) for c,t in zip(row,self.terms)) or '0') for axis,row in zip(('x','y'),rows))
 
     def snapshot(self):
         return dict(id=self.id,terms=self.terms,shared=self.shared,coefficients=self.coefficients,
@@ -90,20 +131,23 @@ class VectorModel:
         vel=old.velocity(previous)
         lag=old.impulse(previous.action) if previous else (0.,0.)
         tape=[]
+        buffer=input_history(history)
         rows=(self.coefficients,self.coefficients) if self.shared else self.coefficients
         for action in actions:
             action.validate()
             if action.kind=='reset':
                 pos=vel=lag=(0.,0.)
+                buffer=[(0.,0.)]*MAX_LAG
             else:
                 push=old.impulse(action)
                 for tick in range(action.ticks if action.kind=='wait' else 1):
                     current=push if tick==0 else (0.,0.)
                     # Both axes read the same old vector state before either updates.
-                    delta=tuple(max(-LIMIT,min(LIMIT,math.fsum(c*value(t,inputs_for(pos,vel,current,lag,axis)) for c,t in zip(rows[axis],self.terms)))) for axis in range(2))
+                    delta=tuple(max(-LIMIT,min(LIMIT,math.fsum(c*value(t,inputs_for(pos,vel,current,lag,axis,buffer)) for c,t in zip(rows[axis],self.terms)))) for axis in range(2))
                     pos=tuple(max(-LIMIT,min(LIMIT,p+d)) for p,d in zip(pos,delta))
                     vel=delta
                     lag=current
+                    buffer=(buffer+[current])[-MAX_LAG:]
             tape.append(tuple(pos))
         return tape
 
@@ -113,9 +157,16 @@ class LinearReference(VectorModel):
     max_terms=9
 
 
+class HistoryReference(VectorModel):
+    """Evaluator-only full input-history ridge model; never a runtime candidate."""
+    max_terms=39
+    max_nodes=120
+
+
 def training_rows(history):
     pairs=[]
     previous=None
+    buffer=[(0.,0.)]*MAX_LAG
     for transition in history:
         reliable=previous is None or previous.action.kind=='reset' or previous.after.tick-previous.before.tick==1
         if transition.action.kind!='reset' and transition.after.tick-transition.before.tick==1 and reliable:
@@ -123,7 +174,8 @@ def training_rows(history):
             vel=old.velocity(previous)
             push=old.impulse(transition.action)
             lag=old.impulse(previous.action) if previous else (0.,0.)
-            pairs.append(tuple((inputs_for(pos,vel,push,lag,axis),target-pos[axis]) for axis,target in enumerate((transition.after.x,transition.after.y))))
+            pairs.append(tuple((inputs_for(pos,vel,push,lag,axis,buffer),target-pos[axis]) for axis,target in enumerate((transition.after.x,transition.after.y))))
+        buffer=advance_inputs(buffer,transition.action)
         previous=transition
     return pairs
 
@@ -190,13 +242,18 @@ def nonlinear_menu():
     return tuple(t for t in old.grammar() if not isinstance(t,str))+tuple(('mul',name,'other_'+name) for name in ('p','v','u'))
 
 
-def propose(incumbent,history,deadline=float('inf'),audit=None):
+def propose(incumbent,history,deadline=float('inf'),audit=None,proposal_mode='ordinary'):
     audit={} if audit is None else audit
+    if proposal_mode not in ('ordinary','history'):
+        raise ValueError('unknown proposal mode')
     audit.update(candidate_fits=0,feature_evaluations=0,families=[],training_pairs=0)
+    if proposal_mode=='history':
+        audit['candidate_scores']=[]
     pairs=training_rows(history)
     audit['training_pairs']=len(pairs)
     families=[('unshare',[(incumbent.terms,False)] if incumbent.shared else [])]
-    for family,menu in [('primitive',VARIABLES),('nonlinear',nonlinear_menu())]:
+    primitive_menu=VARIABLES+(lag_menu() if proposal_mode=='history' else ())
+    for family,menu in [('primitive',primitive_menu),('nonlinear',nonlinear_menu())]:
         edits=[(incumbent.terms+(term,),False) for term in menu if term not in incumbent.terms] if len(incumbent.terms)<4 else []
         families.append((family,edits))
     selected=[]
@@ -217,6 +274,9 @@ def propose(incumbent,history,deadline=float('inf'),audit=None):
                 audit['feature_evaluations']+=2*len(terms)
             mse=math.fsum(errors)/max(1,len(errors))
             scored.append((mse+1e-4*model.parameter_count,model.id,model,mse))
+            if proposal_mode=='history':
+                audit['candidate_scores'].append(dict(family=family,model_id=model.id,terms=model.terms,
+                    training_score=mse+1e-4*model.parameter_count,training_mse=mse,parameter_count=model.parameter_count))
         scored.sort(key=lambda item:(item[0],item[1]))
         best=scored[0] if scored else None
         audit['families'].append(dict(family=family,candidates=len(scored),selected_model_id=best[1] if best else None,
@@ -229,3 +289,10 @@ def propose(incumbent,history,deadline=float('inf'),audit=None):
 def linear_reference(history,deadline=float('inf')):
     audit=dict(candidate_fits=0,feature_evaluations=0)
     return _fit(VARIABLES,False,training_rows(history),deadline,audit,LinearReference)
+
+
+def history_reference(history,deadline=float('inf')):
+    audit=dict(candidate_fits=0,feature_evaluations=0)
+    model=_fit(VARIABLES+lag_menu(),False,training_rows(history),deadline,audit,HistoryReference)
+    model.fit_work=dict(audit)
+    return model

@@ -28,9 +28,14 @@ def tape(model, initial, sequence):
     return [(p['x'],p['y']) for p in frozen_rollout(model,initial,sequence)]
 
 
-def evaluation(model, history, cycles, variant, seed, deadline):
+def evaluation(model, history, cycles, variant, seed, deadline, include_history_reference=False):
     reference=linear_reference(history,deadline)
     models={'learned':model,'vector_linear':reference}
+    memory_reference=None
+    if include_history_reference:
+        from .revision_models import history_reference
+        memory_reference=history_reference(history,deadline)
+        models['history_linear']=memory_reference
     for cycle in cycles:
         for snapshot in cycle.get('models',[]):
             models['cycle%d:%s'%(cycle['id'],snapshot['id'])]=VectorModel.from_snapshot(snapshot)
@@ -70,7 +75,9 @@ def evaluation(model, history, cycles, variant, seed, deadline):
             external_required_margin=margin,external_accepted=accepted,external_selected_id=selected,
             same_accept_reject=accepted==cycle['accepted'],same_selected_model=selected==cycle['selected_id'],
             meaning='Posthoc best-alternative single-batch margin on frozen snapshots; NOT the two-stage adoption rule. Different intervention distribution, not causal truth.'))
-    return dict(metrics={k:metrics[k] for k in ('learned','vector_linear')},
+    return dict(metrics={k:metrics[k] for k in models if not k.startswith('cycle')},
+        history_reference=memory_reference.snapshot() if memory_reference else None,
+        history_reference_work=getattr(memory_reference,'fit_work',None),
         snapshot_metrics={k:v for k,v in metrics.items() if k.startswith('cycle')},records=records,
         tool_cost=sum(r['cost'] for r in records),reference=reference.snapshot(),agreement=agreement,decision_diagnostics=decision_diagnostics,
         warning='Separate outcomes never affect adoption; reused evaluator design and three noise seeds are descriptive.')
@@ -83,11 +90,12 @@ def source_info():
         source_sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)})
 
 
-def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'):
+def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original',proposal_mode='ordinary',include_history_reference=False):
     if not 0<cpu_seconds<=120:raise ValueError('invalid CPU cap')
     if policy not in ('active','random','coverage','no-revision','legacy'):raise ValueError('unknown policy')
     if check_rule not in ('original','pooled','confirm_short','confirm_long'):raise ValueError('unknown check rule')
-    if policy=='legacy' and check_rule!='original':raise ValueError('legacy has no revision check rule')
+    if proposal_mode not in ('ordinary','history'):raise ValueError('unknown proposal mode')
+    if policy=='legacy' and (check_rule!='original' or proposal_mode!='ordinary'):raise ValueError('legacy has no revision modes')
     output=Path(output)
     if output.exists():raise FileExistsError('fresh output required')
     provenance=source_info()
@@ -95,8 +103,8 @@ def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'
     start=time.process_time();deadline=start+cpu_seconds
     world=make_revision_world(seed,variant)
     legacy=policy=='legacy'
-    agent=Investigator(world.initial,'active',seed+700001) if legacy else RevisionInvestigator(world.initial,policy,seed+700001,check_rule=check_rule)
-    trace=dict(schema_version=2,variant=variant,policy=policy,seed=seed,check_rule=check_rule,world_source_commit=WORLD_COMMIT,
+    agent=Investigator(world.initial,'active',seed+700001) if legacy else RevisionInvestigator(world.initial,policy,seed+700001,check_rule=check_rule,proposal_mode=proposal_mode)
+    trace=dict(schema_version=2,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,world_source_commit=WORLD_COMMIT,
         initial=asdict(world.initial),events=[],cycles=[],status='running',caps={'training':80,'evaluation':68,'cpu_seconds':cpu_seconds,'trace_bytes':MAX_BYTES},
         assumptions='Supplied initial v/u structure for revision policies; known zero home, weak noise floor, bounded predefined revision operators; no calibrated confidence.')
     journal_bytes=0
@@ -139,14 +147,14 @@ def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'
             position_losses=agent.cycle.get('position_losses'),screening=agent.cycle.get('screening'),
             confirmation_plan=agent.cycle.get('confirmation_plan')))
     if not trace['status'].startswith('incomplete'):
-        try:trace['evaluation']=evaluation(model,agent.history,trace['cycles'],variant,seed,deadline)
+        try:trace['evaluation']=evaluation(model,agent.history,trace['cycles'],variant,seed,deadline,include_history_reference=include_history_reference)
         except TimeoutError:trace['status']='incomplete_evaluation_cpu_cap'
     trace['cpu_seconds']=time.process_time()-start
     if time.process_time()>=deadline and not trace['status'].startswith('incomplete'):trace['status']='incomplete_cpu_cap'
     encoded=json.dumps(trace,allow_nan=False).encode()
     if len(encoded)+journal_bytes>MAX_BYTES:raise RuntimeError('raw artifact cap exceeded')
     (output/'trace.json').write_bytes(encoded)
-    summary=dict(provenance,variant=variant,policy=policy,seed=seed,check_rule=check_rule,status=trace['status'],
+    summary=dict(provenance,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,status=trace['status'],
         training_cost=world.consumed,tool_actions=len(agent.history),experiments=len(trace['events']),
         evaluation_cost=trace.get('evaluation',{}).get('tool_cost'),metrics=trace.get('evaluation',{}).get('metrics'),
         formula=model.formula,selected_model=model.snapshot(),cycles=len(trace['cycles']),
@@ -165,7 +173,9 @@ def main():
     p.add_argument('--policy',choices=('active','random','coverage','no-revision','legacy'),default='active')
     p.add_argument('--seed',type=int,default=270001);p.add_argument('--output',required=True)
     p.add_argument('--check-rule',choices=('original','pooled','confirm_short','confirm_long'),default='original')
-    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output,check_rule=args.check_rule)
+    p.add_argument('--proposal-mode',choices=('ordinary','history'),default='ordinary')
+    p.add_argument('--history-reference',action='store_true')
+    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output,check_rule=args.check_rule,proposal_mode=args.proposal_mode,include_history_reference=args.history_reference)
     print(json.dumps(r,indent=2))
     if r['status']!='budget_complete':raise SystemExit(2)
 

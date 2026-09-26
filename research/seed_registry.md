@@ -76,3 +76,7 @@ Reused seed 260926 and the existing evaluator in six active-policy runs (guided/
 ## Assumption revision v1 — September 26, 2026
 
 World source dfabfe1 and learner/protocol3dc00a2 were frozen before45 runs. Sensor seeds270001/270002/270003, action seed+700001, evaluator seed+100000+index*1009 for four fixed sequences. Policies/worlds share streams intentionally; seeds vary noise, not physical laws. Three worlds × three seeds × five policies; no learner smoke, tuning or extra runs. These are now inspected developmental results. Synthetic fixtures use7/11 and a fake harness, not studyworld outcomes.
+
+## Follow-up A
+
+Clean e1317cd; seeds280001–280003, same action/evaluator offsets and world laws as revision_v1.36runs:3worlds×3seeds×4check rules. All now inspected development data. No extra learner smoke or tuning.

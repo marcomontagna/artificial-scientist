@@ -1,0 +1,35 @@
+# Follow-up B: construct a temporal explanation from public history
+
+Pre-execution design. A found no benefit from stricter gates. This study asks whether the investigator can add a useful delayed-input term after prediction failures. This is a capability extension of the connected loop, using established finite impulse response/system identification ideas; not a new discovery algorithm. The coordinator knows the old stress law, so this is transparent development, not blind discovery.
+
+## Fixed operator and semantics
+
+Add opt-in proposal_mode=history; default remains ordinary. A safe lag(term,k) operator reads only the agent's own recorded or prospectively planned inputs, on either coordinate, at lag k ticks. Inputs:own u or other_u; k is every integer1..16. Horizon16 is a power-of-two engineering bound matching the longest existing continuous evaluator sequence and one-fifth of80training units, not a chosen winning lag. All32entries are searched uniformly; no special lag, axis or coefficient. Existing lag1 duplicates are excluded. Sensor-history features and hidden simulator state are not supplied.
+
+Before each predicted transition at public tick t, lag k is the input from the transition starting t-k. Reset clears the input buffer; pre-initial and pre-reset inputs are zero by declared initialization convention. Multi-tick waits advance zero inputs one tick at a time. Prediction starts reconstruct memory from the entire recorded public action history since reset; restarting a short tape does NOT erase memory. During rollout, only planned actions update the buffer. Simultaneous axes, safe interpreter, coefficient clamps, max4terms/40nodes remain. Formula output explicitly names input and lag.
+
+Keep initial v/u shared model, ordinary original check rule, thresholds, fitter,80training/68external units, max2cycles, same action menu. Expand the existing primitive proposal family with lag expressions, still one winner per family and at most3alternatives including unshare/nonlinear. This controls committee size, though search work grows and temporal candidates compete with ordinary primitives. Training score remains MSE+.0001parameter_count. Log every candidate score/count and selected term, including neighboring lag scores k±1/k±2; no extra diagnostic changes the shortlist. Rank using acquired training data only; keep new predictions frozen before actions and choose adoption with existing margin.
+
+## Comparison
+
+3unchanged worlds ×3new sensor seeds290001–290003 ×4arms =36runs: ordinary-active, history-active, history-random, history-coverage. All use original checks and identical tool caps. Ordinary-active isolates added hypothesis language/search; history-active versus random/coverage separates acquisition policy under the same representation. All are developmental comparisons on known laws.
+
+For each run, additionally fit an evaluator-only flat ridge reference with all ordinary9variables plus30nonduplicate lag features using that run's training history, and evaluate on the same fixed tapes. Each external tape starts with its OWN fresh reset and empty input history; advance only that tape's planned inputs. Neither training actions nor another evaluation tape's actions initialize it. The learned and reference models use identical buffer semantics. It has39features per axis/78coefficients, more than the runtime4term model, same ridge and coefficient clamps, no structural search, no evaluator fitting. Record its coefficient count/cost and formula. This is a same-data prediction reference, not an independently acting policy. Existing ordinary9variable reference remains.
+
+Primary criterion: history-active lowers stress external MSE versus ordinary-active mean by at least20%, with paired improvement in at least2/3seeds, while control and challenge mean error each≤1.25ordinary+.0001. Report all comparisons, term adoption, harmful/useful/missed frozen revisions, unresolved flags and search costs. A temporal adoption without prediction improvement fails. Flat-reference and active/random/coverage comparisons qualify attribution: if history-active fails to beat their means, do not claim construction or active acquisition adds predictive benefit beyond those alternatives. No universal correctness, calibrated uncertainty or novelty inference. If evidence is insufficient within80units, report failure/inconclusive without enlarging budget, horizon or choosing lag from evaluation. No automatic default promotion.
+
+## Review and deliverable
+
+Claude design and result critiques; independent code and raw-result audit. Freeze protocol/source before36runs, preserve all failures, no studyworld smoke. Predeclare replay history-active/stress290001. Old ordinary behavior must pass saved-history compatibility before execution. Focused synthetic tests cover arbitrary delays including endpoints, reset/wait timing, frozen rollouts without future observations, safe grammar bounds and default preservation. Next study depends on these results and review.
+
+## Accepted design review corrections
+
+Claude and the independent reviewer check design before coding. Existing world reset semantics must be confirmed by source inspection; reset clears the delayed physical state. Add a cross-tape isolation fixture. Construction is failure-triggered; report trigger counts and whether temporal candidates reached a prospective check. No trigger is not evidence that a proposed operator was tested. Only one primitive-family winner reaches the committee: active selection does not directly compare all lag values; its action choice distinguishes shortlisted explanations. The search penalty is weak against correlated hypotheses; full training scores expose near ties without changing decisions.
+
+The20%criterion compares ratio of arithmetic mean stress MSE across three seeds; paired wins compare identical world/seed. Control and challenge caps each apply separately to their mean. Preserve A definitions: harmful accepted snapshot means external MSE strictly exceeds its OWN frozen incumbent; useful accepted means improvement exceeds the same15%/parameter margin; missed useful means a rejected decision candidate would exceed that margin externally. Denominators are completed cycles, adoptions and all three runs; zero-adoption rates undefined. More candidates selected or adopted is not a success criterion.
+
+Independent reviewer confirmed by source inspection that successful simulator resets clear all pending delayed inputs; failed resets do not mutate them. The flat reference is a higher-capacity comparator, not assumed to predict well before results.
+
+## Prior art boundary
+
+[SINDYc (2016)](https://arxiv.org/abs/1605.06682) already identifies controlled dynamics using regression over candidate features. [HAVOK (2017;2016preprint)](https://arxiv.org/abs/1608.05306) combines delay coordinates and regression to model dynamics. Coordinator checked their primary abstracts; these establish relevant precedents, not algorithmic equivalence or imported guarantees. Our bounded lag search is an engineering integration, with no claim to invent temporal representations or equation discovery.

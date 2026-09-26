@@ -18,11 +18,14 @@ def clone(value):
 
 
 class RevisionInvestigator:
-    def __init__(self, initial, policy='active', seed=0, check_rule='original'):
+    def __init__(self, initial, policy='active', seed=0, check_rule='original', proposal_mode='ordinary'):
         if policy not in ('active', 'random', 'coverage', 'no-revision'):
             raise ValueError('unknown revision policy')
         if check_rule not in ('original', 'pooled', 'confirm_short', 'confirm_long'):
             raise ValueError('unknown check rule')
+        if proposal_mode not in ('ordinary', 'history'):
+            raise ValueError('unknown proposal mode')
+        self.proposal_mode = proposal_mode
         self.check_rule = check_rule
         self.policy = policy
         self.rng = random.Random(seed)
@@ -83,7 +86,7 @@ class RevisionInvestigator:
             incumbent_id=self.incumbent.id, models=[m.snapshot() for m in models],
             chosen=index, actions=options[index]['actions'], predictions=chosen_predictions,
             options=options, reason=reason, failure_threshold=self.threshold, home_variance=self.noise,
-            check_rule=self.check_rule, check_stage=('confirmation' if confirmation else 'screening') if self.cycle else 'explore',
+            proposal_mode=self.proposal_mode, check_rule=self.check_rule, check_stage=('confirmation' if confirmation else 'screening') if self.cycle else 'explore',
             confirmation_plan=confirmation, confirmation_offset=offset,
             prediction_origin=prediction_origin, option_prediction_origin='current_observed_start'))
         return clone(self.pending)
@@ -165,7 +168,10 @@ class RevisionInvestigator:
                 audit={}
                 self._partial['revision'] = dict(trigger=trigger, proposal_audit=audit, incomplete='proposal search')
                 try:
-                    candidates, audit = propose(self.incumbent, self.history, deadline=deadline, audit=audit)
+                    if self.proposal_mode == 'history':
+                        candidates, audit = propose(self.incumbent, self.history, deadline=deadline, audit=audit, proposal_mode='history')
+                    else:
+                        candidates, audit = propose(self.incumbent, self.history, deadline=deadline, audit=audit)
                 finally:
                     self.work['candidate_fits'] += audit.get('candidate_fits',0)
                     self.work['feature_evaluations'] += audit.get('feature_evaluations',0)

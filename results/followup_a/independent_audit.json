@@ -1,0 +1,48 @@
+{
+  "reviewer": "Codex independent_review",
+  "scope": "Read-only saved-artifact recomputation; no simulator or learner reruns",
+  "runs_checked": 36,
+  "completed_cycles_checked": 40,
+  "max_absolute_recomputed_error_difference": 0.0,
+  "checks": [
+    "Clean e1317cd source provenance and current source hashes",
+    "80 training and 68 evaluation tool units, CPU and combined trace/journal caps",
+    "Exact pre-action journal/event plan and hash identity",
+    "Frozen model snapshots, fixed coverage suffix and long-tape slices versus short restarts",
+    "Screening winner, pooled/split losses, strict practical margins and split conjunction",
+    "All recorded training/evaluation squared errors and summary means",
+    "Actual decision-candidate harmful/useful/missed diagnostics",
+    "Matched external sequences/outcomes across rules and identical first-cycle suffix plans across pooled/short/long"
+  ],
+  "key_results": {
+    "control_all_rule_mean": 0.0006199132881429532,
+    "challenge_all_rule_mean_approximately": 0.0006646395506240572,
+    "stress_means": {
+      "original": 0.020086187452816453,
+      "pooled": 0.021991944958166337,
+      "confirm_short": 0.021991944958166337,
+      "confirm_long": 0.02228986861706315
+    },
+    "harmful_accepted_all_rules_worlds": 0,
+    "challenge_useful_accepted_per_rule": 3,
+    "stress_adoptions": {
+      "original": 2,
+      "pooled": 1,
+      "confirm_short": 1,
+      "confirm_long": 0
+    },
+    "stress_missed_useful": {
+      "original": 0,
+      "pooled": 2,
+      "confirm_short": 2,
+      "confirm_long": 1
+    },
+    "first_cycle_short_long_decision_difference": "stress seed 280002: short accepts, long rejects"
+  },
+  "limitations": [
+    "Artifact consistency and implementation order do not provide an independently trusted timestamp",
+    "No independent reconstruction of every candidate fit or feature-operation counter in this bounded audit",
+    "No harmful acceptances occurred on these new seeds; comparison cannot demonstrate reduction in that failure",
+    "Tiny challenge mean differences at floating-point rounding scale are not gains"
+  ]
+}

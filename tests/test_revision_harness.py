@@ -101,3 +101,21 @@ class HarnessTests(unittest.TestCase):
             with self.assertRaises(ValueError):revision_run.investigate('fixture','active',7,output,check_rule='invalid')
             with self.assertRaises(ValueError):revision_run.investigate('fixture','legacy',7,output,check_rule='confirm_long')
             self.assertFalse(output.exists())
+
+    def test_each_external_tape_rebuilds_from_own_empty_history(self):
+        calls=[]
+        class Spy(VectorModel):
+            def predict_tape(self,observation,history,actions):
+                calls.append((observation.tick,list(history),tuple(actions)))
+                self_test.assertEqual(history,[])
+                return super().predict_tape(observation,history,actions)
+        self_test=self
+        model=Spy(('v',),True,(0.,))
+        training=[Transition(Observation(0,0,0),Action('push',magnitude=1),Observation(1,1,0))]
+        with patch.object(revision_run,'make_revision_world',side_effect=lambda *a:FakeWorld()),patch.object(revision_run,'linear_reference',return_value=model),patch('artificial_scientist.revision_models.history_reference',return_value=model) as fitter:
+            result=revision_run.evaluation(model,training,[],'fixture',7,float('inf'),include_history_reference=True)
+        fitter.assert_called_once_with(training,float('inf'))
+        self.assertEqual(len(calls),12)
+        self.assertTrue(all(tick==8 and not history for tick,history,actions in calls))
+        self.assertIn('history_linear',result['metrics'])
+        self.assertEqual(len(training),1)

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from artificial_scientist.lab_api import Observation
+from artificial_scientist.lab_api import Action, Observation, Transition
 from artificial_scientist.revision_agent import RevisionInvestigator
 from artificial_scientist.revision_models import VectorModel
 
@@ -11,6 +11,50 @@ class RevisionAgentTests(unittest.TestCase):
         tick=agent.observation.tick
         outcomes=[Observation(tick+i,*position) for i in (1,2)]
         return plan,agent.accept(outcomes)
+
+    def test_history_candidate_tape_is_prospective_and_frozen(self):
+        agent=RevisionInvestigator(Observation(2,0.,0.),proposal_mode='history')
+        agent.history=[Transition(Observation(0,0.,0.),Action('push',magnitude=1.),Observation(1,0.,0.)),
+                       Transition(Observation(1,0.,0.),Action('observe'),Observation(2,0.,0.))]
+        incumbent=VectorModel(('one',),True,(0.,))
+        delayed=VectorModel((('lag','u',2),),True,(1.,))
+        agent.incumbent=incumbent
+        agent.steps=6
+        agent.cycle=dict(id=0,models=[incumbent,delayed],snapshots=[incumbent.snapshot(),delayed.snapshot()],
+                         trigger={},audit={},losses={incumbent.id:[],delayed.id:[]},check_steps=[])
+        before=delayed.snapshot()
+        plan=agent.plan(68)
+        predicted=next(p for p in plan['predictions'] if p['model_id']==delayed.id)
+        self.assertEqual(predicted['tape'],[[1.,0.],[1.,0.]])
+        with patch('artificial_scientist.revision_agent.fit_model') as fitter:
+            result=agent.accept([Observation(3,9.,9.),Observation(4,9.,9.)])
+        fitter.assert_not_called()
+        self.assertEqual(delayed.snapshot(),before)
+        self.assertEqual(predicted['tape'],[[1.,0.],[1.,0.]])
+        self.assertEqual(result['losses'][delayed.id],145.)
+
+    def test_proposal_mode_validation_default_and_trigger_forwarding(self):
+        with self.assertRaisesRegex(ValueError,'proposal mode'):
+            RevisionInvestigator(Observation(0,0,0),proposal_mode='world_hint')
+        alternative=VectorModel(('one',),True,(0.,))
+        for mode in ('ordinary','history'):
+            agent=RevisionInvestigator(Observation(0,0,0),proposal_mode=mode)
+            self.assertEqual(agent.proposal_mode,mode)
+            with patch('artificial_scientist.revision_agent.fit_model',side_effect=lambda m,h,deadline,audit:m), \
+                 patch('artificial_scientist.revision_agent.propose',return_value=([alternative],{})) as proposer:
+                for k in range(6):
+                    plan,result=self.step(agent,(10.*(k+1),-10.*(k+1)))
+                    self.assertEqual(plan['proposal_mode'],mode)
+            proposer.assert_called_once()
+            self.assertEqual(proposer.call_args.args[1],agent.history)
+            self.assertEqual(agent.cycle['trigger']['history_length'],12)
+            if mode=='history':
+                self.assertEqual(proposer.call_args.kwargs['proposal_mode'],'history')
+            else:
+                self.assertNotIn('proposal_mode',proposer.call_args.kwargs)
+        default=RevisionInvestigator(Observation(0,0,0))
+        explicit=RevisionInvestigator(Observation(0,0,0),proposal_mode='ordinary')
+        self.assertEqual(default.plan(80),explicit.plan(80))
 
     def test_initial_prefix_shared_across_policies_and_no_alias(self):
         agents=[RevisionInvestigator(Observation(0,0,0),p,7) for p in ('active','random','coverage','no-revision')]

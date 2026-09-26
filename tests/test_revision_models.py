@@ -99,5 +99,103 @@ class VectorTests(unittest.TestCase):
             m.fit_model(incumbent,history,deadline=time.process_time()-1)
 
 
+
+
+class HistoryOperatorTests(unittest.TestCase):
+    def test_safe_bounds_and_nested_expression_roundtrip(self):
+        for k in (0,17,-1,True,1.0,'2'):
+            with self.subTest(k=k),self.assertRaises(ValueError):
+                m.VectorModel((('lag','u',k),),True,(1.,))
+        for t in (('lag','p',2),('lag','u'),('lag','u',2,3),('lag',('abs','u'),2)):
+            with self.subTest(t=t),self.assertRaises(ValueError):m.nodes(t)
+        term=('mul',('lag','other_u',16),('abs',('lag','u',3)))
+        model=m.VectorModel((term,),False,((.5,),(.8,)))
+        other=m.VectorModel.from_snapshot(json.loads(json.dumps(model.snapshot())))
+        self.assertEqual(model.snapshot(),other.snapshot())
+        self.assertIn('lag(other_u,16)',model.formula)
+        self.assertIn('lag(u,3)',model.id)
+        with self.assertRaises(ValueError):
+            m.VectorModel(tuple(('lag','u',k) for k in range(1,6)),True,(0.,)*5)
+
+    def test_every_delay_uses_transition_start_ticks_for_own_and_cross(self):
+        for k in range(1,17):
+            actions=[Action('push',magnitude=1.)]+[Action('observe')]*(k+1)
+            for name,target in (('u',(1.,0.)),('other_u',(0.,1.))):
+                model=m.VectorModel((('lag',name,k),),True,(1.,))
+                tape=model.predict_tape(Observation(0,0.,0.),[],actions)
+                self.assertEqual(tape[:k],[(0.,0.)]*k)
+                self.assertEqual(tape[k:], [target,target])
+
+    def test_wait_tick_memory_and_recorded_restart_equivalence(self):
+        model=m.VectorModel((('lag','u',5),),True,(1.,))
+        before=Observation(0,0.,0.)
+        prefix=[Action('push',magnitude=1.),Action('wait',ticks=3)]
+        history=[]
+        for action in prefix:
+            after=Observation(before.tick+action.cost,0.,0.)
+            history.append(Transition(before,action,after));before=after
+        suffix=[Action('observe'),Action('observe'),Action('wait',ticks=2)]
+        full=model.predict_tape(Observation(0,0.,0.),[],prefix+suffix)
+        restarted=model.predict_tape(before,history,suffix)
+        self.assertEqual(restarted,full[len(prefix):])
+        self.assertEqual(restarted,[(0.,0.),(1.,0.),(1.,0.)])
+        for action in suffix[:2]:
+            after=Observation(before.tick+1,0.,0.)
+            history.append(Transition(before,action,after));before=after
+        pairs=m.training_rows(history)
+        # Wait and immediately following observation are excluded from fitting,
+        # but their zero-input ticks still advance the lag buffer.
+        self.assertEqual(len(pairs),2)
+        self.assertEqual(m.value(('lag','u',5),pairs[-1][0][0]),1.)
+        self.assertEqual(m.value(('lag','other_u',5),pairs[-1][1][0]),1.)
+
+    def test_reset_and_cross_tape_isolation(self):
+        model=m.VectorModel((('lag','u',4),),True,(1.,))
+        start=Observation(0,0.,0.)
+        history=[Transition(start,Action('push',magnitude=1.),Observation(1,0.,0.))]
+        reset=Transition(history[-1].after,Action('reset'),Observation(9,0.,0.))
+        future=[Action('wait',ticks=8),Action('observe')]
+        self.assertEqual(model.predict_tape(reset.after,history+[reset],future),[(0.,0.)]*2)
+        model.predict_tape(start,[],[Action('push',magnitude=1.),Action('wait',ticks=4)])
+        self.assertEqual(model.predict_tape(start,[],future),[(0.,0.)]*2)
+        self.assertEqual(model.predict_tape(history[-1].after,history,[Action('reset')]+future),[(0.,0.)]*3)
+
+    def test_history_proposals_log_all_fits_without_extra_alternatives(self):
+        history=VectorTests().history()
+        incumbent=m.fit_model(dict(terms=('v','u'),shared=True),history)
+        plain,pa=m.propose(incumbent,history)
+        guided,ga=m.propose(incumbent,history,proposal_mode='history')
+        self.assertLessEqual(len(guided),3)
+        self.assertEqual(ga['candidate_fits'],pa['candidate_fits']+30)
+        self.assertEqual(len(ga['candidate_scores']),ga['candidate_fits'])
+        lagged=[r for r in ga['candidate_scores'] if any(isinstance(t,tuple) and t[0]=='lag' for t in r['terms'])]
+        self.assertEqual(len(lagged),30)
+        self.assertEqual({r['terms'][-1] for r in lagged},set(m.lag_menu()))
+        self.assertNotIn('candidate_scores',pa)
+        with self.assertRaises(ValueError):m.propose(incumbent,history,proposal_mode='unknown')
+
+    def test_reference_cap_and_fitted_delay_on_synthetic_history(self):
+        history=[];before=Observation(0,0.,0.);past=[]
+        for i in range(32):
+            action=Action('push',magnitude=.8 if i%5 in (0,2) else .2,angle=(i%3)*math.pi/2)
+            impulse=m.old.impulse(action)
+            old=past[-3] if len(past)>=3 else (0.,0.)
+            after=Observation(i+1,before.x+.7*old[0],before.y+.4*old[1])
+            history.append(Transition(before,action,after));before=after;past.append(impulse)
+        fitted=m.fit_model(dict(terms=(('lag','u',3),),shared=False),history)
+        self.assertAlmostEqual(fitted.coefficients[0][0],.7,places=3)
+        self.assertAlmostEqual(fitted.coefficients[1][0],.4,places=3)
+        reference=m.history_reference(history)
+        self.assertEqual(len(reference.terms),39)
+        self.assertEqual(reference.parameter_count,78)
+        self.assertEqual(reference.fit_work['candidate_fits'],1)
+        self.assertGreater(reference.fit_work['feature_evaluations'],0)
+        restored=m.HistoryReference.from_snapshot(json.loads(json.dumps(reference.snapshot())))
+        self.assertEqual(reference.snapshot(),restored.snapshot())
+        with self.assertRaises(ValueError):m.VectorModel.from_snapshot(reference.snapshot())
+        with self.assertRaises(ValueError):m.LinearReference.from_snapshot(reference.snapshot())
+        with self.assertRaises(TimeoutError):m.history_reference(history,deadline=time.process_time()-1)
+
+
 if __name__=='__main__':
     unittest.main()
