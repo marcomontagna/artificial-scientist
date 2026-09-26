@@ -58,7 +58,7 @@ class LearnerTest(unittest.TestCase):
         coeff = fit(('v', 'u'), rows)
         self.assertAlmostEqual(coeff[0], .7, places=4)
         self.assertAlmostEqual(coeff[1], .3, places=4)
-        for filename in ('lab_agent.py', 'lab_models.py', 'lab_api.py'):
+        for filename in ('lab_agent.py', 'lab_models.py', 'lab_api.py', 'lab_guided.py'):
             tree = ast.parse((Path('artificial_scientist') / filename).read_text())
             imports = [n.module for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)]
             self.assertFalse(any(name and ('world' in name or 'run' in name) for name in imports))

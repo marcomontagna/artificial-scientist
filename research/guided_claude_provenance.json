@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-5-5",
+  "access": "Official read-only CLI, previously verified Pro access, no paid fallback",
+  "is_error": false,
+  "scope": "Design critique; no executed tests or code edits",
+  "sha256": {
+    "results/runs/guided_plan_claude_20260926/request.txt": "d8c25eec54d433dc01464382ad92bbd09e4619716da0ec903aced983d9f4cb5d",
+    "results/runs/guided_plan_claude_20260926/response.json": "36d32e1803a0d6a83a0d567cf19b735f709fc4a369d9e94993faa6697e46e519",
+    "research/claude_guided_review.md": "97ac1aff67ae3bc412bac69aa60db7acfac070592658ebc186cb7ea9f57c8fb1"
+  }
+}

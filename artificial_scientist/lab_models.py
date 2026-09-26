@@ -184,7 +184,9 @@ def fit(terms, rows):
     return tuple(max(-10.0, min(10.0, matrix[i][n])) for i in range(n))
 
 
-def propose(rows, excluded, count=2, deadline=float('inf')):
+def propose(rows, excluded, count=2, deadline=float('inf'), audit=None):
+    if audit is not None:
+        audit.update(mode='enumerate', candidate_fits=0, feature_evaluations=0)
     terms = grammar()
     candidates = []
     for size in (1, 2):
@@ -193,6 +195,8 @@ def propose(rows, excluded, count=2, deadline=float('inf')):
                 raise TimeoutError('model search CPU cap')
             if complexity(chosen) > 12 or program_id(chosen) in excluded:
                 continue
+            if audit is not None:
+                audit['candidate_fits'] += 1
             coefficients = fit(chosen, rows)
             error = sum((sum(c * value(t, inputs) for c, t in zip(coefficients, chosen)) - target) ** 2 for inputs, target in rows) / max(1, len(rows))
             candidates.append((error + 0.0001 * complexity(chosen), program_id(chosen), chosen, coefficients))

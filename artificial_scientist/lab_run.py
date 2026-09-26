@@ -76,7 +76,7 @@ def evaluate(model, rows, variant, seed, deadline):
                 warning='Scores assess observed-position prediction, not recovery of a physical law. Differencing sensor noise biases coefficients.')
 
 
-def investigate(variant, policy, seed, output, budget=80, cpu_seconds=120):
+def investigate(variant, policy, seed, output, budget=80, cpu_seconds=120, proposal='enumerate'):
     if type(budget) is not int or not 1 <= budget <= 80 or not 0 < cpu_seconds <= 120:
         raise ValueError('invalid resource budget')
     output = Path(output)
@@ -86,8 +86,8 @@ def investigate(variant, policy, seed, output, budget=80, cpu_seconds=120):
     start = time.process_time()
     deadline = start + cpu_seconds
     world = make_world(seed, variant)
-    agent = Investigator(world.initial, policy, seed + 700001)
-    trace = dict(schema_version=1, variant=variant, policy=policy, seed=seed,
+    agent = Investigator(world.initial, policy, seed + 700001, proposal=proposal)
+    trace = dict(schema_version=1, variant=variant, policy=policy, seed=seed, proposal=proposal,
                  world_source_commit=WORLD_COMMIT, status='running', events=[],
                  initial=asdict(world.initial), assumptions='Shared coefficients, separable axes, limited grammar, noisy velocity proxy; scores are not calibrated probabilities.',
                  caps=dict(tool_units=budget, cpu_seconds=cpu_seconds, trace_bytes=MAX_TRACE_BYTES))
@@ -124,6 +124,7 @@ def investigate(variant, policy, seed, output, budget=80, cpu_seconds=120):
     trace['final_models'] = [m.snapshot() for m in agent.models]
     trace['selected_model'] = agent.final_model().snapshot()
     trace['training_cost'] = world.consumed
+    trace['search_cost'] = dict(agent.search_cost)
     trace['interpretation'] = 'Integration demonstration; no novelty, calibrated confidence, physical-law recovery or policy-superiority claim.'
     if not status.startswith('incomplete'):
         try:
@@ -144,6 +145,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--variant', choices=('development', 'challenge', 'noise'), default='development')
     parser.add_argument('--seed', type=int, default=260926)
+    parser.add_argument('--proposal', choices=('enumerate', 'guided'), default='enumerate')
+    parser.add_argument('--policies', nargs='+', choices=('active', 'random', 'coverage'), default=['active', 'random', 'coverage'])
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists():
@@ -155,13 +158,13 @@ def main():
         commit = 'unavailable'
     from .lab_replay import export_replay
     source_hashes = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('artificial_scientist').glob('lab_*.py'))}
-    summary = dict(variant=args.variant, seed=args.seed, source_commit=commit,
+    summary = dict(variant=args.variant, seed=args.seed, proposal=args.proposal, source_commit=commit,
                    source_sha256=source_hashes, git_status=subprocess.check_output(['git','status','--porcelain'],text=True), policies={})
-    for policy in ('active', 'random', 'coverage'):
-        trace = investigate(args.variant, policy, args.seed, args.output / policy)
+    for policy in dict.fromkeys(args.policies):
+        trace = investigate(args.variant, policy, args.seed, args.output / policy, proposal=args.proposal)
         export_replay(trace, args.output / policy / 'replay.html')
         summary['policies'][policy] = dict(status=trace['status'], actions=len(trace['events']), training_cost=trace['training_cost'],
-                                          formula=trace['selected_model']['formula'],
+                                          formula=trace['selected_model']['formula'], search_cost=trace['search_cost'],
                                           metrics=trace.get('evaluation', {}).get('mean_squared_position_error'), cpu_seconds=trace['cpu_seconds'])
     (args.output / 'summary.json').write_text(json.dumps(summary, indent=2, allow_nan=False) + '\n')
     print(json.dumps(summary, indent=2))
