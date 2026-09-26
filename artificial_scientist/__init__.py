@@ -1,1 +1,1 @@
-"""Tool-based investigations of simulated worlds; laboratory implementation pending."""
+"""Tool-based investigations of simulated worlds with bounded executable models."""

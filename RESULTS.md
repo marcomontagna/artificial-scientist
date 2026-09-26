@@ -1,13 +1,11 @@
-# Current status and retained evidence
+# Results
 
-The active project is now a tool-using investigator in a persistent simulated laboratory. **That agent is not implemented yet.** This reset cleaned the repository and fixed its direction; it did not demonstrate discovery or run a new experiment.
+**First complete tool-using investigation implemented and run.** Twenty focused tests pass; nine bounded runs completed. [Full concise report](research/tool_lab_result.md) · [Offline replay](results/tool_lab_v1/replay.html).
 
-The [archived prototypes](https://github.com/marcomontagna/artificial-scientist/tree/0c7c3e4dbe3405a0f681b31fbc92e47aefac9ad9) remain reproducible from their original source/test/config groups. The last archived suite had 103 passing tests; those are not tests of the new laboratory.
+The active development learner produced `delta ≈ 0.797*v + 0.420*u` and predicted fresh interventions much better than persistence. Random exploration did better than active in that world; coverage did better on the harder challenge. Noise-world behavior resembles predicting the known home position. This is a connected learner with inspectable formulas, not a novel discovery or consistently superior experiment chooser. One seed per world; no generalization or significance claim.
 
-Three lessons carry forward:
+Claude Opus 5.5 reviewed plan and code; separate Codex agents reviewed implementation and independently recomputed recorded results. Source was frozen before the first demonstration. Browser playback is not verified because local-file navigation was blocked; exporter safety and trace tests passed. No extra spending; no experiment is running.
 
-- Efficient pooled fitting beat the last revision scheme; adding machinery did not establish better learning.
-- Information-seeking lost to random exploration on a noise control. Surprise alone is a poor objective.
-- A model can escape rejection and still be wrong. Fifty of 60 out-of-grammar exponential formulas did so in the last study.
+[Summary](results/tool_lab_v1/summary.json) · [Exact contract](research/tool_lab_implementation.md) · [Next step](NEXT_STEPS.md).
 
-[Last archived result](research/equation_revision_result.md) · [Historical RNG correction](research/equation_domain_rng_erratum.md) · [Archive and recovery](archive/README.md).
+The prior statistical studies are retired, not erased. Their [immutable archive](archive/README.md), [last historical result](research/equation_revision_result.md) and [RNG correction](research/equation_domain_rng_erratum.md) remain accessible. Historical test counts do not describe the current implementation.

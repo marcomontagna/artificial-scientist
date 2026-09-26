@@ -1,6 +1,6 @@
-# Historical seed status
+# Seed ledger
 
-This ledger is preserved as provenance for retired studies. The new laboratory has not sampled any seeds; choose and record a fresh range when its implementation is ready. See [archive](../archive/README.md).
+The earlier entries preserve provenance for retired studies; see [archive](../archive/README.md). The connected laboratory’s first seed use is recorded in the final section below.
 
 Updated September 26, 2026. This records actual inspection for the v0/v1/v2 sequence-world family, not the seed plan for every future environment.
 
@@ -60,3 +60,7 @@ No post-result tuning or held-out confirmation. The separate sequence-family res
 - **1190:** eight-dataset resource smoke, inspected.
 - **1200–1259:**480dataset/2,400candidate study, inspected development data; no post-result tuning.
 - All567role-plus-seed keys are unique. Five pipelines share each dataset’s88observations; quadratic/noise controls duplicate residual experiments. Reserve1000–1049 remains unused.
+
+## Connected tool laboratory v1 — September 26, 2026
+
+Development, challenge and noise each use sensor seed 260926 (same supplied seed is deliberate; worlds are not independent samples). Action RNG uses seed+700001. Each frozen evaluator uses seed+100000+index*1009 for its three separate sequences. All policies share these evaluator sequences and noise streams. One descriptive run per world/policy, no tuning after development and no further sampling. Frozen implementation 92f5075; see [results](tool_lab_result.md).

@@ -1,5 +1,7 @@
-# Investigation records
+# Results and traces
 
-`results/runs/` contains ignored local raw records from earlier work; the cleanup leaves them untouched. They are historical evidence, not an active laboratory or background process.
+`tool_lab_v1/` contains the first connected investigator’s compact summaries, raw-file hashes and self-contained development/active replay. [Result report](../research/tool_lab_result.md).
 
-Tracked historical summaries moved out of the active checkout and remain available at the [archive snapshot](../archive/README.md). New laboratory traces will use fresh directories and record actual tools, frozen predictions, observations and model changes. No new laboratory run exists yet.
+All nine original traces, before-action journals and per-policy replays remain under ignored `runs/tool_lab_v1_*` directories. Do not overwrite them. The tracked replay embeds its original trace. Reproduce with the frozen source and commands in the report; timing fields may vary.
+
+Earlier runs are preserved under `runs/`, with their source/tests/reports in the [Git archive](../archive/README.md). They are not current learner dependencies.

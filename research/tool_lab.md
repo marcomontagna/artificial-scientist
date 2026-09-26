@@ -1,6 +1,6 @@
 # First tool-based laboratory
 
-**Design, not an implemented agent.** Deliver one complete investigation trace before expanding the system. The first demonstrator is one object in 2D, not a suite of paper-style component studies.
+**First implementation complete.** This is the high-level design; the [implementation contract](tool_lab_implementation.md) fixes exact semantics, and the [result report](tool_lab_result.md) records the completed investigation. The first demonstrator is one object in 2D, not a suite of paper-style component studies.
 
 ## Boundary and tools
 
