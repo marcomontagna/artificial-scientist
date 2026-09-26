@@ -1,0 +1,20 @@
+{
+  "author": "Claude Code Opus 5.5",
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "duration_ms": 120339,
+  "num_turns": 3,
+  "is_error": false,
+  "access": "Existing Pro subscription, usage credits previously verified off; no paid fallback enabled",
+  "request_sha256": "4bbd3bf8a557a714d7888498cf2cf028361404af9e6f6238d0fcacb9c13e2e52",
+  "response_sha256": "abb8399e243f9f91220c3c54d61e5d8a82c9677e26755e84645fecb740cdc8b3",
+  "report_sha256": "4bdffd80d1933bee88cfe4c45c4981c16cbe5d3d1a688bf9f3b74b9913aa3c1f",
+  "reviewed_version": "Initial protocol only; blocking findings fixed before implementation and separately reviewed",
+  "fixes": [
+    "Cycle moved to descriptive sanity arm with analytic path fixtures",
+    "Per-world harm guard added",
+    "Claims limited to shallow model-based coverage planning",
+    "Smoke disk projection gate added"
+  ]
+}
