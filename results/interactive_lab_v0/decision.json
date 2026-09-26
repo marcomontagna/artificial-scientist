@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "passed": true,
+  "completed_episodes": 960,
+  "expected_episodes": 960,
+  "screen_max_difference": -0.01,
+  "meaning": "exploratory predictive sample efficiency in four supplied-library worlds only",
+  "consequence": "report bounded toy benefit only"
+}

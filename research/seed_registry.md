@@ -16,3 +16,10 @@ Changing a world schedule does not erase prior seed inspection. New research pro
 - The previous population feasibility calculation used no sampling seeds.
 
 Shared numerical seeds across world/schedule cells create correlated comparisons; they do not create independent law-family replications. No effect-based tuning followed smoke or full-study results.
+
+## Interactive laboratory v0
+
+- **7/11:** synthetic unit fixtures.
+- **390:**24episode resource smoke; previously inspected causal development seed, not new or held out.
+- **400–439:**960episode study, now inspected development data.
+- Replay embeds first3declaredseeds400/401/402, all six worlds and four policies; full overview includes all40. No seed selection by effect and no post-result tuning.

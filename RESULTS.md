@@ -1,5 +1,11 @@
 # Results
 
+## Interactive laboratory — September 25
+
+The [first active-learning prototype](research/interactive_lab_result.md) completed960episodes/46,080experiments in6.249seconds;54tests pass. Mean excess query loss over the four supplied-library worlds improved by0.02018nats versus random and0.01394 versus round-robin. Both fixed primary thresholds pass; descriptive seed-level intervals are reported in the full result.
+
+The fair-random control is worse under active acquisition. The supplied flexible fallback helps on the out-of-library majority world but does not discover its symbolic rule; flexibility also costs performance in the well-specified worlds. No RL-policy training, novelty or calibration claim. Claude reviewed the plan; separate agents reviewed implementation and independently audited all metrics. [Offline replay](visualization/interactive_lab.html) now shows real action choices and posterior changes. Earlier component studies remain below as historical evidence.
+
 ## Finite-sample causal diagnostic — September 25
 
 The [reviewed study](research/causal_diagnostic_result.md) completed 6,000 episodes and 2.4 million observations in 24.309 seconds from clean committed source `5d77412`. All 45 tests passed. The prespecified structured mixture detected strong model failures in 198–200/200 trials per cell, versus 6–16/200 for KT; all six primary lower Wilson bounds exceed 0.80. Medium cases yielded only 8–15/200 detections, weak cases zero, and the biased-common-cause stress case zero for the primary. All null cells had zero observed alarms; this does not prove uniform validity.
