@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "diagnostic_screen_pass": true,
+  "error_rate_conditions": {
+    "affine": true,
+    "sparse_quadratic": true,
+    "noise_only": true
+  },
+  "conditional_power_conditions": {
+    "affine": true,
+    "sparse_quadratic": true
+  },
+  "pause_stage3_pending_diagnosis": false,
+  "limitation": "known-model implementation/calibration check; no coefficient accuracy, missing-term, functional-form or general explanation guarantee"
+}

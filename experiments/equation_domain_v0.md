@@ -1,6 +1,6 @@
-# Domain challenge v0 — provisional diagnostic stage 3
+# Domain challenge v0 — diagnostic stage 3
 
-Not approved for implementation or sampling until Claude reviews stage 2 and this plan. The question is whether wider experiments expose wrong polynomial approximations without mistaking coefficient-estimation uncertainty for a wrong law. This is a known linear-regression predictive check, not a new discovery method or grammar repair.
+Claude reviewed stage 2 and this plan; the additions below address its presampling objections. Final independent approval is required before implementation. The question is whether wider experiments expose wrong polynomial approximations without mistaking coefficient-estimation uncertainty for a wrong law. This is a known linear-regression predictive check, not a new discovery method or grammar repair.
 
 ## Fixed model and equal budgets
 
@@ -38,3 +38,17 @@ One process, internal120seconds/external150seconds, max50MB. Smoke6datasets/12au
 Tests: independent small-matrix covariance/whitening examples; a diagonal chi-square tail fixture and monotonicity; rank failure; known positive-definite solve; correct domain/noise coupling; predictions unchanged by audit; 40-versus56budget accounting; complete grid and all per-family gates; provenance/time/disk protection. Independent code/data review and final Claude interpretation are required.
 
 The three in-class/noise controls share design and noise. Full OLS removes their polynomial means exactly, so their residuals and rejection decisions should agree up to numerical precision; they are not three independent calibration replications.
+
+## Presampling resolutions from Claude
+
+The independent stage2 raw-data audit is complete and recorded in research/review_log.md. Each outside family here is one fixed function with40random designs/noise draws; these are not40independent sampled laws. This is a predictable validation of known regression theory, not a discovery result.
+
+Record evaluator-only noncentrality and theoretical power on every audit. Fit noiseless training means to the same full six-term design to obtain b0. Let delta=f(A)-A*b0, lambda=delta^T*V^(-1)*delta. Under each fixed function, conditional on the designs and marginal over both noise sources, Q follows noncentral chi-square16(lambda). Do NOT use the realized noisy fit to define lambda. No hidden law, lambda or power may influence fitting, audit locations or rejection. Log the noiseless coefficients, delta, lambda and theoretical power; report mean power next to observed rejection in each cell.
+
+Find the central 95%critical value by80bisections on[0,128] using the fixed df16 survival formula. Power is1 minus the Poisson(lambda/2) mixture of central chi-square CDFs with df16+2j. Sum Poisson components j=0..128, computing weights individually in log space (special-case lambda=0). Compute each integer-shape gamma CDF with the positive series exp(-z)*sum_{k=shape}^infinity z^k/k!, not subtraction from1. Stop its positive tail when the geometric remainder bound is below1e-15; cap1000terms and fail if not converged. The omitted mixture CDF is bounded by GammaCDF(shape137,z=critical/2), below8.28e-88. Use fsum and validate finite probabilities, allowing clamping only within1e-12 of[0,1]. No new dependencies or Monte Carlo power estimates. Add independent fixtures for lambda0 (power.05), monotonicity and nonzero reference values.
+
+Keep the gain gate unchanged. If cubic wide rejection is high but its gain fails because local detection is already high, the comparative screen still FAILS; report the local ceiling and absolute detection in both arms. This does not mean the wide test lacks detection power. Report these absolute rates regardless of outcome. No retrospective threshold or amplitude changes.
+
+Assert the three in-class/noise controls have matching Q per seed/arm within absolute1e-8 plus relative1e-10; a discrepancy fails the run rather than being treated as three replications. Their effective calibration sample remains40per arm. Report empirical p-value quantiles at0,.25,.5,.75,1 using linear interpolation of sorted values. These summaries and a small empirical error gate cannot establish uniform calibration; the proof and numerical fixtures provide the stated model-specific basis. The crude MSE threshold intentionally ignores growing coefficient uncertainty on the wide arm; its false rejections do not show that the underlying polynomial law is wrong.
+
+Primary numerical reference: [Boost noncentral chi-square documentation](https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_chi_squared_dist.html). The implementation remains a small independently checked standard-library calculation, not a Boost dependency.
