@@ -1,0 +1,21 @@
+{
+  "access": "Previously verified Pro subscription, extra usage off; official read-only CLI; no paid API fallback",
+  "plan": {
+    "model": "claude-opus-5-5",
+    "is_error": false,
+    "sha256": {
+      "results/runs/tool_lab_plan_claude_20260926/request.txt": "a4c8c1cc9928db885479c79a467979cb7192cf3a4af026e1a0883fb1a028b64c",
+      "results/runs/tool_lab_plan_claude_20260926/response.json": "5b423b9c7d25820e350beedad428036873d14a7f92a83c9822d8c8ae414b2dc0",
+      "research/claude_tool_lab_plan.md": "ce94bc7c22bac39ab0fdfa1e7930a3ff1b72323d1b34a59d1ee9a7a2d84d0978"
+    }
+  },
+  "code": {
+    "model": "claude-opus-5-5",
+    "is_error": false,
+    "sha256": {
+      "results/runs/tool_lab_code_claude_20260926/request.txt": "18e3ee0b8d227969a982f77d0d1dfbc71326e5c65b5e1ff764eb7891acf95264",
+      "results/runs/tool_lab_code_claude_20260926/response.json": "272bc2f4e3c8a83c16b3bbd2e4f3455f229ca1d6a0e73999464c241aaf99ed7e",
+      "research/claude_tool_lab_code.md": "c48187ed57bf149cd67a8b6d4e3e3c1e10ce903b1e5bec49b3c8e00f5abeed2a"
+    }
+  }
+}
