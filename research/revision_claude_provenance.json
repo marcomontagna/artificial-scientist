@@ -16,6 +16,22 @@
         "results/runs/revision_claude_plan_20260926/response.json": "fd85c3e20f02dad4ab83ab692c743ce475a2b519a30641048eec723d05ed291c",
         "research/claude_revision_plan.md": "58c20b49930469c80391afd90aba238044a290c569777dc39b8e7127df2b1373"
       }
+    },
+    {
+      "stage": "result",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "duration_ms": 108115,
+      "num_turns": 15,
+      "is_error": false,
+      "raw_directory": "results/runs/revision_claude_result_20260926",
+      "report": "research/claude_revision_result.md",
+      "sha256": {
+        "results/runs/revision_claude_result_20260926/request.txt": "471893489c2915a1a1deb5e4d668ff78d31ca00e6161222f717261baa99768b8",
+        "results/runs/revision_claude_result_20260926/response.json": "83bff0c7d8f758818dea38d55f16353d57ef7130f4c17efd02adaac2901aac84",
+        "research/claude_revision_result.md": "f884fe51f91912f8a56a65118dbbe17fd0801a33ae5db6d9609998392d44146c"
+      }
     }
   ]
 }

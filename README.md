@@ -8,15 +8,15 @@ Small, falsifiable experiments in how an artificial learner can understand an un
 
 The goal is a learner that investigates unfamiliar systems across **multiple procedurally generated universes**. Understanding is the objective: improve predictions, uncertainty and explanations by choosing informative experiments; a win/lose reward is optional. The earlier context-selection line is frozen. The current priority is explicit equations: fit a hypothesis, test its terms, challenge where it applies, and eventually revise it through informative experiments. Neural networks are an option, not a committed architecture. See [the concise direction](research/direction.md) and [next steps](NEXT_STEPS.md). The earlier EPIG/EIG plan is optional groundwork, not the active target. Novelty and effectiveness remain unproven.
 
-## Latest: one equation, independent checks
+## Latest: reject, revise, and check afresh
 
-[The integrated equation study](research/equation_pipeline_result.md) is complete: **480 datasets, 1,440 candidates; 96 tests pass**. The learner selects polynomial terms on A, refits on independent B, and checks that frozen equation on C. Its predefined integration screen passes. It confirms all strong true terms, but only49%/39% of weaker affine/quadratic terms, versus63%/60% for ordinary pooled BIC. Pooled BIC also has lower mean prediction MSE in all four polynomial families. Splitting supports the current whole-form test; it is not a demonstrated prediction advantage.
+[The one-revision study](research/equation_revision_result.md) is complete: **480 datasets, 2,400 candidates; 103 tests pass**. The learner can reject a quadratic equation, add one supplied cubic term, refit it, and check it on fresh observations. The implementation checks pass; **the practical utility screen fails**.
 
-No false term was confirmed in any in-family/noise cell (each0/60); zero observed is not zero risk. Known Gaussian noise and supplied polynomial grammar remain major assumptions. There is no trained RL policy or novelty claim. Next, following Claude’s critique: review a minimal reject–revise–fresh-check loop with stronger inference and ordinary-selection baselines.
+Revision reduces mean prediction error versus never revising, but its medium/strong cubic errors remain5.92×/1.91× those of a fixed large model using all training data. No raw output exactly recovered sparse support: the six base terms are always retained. Weak effects were often missed. Fifty of60wrong exponential formulas escaped final rejection: not rejected does not mean true. The grammar and known Gaussian noise remain supplied assumptions. This is a functional learning loop, not a new discovery algorithm, neural network or trained RL policy.
 
-**Correction:** random-stream overlap affects the earlier domain study's aggregate uncertainty claims. Its counts remain descriptive; old data are preserved. [Erratum](research/equation_domain_rng_erratum.md). The current pipeline fixes the stream-spacing defect and tests against recurrence.
+Claude challenged the design; we added the efficient fixed baseline and preserved the negative result. Separate agents reviewed code and independently reproduced the numerical evidence. [Result](research/equation_revision_result.md) · [Reproduce](research/equation_revision_reproduction.md) · [Next steps](NEXT_STEPS.md). Execution is finished; the next research question needs justification before another study.
 
-[Current result](research/equation_pipeline_result.md) · [Earlier three studies](research/overnight_equation_report.md) · [Next steps](NEXT_STEPS.md). Execution is finished. Existing visualizations below replay the earlier interactive learners.
+Earlier [same-equation integration](research/equation_pipeline_result.md) and [three equation studies](research/overnight_equation_report.md) remain preserved. The earlier domain study's aggregate uncertainty claims have an explicit [random-stream erratum](research/equation_domain_rng_erratum.md). Existing visualizations below replay earlier interactive learners.
 
 ## Previous stateful learner and visualization
 

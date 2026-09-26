@@ -51,3 +51,10 @@ No post-result tuning or held-out confirmation. The separate sequence-family res
 - **1090:** eight-dataset resource smoke, inspected.
 - **1100–1159:**480-dataset full study, now inspected development data; no post-result tuning. Example formula uses the first declared seed1100.
 - All441law/input/noise offset-plus-seed keys across study/smoke/fixtures are unique. Worlds and pipelines intentionally share observations within each seed; five full-model in-family controls duplicate residual experiments. Reserve1000–1049 remains unused.
+
+## Equation revision v0
+
+- **7/11:** synthetic tests; deterministic feasibility grids used no RNG.
+- **1190:** eight-dataset resource smoke, inspected.
+- **1200–1259:**480dataset/2,400candidate study, inspected development data; no post-result tuning.
+- All567role-plus-seed keys are unique. Five pipelines share each dataset’s88observations; quadratic/noise controls duplicate residual experiments. Reserve1000–1049 remains unused.

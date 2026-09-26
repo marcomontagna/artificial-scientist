@@ -1,5 +1,11 @@
 # Results
 
+## One revision — September 26
+
+[Reject/revise/fresh-check study](research/equation_revision_result.md):480datasets,2,400candidates,42,240observations from clean`0e8c5c0`;103tests pass. **Hard integration passes; practical utility fails.** Raw exact-support recovery is0/60 in all35in-family cells because the dense six-term base is mandatory. Correct cubic proposals occur44/60medium-x,60/60strong-x and49/60medium-u, with0/60control revisions. Mean shell MSE improves59.5%/99.6% versus never revising on medium/strong-x, but remains5.92×/1.91× the efficient pooled-full baseline. The outer shell is inside the observation domain.
+
+Among insufficient final forms,58/59weak-cubic,7/60both-cubic and50/60exponential cases escape rejection; the remaining weak-cubic nonrejection has sufficient support. Each in-family cell has0/60false likelihood-evidence claims and3/60exact-test false-claim datasets; shared designs/noise make these correlated, not independent calibration replications. Exact-test containment of likelihood-evidence claims was derived before sampling. No novelty, general explanation guarantee or observations-saved claim. Raw numerical audit independently reproduces the run with maximum discrepancy6.92e-11.
+
 ## Integrated equation pipeline — September 26
 
 [Same-equation study](research/equation_pipeline_result.md): **480 datasets / 1,440 candidates / 30,720 observations**, clean source`1ef9ae5`;96tests pass. Both fixed integration/practical screens pass. Independent refit confirms180/180 strong affine and115/115 strong quadratic terms, but only88/180 weak affine and45/115 weak quadratic, versus114/180 and69/115 for pooled BIC. Pooled BIC has lower mean prediction MSE in all four polynomial families; its whole-form test is unavailable under the present derivation. No superiority or novelty claim.
