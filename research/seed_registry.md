@@ -80,3 +80,7 @@ World source dfabfe1 and learner/protocol3dc00a2 were frozen before45 runs. Sens
 ## Follow-up A
 
 Clean e1317cd; seeds280001–280003, same action/evaluator offsets and world laws as revision_v1.36runs:3worlds×3seeds×4check rules. All now inspected development data. No extra learner smoke or tuning.
+
+## Follow-up B
+
+Clean2b0eca1; sensor seeds290001–290003 with existing action/evaluator offsets.36runs:3knownworlds×3seeds×ordinaryactive/historyactive/historyrandom/historycoverage. All inspected developmentdata; no extra smoke/tuning.

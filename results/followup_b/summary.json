@@ -1,0 +1,4626 @@
+{
+  "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+  "runs": [
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0011073709909301965,
+        "vector_linear": 0.10834667573584038,
+        "history_linear": 0.0938604362928131
+      },
+      "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8121319365359019,
+          0.4209296459578222
+        ],
+        "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.090344,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [],
+      "cycle_decisions": [],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0033997525493728604,
+        "vector_linear": 0.12345540807886102,
+        "history_linear": 0.09971623119610423
+      },
+      "formula": "delta_x = 0.803265*v + 0.422099*u; delta_y = 0.803265*v + 0.422099*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8032654023904344,
+          0.42209876533075347
+        ],
+        "formula": "delta_x = 0.803265*v + 0.422099*u; delta_y = 0.803265*v + 0.422099*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 23088
+      },
+      "cpu_seconds": 0.11492799999999997,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.0027192362497059637,
+          "external_candidate_mse": 0.004447300724676246,
+          "external_required_margin": 0.00040788543745589456,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 27,
+            "history_length": 56,
+            "recent_errors": [
+              0.0027567459256869144,
+              0.002634301119198764,
+              0.0017514129156731189,
+              0.0012991524222977693,
+              0.002874888831107825
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_lag_u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0013442397979180148,
+            "untied:v+u": 0.0014458116189207744,
+            "untied:v+u+other_lag_u": 0.0014176459055371179,
+            "untied:v+u+abs(u)": 0.0014810979778278554
+          },
+          "required_margin": 0.0004
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0017040832145370736,
+        "vector_linear": 0.002618829649784963,
+        "history_linear": 0.0013709574225864443
+      },
+      "formula": "delta_x = 0.814213*v + 0.413591*u; delta_y = 0.814213*v + 0.413591*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8142128278742188,
+          0.4135911052791113
+        ],
+        "formula": "delta_x = 0.814213*v + 0.413591*u; delta_y = 0.814213*v + 0.413591*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 24816
+      },
+      "cpu_seconds": 0.13036100000000006,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.004400508397912469,
+          "external_candidate_mse": 0.01113312894416238,
+          "external_required_margin": 0.0006600762596868703,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.00162383711161187,
+          "external_candidate_mse": 0.004280031020868145,
+          "external_required_margin": 0.0004,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0005632988394706631,
+              0.0011023426947092145,
+              0.00299499884040749,
+              0.004778490389354613,
+              0.009151179375646214
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_lag_u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0016141622466377304,
+            "untied:v+u": 0.0024350382520621086,
+            "untied:v+u+other_lag_u": 0.0022535783906288695,
+            "untied:v+u+(v*other_v)": 0.002839173692044454
+          },
+          "required_margin": 0.0004
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 24,
+            "history_length": 50,
+            "recent_errors": [
+              0.000897523522736153,
+              0.0013494231464413926,
+              0.005115949314553182,
+              0.003116374109479083,
+              0.0027635597145174067
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag_u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0005299458508414601,
+            "untied:v+u": 0.0005510856531901453,
+            "untied:v+u+lag_u": 0.00037710396429164864,
+            "untied:v+u+(u*p)": 0.0013167068767018183
+          },
+          "required_margin": 0.0004
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0011073709909301965,
+        "vector_linear": 0.10834667573584038,
+        "history_linear": 0.0938604362928131
+      },
+      "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8121319365359019,
+          0.4209296459578222
+        ],
+        "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.08927199999999999,
+      "arm": "history_active",
+      "decision_diagnostics": [],
+      "cycle_decisions": [],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0035634517745115413,
+        "vector_linear": 0.013811766940043966,
+        "history_linear": 0.0018814683460834385
+      },
+      "formula": "delta_x = 0.806396*v + 0.416259*u; delta_y = 0.806396*v + 0.416259*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8063962538549614,
+          0.4162592375829092
+        ],
+        "formula": "delta_x = 0.806396*v + 0.416259*u; delta_y = 0.806396*v + 0.416259*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 43248
+      },
+      "cpu_seconds": 0.130448,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.0027192362497059637,
+          "external_candidate_mse": 0.0028094606455062844,
+          "external_required_margin": 0.00040788543745589456,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 27,
+            "history_length": 56,
+            "recent_errors": [
+              0.0027567459256869144,
+              0.002634301119198764,
+              0.0017514129156731189,
+              0.0012991524222977693,
+              0.002874888831107825
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0015190134358272914,
+            "untied:v+u": 0.0016019311970185707,
+            "untied:v+u+lag(u,15)": 0.0017156907196477656,
+            "untied:v+u+abs(u)": 0.0029485764255134934
+          },
+          "required_margin": 0.0002278520153740937
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0012735753144703466,
+        "vector_linear": 0.0027367558872257707,
+        "history_linear": 0.0016858428333798396
+      },
+      "formula": "delta_x = 0.81415*v + 0.417746*u; delta_y = 0.81415*v + 0.417746*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8141497107793674,
+          0.417746202596912
+        ],
+        "formula": "delta_x = 0.81415*v + 0.417746*u; delta_y = 0.81415*v + 0.417746*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 47136
+      },
+      "cpu_seconds": 0.15334099999999995,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.004400508397912469,
+          "external_candidate_mse": 0.01894977937613572,
+          "external_required_margin": 0.0006600762596868703,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.001133702818419689,
+          "external_candidate_mse": 0.001416315882395777,
+          "external_required_margin": 0.0002,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0005632988394706631,
+              0.0011023426947092145,
+              0.00299499884040749,
+              0.004778490389354613,
+              0.009151179375646214
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.001017012734167502,
+            "untied:v+u": 0.002501106719363603,
+            "untied:v+u+lag(other_u,8)": 0.0392495969558684,
+            "untied:v+u+(v*other_v)": 0.0032587372496423856
+          },
+          "required_margin": 0.0002
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 24,
+            "history_length": 50,
+            "recent_errors": [
+              0.0009583929985127339,
+              0.0015426336623127412,
+              0.0051734709722124385,
+              0.0042884287836518434,
+              0.0038759570864262856
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0005077424002844977,
+            "untied:v+u": 0.0005151062839487406,
+            "untied:v+u+lag(u,16)": 0.0006637830196145043,
+            "untied:v+u+(u*u)": 0.0005796141786776017
+          },
+          "required_margin": 0.0002
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0005354769859027996,
+        "vector_linear": 0.0017546599665749076,
+        "history_linear": 0.0008016663951135147
+      },
+      "formula": "delta_x = 0.818508*v + 0.41825*u; delta_y = 0.818508*v + 0.41825*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8185075122230641,
+          0.4182502210125834
+        ],
+        "formula": "delta_x = 0.818508*v + 0.41825*u; delta_y = 0.818508*v + 0.41825*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.09049600000000002,
+      "arm": "history_random",
+      "decision_diagnostics": [],
+      "cycle_decisions": [],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0011983357426866316,
+        "vector_linear": 0.0034294093633919515,
+        "history_linear": 0.0010764048976087594
+      },
+      "formula": "delta_x = 0.813047*v + 0.419134*u; delta_y = 0.813047*v + 0.419134*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8130469786959201,
+          0.4191341846601311
+        ],
+        "formula": "delta_x = 0.813047*v + 0.419134*u; delta_y = 0.813047*v + 0.419134*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 18320
+      },
+      "cpu_seconds": 0.11658800000000002,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.0007118359004232176,
+          "external_candidate_mse": 0.006136162690100575,
+          "external_required_margin": 0.0002,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 8,
+            "history_length": 18,
+            "recent_errors": [
+              0.0013699201392371515,
+              0.020096448821965655,
+              0.0003315947069176522,
+              0.002568575614420872,
+              0.002607221344191477
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0021925980017468475,
+            "untied:v+u": 0.0029082039722764788,
+            "untied:v+u+other_u": 0.004283179327246593,
+            "untied:v+u+abs(u)": 0.008938706545672203
+          },
+          "required_margin": 0.0003288897002620271
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0010425651693920777,
+        "vector_linear": 0.0009640648108588276,
+        "history_linear": 0.0011918618077774894
+      },
+      "formula": "delta_x = 0.811398*v + 0.428101*u; delta_y = 0.811398*v + 0.428101*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8113976527863374,
+          0.4281009981912131
+        ],
+        "formula": "delta_x = 0.811398*v + 0.428101*u; delta_y = 0.811398*v + 0.428101*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 47136
+      },
+      "cpu_seconds": 0.153721,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.004400508397912469,
+          "external_candidate_mse": 0.01894977937613572,
+          "external_required_margin": 0.0006600762596868703,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+abs(u)",
+          "accepted": false,
+          "external_incumbent_mse": 0.001297557433571691,
+          "external_candidate_mse": 0.0018992695258237616,
+          "external_required_margin": 0.0004,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0005632988394706631,
+              0.0011023426947092145,
+              0.00299499884040749,
+              0.004778490389354613,
+              0.009151179375646214
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0010132833240269208,
+            "untied:v+u": 0.0033925001658529764,
+            "untied:v+u+lag(other_u,8)": 0.02125124724172726,
+            "untied:v+u+(v*other_v)": 0.005268004230992256
+          },
+          "required_margin": 0.0002
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 24,
+            "history_length": 50,
+            "recent_errors": [
+              0.0012088243757269782,
+              0.0014865003556188937,
+              0.0041570587036349315,
+              0.003256690497043883,
+              0.0025228757228149905
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+abs(u)",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0009693113633899919,
+            "untied:v+u": 0.0009292404033114422,
+            "untied:v+u+lag(other_u,13)": 0.000950635171508192,
+            "untied:v+u+abs(u)": 0.0007307287886438599
+          },
+          "required_margin": 0.0004
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0011073709909301965,
+        "vector_linear": 0.10834667573584038,
+        "history_linear": 0.0938604362928131
+      },
+      "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8121319365359019,
+          0.4209296459578222
+        ],
+        "formula": "delta_x = 0.812132*v + 0.42093*u; delta_y = 0.812132*v + 0.42093*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.09038299999999999,
+      "arm": "history_coverage",
+      "decision_diagnostics": [],
+      "cycle_decisions": [],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0033997525493728604,
+        "vector_linear": 0.12345540807886102,
+        "history_linear": 0.09971623119610423
+      },
+      "formula": "delta_x = 0.803265*v + 0.422099*u; delta_y = 0.803265*v + 0.422099*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8032654023904344,
+          0.42209876533075347
+        ],
+        "formula": "delta_x = 0.803265*v + 0.422099*u; delta_y = 0.803265*v + 0.422099*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 43248
+      },
+      "cpu_seconds": 0.1311,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.0027192362497059637,
+          "external_candidate_mse": 0.0028094606455062844,
+          "external_required_margin": 0.00040788543745589456,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 27,
+            "history_length": 56,
+            "recent_errors": [
+              0.0027567459256869144,
+              0.002634301119198764,
+              0.0017514129156731189,
+              0.0012991524222977693,
+              0.002874888831107825
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0013442397979180148,
+            "untied:v+u": 0.0014458116189207744,
+            "untied:v+u+lag(u,15)": 0.0014954093015745744,
+            "untied:v+u+abs(u)": 0.0014810979778278554
+          },
+          "required_margin": 0.0002016359696877022
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.00165750775118931,
+        "vector_linear": 0.1274956449705044,
+        "history_linear": 0.09089572355610843
+      },
+      "formula": "delta_x = 0.812491*v + 0.416714*u; delta_y = 0.812491*v + 0.416714*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8124907077936779,
+          0.41671417064256927
+        ],
+        "formula": "delta_x = 0.812491*v + 0.416714*u; delta_y = 0.812491*v + 0.416714*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 47136
+      },
+      "cpu_seconds": 0.15419199999999988,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.004400508397912469,
+          "external_candidate_mse": 0.01894977937613572,
+          "external_required_margin": 0.0006600762596868703,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,4)",
+          "accepted": false,
+          "external_incumbent_mse": 0.0015623456641014233,
+          "external_candidate_mse": 0.006453691557784674,
+          "external_required_margin": 0.0004,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0005632988394706631,
+              0.0011023426947092145,
+              0.00299499884040749,
+              0.004778490389354613,
+              0.009151179375646214
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0007766356728690463,
+            "untied:v+u": 0.0017158398366876634,
+            "untied:v+u+lag(other_u,8)": 0.0206898893430229,
+            "untied:v+u+(v*other_v)": 0.002060775358294724
+          },
+          "required_margin": 0.0002
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 24,
+            "history_length": 50,
+            "recent_errors": [
+              0.0009482549850096778,
+              0.0014768198713348583,
+              0.005067865857845825,
+              0.0039899566202483165,
+              0.00361845059897087
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,4)",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.0004902588689441876,
+            "untied:v+u": 0.0005645858293980285,
+            "untied:v+u+lag(other_u,4)": 0.00038591187097803,
+            "untied:v+u+(u*p)": 0.0005547547741194368
+          },
+          "required_margin": 0.0004
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0004892251308642134,
+        "vector_linear": 0.0009640306917021677,
+        "history_linear": 0.0005500056087232892
+      },
+      "formula": "delta_x = 0.714824*v + 0.384717*u + -0.171118*other_v; delta_y = 0.651554*v + 0.378886*u + 0.210095*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7148244190540617,
+            0.38471702867423757,
+            -0.17111823250639113
+          ],
+          [
+            0.6515542717625249,
+            0.3788855311178404,
+            0.21009501417542586
+          ]
+        ],
+        "formula": "delta_x = 0.714824*v + 0.384717*u + -0.171118*other_v; delta_y = 0.651554*v + 0.378886*u + 0.210095*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13164
+      },
+      "cpu_seconds": 0.109456,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.08474781121908118,
+          "external_candidate_mse": 0.010375418166327314,
+          "external_required_margin": 0.012712171682862176,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.005088069610475971,
+              0.0003196583453952525,
+              0.0008370412409399277,
+              0.018656935547670683,
+              0.0031838652599323193
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.028145289757570812,
+            "untied:v+u": 0.023011507269594784,
+            "untied:v+u+other_v": 0.004436022008574444,
+            "untied:v+u+(p*other_p)": 3.9993752397537228
+          },
+          "required_margin": 0.004221793463635622
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0020712347283903146,
+        "vector_linear": 0.0072338766594955035,
+        "history_linear": 0.0009613015523816573
+      },
+      "formula": "delta_x = 0.716741*v + 0.365216*u + -0.198824*other_v; delta_y = 0.645302*v + 0.377057*u + 0.22199*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7167406170620632,
+            0.3652160519351098,
+            -0.19882399343399346
+          ],
+          [
+            0.6453018479546508,
+            0.3770571627688382,
+            0.22198984841371355
+          ]
+        ],
+        "formula": "delta_x = 0.716741*v + 0.365216*u + -0.198824*other_v; delta_y = 0.645302*v + 0.377057*u + 0.22199*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 14264
+      },
+      "cpu_seconds": 0.1121669999999999,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.08409923628206717,
+          "external_candidate_mse": 0.003474593302947113,
+          "external_required_margin": 0.012614885442310075,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0008832764776102458,
+              0.002430209948705222,
+              0.024648523503223375,
+              0.013138885846682788,
+              0.0036334238870296396
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.0374528038610006,
+            "untied:v+u": 0.044682384439624245,
+            "untied:v+u+other_v": 0.0017377619282082407,
+            "untied:v+u+(p*other_p)": 0.05684525295118213
+          },
+          "required_margin": 0.005617920579150089
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0006601269634124178,
+        "vector_linear": 0.0014333101275662632,
+        "history_linear": 0.0008100243611522456
+      },
+      "formula": "delta_x = 0.718749*v + 0.386281*u + -0.173405*other_v; delta_y = 0.643351*v + 0.376428*u + 0.219035*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7187486830038369,
+            0.38628097789524724,
+            -0.17340471130787927
+          ],
+          [
+            0.6433509160500676,
+            0.3764277790341992,
+            0.2190347916866575
+          ]
+        ],
+        "formula": "delta_x = 0.718749*v + 0.386281*u + -0.173405*other_v; delta_y = 0.643351*v + 0.376428*u + 0.219035*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 32124
+      },
+      "cpu_seconds": 0.134363,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.07313817273157001,
+          "external_candidate_mse": 0.008670741671366918,
+          "external_required_margin": 0.010970725909735501,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v+other_lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.0009567322483807848,
+          "external_candidate_mse": 0.0015344953090486967,
+          "external_required_margin": 0.0002,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0008224002041886185,
+              0.00024525095535756186,
+              0.003973684501881595,
+              0.007258333202964215,
+              0.009981723638348608
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.039587363007223486,
+            "untied:v+u": 0.040377181820246334,
+            "untied:v+u+other_v": 0.0051296340617666,
+            "untied:v+u+(v*other_v)": 0.13304187555916872
+          },
+          "required_margin": 0.005938104451083523
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 25,
+            "history_length": 52,
+            "recent_errors": [
+              0.0012027777975839203,
+              0.0040514405368689,
+              0.002931697724928156,
+              0.0018313422643152855,
+              0.0033860900499684066
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v+other_lag_u",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": false,
+          "mean_squared_error": {
+            "untied:v+u+other_v": 0.001176962720855261,
+            "untied:v+u+other_v+other_lag_u": 0.0012900919124893238,
+            "untied:v+u+other_v+abs(u)": 0.001532127189630081
+          },
+          "required_margin": 0.0002
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.000426706583941246,
+        "vector_linear": 0.0006912372620269759,
+        "history_linear": 0.0004634439376055406
+      },
+      "formula": "delta_x = 0.715447*v + 0.383936*u + -0.176953*other_v; delta_y = 0.645472*v + 0.38489*u + 0.207047*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7154472569456007,
+            0.3839359663152298,
+            -0.17695267020207403
+          ],
+          [
+            0.6454722450475605,
+            0.38488952325971226,
+            0.20704665700318356
+          ]
+        ],
+        "formula": "delta_x = 0.715447*v + 0.383936*u + -0.176953*other_v; delta_y = 0.645472*v + 0.38489*u + 0.207047*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 2,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 111,
+        "refits": 34,
+        "feature_evaluations": 41228
+      },
+      "cpu_seconds": 0.14831400000000006,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": true,
+          "external_incumbent_mse": 0.08474781121908118,
+          "external_candidate_mse": 0.07552262227977617,
+          "external_required_margin": 0.012712171682862176,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.06473337072064317,
+          "external_candidate_mse": 0.001048035372479513,
+          "external_required_margin": 0.009710005608096475,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.005088069610475971,
+              0.0003196583453952525,
+              0.0008370412409399277,
+              0.018656935547670683,
+              0.0031838652599323193
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "untied:v+u",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.028145289757570812,
+            "untied:v+u": 0.023011507269594784,
+            "untied:v+u+lag(other_u,9)": 0.03698985247085303,
+            "untied:v+u+(p*other_p)": 3.9993752397537228
+          },
+          "required_margin": 0.004221793463635622
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 18,
+            "history_length": 38,
+            "recent_errors": [
+              0.0019563153211331822,
+              0.00022898393982651217,
+              0.011045261555827765,
+              0.012498164081796369,
+              0.0161994965250931
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "untied:v+u": 0.06614354469486049,
+            "untied:v+u+other_v": 0.0007707635594699673,
+            "untied:v+u+(p*abs(p))": 0.06812359109696502
+          },
+          "required_margin": 0.009921531704229073
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0020712347283903146,
+        "vector_linear": 0.0072338766594955035,
+        "history_linear": 0.0009613015523816573
+      },
+      "formula": "delta_x = 0.716741*v + 0.365216*u + -0.198824*other_v; delta_y = 0.645302*v + 0.377057*u + 0.22199*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7167406170620632,
+            0.3652160519351098,
+            -0.19882399343399346
+          ],
+          [
+            0.6453018479546508,
+            0.3770571627688382,
+            0.22198984841371355
+          ]
+        ],
+        "formula": "delta_x = 0.716741*v + 0.365216*u + -0.198824*other_v; delta_y = 0.645302*v + 0.377057*u + 0.22199*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 20024
+      },
+      "cpu_seconds": 0.1212620000000002,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.08409923628206717,
+          "external_candidate_mse": 0.003474593302947113,
+          "external_required_margin": 0.012614885442310075,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0008832764776102458,
+              0.002430209948705222,
+              0.024648523503223375,
+              0.013138885846682788,
+              0.0036334238870296396
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.0374528038610006,
+            "untied:v+u": 0.044682384439624245,
+            "untied:v+u+other_v": 0.0017377619282082407,
+            "untied:v+u+(p*other_p)": 0.05684525295118213
+          },
+          "required_margin": 0.005617920579150089
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0006601269634124178,
+        "vector_linear": 0.0014333101275662632,
+        "history_linear": 0.0008100243611522456
+      },
+      "formula": "delta_x = 0.718749*v + 0.386281*u + -0.173405*other_v; delta_y = 0.643351*v + 0.376428*u + 0.219035*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7187486830038369,
+            0.38628097789524724,
+            -0.17340471130787927
+          ],
+          [
+            0.6433509160500676,
+            0.3764277790341992,
+            0.2190347916866575
+          ]
+        ],
+        "formula": "delta_x = 0.718749*v + 0.386281*u + -0.173405*other_v; delta_y = 0.643351*v + 0.376428*u + 0.219035*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 110,
+        "refits": 34,
+        "feature_evaluations": 61404
+      },
+      "cpu_seconds": 0.1631610000000001,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.07313817273157001,
+          "external_candidate_mse": 0.008670741671366918,
+          "external_required_margin": 0.010970725909735501,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v+lag(other_u,12)",
+          "accepted": false,
+          "external_incumbent_mse": 0.0009567322483807848,
+          "external_candidate_mse": 0.0011116147264701557,
+          "external_required_margin": 0.0002,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0008224002041886185,
+              0.00024525095535756186,
+              0.003973684501881595,
+              0.007258333202964215,
+              0.009981723638348608
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.039587363007223486,
+            "untied:v+u": 0.040377181820246334,
+            "untied:v+u+other_v": 0.0051296340617666,
+            "untied:v+u+(v*other_v)": 0.13304187555916872
+          },
+          "required_margin": 0.005938104451083523
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 25,
+            "history_length": 52,
+            "recent_errors": [
+              0.0012027777975839203,
+              0.0040514405368689,
+              0.002931697724928156,
+              0.0018313422643152855,
+              0.0033860900499684066
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v+lag(other_u,12)",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": false,
+          "mean_squared_error": {
+            "untied:v+u+other_v": 0.001176962720855261,
+            "untied:v+u+other_v+lag(other_u,12)": 0.0012349943217736265,
+            "untied:v+u+other_v+abs(u)": 0.001532127189630081
+          },
+          "required_margin": 0.0002
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0004417627122979461,
+        "vector_linear": 0.0011813695182214944,
+        "history_linear": 0.00046256106715831136
+      },
+      "formula": "delta_x = 0.720245*v + 0.376154*u + -0.178634*other_v; delta_y = 0.644165*v + 0.379655*u + 0.218899*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7202446847579127,
+            0.37615420192812127,
+            -0.1786343671194041
+          ],
+          [
+            0.6441647471713954,
+            0.37965517401931614,
+            0.21889940687329293
+          ]
+        ],
+        "formula": "delta_x = 0.720245*v + 0.376154*u + -0.178634*other_v; delta_y = 0.644165*v + 0.379655*u + 0.218899*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 39080
+      },
+      "cpu_seconds": 0.1497980000000001,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.08474781121908118,
+          "external_candidate_mse": 0.07552262227977617,
+          "external_required_margin": 0.012712171682862176,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.06694730211901326,
+          "external_candidate_mse": 0.0004369504839509135,
+          "external_required_margin": 0.010042095317851989,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.005088069610475971,
+              0.0003196583453952525,
+              0.0008370412409399277,
+              0.018656935547670683,
+              0.0031838652599323193
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.02713970914209604,
+            "untied:v+u": 0.02912786766546017,
+            "untied:v+u+lag(other_u,9)": 0.04168663997658684,
+            "untied:v+u+(p*other_p)": 0.15637507023901853
+          },
+          "required_margin": 0.004070956371314406
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 16,
+            "history_length": 34,
+            "recent_errors": [
+              0.009323589331758407,
+              0.006984856599413282,
+              0.0018130840747743113,
+              0.0003776213452976301,
+              0.0026891555333523956
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.015861484720925714,
+            "untied:v+u": 0.01850321332578241,
+            "untied:v+u+other_v": 0.0006190706158475057,
+            "untied:v+u+positive(p)": 0.01782916866292282
+          },
+          "required_margin": 0.002379222708138857
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0007325037445693786,
+        "vector_linear": 0.00046190417160762466,
+        "history_linear": 0.0003134942662343678
+      },
+      "formula": "delta_x = 0.70086*v + 0.378004*u + -0.184246*other_v; delta_y = 0.642007*v + 0.378927*u + 0.212317*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7008599669597707,
+            0.3780042341797731,
+            -0.18424641911390463
+          ],
+          [
+            0.6420068161715254,
+            0.37892680142385493,
+            0.2123170848867168
+          ]
+        ],
+        "formula": "delta_x = 0.70086*v + 0.378004*u + -0.184246*other_v; delta_y = 0.642007*v + 0.378927*u + 0.212317*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 20024
+      },
+      "cpu_seconds": 0.11954300000000018,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.05875920662093933,
+          "external_candidate_mse": 0.0046389256303916125,
+          "external_required_margin": 0.008813880993140899,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0008832764776102458,
+              0.002430209948705222,
+              0.024648523503223375,
+              0.02126461385249192,
+              0.01948717599611219
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.007617976014884213,
+            "untied:v+u": 0.006763499705186955,
+            "untied:v+u+other_v": 0.00213753043248614,
+            "untied:v+u+(p*other_p)": 0.006708363718081752
+          },
+          "required_margin": 0.0011426964022326319
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0006262578431517367,
+        "vector_linear": 0.0007357442270125266,
+        "history_linear": 0.0009635971323721068
+      },
+      "formula": "delta_x = 0.711921*v + 0.388729*u + -0.181543*other_v; delta_y = 0.636822*v + 0.387775*u + 0.216401*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7119210771021341,
+            0.38872858160483664,
+            -0.18154316312855678
+          ],
+          [
+            0.6368224876051546,
+            0.3877745288274481,
+            0.21640105510068858
+          ]
+        ],
+        "formula": "delta_x = 0.711921*v + 0.388729*u + -0.181543*other_v; delta_y = 0.636822*v + 0.387775*u + 0.216401*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 17484
+      },
+      "cpu_seconds": 0.11843799999999982,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.07313817273157001,
+          "external_candidate_mse": 0.008670741671366918,
+          "external_required_margin": 0.010970725909735501,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0008224002041886185,
+              0.00024525095535756186,
+              0.003973684501881595,
+              0.007258333202964215,
+              0.009981723638348608
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.013101064071828632,
+            "untied:v+u": 0.013018664006162367,
+            "untied:v+u+other_v": 0.003135378121847324,
+            "untied:v+u+(v*other_v)": 0.02173743694460018
+          },
+          "required_margin": 0.0019651596107742946
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0004734102373641457,
+        "vector_linear": 0.04597501191938337,
+        "history_linear": 0.04388158487403347
+      },
+      "formula": "delta_x = 0.717789*v + 0.382152*u + -0.173165*other_v; delta_y = 0.644735*v + 0.385815*u + 0.205526*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7177886835221985,
+            0.3821523519254921,
+            -0.17316493621864856
+          ],
+          [
+            0.6447349127720788,
+            0.3858152497302961,
+            0.20552550205262662
+          ]
+        ],
+        "formula": "delta_x = 0.717789*v + 0.382152*u + -0.173165*other_v; delta_y = 0.644735*v + 0.385815*u + 0.205526*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 37848
+      },
+      "cpu_seconds": 0.15000499999999994,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.08474781121908118,
+          "external_candidate_mse": 0.07552262227977617,
+          "external_required_margin": 0.012712171682862176,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.0809890918585014,
+          "external_candidate_mse": 0.0007143587266174708,
+          "external_required_margin": 0.012148363778775208,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.005088069610475971,
+              0.0003196583453952525,
+              0.0008370412409399277,
+              0.018656935547670683,
+              0.0031838652599323193
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.005552973620571378,
+            "untied:v+u": 0.006496358020346681,
+            "untied:v+u+lag(other_u,9)": 0.018479138599324263,
+            "untied:v+u+(p*other_p)": 0.024567090730207596
+          },
+          "required_margin": 0.0008329460430857068
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 15,
+            "history_length": 32,
+            "recent_errors": [
+              0.00038622511239279605,
+              0.0008181141015563768,
+              0.00655381525528656,
+              0.0026006565697892685,
+              0.005009674750161344
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.007563099210083145,
+            "untied:v+u": 0.006823547060399947,
+            "untied:v+u+other_v": 0.0008186271355447182,
+            "untied:v+u+(p*abs(p))": 0.0056655970150225055
+          },
+          "required_margin": 0.0011344648815124717
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.00022534660410726927,
+        "vector_linear": 0.04599272857305276,
+        "history_linear": 0.0462601337664737
+      },
+      "formula": "delta_x = 0.70777*v + 0.384175*u + -0.178238*other_v; delta_y = 0.64307*v + 0.388776*u + 0.208694*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7077703955639356,
+            0.3841749935209806,
+            -0.17823751474338434
+          ],
+          [
+            0.6430704147203444,
+            0.38877594042414115,
+            0.2086939126961811
+          ]
+        ],
+        "formula": "delta_x = 0.70777*v + 0.384175*u + -0.178238*other_v; delta_y = 0.64307*v + 0.388776*u + 0.208694*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 20024
+      },
+      "cpu_seconds": 0.12042400000000031,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.08409923628206717,
+          "external_candidate_mse": 0.003474593302947113,
+          "external_required_margin": 0.012614885442310075,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0008832764776102458,
+              0.002430209948705222,
+              0.024648523503223375,
+              0.013138885846682788,
+              0.0036334238870296396
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.005931670523023203,
+            "untied:v+u": 0.006045267775580934,
+            "untied:v+u+other_v": 0.0010382348513283443,
+            "untied:v+u+(p*other_p)": 0.006806034414917705
+          },
+          "required_margin": 0.0008897505784534803
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.000553206583170604,
+        "vector_linear": 0.04209238489802249,
+        "history_linear": 0.0401368211112515
+      },
+      "formula": "delta_x = 0.715789*v + 0.382692*u + -0.177952*other_v; delta_y = 0.644051*v + 0.367185*u + 0.23442*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7157891414248593,
+            0.3826916035585359,
+            -0.17795169436370528
+          ],
+          [
+            0.6440505773449994,
+            0.3671854294811816,
+            0.23441976343892698
+          ]
+        ],
+        "formula": "delta_x = 0.715789*v + 0.382692*u + -0.177952*other_v; delta_y = 0.644051*v + 0.367185*u + 0.23442*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 17484
+      },
+      "cpu_seconds": 0.11982099999999996,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+other_v",
+          "accepted": true,
+          "external_incumbent_mse": 0.07313817273157001,
+          "external_candidate_mse": 0.008670741671366918,
+          "external_required_margin": 0.010970725909735501,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 5,
+            "history_length": 12,
+            "recent_errors": [
+              0.0008224002041886185,
+              0.00024525095535756186,
+              0.003973684501881595,
+              0.007258333202964215,
+              0.009981723638348608
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+other_v",
+          "selected_id": "untied:v+u+other_v",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.006017990703278857,
+            "untied:v+u": 0.00603609554424533,
+            "untied:v+u+other_v": 0.0012882425958249191,
+            "untied:v+u+(v*other_v)": 0.01640037635764333
+          },
+          "required_margin": 0.0009026986054918285
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.015472926097597657,
+        "vector_linear": 0.11880548528726569,
+        "history_linear": 0.0014345056075694648
+      },
+      "formula": "delta_x = 0.656782*v + 0.304947*u + 0.00309855*lag_u; delta_y = 0.707722*v + 0.30264*u + 0.00480432*lag_u",
+      "selected_model": {
+        "id": "untied:v+u+lag_u",
+        "terms": [
+          "v",
+          "u",
+          "lag_u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6567824487306356,
+            0.3049466978427316,
+            0.0030985529826803994
+          ],
+          [
+            0.707721892261837,
+            0.30263980183202577,
+            0.004804321490067609
+          ]
+        ],
+        "formula": "delta_x = 0.656782*v + 0.304947*u + 0.00309855*lag_u; delta_y = 0.707722*v + 0.30264*u + 0.00480432*lag_u",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 28644
+      },
+      "cpu_seconds": 0.1313380000000004,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag_u",
+          "accepted": true,
+          "external_incumbent_mse": 0.02049327111505581,
+          "external_candidate_mse": 0.018559003513513708,
+          "external_required_margin": 0.0030739906672583714,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag_u+(v*other_v)",
+          "accepted": false,
+          "external_incumbent_mse": 0.02979981201179557,
+          "external_candidate_mse": 0.1505332652800236,
+          "external_required_margin": 0.0044699718017693355,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 8,
+            "history_length": 18,
+            "recent_errors": [
+              0.005069658640721594,
+              0.0029257568988808346,
+              0.0007649666748883824,
+              0.0005027784755305576,
+              0.0059361887638406385
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag_u",
+          "selected_id": "untied:v+u+lag_u",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.031952128223831845,
+            "untied:v+u": 0.02933047010122755,
+            "untied:v+u+lag_u": 0.022857685582783848,
+            "untied:v+u+(v*p)": 0.2688951351970995
+          },
+          "required_margin": 0.004792819233574777
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 18,
+            "history_length": 38,
+            "recent_errors": [
+              0.03670585710732747,
+              0.03836609137692935,
+              0.0406649673166064,
+              0.00933546845839216,
+              0.00549196664772377
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag_u+(v*other_v)",
+          "selected_id": "untied:v+u+lag_u",
+          "accepted": false,
+          "mean_squared_error": {
+            "untied:v+u+lag_u": 0.015585514171430316,
+            "untied:v+u+lag_u+other_p": 0.04750831870631932,
+            "untied:v+u+lag_u+(v*other_v)": 0.029987979643720943
+          },
+          "required_margin": 0.0023378271257145475
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.029690743336094488,
+        "vector_linear": 0.03424548689092925,
+        "history_linear": 0.00034370756868656665
+      },
+      "formula": "delta_x = 0.717981*v + 0.308162*u; delta_y = 0.625303*v + 0.295298*u",
+      "selected_model": {
+        "id": "untied:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7179814342231965,
+            0.30816176341309176
+          ],
+          [
+            0.6253031263660741,
+            0.2952978692874975
+          ]
+        ],
+        "formula": "delta_x = 0.717981*v + 0.308162*u; delta_y = 0.625303*v + 0.295298*u",
+        "parameter_count": 4
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 25408
+      },
+      "cpu_seconds": 0.1295989999999998,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.02110125935257262,
+          "external_candidate_mse": 0.019186354875786873,
+          "external_required_margin": 0.003165188902885893,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": true,
+          "external_incumbent_mse": 0.018508338563507216,
+          "external_candidate_mse": 0.02439121103493749,
+          "external_required_margin": 0.002776250784526082,
+          "harmful_accepted": true,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0014735503664562747,
+              0.0007827651530540941,
+              0.021234016755957263,
+              0.004653981236418955,
+              0.0028528004542898574
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag_u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.021190362546117107,
+            "untied:v+u": 0.02450021326838839,
+            "untied:v+u+lag_u": 0.02055426961317969,
+            "untied:v+u+(p*other_p)": 0.03201540879270025
+          },
+          "required_margin": 0.003178554381917566
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 23,
+            "history_length": 48,
+            "recent_errors": [
+              0.002333730394405117,
+              0.02243047278705728,
+              0.028499384232052956,
+              0.0006398970002951177,
+              0.005653387929914867
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "untied:v+u",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.014153214839476519,
+            "untied:v+u": 0.011169845149212956,
+            "untied:v+u+other_p": 0.01855999309672071,
+            "untied:v+u+(p*abs(p))": 0.01721215632389036
+          },
+          "required_margin": 0.0021229822259214775
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "ordinary",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.016807975189601167,
+        "vector_linear": 0.031191288603546658,
+        "history_linear": 0.002167559779834211
+      },
+      "formula": "delta_x = 0.687197*v + 0.296668*u; delta_y = 0.687197*v + 0.296668*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.687196751878188,
+          0.29666785349887864
+        ],
+        "formula": "delta_x = 0.687197*v + 0.296668*u; delta_y = 0.687197*v + 0.296668*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 21856
+      },
+      "cpu_seconds": 0.129448,
+      "arm": "ordinary_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag_u",
+          "accepted": false,
+          "external_incumbent_mse": 0.025811349043560236,
+          "external_candidate_mse": 0.01761238040406453,
+          "external_required_margin": 0.0038717023565340352,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": true
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.023856757781561145,
+          "external_candidate_mse": 0.027024779760225704,
+          "external_required_margin": 0.0035785136672341717,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.002434299224346642,
+              0.0030107798624829287,
+              0.0029782132264990916,
+              0.002132142221324823,
+              0.005055145221924307
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag_u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.01620668196248794,
+            "untied:v+u": 0.017492402381117437,
+            "untied:v+u+lag_u": 0.016233970050185564,
+            "untied:v+u+positive(p)": 0.01946403191396501
+          },
+          "required_margin": 0.002431002294373191
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 17,
+            "history_length": 36,
+            "recent_errors": [
+              0.006026645905326299,
+              0.02910797060295944,
+              0.04101311064051602,
+              0.02629638611820876,
+              0.0014018158160667143
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.010960112914973077,
+            "untied:v+u": 0.011258076762291954,
+            "untied:v+u+other_lag_u": 0.01953322697913744,
+            "untied:v+u+(p*abs(p))": 0.019343334416348893
+          },
+          "required_margin": 0.0016440169372459615
+        }
+      ],
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0006727265537123117,
+        "vector_linear": 0.030169974524663332,
+        "history_linear": 0.0030531095545601743
+      },
+      "formula": "delta_x = 0.638279*v + 0.298878*u + -0.221794*lag(other_u,11); delta_y = 0.628355*v + 0.30636*u + 0.225521*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6382789728652779,
+            0.2988782685753153,
+            -0.22179387769296363
+          ],
+          [
+            0.6283551138697447,
+            0.3063604299707267,
+            0.2255206428802491
+          ]
+        ],
+        "formula": "delta_x = 0.638279*v + 0.298878*u + -0.221794*lag(other_u,11); delta_y = 0.628355*v + 0.30636*u + 0.225521*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 21288
+      },
+      "cpu_seconds": 0.12314900000000017,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.02049327111505581,
+          "external_candidate_mse": 0.0005989401892223764,
+          "external_required_margin": 0.0030739906672583714,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 8,
+            "history_length": 18,
+            "recent_errors": [
+              0.005069658640721594,
+              0.0029257568988808346,
+              0.0007649666748883824,
+              0.0005027784755305576,
+              0.0059361887638406385
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.0352385966540321,
+            "untied:v+u": 0.033227667807376404,
+            "untied:v+u+lag(other_u,11)": 0.0011868020639755367,
+            "untied:v+u+(v*p)": 0.1246877023471765
+          },
+          "required_margin": 0.005285789498104815
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0005996193111117122,
+        "vector_linear": 0.08207542065608889,
+        "history_linear": 0.0019294252480517363
+      },
+      "formula": "delta_x = 0.623929*v + 0.307095*u + -0.229138*lag(other_u,11); delta_y = 0.642159*v + 0.300383*u + 0.213725*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6239288148317446,
+            0.30709547767940476,
+            -0.2291376753457187
+          ],
+          [
+            0.6421589711998387,
+            0.30038269397520434,
+            0.21372465424949091
+          ]
+        ],
+        "formula": "delta_x = 0.623929*v + 0.307095*u + -0.229138*lag(other_u,11); delta_y = 0.642159*v + 0.300383*u + 0.213725*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 20024
+      },
+      "cpu_seconds": 0.12225200000000003,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.02110125935257262,
+          "external_candidate_mse": 0.0029682882984627176,
+          "external_required_margin": 0.003165188902885893,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0014735503664562747,
+              0.0007827651530540941,
+              0.021234016755957263,
+              0.004653981236418955,
+              0.0028528004542898574
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.025419962875099775,
+            "untied:v+u": 0.028706333052843272,
+            "untied:v+u+lag(other_u,11)": 0.003845170517056686,
+            "untied:v+u+(p*other_p)": 0.037050724484645824
+          },
+          "required_margin": 0.003812994431264966
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0007558779106717709,
+        "vector_linear": 0.01843896507011257,
+        "history_linear": 0.0008028320962539361
+      },
+      "formula": "delta_x = 0.644484*v + 0.300268*u + 0.0151307*lag(u,13) + -0.237604*lag(other_u,11); delta_y = 0.637833*v + 0.302383*u + -0.00433545*lag(u,13) + 0.223935*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(u,13)+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "u",
+            13
+          ],
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6444842392697122,
+            0.3002680862396662,
+            0.015130722832614407,
+            -0.23760413717868464
+          ],
+          [
+            0.6378326107634679,
+            0.3023834520203881,
+            -0.004335450129866608,
+            0.2239353080124144
+          ]
+        ],
+        "formula": "delta_x = 0.644484*v + 0.300268*u + 0.0151307*lag(u,13) + -0.237604*lag(other_u,11); delta_y = 0.637833*v + 0.302383*u + -0.00433545*lag(u,13) + 0.223935*lag(other_u,11)",
+        "parameter_count": 8
+      },
+      "cycles": 2,
+      "adoptions": 2,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 110,
+        "refits": 34,
+        "feature_evaluations": 52764
+      },
+      "cpu_seconds": 0.1637979999999999,
+      "arm": "history_active",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(u,13)",
+          "accepted": true,
+          "external_incumbent_mse": 0.025811349043560236,
+          "external_candidate_mse": 0.022465019884457246,
+          "external_required_margin": 0.0038717023565340352,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(u,13)+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.03797427657300499,
+          "external_candidate_mse": 0.0008036695560197865,
+          "external_required_margin": 0.0056961414859507484,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.002434299224346642,
+              0.0030107798624829287,
+              0.0029782132264990916,
+              0.002132142221324823,
+              0.005055145221924307
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(u,13)",
+          "selected_id": "untied:v+u+lag(u,13)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.027504240884179035,
+            "untied:v+u": 0.028551063319253903,
+            "untied:v+u+lag(u,13)": 0.007315306263699366,
+            "untied:v+u+positive(p)": 0.02921122893312282
+          },
+          "required_margin": 0.004125636132626855
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 17,
+            "history_length": 36,
+            "recent_errors": [
+              0.03516411724810039,
+              0.026772692417184697,
+              0.004938767438267456,
+              0.0012377125758439,
+              0.025291429221800107
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(u,13)+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(u,13)+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "untied:v+u+lag(u,13)": 0.006417325624349227,
+            "untied:v+u+lag(u,13)+lag(other_u,11)": 0.000699930559649513,
+            "untied:v+u+lag(u,13)+(v*p)": 1.9850609975915916
+          },
+          "required_margin": 0.0009625988436523839
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 2,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0005797030820211463,
+        "vector_linear": 0.03665877212119831,
+        "history_linear": 0.000565034172956977
+      },
+      "formula": "delta_x = 0.646699*v + 0.29649*u + -0.230956*lag(other_u,11); delta_y = 0.643125*v + 0.29916*u + 0.219774*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6466991129328181,
+            0.2964899512672112,
+            -0.23095577930878364
+          ],
+          [
+            0.6431250955875304,
+            0.2991601231946204,
+            0.21977449458889756
+          ]
+        ],
+        "formula": "delta_x = 0.646699*v + 0.29649*u + -0.230956*lag(other_u,11); delta_y = 0.643125*v + 0.29916*u + 0.219774*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 18756
+      },
+      "cpu_seconds": 0.12082499999999996,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.01834628004369817,
+          "external_candidate_mse": 0.0009970852148097277,
+          "external_required_margin": 0.0027519420065547254,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 6,
+            "history_length": 14,
+            "recent_errors": [
+              0.0010856368182151836,
+              0.0002791394009990495,
+              0.005069658640721594,
+              0.0029257568988808346,
+              0.007846992988025459
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.014659309100443904,
+            "untied:v+u": 0.013534600121462112,
+            "untied:v+u+lag(other_u,11)": 0.0016303062033084324,
+            "untied:v+u+(u*abs(u))": 0.017478695035154312
+          },
+          "required_margin": 0.0021988963650665856
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0008336751282218337,
+        "vector_linear": 0.024100673793977376,
+        "history_linear": 0.0011225336696129129
+      },
+      "formula": "delta_x = 0.632473*v + 0.298476*u + -0.216675*lag(other_u,11); delta_y = 0.64088*v + 0.299482*u + 0.200626*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6324727428886653,
+            0.29847614946814044,
+            -0.21667547394587333
+          ],
+          [
+            0.640879539649756,
+            0.2994821979187733,
+            0.20062632779214928
+          ]
+        ],
+        "formula": "delta_x = 0.632473*v + 0.298476*u + -0.216675*lag(other_u,11); delta_y = 0.64088*v + 0.299482*u + 0.200626*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 21288
+      },
+      "cpu_seconds": 0.12207900000000027,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.023729193216316675,
+          "external_candidate_mse": 0.0021996830213844836,
+          "external_required_margin": 0.003559378982447501,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 8,
+            "history_length": 18,
+            "recent_errors": [
+              0.0007827651530540941,
+              0.021234016755957263,
+              0.005753604316066001,
+              0.0019676540634443237,
+              0.004318705845978381
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.01924172067590482,
+            "untied:v+u": 0.020745777044466663,
+            "untied:v+u+lag(other_u,11)": 0.0025563289898094485,
+            "untied:v+u+(v*other_v)": 0.019293781494827415
+          },
+          "required_margin": 0.002886258101385723
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0006780808082060294,
+        "vector_linear": 0.018459799261642748,
+        "history_linear": 0.001087825764730442
+      },
+      "formula": "delta_x = 0.644441*v + 0.308188*u + -0.211331*lag(other_u,11); delta_y = 0.634313*v + 0.308219*u + 0.225025*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6444408978599319,
+            0.308188036250985,
+            -0.21133132657839201
+          ],
+          [
+            0.6343133412754982,
+            0.30821873118978094,
+            0.22502522924653678
+          ]
+        ],
+        "formula": "delta_x = 0.644441*v + 0.308188*u + -0.211331*lag(other_u,11); delta_y = 0.634313*v + 0.308219*u + 0.225025*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 112,
+        "refits": 34,
+        "feature_evaluations": 40392
+      },
+      "cpu_seconds": 0.15292200000000022,
+      "arm": "history_random",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u",
+          "accepted": false,
+          "external_incumbent_mse": 0.01753371755891768,
+          "external_candidate_mse": 0.014204303327015857,
+          "external_required_margin": 0.002630057633837652,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": true
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.019419186063490856,
+          "external_candidate_mse": 0.0007674112960517989,
+          "external_required_margin": 0.002912877909523628,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 6,
+            "history_length": 14,
+            "recent_errors": [
+              0.0007300527778468058,
+              0.002434299224346642,
+              0.0030107798624829287,
+              0.0029782132264990916,
+              0.004534724307587577
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u",
+          "selected_id": "shared:v+u",
+          "accepted": false,
+          "mean_squared_error": {
+            "shared:v+u": 0.01375432421722085,
+            "untied:v+u": 0.01268539854457313,
+            "untied:v+u+lag(other_u,7)": 0.013021175099280607,
+            "untied:v+u+(p*other_p)": 0.06719456106469589
+          },
+          "required_margin": 0.0020631486325831277
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 16,
+            "history_length": 34,
+            "recent_errors": [
+              0.004800875358253567,
+              0.015526609071750169,
+              0.0020618364809490064,
+              0.0029484343572086717,
+              0.02774745824061495
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.020051941288684493,
+            "untied:v+u": 0.018850364190707555,
+            "untied:v+u+lag(other_u,11)": 0.0008968188772792294,
+            "untied:v+u+(v*other_v)": 0.02602436267984113
+          },
+          "required_margin": 0.003007791193302674
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 290001,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0004701256142947248,
+        "vector_linear": 0.1740811523928302,
+        "history_linear": 0.021702012007289773
+      },
+      "formula": "delta_x = 0.646152*v + 0.300388*u + -0.225553*lag(other_u,11); delta_y = 0.635523*v + 0.302664*u + 0.224845*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6461515758599125,
+            0.3003882107920375,
+            -0.22555320095554718
+          ],
+          [
+            0.6355229394113706,
+            0.30266444582776203,
+            0.2248449535374243
+          ]
+        ],
+        "formula": "delta_x = 0.646152*v + 0.300388*u + -0.225553*lag(other_u,11); delta_y = 0.635523*v + 0.302664*u + 0.224845*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 21288
+      },
+      "cpu_seconds": 0.12300900000000015,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.02049327111505581,
+          "external_candidate_mse": 0.0005989401892223764,
+          "external_required_margin": 0.0030739906672583714,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 8,
+            "history_length": 18,
+            "recent_errors": [
+              0.005069658640721594,
+              0.0029257568988808346,
+              0.0007649666748883824,
+              0.0005027784755305576,
+              0.0059361887638406385
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.029361748207257836,
+            "untied:v+u": 0.02987636009045272,
+            "untied:v+u+lag(other_u,11)": 0.001425850709730878,
+            "untied:v+u+(v*p)": 0.025680898208050747
+          },
+          "required_margin": 0.004404262231088675
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 290002,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0005657381290056665,
+        "vector_linear": 0.1810581985531323,
+        "history_linear": 0.025038131238385972
+      },
+      "formula": "delta_x = 0.633114*v + 0.304133*u + -0.228246*lag(other_u,11); delta_y = 0.638547*v + 0.305306*u + 0.210894*lag(other_u,11)",
+      "selected_model": {
+        "id": "untied:v+u+lag(other_u,11)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "other_u",
+            11
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6331138527987346,
+            0.30413326592404355,
+            -0.2282463403507137
+          ],
+          [
+            0.6385473437303043,
+            0.3053060563027269,
+            0.2108941051937011
+          ]
+        ],
+        "formula": "delta_x = 0.633114*v + 0.304133*u + -0.228246*lag(other_u,11); delta_y = 0.638547*v + 0.305306*u + 0.210894*lag(other_u,11)",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 56,
+        "refits": 37,
+        "feature_evaluations": 20024
+      },
+      "cpu_seconds": 0.12170900000000007,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "external_incumbent_mse": 0.02110125935257262,
+          "external_candidate_mse": 0.0029682882984627176,
+          "external_required_margin": 0.003165188902885893,
+          "harmful_accepted": false,
+          "useful_accepted": true,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.0014735503664562747,
+              0.0007827651530540941,
+              0.021234016755957263,
+              0.004653981236418955,
+              0.0028528004542898574
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(other_u,11)",
+          "selected_id": "untied:v+u+lag(other_u,11)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.02302348428365365,
+            "untied:v+u": 0.024773037829183716,
+            "untied:v+u+lag(other_u,11)": 0.00355738723366699,
+            "untied:v+u+(p*other_p)": 0.034378125980703
+          },
+          "required_margin": 0.0034535226425480474
+        }
+      ],
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    },
+    {
+      "source_commit": "2b0eca1223f9d856a26798a8b7b55615f38f7723",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "0715ac373229061eeec8e1925c93502a2aca7186ac0a29ed1ea2ec0b08b03c27",
+        "artificial_scientist/revision_models.py": "43a0529ff1a1c78bfb3d9aeded8c98717f985bd5436ca2e6f53f50ec6aec8b8c",
+        "artificial_scientist/revision_replay.py": "03a91a04bbf7aff10c2c356898a08764459a3cb6e78a66344857012e38dacee5",
+        "artificial_scientist/revision_run.py": "0b3595014af2db1b3bbb475b5b541a1e1dea09dcda1ef95be60241b3faf412c4",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 290003,
+      "check_rule": "original",
+      "proposal_mode": "history",
+      "include_history_reference": true,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.02280802465759397,
+        "vector_linear": 0.1775345685830077,
+        "history_linear": 0.020363872840660973
+      },
+      "formula": "delta_x = 0.647412*v + 0.302703*u + -0.217547*lag(u,13); delta_y = 0.678488*v + 0.293727*u + -0.160397*lag(u,13)",
+      "selected_model": {
+        "id": "untied:v+u+lag(u,13)",
+        "terms": [
+          "v",
+          "u",
+          [
+            "lag",
+            "u",
+            13
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6474124001870487,
+            0.3027026136716446,
+            -0.21754674562931994
+          ],
+          [
+            0.6784875113516824,
+            0.2937265266297391,
+            -0.1603966882946192
+          ]
+        ],
+        "formula": "delta_x = 0.647412*v + 0.302703*u + -0.217547*lag(u,13); delta_y = 0.678488*v + 0.293727*u + -0.160397*lag(u,13)",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 110,
+        "refits": 34,
+        "feature_evaluations": 58868
+      },
+      "cpu_seconds": 0.16385899999999953,
+      "arm": "history_coverage",
+      "decision_diagnostics": [
+        {
+          "cycle_id": 0,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(u,13)",
+          "accepted": true,
+          "external_incumbent_mse": 0.025811349043560236,
+          "external_candidate_mse": 0.022465019884457246,
+          "external_required_margin": 0.0038717023565340352,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        },
+        {
+          "cycle_id": 1,
+          "check_rule": "original",
+          "candidate_id": "untied:v+u+lag(u,13)+(v*other_v)",
+          "accepted": false,
+          "external_incumbent_mse": 0.022713781069177073,
+          "external_candidate_mse": 0.019919205274193386,
+          "external_required_margin": 0.0034070671603765607,
+          "harmful_accepted": false,
+          "useful_accepted": false,
+          "missed_useful": false
+        }
+      ],
+      "cycle_decisions": [
+        {
+          "id": 0,
+          "trigger": {
+            "after_step": 7,
+            "history_length": 16,
+            "recent_errors": [
+              0.002434299224346642,
+              0.0030107798624829287,
+              0.0029782132264990916,
+              0.002132142221324823,
+              0.005055145221924307
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(u,13)",
+          "selected_id": "untied:v+u+lag(u,13)",
+          "accepted": true,
+          "mean_squared_error": {
+            "shared:v+u": 0.02124121453482402,
+            "untied:v+u": 0.02261464019013233,
+            "untied:v+u+lag(u,13)": 0.006377474561953069,
+            "untied:v+u+positive(p)": 0.022746555110093308
+          },
+          "required_margin": 0.003186182180223603
+        },
+        {
+          "id": 1,
+          "trigger": {
+            "after_step": 22,
+            "history_length": 46,
+            "recent_errors": [
+              0.023040894233378115,
+              0.001446699764685699,
+              0.0038679502095591406,
+              0.0016720152009284087,
+              0.00911119095341755
+            ],
+            "threshold": 0.0025
+          },
+          "best_alternative": "untied:v+u+lag(u,13)+(v*other_v)",
+          "selected_id": "untied:v+u+lag(u,13)",
+          "accepted": false,
+          "mean_squared_error": {
+            "untied:v+u+lag(u,13)": 0.0015097550673891667,
+            "untied:v+u+lag(u,13)+lag(u,9)": 0.0017658850388827423,
+            "untied:v+u+lag(u,13)+(v*other_v)": 0.0014901867827114025
+          },
+          "required_margin": 0.000226463260108375
+        }
+      ],
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 1,
+      "history_reference_work": {
+        "candidate_fits": 1,
+        "feature_evaluations": 6240
+      }
+    }
+  ],
+  "cells": {
+    "control/ordinary_active": {
+      "mean_mse": 0.0020704022516133767,
+      "mean_history_reference_mse": 0.06498254163716792,
+      "cycles": 3,
+      "adoptions": 0,
+      "harmful": 0,
+      "useful": 0,
+      "missed": 0,
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 26
+    },
+    "control/history_active": {
+      "mean_mse": 0.0019814660266373615,
+      "mean_history_reference_mse": 0.03247591582409213,
+      "cycles": 3,
+      "adoptions": 0,
+      "harmful": 0,
+      "useful": 0,
+      "missed": 0,
+      "temporal_candidates_checked": 3,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 56
+    },
+    "control/history_random": {
+      "mean_mse": 0.0009254592993271696,
+      "mean_history_reference_mse": 0.0010233110334999212,
+      "cycles": 3,
+      "adoptions": 0,
+      "harmful": 0,
+      "useful": 0,
+      "missed": 0,
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 56
+    },
+    "control/history_coverage": {
+      "mean_mse": 0.0020548770971641223,
+      "mean_history_reference_mse": 0.09482413034834192,
+      "cycles": 3,
+      "adoptions": 0,
+      "harmful": 0,
+      "useful": 0,
+      "missed": 0,
+      "temporal_candidates_checked": 3,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 56
+    },
+    "challenge/ordinary_active": {
+      "mean_mse": 0.001073528940888982,
+      "mean_history_reference_mse": 0.0007737771740857307,
+      "cycles": 4,
+      "adoptions": 3,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 0,
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 34
+    },
+    "challenge/history_active": {
+      "mean_mse": 0.0010526894252479927,
+      "mean_history_reference_mse": 0.0007449232837131478,
+      "cycles": 5,
+      "adoptions": 4,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 0,
+      "temporal_candidates_checked": 2,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 92.33333333333333
+    },
+    "challenge/history_random": {
+      "mean_mse": 0.0006001747666730204,
+      "mean_history_reference_mse": 0.0005798841552549286,
+      "cycles": 4,
+      "adoptions": 3,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 0,
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 74.66666666666667
+    },
+    "challenge/history_coverage": {
+      "mean_mse": 0.00041732114154733967,
+      "mean_history_reference_mse": 0.04342617991725289,
+      "cycles": 4,
+      "adoptions": 3,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 0,
+      "temporal_candidates_checked": 1,
+      "temporal_adoptions": 0,
+      "unresolved": 0,
+      "mean_candidate_fits": 74.66666666666667
+    },
+    "stress/ordinary_active": {
+      "mean_mse": 0.020657214874431104,
+      "mean_history_reference_mse": 0.0013152576520300808,
+      "cycles": 6,
+      "adoptions": 2,
+      "harmful": 1,
+      "useful": 0,
+      "missed": 1,
+      "temporal_candidates_checked": 0,
+      "temporal_adoptions": 0,
+      "unresolved": 3,
+      "mean_candidate_fits": 51.333333333333336
+    },
+    "stress/history_active": {
+      "mean_mse": 0.0006760745918319316,
+      "mean_history_reference_mse": 0.0019284556329552823,
+      "cycles": 4,
+      "adoptions": 4,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 0,
+      "temporal_candidates_checked": 4,
+      "temporal_adoptions": 4,
+      "unresolved": 0,
+      "mean_candidate_fits": 74
+    },
+    "stress/history_random": {
+      "mean_mse": 0.0006971530061496698,
+      "mean_history_reference_mse": 0.000925131202433444,
+      "cycles": 4,
+      "adoptions": 3,
+      "harmful": 0,
+      "useful": 3,
+      "missed": 1,
+      "temporal_candidates_checked": 4,
+      "temporal_adoptions": 3,
+      "unresolved": 0,
+      "mean_candidate_fits": 74.66666666666667
+    },
+    "stress/history_coverage": {
+      "mean_mse": 0.00794796280029812,
+      "mean_history_reference_mse": 0.02236800536211224,
+      "cycles": 4,
+      "adoptions": 3,
+      "harmful": 0,
+      "useful": 2,
+      "missed": 0,
+      "temporal_candidates_checked": 4,
+      "temporal_adoptions": 3,
+      "unresolved": 0,
+      "mean_candidate_fits": 74
+    }
+  },
+  "criteria": {
+    "stress_mean_reduction": 0.9672717452017814,
+    "stress_paired_wins": 3,
+    "control_cap": true,
+    "challenge_cap": true
+  },
+  "cpu_seconds": 4.615913000000001
+}

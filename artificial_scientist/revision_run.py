@@ -20,6 +20,14 @@ EVALUATION = ORIGINAL_EVALUATION + ((Action('push',angle=.61,magnitude=.8),Actio
     Action('push',angle=4.72,magnitude=.4),Action('wait',ticks=4),Action('observe')),)
 MAX_BYTES=10*1024*1024
 WORLD_COMMIT='dfabfe1'
+TRANSFER_VARIANTS=('transfer_a','transfer_b')
+
+
+def world_for(seed,variant):
+    if variant in TRANSFER_VARIANTS:
+        from .revision_transfer_world import make_transfer_world
+        return make_transfer_world(seed,variant)
+    return make_revision_world(seed,variant)
 
 
 def tape(model, initial, sequence):
@@ -28,10 +36,15 @@ def tape(model, initial, sequence):
     return [(p['x'],p['y']) for p in frozen_rollout(model,initial,sequence)]
 
 
-def evaluation(model, history, cycles, variant, seed, deadline, include_history_reference=False):
+def evaluation(model, history, cycles, variant, seed, deadline, include_history_reference=False, include_sparse_reference=False):
     reference=linear_reference(history,deadline)
     models={'learned':model,'vector_linear':reference}
     memory_reference=None
+    sparse_reference=None
+    if include_sparse_reference:
+        from .revision_reference import sparse_history_reference
+        sparse_reference=sparse_history_reference(history,deadline)
+        models['history_sparse']=sparse_reference
     if include_history_reference:
         from .revision_models import history_reference
         memory_reference=history_reference(history,deadline)
@@ -42,7 +55,7 @@ def evaluation(model, history, cycles, variant, seed, deadline, include_history_
     records=[]
     for index,sequence in enumerate(EVALUATION):
         if time.process_time()>=deadline:raise TimeoutError('evaluation CPU cap')
-        world=make_revision_world(seed+100000+index*1009,variant)
+        world=world_for(seed+100000+index*1009,variant)
         initial=world.step(Action('reset'))
         predictions={name:tape(m,initial,sequence) for name,m in models.items()}
         frozen_hash=digest(predictions)
@@ -78,6 +91,9 @@ def evaluation(model, history, cycles, variant, seed, deadline, include_history_
     return dict(metrics={k:metrics[k] for k in models if not k.startswith('cycle')},
         history_reference=memory_reference.snapshot() if memory_reference else None,
         history_reference_work=getattr(memory_reference,'fit_work',None),
+        sparse_reference=sparse_reference.snapshot() if sparse_reference else None,
+        sparse_reference_work=getattr(sparse_reference,'fit_work',None),
+        sparse_reference_selection=getattr(sparse_reference,'selection_audit',None),
         snapshot_metrics={k:v for k,v in metrics.items() if k.startswith('cycle')},records=records,
         tool_cost=sum(r['cost'] for r in records),reference=reference.snapshot(),agreement=agreement,decision_diagnostics=decision_diagnostics,
         warning='Separate outcomes never affect adoption; reused evaluator design and three noise seeds are descriptive.')
@@ -90,7 +106,7 @@ def source_info():
         source_sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)})
 
 
-def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original',proposal_mode='ordinary',include_history_reference=False):
+def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original',proposal_mode='ordinary',include_history_reference=False,include_sparse_reference=False):
     if not 0<cpu_seconds<=120:raise ValueError('invalid CPU cap')
     if policy not in ('active','random','coverage','no-revision','legacy'):raise ValueError('unknown policy')
     if check_rule not in ('original','pooled','confirm_short','confirm_long'):raise ValueError('unknown check rule')
@@ -101,10 +117,10 @@ def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'
     provenance=source_info()
     output.mkdir(parents=True)
     start=time.process_time();deadline=start+cpu_seconds
-    world=make_revision_world(seed,variant)
+    world=world_for(seed,variant)
     legacy=policy=='legacy'
     agent=Investigator(world.initial,'active',seed+700001) if legacy else RevisionInvestigator(world.initial,policy,seed+700001,check_rule=check_rule,proposal_mode=proposal_mode)
-    trace=dict(schema_version=2,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,world_source_commit=WORLD_COMMIT,
+    trace=dict(schema_version=2,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,include_sparse_reference=include_sparse_reference,world_source_commit=provenance['source_commit'] if variant in TRANSFER_VARIANTS else WORLD_COMMIT,
         initial=asdict(world.initial),events=[],cycles=[],status='running',caps={'training':80,'evaluation':68,'cpu_seconds':cpu_seconds,'trace_bytes':MAX_BYTES},
         assumptions='Supplied initial v/u structure for revision policies; known zero home, weak noise floor, bounded predefined revision operators; no calibrated confidence.')
     journal_bytes=0
@@ -147,14 +163,14 @@ def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'
             position_losses=agent.cycle.get('position_losses'),screening=agent.cycle.get('screening'),
             confirmation_plan=agent.cycle.get('confirmation_plan')))
     if not trace['status'].startswith('incomplete'):
-        try:trace['evaluation']=evaluation(model,agent.history,trace['cycles'],variant,seed,deadline,include_history_reference=include_history_reference)
+        try:trace['evaluation']=evaluation(model,agent.history,trace['cycles'],variant,seed,deadline,include_history_reference=include_history_reference,include_sparse_reference=include_sparse_reference)
         except TimeoutError:trace['status']='incomplete_evaluation_cpu_cap'
     trace['cpu_seconds']=time.process_time()-start
     if time.process_time()>=deadline and not trace['status'].startswith('incomplete'):trace['status']='incomplete_cpu_cap'
     encoded=json.dumps(trace,allow_nan=False).encode()
     if len(encoded)+journal_bytes>MAX_BYTES:raise RuntimeError('raw artifact cap exceeded')
     (output/'trace.json').write_bytes(encoded)
-    summary=dict(provenance,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,status=trace['status'],
+    summary=dict(provenance,variant=variant,policy=policy,seed=seed,check_rule=check_rule,proposal_mode=proposal_mode,include_history_reference=include_history_reference,include_sparse_reference=include_sparse_reference,status=trace['status'],
         training_cost=world.consumed,tool_actions=len(agent.history),experiments=len(trace['events']),
         evaluation_cost=trace.get('evaluation',{}).get('tool_cost'),metrics=trace.get('evaluation',{}).get('metrics'),
         formula=model.formula,selected_model=model.snapshot(),cycles=len(trace['cycles']),
@@ -169,13 +185,14 @@ def investigate(variant,policy,seed,output,cpu_seconds=120,check_rule='original'
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument('--variant',choices=('control','challenge','stress'),required=True)
+    p.add_argument('--variant',choices=('control','challenge','stress')+TRANSFER_VARIANTS,required=True)
     p.add_argument('--policy',choices=('active','random','coverage','no-revision','legacy'),default='active')
     p.add_argument('--seed',type=int,default=270001);p.add_argument('--output',required=True)
     p.add_argument('--check-rule',choices=('original','pooled','confirm_short','confirm_long'),default='original')
     p.add_argument('--proposal-mode',choices=('ordinary','history'),default='ordinary')
     p.add_argument('--history-reference',action='store_true')
-    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output,check_rule=args.check_rule,proposal_mode=args.proposal_mode,include_history_reference=args.history_reference)
+    p.add_argument('--sparse-reference',action='store_true')
+    args=p.parse_args();r=investigate(args.variant,args.policy,args.seed,args.output,check_rule=args.check_rule,proposal_mode=args.proposal_mode,include_history_reference=args.history_reference,include_sparse_reference=args.sparse_reference)
     print(json.dumps(r,indent=2))
     if r['status']!='budget_complete':raise SystemExit(2)
 

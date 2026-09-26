@@ -1,0 +1,38 @@
+{
+  "reviewer": "Codex independent_review",
+  "method": "Read-only saved records; independent arithmetic and lag-aware simultaneous-axis interpreter; no world or learner reruns",
+  "runs_checked": 36,
+  "cycles_checked": 47,
+  "max_error_metric_difference": 0.0,
+  "max_independent_external_rollout_difference": 0.0,
+  "checks": [
+    "Clean2b0eca1 source hashes",
+    "Journal/event identity and pre-action prediction hashes",
+    "80training/68evaluation units and CPU/trace-journal caps",
+    "Four frozen check snapshots and adoption margins",
+    "All saved training and external squared errors, summary metrics",
+    "Actual decision candidate harmful/useful/missed fields",
+    "Independent rollout from empty per-tape input buffer for every learned/reference/candidate snapshot; lag before current input, planned waits and simultaneous axes",
+    "Paired external action/outcome tapes across arms",
+    "Flat39feature78coefficient reference reports1fit and6240feature evaluations each"
+  ],
+  "stress_mean_errors": {
+    "ordinary_active": 0.020657214874431104,
+    "history_active": 0.0006760745918319316,
+    "history_random": 0.0006971530061496697,
+    "history_coverage": 0.00794796280029812,
+    "same_data_flat_reference_history_active": 0.001928455632955282
+  },
+  "findings": [
+    "All3history-active stress final models contain other-input lag11; seed290003 additionally contains own-input lag13",
+    "History-random also identifies other-input lag11 in all3stress runs and has similar mean error",
+    "Coverage seed290003 retains own-input lag13 instead of cross-input lag11",
+    "History-active beats its fixed flat ridge reference on stress, but the untuned reference is not a universal strong baseline",
+    "Known-law development and supplied uniform lag bank do not establish novel or unique causal-law discovery"
+  ],
+  "limitations": [
+    "Did not independently solve all39-feature ridge coefficient systems in this bounded audit; independently evaluated saved coefficients and verified fit-work counts",
+    "Did not recompute every training candidate score or feature-operation count",
+    "Hash consistency is not a separately trusted timestamp"
+  ]
+}

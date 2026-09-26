@@ -112,10 +112,11 @@ class HarnessTests(unittest.TestCase):
         self_test=self
         model=Spy(('v',),True,(0.,))
         training=[Transition(Observation(0,0,0),Action('push',magnitude=1),Observation(1,1,0))]
-        with patch.object(revision_run,'make_revision_world',side_effect=lambda *a:FakeWorld()),patch.object(revision_run,'linear_reference',return_value=model),patch('artificial_scientist.revision_models.history_reference',return_value=model) as fitter:
-            result=revision_run.evaluation(model,training,[],'fixture',7,float('inf'),include_history_reference=True)
+        with patch.object(revision_run,'make_revision_world',side_effect=lambda *a:FakeWorld()),patch.object(revision_run,'linear_reference',return_value=model),patch('artificial_scientist.revision_models.history_reference',return_value=model) as fitter,patch('artificial_scientist.revision_reference.sparse_history_reference',return_value=model) as sparse:
+            result=revision_run.evaluation(model,training,[],'fixture',7,float('inf'),include_history_reference=True,include_sparse_reference=True)
+        sparse.assert_called_once_with(training,float('inf'))
         fitter.assert_called_once_with(training,float('inf'))
-        self.assertEqual(len(calls),12)
+        self.assertEqual(len(calls),16)
         self.assertTrue(all(tick==8 and not history for tick,history,actions in calls))
         self.assertIn('history_linear',result['metrics'])
         self.assertEqual(len(training),1)
