@@ -1,9 +1,9 @@
-# Next step: improve the same investigator
+# Next step: understand a guided-search failure
 
-The first connected loop is implemented: observe → propose formulas → predict an experiment → use a tool → compare → revise. [Results](research/tool_lab_result.md) and [recorded replay](results/tool_lab_v1/replay.html) are ready. Execution is finished.
+The observation-guided proposer is implemented. It links recorded prediction failures to a shortlist of local formula changes and then to actual experiment choices. [Results](research/guided_proposal_result.md) · [Replay](results/guided_v1/replay.html). All runs are finished.
 
-The next bottleneck is experiment choice. Active exploration did not beat random in the development world or coverage in the challenge. Inspect the saved action scores and prediction failures before changing code. Review one concrete improvement with Claude, keep the same model-fitting capability and compare within this working laboratory. Do not launch another disconnected statistical study or add the hidden challenge’s formula as a supplied answer.
+Guided search uses fewer candidate fits and improves the simple-world check, but roughly doubles error on the harder world. Keep it opt-in; enumeration remains the default. This is a meaningful selective-search mechanism, not proof that copying human reasoning is better.
 
-The current shared, separable model language cannot express cross-axis dynamics. Representation expansion remains a later capability goal, alongside transfer to additional worlds. A neural network or trained RL policy needs a concrete role, not an automatic place in the roadmap.
+Inspect why the useful motion/input approximation appears only after action 39 in the harder-world trace. Incumbent changes, sparse one-tick evidence, permanent exclusions and the limited representation are hypotheses to examine, not diagnosed causes. Review one concrete repair with Claude before further code or runs. Preserve both controls and all failures; no additional sweep or detached statistical study.
 
-No further run is currently scheduled by this implementation. Keep failures, independent review, fresh outputs and no-extra-spending rules.
+The goal remains an investigator that uses observations to build and test useful explanations. A new primitive, neural model or RL policy should solve a demonstrated limitation. No extra spending.

@@ -1,0 +1,101 @@
+{
+  "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+  "raw_files": {
+    "results/runs/guided_v1_development_enumerate/active/predictions_before_actions.jsonl": {
+      "sha256": "465c953ab13f00593ea19735d577bf6e3322350d5f81063605b59f979317e661",
+      "bytes": 1117097
+    },
+    "results/runs/guided_v1_development_enumerate/active/replay.html": {
+      "sha256": "66f489c9c52f2e36129d1694539d634a6d833a903740c94f91944d179565cc0a",
+      "bytes": 1217537
+    },
+    "results/runs/guided_v1_development_enumerate/active/trace.json": {
+      "sha256": "f2be57fe26d96755767b5150344f6a7d0957cd1e823f300fa896dc893030e634",
+      "bytes": 1270332
+    },
+    "results/runs/guided_v1_development_enumerate/summary.json": {
+      "sha256": "b2c50202a4ffb4420b69d0fd257102f658cf143f078f1a8b33f4f92b0ff1393d",
+      "bytes": 1521
+    },
+    "results/runs/guided_v1_development_guided/active/predictions_before_actions.jsonl": {
+      "sha256": "87770fdc91e284b322d1bafafee101ef762af22fe4c85d2977e4cf1957278427",
+      "bytes": 1490391
+    },
+    "results/runs/guided_v1_development_guided/active/replay.html": {
+      "sha256": "1fb5d76697955dbdf9476573bd4e4144a7cda08c50a2f82bc427bcca57171f21",
+      "bytes": 1743156
+    },
+    "results/runs/guided_v1_development_guided/active/trace.json": {
+      "sha256": "d7cb5c1a9b25213a5ccdde1a01de2e606a6dce7e1885a009dce9adbb499b9803",
+      "bytes": 1834383
+    },
+    "results/runs/guided_v1_development_guided/summary.json": {
+      "sha256": "2bfc9eea0de4acd1017b3d3dda3801cdb62d4e91892eee00dec9012af50d620b",
+      "bytes": 1511
+    },
+    "results/runs/guided_v1_challenge_enumerate/active/predictions_before_actions.jsonl": {
+      "sha256": "878d5a7735bcdb64d285d91e67e3b6a63714b2bfbffc6b95171de85177e37f08",
+      "bytes": 1307255
+    },
+    "results/runs/guided_v1_challenge_enumerate/active/replay.html": {
+      "sha256": "3c84f7b1e4039ae9fd44f38dca0ec4439c99779fd69a34d7f08dbdf7fed2c018",
+      "bytes": 1427283
+    },
+    "results/runs/guided_v1_challenge_enumerate/active/trace.json": {
+      "sha256": "17a2b07a2712a48f31247f07ac03749646b379d74744f9ec2b3b7bcf568f2371",
+      "bytes": 1491194
+    },
+    "results/runs/guided_v1_challenge_enumerate/summary.json": {
+      "sha256": "ac4633c2d1db8a476671ac843f50561d595fe3042bbdb7e0e3dbc6da8bb6d799",
+      "bytes": 1504
+    },
+    "results/runs/guided_v1_challenge_guided/active/predictions_before_actions.jsonl": {
+      "sha256": "a15a2bce30ca9981223d8d5f96f56513463779747e1c54bf0f49bf06d4675d96",
+      "bytes": 1364658
+    },
+    "results/runs/guided_v1_challenge_guided/active/replay.html": {
+      "sha256": "702d7dfeb0c161b4e3eeae471e7a659c98b06937d632f4cb7c594eef2769ce1a",
+      "bytes": 1542925
+    },
+    "results/runs/guided_v1_challenge_guided/active/trace.json": {
+      "sha256": "409860c4a1d4917cf04d43fd5cd67c0283b23d9ce92a63c659b138a35c13109f",
+      "bytes": 1623361
+    },
+    "results/runs/guided_v1_challenge_guided/summary.json": {
+      "sha256": "1325c6fa580257ca2d3795c4be30a2552ec679086979b996cf5c0122129cf95b",
+      "bytes": 1513
+    },
+    "results/runs/guided_v1_noise_enumerate/active/predictions_before_actions.jsonl": {
+      "sha256": "a848fa72d0148e36205ad4a00ab8fdd172f0354114a4e9b28c0f0110548aa6f3",
+      "bytes": 2070639
+    },
+    "results/runs/guided_v1_noise_enumerate/active/replay.html": {
+      "sha256": "8277cde24d2d96cd356240d99ddadbe00262ee7858cc689abd445624600ed465",
+      "bytes": 2269701
+    },
+    "results/runs/guided_v1_noise_enumerate/active/trace.json": {
+      "sha256": "17dfe1f05199a8d10452e7ff2ec389ea6a2f2dfb40296e92910cd6b3462a5d15",
+      "bytes": 2379695
+    },
+    "results/runs/guided_v1_noise_enumerate/summary.json": {
+      "sha256": "35e27098337f9367c6779b32188fc67cde37825a4f33b13eaf3f603eb52e5bba",
+      "bytes": 1525
+    },
+    "results/runs/guided_v1_noise_guided/active/predictions_before_actions.jsonl": {
+      "sha256": "ac4236b1cb1577bfb4986852e4c06781bf5937c7e01e0c1f053242035821138d",
+      "bytes": 2132275
+    },
+    "results/runs/guided_v1_noise_guided/active/replay.html": {
+      "sha256": "9935c561c624d0dbb1e5613dc046cc97b9ec5aab590fa30f03a2607810fa5132",
+      "bytes": 2405349
+    },
+    "results/runs/guided_v1_noise_guided/active/trace.json": {
+      "sha256": "4164f209194a60633b84e235122851adcfc5e61e853628aecb0ace9b94cb797c",
+      "bytes": 2533425
+    },
+    "results/runs/guided_v1_noise_guided/summary.json": {
+      "sha256": "cb1b3bc4167b2afa7660740b212432b69dada543cf75e20fd66b290641845230",
+      "bytes": 1497
+    }
+  }
+}

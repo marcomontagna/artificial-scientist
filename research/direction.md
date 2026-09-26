@@ -18,4 +18,4 @@ Understanding is primary. A later target-reaching task can test whether a learne
 
 Known components are welcome. We do not need to invent regression or establish paper-level novelty before building the prototype. Any later novelty claim must face the [closest prior work](references.md) and serious alternatives. The previous disconnected statistical exercises are [retired](../archive/README.md); their failures remain evidence, not the active roadmap.
 
-Current status: the first laboratory loop is implemented and its bounded demonstration is complete; see the [results](tool_lab_result.md). Experiment choice remains a demonstrated limitation. No promised AGI, universal discovery or guaranteed breakthrough.
+Current status: the first laboratory loop is implemented and its bounded demonstration is complete; see the [results](tool_lab_result.md). An opt-in [observation-guided proposer](guided_proposal_result.md) now selects local formulas from recorded prediction failures. It has mixed results; both experiment choice and proposal selection remain limitations. No promised AGI, universal discovery or guaranteed breakthrough.

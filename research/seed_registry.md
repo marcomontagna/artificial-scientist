@@ -64,3 +64,7 @@ No post-result tuning or held-out confirmation. The separate sequence-family res
 ## Connected tool laboratory v1 — September 26, 2026
 
 Development, challenge and noise each use sensor seed 260926 (same supplied seed is deliberate; worlds are not independent samples). Action RNG uses seed+700001. Each frozen evaluator uses seed+100000+index*1009 for its three separate sequences. All policies share these evaluator sequences and noise streams. One descriptive run per world/policy, no tuning after development and no further sampling. Frozen implementation 92f5075; see [results](tool_lab_result.md).
+
+## Guided proposal v1 — September 26, 2026
+
+Reused the already inspected laboratory seed 260926 and existing evaluator offsets in six active-policy runs (enumerate/guided × development/challenge/noise). These are developmental comparisons, not fresh independent confirmation. Implementation d567435 was frozen before execution; no subsequent tuning or extra sampling. Original runs preserved.

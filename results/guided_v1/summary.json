@@ -1,0 +1,2015 @@
+{
+  "development": {
+    "enumerate": {
+      "run": {
+        "variant": "development",
+        "seed": 260926,
+        "proposal": "enumerate",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 42,
+            "training_cost": 80,
+            "formula": "delta = 0.796573*v + 0.420284*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 2340,
+              "feature_evaluations": 0,
+              "refits": 300
+            },
+            "metrics": {
+              "learned": 0.0012366504540847892,
+              "persistence": 0.4842455054325599,
+              "home": 0.48554009542623766,
+              "linear": 0.002780731493680465
+            },
+            "cpu_seconds": 0.49156299999999997
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 0,
+        "actions_with_association_proposal_changing_choice": 0,
+        "proposals": [],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 0,
+          "not_lower_error": 0,
+          "insufficient_common_predictions": 0
+        }
+      }
+    },
+    "guided": {
+      "run": {
+        "variant": "development",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 53,
+            "training_cost": 80,
+            "formula": "delta = 0.817131*v + 0.417184*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 99,
+              "feature_evaluations": 3640,
+              "refits": 381
+            },
+            "metrics": {
+              "learned": 0.00028810168902201986,
+              "persistence": 0.4842455054325599,
+              "home": 0.48554009542623766,
+              "linear": 0.00024272542577987797
+            },
+            "cpu_seconds": 0.421173
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 33,
+        "actions_with_association_proposal_changing_choice": 32,
+        "proposals": [
+          {
+            "model_id": "(u*p)",
+            "parent": "zero",
+            "proposed_after_step": 3,
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "pairs": [
+              {
+                "step": 4,
+                "parent_error": 0.13241373524190558,
+                "proposal_error": 0.045643752538729106
+              },
+              {
+                "step": 5,
+                "parent_error": 0.011792837724914426,
+                "proposal_error": 0.6533208619546143
+              },
+              {
+                "step": 6,
+                "parent_error": 0.21759871748425322,
+                "proposal_error": 0.17906579823942076
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u",
+            "parent": "zero",
+            "proposed_after_step": 3,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 4,
+                "parent_error": 0.13241373524190558,
+                "proposal_error": 0.010068556301816993
+              },
+              {
+                "step": 5,
+                "parent_error": 0.011792837724914426,
+                "proposal_error": 0.05298484926759595
+              },
+              {
+                "step": 6,
+                "parent_error": 0.21759871748425322,
+                "proposal_error": 0.053117242753516154
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "(u*abs(u))",
+            "parent": "zero",
+            "proposed_after_step": 6,
+            "origin": "residual_association",
+            "feature": "(u*abs(u))",
+            "pairs": [
+              {
+                "step": 7,
+                "parent_error": 0.5880334001783944,
+                "proposal_error": 0.20430346766254276
+              },
+              {
+                "step": 8,
+                "parent_error": 0.04990449778872201,
+                "proposal_error": 0.4187261238362774
+              },
+              {
+                "step": 9,
+                "parent_error": 0.059102189825024985,
+                "proposal_error": 0.005061829287695583
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "positive(u)",
+            "parent": "zero",
+            "proposed_after_step": 6,
+            "origin": "residual_association",
+            "feature": "positive(u)",
+            "pairs": [
+              {
+                "step": 7,
+                "parent_error": 0.5880334001783944,
+                "proposal_error": 0.5880334001783946
+              },
+              {
+                "step": 8,
+                "parent_error": 0.04990449778872201,
+                "proposal_error": 0.33872765244470915
+              },
+              {
+                "step": 9,
+                "parent_error": 0.059102189825024985,
+                "proposal_error": 0.02201374075702246
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "p",
+            "parent": "u",
+            "proposed_after_step": 8,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 9,
+                "parent_error": 0.00439194408883335,
+                "proposal_error": 0.2157866610773356
+              },
+              {
+                "step": 10,
+                "parent_error": 0.07861321471067809,
+                "proposal_error": 0.2765495793779372
+              },
+              {
+                "step": 11,
+                "parent_error": 0.0998330801124567,
+                "proposal_error": 0.008545437178398705
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+u",
+            "parent": "u",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "v",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.02389013059423147,
+                "proposal_error": 0.0012775294456645677
+              },
+              {
+                "step": 13,
+                "parent_error": 0.1968475079575669,
+                "proposal_error": 0.00023160696350323296
+              },
+              {
+                "step": 14,
+                "parent_error": 3.542206803840072,
+                "proposal_error": 0.011944523795519335
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "u+(v*abs(v))",
+            "parent": "u",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "(v*abs(v))",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.02389013059423147,
+                "proposal_error": 0.012110171828695141
+              },
+              {
+                "step": 13,
+                "parent_error": 0.1968475079575669,
+                "proposal_error": 0.032770984096435404
+              },
+              {
+                "step": 14,
+                "parent_error": 3.542206803840072,
+                "proposal_error": 0.23326279410185374
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "u+(v*p)",
+            "parent": "u",
+            "proposed_after_step": 14,
+            "origin": "residual_association",
+            "feature": "(v*p)",
+            "pairs": [
+              {
+                "step": 15,
+                "parent_error": 0.21173280548640347,
+                "proposal_error": 13.752684854686548
+              },
+              {
+                "step": 16,
+                "parent_error": 0.14528134826911784,
+                "proposal_error": 3.8852327462973593
+              },
+              {
+                "step": 17,
+                "parent_error": 0.05245443834311322,
+                "proposal_error": 4.065328386068588
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+(v*v)",
+            "parent": "u",
+            "proposed_after_step": 14,
+            "origin": "residual_association",
+            "feature": "(v*v)",
+            "pairs": [
+              {
+                "step": 15,
+                "parent_error": 0.21173280548640347,
+                "proposal_error": 0.03670256999616411
+              },
+              {
+                "step": 16,
+                "parent_error": 0.14528134826911784,
+                "proposal_error": 0.10594637108515803
+              },
+              {
+                "step": 17,
+                "parent_error": 0.05245443834311322,
+                "proposal_error": 0.036817571810923724
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "abs(p)",
+            "parent": "v+u",
+            "proposed_after_step": 19,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 20,
+                "parent_error": 0.002831484935157772,
+                "proposal_error": 0.4716273226728662
+              },
+              {
+                "step": 21,
+                "parent_error": 0.0016093915071062547,
+                "proposal_error": 1.0283330964482267
+              },
+              {
+                "step": 22,
+                "parent_error": 0.0012650774130596814,
+                "proposal_error": 1.1317167850933982
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(v*v)",
+            "parent": "v+u",
+            "proposed_after_step": 23,
+            "origin": "residual_association",
+            "feature": "(v*v)",
+            "pairs": [
+              {
+                "step": 24,
+                "parent_error": 0.007745761132001256,
+                "proposal_error": 1.6151870158972743
+              },
+              {
+                "step": 25,
+                "parent_error": 0.1563825735653461,
+                "proposal_error": 0.4327665603379985
+              },
+              {
+                "step": 26,
+                "parent_error": 0.006937650978022465,
+                "proposal_error": 0.24462282621771364
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(v*p)",
+            "parent": "v+u",
+            "proposed_after_step": 23,
+            "origin": "residual_association",
+            "feature": "(v*p)",
+            "pairs": [
+              {
+                "step": 24,
+                "parent_error": 0.007745761132001256,
+                "proposal_error": 21.931412279501846
+              },
+              {
+                "step": 25,
+                "parent_error": 0.1563825735653461,
+                "proposal_error": 30.69337605729602
+              }
+            ],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "v+abs(v)",
+            "parent": "v+u",
+            "proposed_after_step": 25,
+            "origin": "residual_association",
+            "feature": "abs(v)",
+            "pairs": [
+              {
+                "step": 26,
+                "parent_error": 0.006937650978022465,
+                "proposal_error": 0.2892939918355867
+              },
+              {
+                "step": 27,
+                "parent_error": 0.000967533363909468,
+                "proposal_error": 0.22531148458259553
+              }
+            ],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "u+(v*u)",
+            "parent": "v+u",
+            "proposed_after_step": 25,
+            "origin": "residual_association",
+            "feature": "(v*u)",
+            "pairs": [
+              {
+                "step": 26,
+                "parent_error": 0.006937650978022465,
+                "proposal_error": 0.10435332053906396
+              },
+              {
+                "step": 27,
+                "parent_error": 0.000967533363909468,
+                "proposal_error": 0.10441530307844919
+              },
+              {
+                "step": 28,
+                "parent_error": 0.006178348282973788,
+                "proposal_error": 2.46850195076834
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(p*p)",
+            "parent": "v+u",
+            "proposed_after_step": 27,
+            "origin": "residual_association",
+            "feature": "(p*p)",
+            "pairs": [
+              {
+                "step": 28,
+                "parent_error": 0.006178348282973788,
+                "proposal_error": 3.4777743676983435
+              },
+              {
+                "step": 29,
+                "parent_error": 0.06121680816698124,
+                "proposal_error": 2.1954445441192454
+              },
+              {
+                "step": 30,
+                "parent_error": 0.023752866909328388,
+                "proposal_error": 1.4084679627961112
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(p*abs(p))",
+            "parent": "v+u",
+            "proposed_after_step": 27,
+            "origin": "residual_association",
+            "feature": "(p*abs(p))",
+            "pairs": [
+              {
+                "step": 28,
+                "parent_error": 0.006178348282973788,
+                "proposal_error": 4.304598430695295
+              },
+              {
+                "step": 29,
+                "parent_error": 0.06121680816698124,
+                "proposal_error": 2.835783562832959
+              },
+              {
+                "step": 30,
+                "parent_error": 0.023752866909328388,
+                "proposal_error": 1.7151260033691775
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+p",
+            "parent": "v+u",
+            "proposed_after_step": 31,
+            "origin": "residual_association",
+            "feature": "p",
+            "pairs": [
+              {
+                "step": 32,
+                "parent_error": 0.006216759487324597,
+                "proposal_error": 1.6822722678071023
+              },
+              {
+                "step": 33,
+                "parent_error": 0.005173311392980292,
+                "proposal_error": 0.3281653466906745
+              },
+              {
+                "step": 34,
+                "parent_error": 4.691938565380865e-06,
+                "proposal_error": 0.24687242906966847
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+positive(v)",
+            "parent": "v+u",
+            "proposed_after_step": 31,
+            "origin": "residual_association",
+            "feature": "positive(v)",
+            "pairs": [
+              {
+                "step": 32,
+                "parent_error": 0.006216759487324597,
+                "proposal_error": 0.02945376962412056
+              },
+              {
+                "step": 33,
+                "parent_error": 0.005173311392980292,
+                "proposal_error": 0.008709491584541797
+              },
+              {
+                "step": 34,
+                "parent_error": 4.691938565380865e-06,
+                "proposal_error": 0.05039235723905578
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+positive(v)",
+            "parent": "v+u",
+            "proposed_after_step": 35,
+            "origin": "residual_association",
+            "feature": "positive(v)",
+            "pairs": [
+              {
+                "step": 36,
+                "parent_error": 0.0001244130543486988,
+                "proposal_error": 0.24658372520005467
+              },
+              {
+                "step": 37,
+                "parent_error": 0.0004912240635340859,
+                "proposal_error": 0.1873424748709212
+              },
+              {
+                "step": 38,
+                "parent_error": 0.0009615547125826903,
+                "proposal_error": 0.19760631276669788
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+positive(u)",
+            "parent": "v+u",
+            "proposed_after_step": 35,
+            "origin": "residual_association",
+            "feature": "positive(u)",
+            "pairs": [
+              {
+                "step": 36,
+                "parent_error": 0.0001244130543486988,
+                "proposal_error": 0.20389034878105067
+              },
+              {
+                "step": 37,
+                "parent_error": 0.0004912240635340859,
+                "proposal_error": 0.17150773775080194
+              },
+              {
+                "step": 38,
+                "parent_error": 0.0009615547125826903,
+                "proposal_error": 0.15456503743431332
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(v*u)",
+            "parent": "v+u",
+            "proposed_after_step": 39,
+            "origin": "residual_association",
+            "feature": "(v*u)",
+            "pairs": [
+              {
+                "step": 40,
+                "parent_error": 0.00021439501531727076,
+                "proposal_error": 0.17066539381026716
+              },
+              {
+                "step": 41,
+                "parent_error": 0.0005071535646169897,
+                "proposal_error": 0.159016033187917
+              },
+              {
+                "step": 42,
+                "parent_error": 0.0010376839371840439,
+                "proposal_error": 0.20403246185955398
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(u*abs(u))",
+            "parent": "v+u",
+            "proposed_after_step": 39,
+            "origin": "residual_association",
+            "feature": "(u*abs(u))",
+            "pairs": [
+              {
+                "step": 40,
+                "parent_error": 0.00021439501531727076,
+                "proposal_error": 0.00042638165502908586
+              },
+              {
+                "step": 41,
+                "parent_error": 0.0005071535646169897,
+                "proposal_error": 0.0003012441677727178
+              },
+              {
+                "step": 42,
+                "parent_error": 0.0010376839371840439,
+                "proposal_error": 0.0008530310158375554
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "v+(u*u)",
+            "parent": "v+u",
+            "proposed_after_step": 43,
+            "origin": "residual_association",
+            "feature": "(u*u)",
+            "pairs": [
+              {
+                "step": 44,
+                "parent_error": 0.001873099034248637,
+                "proposal_error": 0.22505759759447644
+              },
+              {
+                "step": 45,
+                "parent_error": 0.0003374264622670572,
+                "proposal_error": 0.1753525424864073
+              },
+              {
+                "step": 46,
+                "parent_error": 6.767274202608025e-05,
+                "proposal_error": 0.18216239415566732
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+abs(u)",
+            "parent": "v+u",
+            "proposed_after_step": 43,
+            "origin": "residual_association",
+            "feature": "abs(u)",
+            "pairs": [
+              {
+                "step": 44,
+                "parent_error": 0.001873099034248637,
+                "proposal_error": 0.22390493964524558
+              },
+              {
+                "step": 45,
+                "parent_error": 0.0003374264622670572,
+                "proposal_error": 0.17502406918527386
+              },
+              {
+                "step": 46,
+                "parent_error": 6.767274202608025e-05,
+                "proposal_error": 0.182194784887532
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+(u*p)",
+            "parent": "v+u",
+            "proposed_after_step": 47,
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "pairs": [
+              {
+                "step": 48,
+                "parent_error": 0.0005379756079944094,
+                "proposal_error": 0.18572411107497616
+              },
+              {
+                "step": 49,
+                "parent_error": 0.0009594378493226782,
+                "proposal_error": 0.1827377578644922
+              },
+              {
+                "step": 50,
+                "parent_error": 0.0008372464551222074,
+                "proposal_error": 0.20863173707904847
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*abs(v))",
+            "parent": "v+u",
+            "proposed_after_step": 47,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 48,
+                "parent_error": 0.0005379756079944094,
+                "proposal_error": 0.22021592959361083
+              },
+              {
+                "step": 49,
+                "parent_error": 0.0009594378493226782,
+                "proposal_error": 0.36082830077983835
+              },
+              {
+                "step": 50,
+                "parent_error": 0.0008372464551222074,
+                "proposal_error": 0.19472475362528072
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+(u*p)",
+            "parent": "v+u",
+            "proposed_after_step": 51,
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "pairs": [
+              {
+                "step": 52,
+                "parent_error": 0.0003639234364246057,
+                "proposal_error": 0.32868932562246045
+              }
+            ],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "u+(u*abs(u))",
+            "parent": "v+u",
+            "proposed_after_step": 51,
+            "origin": "residual_association",
+            "feature": "(u*abs(u))",
+            "pairs": [
+              {
+                "step": 52,
+                "parent_error": 0.0003639234364246057,
+                "proposal_error": 0.25043903516541877
+              }
+            ],
+            "paired_status": "insufficient_common_predictions"
+          }
+        ],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 6,
+          "not_lower_error": 18,
+          "insufficient_common_predictions": 4
+        }
+      }
+    }
+  },
+  "challenge": {
+    "enumerate": {
+      "run": {
+        "variant": "challenge",
+        "seed": 260926,
+        "proposal": "enumerate",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 48,
+            "training_cost": 80,
+            "formula": "delta = 0.840334*v + 0.324023*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 2702,
+              "feature_evaluations": 0,
+              "refits": 348
+            },
+            "metrics": {
+              "learned": 0.0264773178178445,
+              "persistence": 0.3790924781053629,
+              "home": 0.38162510189267385,
+              "linear": 0.04142419464528203
+            },
+            "cpu_seconds": 0.621935
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 0,
+        "actions_with_association_proposal_changing_choice": 0,
+        "proposals": [],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 0,
+          "not_lower_error": 0,
+          "insufficient_common_predictions": 0
+        }
+      }
+    },
+    "guided": {
+      "run": {
+        "variant": "challenge",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 52,
+            "training_cost": 80,
+            "formula": "delta = 0.769821*v + 0.29507*u; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 55,
+              "feature_evaluations": 1240,
+              "refits": 370
+            },
+            "metrics": {
+              "learned": 0.05317091559708312,
+              "persistence": 0.3790924781053629,
+              "home": 0.38162510189267385,
+              "linear": 0.10420538439205237
+            },
+            "cpu_seconds": 0.36219300000000004
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 38,
+        "actions_with_association_proposal_changing_choice": 30,
+        "proposals": [
+          {
+            "model_id": "lag_u",
+            "parent": "zero",
+            "proposed_after_step": 3,
+            "origin": "residual_association",
+            "feature": "lag_u",
+            "pairs": [
+              {
+                "step": 4,
+                "parent_error": 0.047222721414732174,
+                "proposal_error": 0.08789673735985938
+              },
+              {
+                "step": 5,
+                "parent_error": 0.0048703706031543136,
+                "proposal_error": 0.011879737150307984
+              },
+              {
+                "step": 6,
+                "parent_error": 0.17734239148376263,
+                "proposal_error": 0.18001659586610627
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u",
+            "parent": "zero",
+            "proposed_after_step": 3,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 4,
+                "parent_error": 0.047222721414732174,
+                "proposal_error": 0.009007501117255361
+              },
+              {
+                "step": 5,
+                "parent_error": 0.0048703706031543136,
+                "proposal_error": 0.017526401280432907
+              },
+              {
+                "step": 6,
+                "parent_error": 0.17734239148376263,
+                "proposal_error": 0.08231667563164387
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "(u*abs(u))",
+            "parent": "zero",
+            "proposed_after_step": 6,
+            "origin": "residual_association",
+            "feature": "(u*abs(u))",
+            "pairs": [
+              {
+                "step": 7,
+                "parent_error": 0.006079585816986546,
+                "proposal_error": 0.029235133599393098
+              },
+              {
+                "step": 8,
+                "parent_error": 0.16429348543345512,
+                "proposal_error": 0.04704715170961038
+              },
+              {
+                "step": 9,
+                "parent_error": 0.0023097721705376243,
+                "proposal_error": 0.03545304190493821
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "(u*p)",
+            "parent": "zero",
+            "proposed_after_step": 6,
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "pairs": [
+              {
+                "step": 7,
+                "parent_error": 0.006079585816986546,
+                "proposal_error": 0.050795944843590096
+              },
+              {
+                "step": 8,
+                "parent_error": 0.16429348543345512,
+                "proposal_error": 0.2333807615460345
+              },
+              {
+                "step": 9,
+                "parent_error": 0.0023097721705376243,
+                "proposal_error": 0.002845660019780509
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+(u*p)",
+            "parent": "u",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "(u*p)",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.024635458150404507,
+                "proposal_error": 0.0407452835597905
+              },
+              {
+                "step": 13,
+                "parent_error": 0.010324691050310784,
+                "proposal_error": 0.010319337233402679
+              },
+              {
+                "step": 14,
+                "parent_error": 0.020652757245206696,
+                "proposal_error": 0.021206291429213774
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+abs(u)",
+            "parent": "u",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "abs(u)",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.024635458150404507,
+                "proposal_error": 0.029950953182671713
+              },
+              {
+                "step": 13,
+                "parent_error": 0.010324691050310784,
+                "proposal_error": 0.010306622526113871
+              },
+              {
+                "step": 14,
+                "parent_error": 0.020652757245206696,
+                "proposal_error": 0.018720739281367773
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "abs(v)",
+            "parent": "zero",
+            "proposed_after_step": 15,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 16,
+                "parent_error": 0.39554450661425417,
+                "proposal_error": 0.40494615854731175
+              },
+              {
+                "step": 17,
+                "parent_error": 0.012427179777164468,
+                "proposal_error": 0.005812483501281711
+              },
+              {
+                "step": 18,
+                "parent_error": 0.06855457248864229,
+                "proposal_error": 0.05717450417820434
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "u+(p*p)",
+            "parent": "u+abs(u)",
+            "proposed_after_step": 19,
+            "origin": "residual_association",
+            "feature": "(p*p)",
+            "pairs": [
+              {
+                "step": 20,
+                "parent_error": 0.043560896607746674,
+                "proposal_error": 4.1989534845020255
+              },
+              {
+                "step": 21,
+                "parent_error": 0.018097832001703125,
+                "proposal_error": 8.227963429377452
+              },
+              {
+                "step": 22,
+                "parent_error": 0.006498201872647519,
+                "proposal_error": 11.091128774393948
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+(p*abs(p))",
+            "parent": "u+abs(u)",
+            "proposed_after_step": 19,
+            "origin": "residual_association",
+            "feature": "(p*abs(p))",
+            "pairs": [
+              {
+                "step": 20,
+                "parent_error": 0.043560896607746674,
+                "proposal_error": 4.4166393361227065
+              },
+              {
+                "step": 21,
+                "parent_error": 0.018097832001703125,
+                "proposal_error": 8.666575661932857
+              },
+              {
+                "step": 22,
+                "parent_error": 0.006498201872647519,
+                "proposal_error": 11.697682742291688
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "abs(p)",
+            "parent": "v",
+            "proposed_after_step": 23,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 24,
+                "parent_error": 0.3549660394696115,
+                "proposal_error": 1.3639961535715566
+              },
+              {
+                "step": 25,
+                "parent_error": 0.06789568473648708,
+                "proposal_error": 2.033560106020352
+              },
+              {
+                "step": 26,
+                "parent_error": 0.02561622538431179,
+                "proposal_error": 2.7593405752074154
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "positive(v)",
+            "parent": "abs(v)",
+            "proposed_after_step": 27,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 28,
+                "parent_error": 0.019287996623291833,
+                "proposal_error": 0.0025039720751798525
+              },
+              {
+                "step": 29,
+                "parent_error": 0.08170880092769325,
+                "proposal_error": 0.08689049224003158
+              },
+              {
+                "step": 30,
+                "parent_error": 0.13617911081685619,
+                "proposal_error": 0.1791708024257349
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "positive(u)",
+            "parent": "u+abs(u)",
+            "proposed_after_step": 31,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 32,
+                "parent_error": 0.026433498977605326,
+                "proposal_error": 0.026433658274133118
+              },
+              {
+                "step": 33,
+                "parent_error": 0.017256685246576205,
+                "proposal_error": 0.0312156693466576
+              },
+              {
+                "step": 34,
+                "parent_error": 0.0608754178572645,
+                "proposal_error": 0.1366910414583431
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "positive(p)",
+            "parent": "u",
+            "proposed_after_step": 35,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 36,
+                "parent_error": 0.04472246319876169,
+                "proposal_error": 0.10528957149248125
+              },
+              {
+                "step": 37,
+                "parent_error": 0.021887619947690163,
+                "proposal_error": 0.0020294386420596795
+              },
+              {
+                "step": 38,
+                "parent_error": 0.05570953655971469,
+                "proposal_error": 0.17346784012331826
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+u",
+            "parent": "u+abs(u)",
+            "proposed_after_step": 39,
+            "origin": "residual_association",
+            "feature": "v",
+            "pairs": [
+              {
+                "step": 40,
+                "parent_error": 0.134742351200293,
+                "proposal_error": 0.017594784100415223
+              },
+              {
+                "step": 41,
+                "parent_error": 0.044273038734341186,
+                "proposal_error": 0.0036150866591270836
+              },
+              {
+                "step": 42,
+                "parent_error": 0.033606904102144605,
+                "proposal_error": 0.005586326894490528
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "u+(v*abs(v))",
+            "parent": "u+abs(u)",
+            "proposed_after_step": 39,
+            "origin": "residual_association",
+            "feature": "(v*abs(v))",
+            "pairs": [
+              {
+                "step": 40,
+                "parent_error": 0.134742351200293,
+                "proposal_error": 0.04235246862668559
+              },
+              {
+                "step": 41,
+                "parent_error": 0.044273038734341186,
+                "proposal_error": 0.007640930296882258
+              },
+              {
+                "step": 42,
+                "parent_error": 0.033606904102144605,
+                "proposal_error": 0.013969545489694538
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "(v*u)",
+            "parent": "v+u",
+            "proposed_after_step": 43,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 44,
+                "parent_error": 0.004077173474524631,
+                "proposal_error": 0.24858645522623452
+              },
+              {
+                "step": 45,
+                "parent_error": 0.005122489123360766,
+                "proposal_error": 0.47488529088419196
+              },
+              {
+                "step": 46,
+                "parent_error": 0.014543936435756334,
+                "proposal_error": 2.3801425917801176
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*p)",
+            "parent": "v+u",
+            "proposed_after_step": 47,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 48,
+                "parent_error": 0.0028111027096895625,
+                "proposal_error": 0.16234961826733346
+              },
+              {
+                "step": 49,
+                "parent_error": 0.0067821753548233015,
+                "proposal_error": 0.9137253303701016
+              },
+              {
+                "step": 50,
+                "parent_error": 0.007130412177961213,
+                "proposal_error": 0.19273801613080957
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "u+(v*v)",
+            "parent": "v+u",
+            "proposed_after_step": 51,
+            "origin": "residual_association",
+            "feature": "(v*v)",
+            "pairs": [],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "u+p",
+            "parent": "v+u",
+            "proposed_after_step": 51,
+            "origin": "residual_association",
+            "feature": "p",
+            "pairs": [],
+            "paired_status": "insufficient_common_predictions"
+          }
+        ],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 5,
+          "not_lower_error": 12,
+          "insufficient_common_predictions": 2
+        }
+      }
+    }
+  },
+  "noise": {
+    "enumerate": {
+      "run": {
+        "variant": "noise",
+        "seed": 260926,
+        "proposal": "enumerate",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 74,
+            "training_cost": 80,
+            "formula": "delta = -0.946312*p + -0.0530324*positive(v); p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 3402,
+              "feature_evaluations": 0,
+              "refits": 544
+            },
+            "metrics": {
+              "learned": 0.11884741299262122,
+              "persistence": 0.16724790482262744,
+              "home": 0.12008694707289493,
+              "linear": 0.16401426426423016
+            },
+            "cpu_seconds": 1.6499380000000001
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 0,
+        "actions_with_association_proposal_changing_choice": 0,
+        "proposals": [],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 0,
+          "not_lower_error": 0,
+          "insufficient_common_predictions": 0
+        }
+      }
+    },
+    "guided": {
+      "run": {
+        "variant": "noise",
+        "seed": 260926,
+        "proposal": "guided",
+        "source_commit": "d567435b36b74b64ab62a61e4a41837e8060b1ef",
+        "source_sha256": {
+          "artificial_scientist/lab_agent.py": "a282958d69ba816805640a6ec14273afc0d74a5ebc8846ea0e1c4080cd349b52",
+          "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+          "artificial_scientist/lab_guided.py": "1883fb088775fcf97c483df44d51e54c55addd8319fd7b83e5e8259dfa8a5cfd",
+          "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+          "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+          "artificial_scientist/lab_run.py": "79b117460c080ecbc31f351838d742cfa2f337728dc850be77f8acdb651286fb",
+          "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74"
+        },
+        "git_status": "",
+        "policies": {
+          "active": {
+            "status": "budget_complete",
+            "actions": 74,
+            "training_cost": 80,
+            "formula": "delta = -0.966275*p; p_next = p + delta; v_next = delta (per axis)",
+            "search_cost": {
+              "candidate_fits": 74,
+              "feature_evaluations": 1840,
+              "refits": 532
+            },
+            "metrics": {
+              "learned": 0.11967441159161042,
+              "persistence": 0.16724790482262744,
+              "home": 0.12008694707289493,
+              "linear": 0.1558031179267065
+            },
+            "cpu_seconds": 0.7539939999999999
+          }
+        }
+      },
+      "diagnostics": {
+        "actions_with_any_proposal_changing_choice": 7,
+        "actions_with_association_proposal_changing_choice": 6,
+        "proposals": [
+          {
+            "model_id": "u",
+            "parent": "v",
+            "proposed_after_step": 3,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 4,
+                "parent_error": 0.41184030133086763,
+                "proposal_error": 0.8084962732345966
+              },
+              {
+                "step": 5,
+                "parent_error": 0.36799308389462776,
+                "proposal_error": 0.10827189227319742
+              },
+              {
+                "step": 6,
+                "parent_error": 0.6390412890898949,
+                "proposal_error": 0.7149082262147541
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "positive(p)",
+            "parent": "zero",
+            "proposed_after_step": 7,
+            "origin": "residual_association",
+            "feature": "positive(p)",
+            "pairs": [
+              {
+                "step": 8,
+                "parent_error": 0.012384724364508447,
+                "proposal_error": 0.032773687898656936
+              },
+              {
+                "step": 9,
+                "parent_error": 0.04134497977739684,
+                "proposal_error": 0.1595181226505735
+              },
+              {
+                "step": 10,
+                "parent_error": 0.2144376768859373,
+                "proposal_error": 0.2573419905890106
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "p",
+            "parent": "zero",
+            "proposed_after_step": 7,
+            "origin": "residual_association",
+            "feature": "p",
+            "pairs": [
+              {
+                "step": 8,
+                "parent_error": 0.012384724364508447,
+                "proposal_error": 0.017728701172074854
+              },
+              {
+                "step": 9,
+                "parent_error": 0.04134497977739684,
+                "proposal_error": 0.093062285677397
+              },
+              {
+                "step": 10,
+                "parent_error": 0.2144376768859373,
+                "proposal_error": 0.17478074703824895
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(p*abs(p))",
+            "parent": "zero",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "(p*abs(p))",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.29470071692138305,
+                "proposal_error": 0.12670762433762683
+              },
+              {
+                "step": 13,
+                "parent_error": 0.2707626783715566,
+                "proposal_error": 0.26720100395584423
+              },
+              {
+                "step": 14,
+                "parent_error": 0.2014358074500523,
+                "proposal_error": 0.015279987266308356
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "abs(u)",
+            "parent": "zero",
+            "proposed_after_step": 11,
+            "origin": "residual_association",
+            "feature": "abs(u)",
+            "pairs": [
+              {
+                "step": 12,
+                "parent_error": 0.29470071692138305,
+                "proposal_error": 0.7093183657405786
+              },
+              {
+                "step": 13,
+                "parent_error": 0.2707626783715566,
+                "proposal_error": 0.28785197334872786
+              },
+              {
+                "step": 14,
+                "parent_error": 0.2014358074500523,
+                "proposal_error": 0.2583699668371692
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "abs(p)",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 15,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 16,
+                "parent_error": 0.009009113256511363,
+                "proposal_error": 0.08202059947574887
+              },
+              {
+                "step": 17,
+                "parent_error": 0.08274686104388736,
+                "proposal_error": 0.10477830367400094
+              },
+              {
+                "step": 18,
+                "parent_error": 1.091290824383221,
+                "proposal_error": 1.311546694833837
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "abs(v)+(p*abs(p))",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 18,
+            "origin": "residual_association",
+            "feature": "abs(v)",
+            "pairs": [
+              {
+                "step": 19,
+                "parent_error": 0.4932425540716942,
+                "proposal_error": 0.6281119783232332
+              },
+              {
+                "step": 20,
+                "parent_error": 0.22897297380555803,
+                "proposal_error": 0.14404140594980527
+              },
+              {
+                "step": 21,
+                "parent_error": 0.050387469101839985,
+                "proposal_error": 0.07337773947737726
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*u)+(p*abs(p))",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 18,
+            "origin": "residual_association",
+            "feature": "(v*u)",
+            "pairs": [
+              {
+                "step": 19,
+                "parent_error": 0.4932425540716942,
+                "proposal_error": 0.5050306294553728
+              },
+              {
+                "step": 20,
+                "parent_error": 0.22897297380555803,
+                "proposal_error": 0.2713564935549526
+              },
+              {
+                "step": 21,
+                "parent_error": 0.050387469101839985,
+                "proposal_error": 0.06271622342322117
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "p+abs(p)",
+            "parent": "p",
+            "proposed_after_step": 23,
+            "origin": "residual_association",
+            "feature": "abs(p)",
+            "pairs": [
+              {
+                "step": 24,
+                "parent_error": 0.04405750963625427,
+                "proposal_error": 0.08725642538452173
+              },
+              {
+                "step": 25,
+                "parent_error": 0.07633427550267671,
+                "proposal_error": 0.06754347461394129
+              },
+              {
+                "step": 26,
+                "parent_error": 0.0681821904497423,
+                "proposal_error": 0.060781831917037135
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "p+abs(u)",
+            "parent": "p",
+            "proposed_after_step": 23,
+            "origin": "residual_association",
+            "feature": "abs(u)",
+            "pairs": [
+              {
+                "step": 24,
+                "parent_error": 0.04405750963625427,
+                "proposal_error": 0.12757553168094296
+              },
+              {
+                "step": 25,
+                "parent_error": 0.07633427550267671,
+                "proposal_error": 0.14149447657340353
+              },
+              {
+                "step": 26,
+                "parent_error": 0.0681821904497423,
+                "proposal_error": 0.032486703311605865
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "lag_u+p",
+            "parent": "p",
+            "proposed_after_step": 27,
+            "origin": "residual_association",
+            "feature": "lag_u",
+            "pairs": [
+              {
+                "step": 28,
+                "parent_error": 0.09096524866537237,
+                "proposal_error": 0.0909669546071468
+              },
+              {
+                "step": 29,
+                "parent_error": 0.08445433908523473,
+                "proposal_error": 0.08438175433258986
+              },
+              {
+                "step": 30,
+                "parent_error": 0.2722137228966582,
+                "proposal_error": 0.23976197535731095
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "p+(u*u)",
+            "parent": "p",
+            "proposed_after_step": 27,
+            "origin": "residual_association",
+            "feature": "(u*u)",
+            "pairs": [
+              {
+                "step": 28,
+                "parent_error": 0.09096524866537237,
+                "proposal_error": 0.09096024285272622
+              },
+              {
+                "step": 29,
+                "parent_error": 0.08445433908523473,
+                "proposal_error": 0.07976411680331438
+              },
+              {
+                "step": 30,
+                "parent_error": 0.2722137228966582,
+                "proposal_error": 0.2800291412625694
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*u)",
+            "parent": "lag_u+p",
+            "proposed_after_step": 31,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 32,
+                "parent_error": 0.12217790414571908,
+                "proposal_error": 0.6212490008390551
+              },
+              {
+                "step": 33,
+                "parent_error": 0.019295914145309682,
+                "proposal_error": 0.2697116005020636
+              },
+              {
+                "step": 34,
+                "parent_error": 0.218038239891176,
+                "proposal_error": 0.10965776059282223
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*p)",
+            "parent": "p+abs(p)",
+            "proposed_after_step": 35,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 36,
+                "parent_error": 0.04582699388089313,
+                "proposal_error": 0.20487388729538855
+              },
+              {
+                "step": 37,
+                "parent_error": 0.09579133797950476,
+                "proposal_error": 0.19719418538653044
+              },
+              {
+                "step": 38,
+                "parent_error": 0.10285591360275367,
+                "proposal_error": 0.001215795678016336
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(u*u)",
+            "parent": "lag_u+p",
+            "proposed_after_step": 39,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 40,
+                "parent_error": 0.21826762593641724,
+                "proposal_error": 0.12022492065023345
+              },
+              {
+                "step": 41,
+                "parent_error": 0.0017577170292966853,
+                "proposal_error": 0.2026081493761435
+              },
+              {
+                "step": 42,
+                "parent_error": 0.05534005980552917,
+                "proposal_error": 0.06813405768740399
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "(v*v)+(p*abs(p))",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 43,
+            "origin": "residual_association",
+            "feature": "(v*v)",
+            "pairs": [
+              {
+                "step": 44,
+                "parent_error": 0.13218411217725662,
+                "proposal_error": 0.12290517768774745
+              },
+              {
+                "step": 45,
+                "parent_error": 0.15091349721834374,
+                "proposal_error": 0.11499388401364788
+              },
+              {
+                "step": 46,
+                "parent_error": 0.07346805419385573,
+                "proposal_error": 0.07300633268646714
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "positive(u)+(p*abs(p))",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 43,
+            "origin": "residual_association",
+            "feature": "positive(u)",
+            "pairs": [
+              {
+                "step": 44,
+                "parent_error": 0.13218411217725662,
+                "proposal_error": 0.09578361764260926
+              },
+              {
+                "step": 45,
+                "parent_error": 0.15091349721834374,
+                "proposal_error": 0.1488593038689227
+              },
+              {
+                "step": 46,
+                "parent_error": 0.07346805419385573,
+                "proposal_error": 0.07047945654593055
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "(p*p)",
+            "parent": "(v*v)+(p*abs(p))",
+            "proposed_after_step": 47,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 48,
+                "parent_error": 0.05264543166537458,
+                "proposal_error": 0.11066778919074739
+              },
+              {
+                "step": 49,
+                "parent_error": 0.018119425151455815,
+                "proposal_error": 0.021775606599154014
+              },
+              {
+                "step": 50,
+                "parent_error": 0.4454340826392159,
+                "proposal_error": 0.4401811767165156
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "p+1",
+            "parent": "p+(u*u)",
+            "proposed_after_step": 50,
+            "origin": "residual_association",
+            "feature": "1",
+            "pairs": [],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "p+positive(p)",
+            "parent": "p+(u*u)",
+            "proposed_after_step": 50,
+            "origin": "residual_association",
+            "feature": "positive(p)",
+            "pairs": [],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "p+(v*abs(v))",
+            "parent": "p",
+            "proposed_after_step": 55,
+            "origin": "residual_association",
+            "feature": "(v*abs(v))",
+            "pairs": [
+              {
+                "step": 56,
+                "parent_error": 0.07365217735898058,
+                "proposal_error": 0.06703095750061142
+              },
+              {
+                "step": 57,
+                "parent_error": 0.03928112120436241,
+                "proposal_error": 0.03927675195780325
+              },
+              {
+                "step": 58,
+                "parent_error": 0.21109358994974098,
+                "proposal_error": 0.21873637417629255
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+p",
+            "parent": "p",
+            "proposed_after_step": 55,
+            "origin": "residual_association",
+            "feature": "v",
+            "pairs": [
+              {
+                "step": 56,
+                "parent_error": 0.07365217735898058,
+                "proposal_error": 0.06369631643510971
+              },
+              {
+                "step": 57,
+                "parent_error": 0.03928112120436241,
+                "proposal_error": 0.04046633980549682
+              },
+              {
+                "step": 58,
+                "parent_error": 0.21109358994974098,
+                "proposal_error": 0.22287375387649103
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+u",
+            "parent": "(p*abs(p))",
+            "proposed_after_step": 59,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 60,
+                "parent_error": 0.010793530216895473,
+                "proposal_error": 0.010928576968244362
+              },
+              {
+                "step": 61,
+                "parent_error": 0.18177878372705303,
+                "proposal_error": 0.21762457049954137
+              },
+              {
+                "step": 62,
+                "parent_error": 0.1132211378672457,
+                "proposal_error": 0.013673172235276112
+              }
+            ],
+            "paired_status": "lower_error"
+          },
+          {
+            "model_id": "v+lag_u",
+            "parent": "v+u",
+            "proposed_after_step": 63,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [],
+            "paired_status": "insufficient_common_predictions"
+          },
+          {
+            "model_id": "v+1",
+            "parent": "p",
+            "proposed_after_step": 67,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 68,
+                "parent_error": 0.04121581972233908,
+                "proposal_error": 0.042878787082156575
+              },
+              {
+                "step": 69,
+                "parent_error": 0.04029696307056116,
+                "proposal_error": 0.10545354820903988
+              },
+              {
+                "step": 70,
+                "parent_error": 0.14512831404640117,
+                "proposal_error": 0.1387288016965575
+              }
+            ],
+            "paired_status": "not_lower_error"
+          },
+          {
+            "model_id": "v+abs(v)",
+            "parent": "p+1",
+            "proposed_after_step": 71,
+            "origin": "scheduled_escape",
+            "feature": null,
+            "pairs": [
+              {
+                "step": 72,
+                "parent_error": 0.008718590143992178,
+                "proposal_error": 0.08360405106460643
+              },
+              {
+                "step": 73,
+                "parent_error": 0.04001627525378882,
+                "proposal_error": 0.06586576104461092
+              }
+            ],
+            "paired_status": "insufficient_common_predictions"
+          }
+        ],
+        "paired_comparison_definition": "First three later actions with both parent and proposal predictions; conditional on chosen actions, no confirmation claim.",
+        "paired_counts": {
+          "lower_error": 5,
+          "not_lower_error": 17,
+          "insufficient_common_predictions": 4
+        }
+      }
+    }
+  }
+}
