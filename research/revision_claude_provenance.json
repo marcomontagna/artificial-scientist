@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-5-5",
+  "scope": "Pre-implementation critique of supplied design; no tools",
+  "access": "Previously verified subscription, extra usage off, API credentials removed, no paid fallback",
+  "is_error": false,
+  "sha256": {
+    "results/runs/revision_design_claude_20260926/request.txt": "ceedece5ece3d216c7731cfe323baa9e0d347df86de2f2b32a7f98dbe9773267",
+    "results/runs/revision_design_claude_20260926/response.json": "39fead738aecb3155db577869d6d13342129a62f7462586ec67f01882ddf8921",
+    "research/claude_revision_design.md": "d48263bc28c26db02b3c2edd2617c170e31d0eb89d68f6b1bb25b5e317113b5b"
+  }
+}
