@@ -1,0 +1,37 @@
+{
+  "access": "Existing Claude Pro subscription, credits previously verified off; no paid fallback; read-only calls",
+  "reviews": [
+    {
+      "stage": "direction",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "duration_ms": 60485,
+      "num_turns": 6,
+      "is_error": false,
+      "raw_directory": "results/runs/equation_claude_direction_20260926",
+      "report": "research/claude_equation_direction.md",
+      "sha256": {
+        "results/runs/equation_claude_direction_20260926/request.txt": "23d185b1d40097d9fc0508c63423a7bdfe97769e3f6206a3d1446dfcaf134a69",
+        "results/runs/equation_claude_direction_20260926/response.json": "de072dfdd4bec7d64de2dacad26fe77373f09fdfde7e5bb1409cde2aef51a2f0",
+        "research/claude_equation_direction.md": "5366bda385a032528322ce8d4e94ce7f92fb3382917f14d82f50c2ef26a59ae3"
+      }
+    },
+    {
+      "stage": "plan1",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "duration_ms": 128076,
+      "num_turns": 5,
+      "is_error": false,
+      "raw_directory": "results/runs/equation_claude_plan1_20260926",
+      "report": "research/claude_equation_plan1.md",
+      "sha256": {
+        "results/runs/equation_claude_plan1_20260926/request.txt": "9878b78f69a317080cd1a56ea16a03ae3f2d3fd783760eeec7230fb0cca6036f",
+        "results/runs/equation_claude_plan1_20260926/response.json": "57a764cbb0cb07e8df9df6dcdb9411afd1365bad604cbbd3356c2a3803192e68",
+        "research/claude_equation_plan1.md": "2ac3aa52384e27f49e24a98c8c8dda6379fac0dba7fa9140cd4f76033e79bf62"
+      }
+    }
+  ]
+}

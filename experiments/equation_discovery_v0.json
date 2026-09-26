@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619
+  ],
+  "smoke_seeds": [
+    590
+  ],
+  "worlds": [
+    "affine",
+    "sparse_quadratic",
+    "sine",
+    "exponential",
+    "noise_only"
+  ],
+  "methods": [
+    "constant",
+    "linear",
+    "dense",
+    "sparse"
+  ],
+  "basis": [
+    "1",
+    "x",
+    "u",
+    "x*x",
+    "x*u",
+    "u*u"
+  ],
+  "max_terms": 3,
+  "sigma": 0.05,
+  "train_sites": 12,
+  "replicates": 2,
+  "audit_sites": 16,
+  "coefficient_magnitude": [
+    0.5,
+    1.5
+  ],
+  "sparse_support_sizes": [
+    1,
+    2,
+    3
+  ],
+  "law_seed_offset": 9100001,
+  "input_seed_offset": 9200003,
+  "train_noise_seed_offset": 9300007,
+  "audit_input_seed_offset": 9400009,
+  "audit_noise_seed_offset": 9500011,
+  "rank_tolerance": 1e-10,
+  "tie_tolerance": 1e-12,
+  "normal_interval_z": 1.959963984540054,
+  "minimum_support_recoveries": 14,
+  "maximum_false_inclusions": 6,
+  "maximum_noise_nonzero": 8,
+  "maximum_false_rejections": 2,
+  "maximum_missed_rejections": 4,
+  "timeout_seconds": 120,
+  "external_timeout_seconds": 150,
+  "max_output_bytes": 50000000,
+  "smoke_safety_factor": 1.5,
+  "smoke_projection_limit_seconds": 60,
+  "smoke_projection_limit_bytes": 40000000,
+  "loop_order": "seed,world",
+  "audit_threshold_multiplier": 4,
+  "interpolation_axis": [
+    -0.9,
+    -0.7,
+    -0.5,
+    -0.3,
+    -0.1,
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "extrapolation_axis": [
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "outside_formulas": {
+    "sine": "sin(pi*x)+0.5*u",
+    "exponential": "exp(x)+0.5*u"
+  },
+  "score": "SSE/sigma^2 + k*log(n)",
+  "heuristic_weight": "exp(-0.5*(score-min_score))/sum",
+  "support_sampling": "uniform size then uniform lexicographic subset containing a quadratic term",
+  "coefficient_sampling": "ordered support: choice([-1,1]) then uniform(0.5,1.5)"
+}
