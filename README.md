@@ -8,9 +8,9 @@ The ambition is an unexpected, useful insight—a “Move 37” moment. That is 
 
 One persistent physical laboratory: first a single object moving in 2D, with hidden motion rules. The agent can observe, push, wait and reset. It keeps a notebook, proposes executable models from declared building blocks, makes predictions before acting, and revises models that fail. We supply an interface and learning machinery, not a catalogue containing the correct world explanations.
 
-**Current status: the agent can detect failed predictions, test competing model revisions and adopt one before refitting.** Fifty-nine tests pass; 45 bounded runs are finished. On the new coupled-motion world, all three active runs added cross-coordinate motion and improved unused predictions. One simple-control run revised unnecessarily, and the delayed-effect stress case remains unresolved. These are capability demonstrations within supplied operators, not a novelty or general-discovery claim.
+**Current status: the agent can construct and test formulas using its past actions.** In three new comparisons (96 investigations; 87 tests), this cut one delayed world's mean error 96.7%. But random exploration often matched or beat active, and a stronger offline fitter extracted better explanations from the same completed data. New worlds exposed incomplete explanations and unreliable warnings. This is a useful research prototype, not a discovery or policy-superiority claim.
 
-[Latest revision-loop results](research/revision_loop_result.md) · [Revision replay](results/revision_v1/replay.html) · [Exact design](research/revision_loop_design.md) · [Earlier progress assessment](research/progress_assessment.md)
+[Three-study report](research/followup_session_report.md) · [Memory replay](results/followup_b/replay.html) · [New-world replay](results/followup_c/replay.html) · [Earlier revision results](research/revision_loop_result.md)
 
 The earlier disconnected studies remain in the [archive](archive/README.md); their raw runs are untouched.
 
@@ -41,3 +41,11 @@ Run the new revision loop with a fresh output directory:
 The original laboratory command remains available and unchanged.
 
 MIT; see [LICENSE](LICENSE). Archived third-party references keep their original attribution.
+
+The public-history candidate is opt-in; existing defaults remain unchanged:
+
+```sh
+.venv/bin/python -m artificial_scientist.revision_run --variant stress --proposal-mode history --history-reference --output results/runs/my_fresh_history
+```
+
+Saved replays display actual logged predictions and revisions; they are not live training. [Exact history design](research/followup_b_design.md).

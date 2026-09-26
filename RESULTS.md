@@ -1,6 +1,12 @@
 # Results
 
-**Latest: an evidence-driven modeling-assumption revision works on the declared coupled-motion challenge.** Mean active error is 0.000679 versus 0.087390 without revision, 0.000971 with random revision and 0.000920 with coverage revision. These are three sensor-noise seeds per world, not generalization evidence. One active simple control expanded unnecessarily; all active delayed-stress runs remain unresolved and their mean error worsens versus no revision.
+**Latest: useful history representations, but unreliable investigation.** Three reviewed comparisons completed96 runs;87 tests pass. Stricter checking did not help. History terms cut delayed-world mean error 96.7%, while random exploration was similar. Two independently authored worlds exposed missed structure, weak active exploration and poor models left unflagged. The sparse offline reference often did much better on the same final observations, with additional computation/capacity.
+
+[Three-study report](research/followup_session_report.md) · [Memory replay](results/followup_b/replay.html) · [New-world replay](results/followup_c/replay.html) · [Next step](NEXT_STEPS.md). All runs finished; defaults unchanged; no extra spending.
+
+## Earlier assumption revision
+
+**An evidence-driven modeling-assumption revision works on the declared coupled-motion challenge.** Mean active error is 0.000679 versus 0.087390 without revision, 0.000971 with random revision and 0.000920 with coverage revision. These are three sensor-noise seeds per world, not generalization evidence. One active simple control expanded unnecessarily; all active delayed-stress runs remain unresolved and their mean error worsens versus no revision.
 
 59 tests passed; all 45 fixed runs completed without tuning. Claude critiqued design and results; independent agents reviewed code and recomputed recorded errors/decisions.
 

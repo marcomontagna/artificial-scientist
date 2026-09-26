@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex independent_review",
+  "scope": "Read-only saved records and independent arithmetic; no world or learner reruns",
+  "runs": 24,
+  "cycles": 48,
+  "source_commit_prefix": "4fc9e84",
+  "checks": [
+    "World seal hashes and clean-run source hashes",
+    "Learner agent/models byte-identical to Bfreeze2b0eca1",
+    "Journal/event prospective plan identity",
+    "80training68evaluation units; CPU/trace caps",
+    "Frozen four-experiment snapshots, adoption margins and prediction losses",
+    "Paired evaluator actions/outcomes acrossarms",
+    "Sparse reference286fits perrun,48/32 chronological split, greedy saved-score winners and validation-stage selection",
+    "216stage continuous validation tapes independently recomputed using prefix state/inputmemory only",
+    "All48axis final sparse ridge fits independently solved on recorded trainingdata",
+    "Detector poor>.01 crossed with completed unresolved status"
+  ],
+  "max_loss_metric_difference": 4.440892098500626e-16,
+  "max_independent_validation_rollout_difference": 0.0,
+  "max_independent_final_sparse_fit_coefficient_difference": 0.0,
+  "means": {
+    "transfer_a": {
+      "ordinary_active": 0.07945551323955209,
+      "history_active": 0.022751590476030228,
+      "history_random": 0.010117415554400754,
+      "history_coverage": 0.03701714199484204,
+      "sparse_reference_on_history_active_data": 0.0005409643349337896
+    },
+    "transfer_b": {
+      "ordinary_active": 0.03836864680833323,
+      "history_active": 0.05458755792943077,
+      "history_random": 0.014129706451686276,
+      "history_coverage": 0.013624489925140907,
+      "sparse_reference_on_history_active_data": 0.000669195900727476
+    }
+  },
+  "history_active_detector": {
+    "transfer_a": {
+      "poor_flagged": 1,
+      "poor_unflagged": 2
+    },
+    "transfer_b": {
+      "poor_flagged": 3
+    }
+  },
+  "limitations": [
+    "Did not independently refit every greedy candidate at every forward stage; checked recorded rank winners and independent final fits",
+    "Sparse reference uses higher termcapacity and compute, so superiority does not isolate selection algorithm alone",
+    "Designed two-world sample is not generalization or calibrated failure-awareness evidence",
+    "Hashes establish consistency, not independent trusted timestamps"
+  ]
+}

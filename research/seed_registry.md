@@ -84,3 +84,7 @@ Clean e1317cd; seeds280001–280003, same action/evaluator offsets and world law
 ## Follow-up B
 
 Clean2b0eca1; sensor seeds290001–290003 with existing action/evaluator offsets.36runs:3knownworlds×3seeds×ordinaryactive/historyactive/historyrandom/historycoverage. All inspected developmentdata; no extra smoke/tuning.
+
+## Follow-up C
+
+Protocol/reference fae6bd8 preceded independently authored worlds sealed4fc9e84. Sensor seeds300001–300003 and existing action/evaluator offsets.24runs:2newworlds×3seeds×fourordinary/historypolicies. All now inspected; coordinator saw numeric laws only afterall24outcomes. Learner/model source unchanged2b0eca1; no extra learner smoke/tuning.

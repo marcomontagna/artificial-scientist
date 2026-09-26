@@ -1,9 +1,7 @@
-# Next decision: make the revision check more reliable
+# Next: reconsider explanations as evidence grows
 
-The complete revision loop is implemented, reviewed and run. [Results](research/revision_loop_result.md) · [Replay](results/revision_v1/replay.html). All 45 investigations are finished. No next experiment is running.
+[Three-study report](research/followup_session_report.md):96 investigations finished; 87 tests pass. Input-history construction improved predictions, but active exploration remains weaker than simple controls and the learner sometimes stops with a poor partial explanation. No experiment is running.
 
-The supplied model language can express the new coupled-motion challenge, and all active runs adopt that useful representation. Active also beats matched random/coverage means in this small check. But one simple control revises unnecessarily; both accepted stress snapshots worsen external prediction versus their frozen incumbents. The stress problem remains unresolved.
+Review a bounded design that lets rejected hypotheses be reconsidered using newly acquired evidence. Compare whole-model construction with the audited sparse history fitter and keep random exploration as the acquisition control. The observed bottleneck combines early rejection, additive proposals and a two-cycle cap; adding another cycle or lowering a threshold is not yet a validated repair. Completed-data success does not prove the early online decision had enough evidence.
 
-Inspect the saved check-versus-external discrepancies to distinguish limited checking horizons, intervention coverage and representation limits. Claude proposes longer checks and default abstention; those remain proposals. Two-step checks can still observe delayed effects of earlier actions, so horizon alone is not an established cause. Any changed rule needs a prospective budget and fresh internal evidence, not evaluator feedback. Replaying logs cannot establish what a different policy would have collected.
-
-Preserve useful approximation without labeling adoption as true-law recovery. Do not add the stress world's exact missing lag, widen the suite, or tune another threshold automatically. Review the next bounded design before implementation. No extra spending.
+Keep the connected observe→propose→predict→act→revise loop. Preserve current defaults and negative results, use no hidden-law hints, and have Claude review the next design/results with independent code/numerical checks. No extra spending or automatic chain.
