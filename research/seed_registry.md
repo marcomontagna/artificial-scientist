@@ -72,3 +72,7 @@ Reused the already inspected laboratory seed 260926 and existing evaluator offse
 ## Conditioned guided proposal v1 — September 26, 2026
 
 Reused seed 260926 and the existing evaluator in six active-policy runs (guided/guided-partial × development/challenge/noise), frozen clean source 3acb2ff. The preceding saved-prefix diagnosis used only original challenge events through step 11. All are inspected developmental evidence; no independent confirmation, post-result tuning or additional sampling. Earlier raw outputs preserved.
+
+## Assumption revision v1 — September 26, 2026
+
+World source dfabfe1 and learner/protocol3dc00a2 were frozen before45 runs. Sensor seeds270001/270002/270003, action seed+700001, evaluator seed+100000+index*1009 for four fixed sequences. Policies/worlds share streams intentionally; seeds vary noise, not physical laws. Three worlds × three seeds × five policies; no learner smoke, tuning or extra runs. These are now inspected developmental results. Synthetic fixtures use7/11 and a fake harness, not studyworld outcomes.

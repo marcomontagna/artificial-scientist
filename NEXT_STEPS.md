@@ -1,9 +1,9 @@
-# Next step: a capability milestone, not another shortlist repair
+# Next decision: make the revision check more reliable
 
-[Progress assessment](research/progress_assessment.md): the connected investigator works, but earlier hypotheses have not improved harder-world predictions. Stop adjusting proposal ranking. No experiment is running.
+The complete revision loop is implemented, reviewed and run. [Results](research/revision_loop_result.md) · [Replay](results/revision_v1/replay.html). All 45 investigations are finished. No next experiment is running.
 
-Design one complete evidence-driven model-assumption revision: observed failure → competing explanations → chosen discriminating experiment → revision or an explicit unresolved explanation → improved independent prediction. Declare generic revision operations before testing; do not insert the known challenge law. Keep external evaluation outside learner decisions.
+The supplied model language can express the new coupled-motion challenge, and all active runs adopt that useful representation. Active also beats matched random/coverage means in this small check. But one simple control revises unnecessarily; both accepted stress snapshots worsen external prediction versus their frozen incumbents. The stress problem remains unresolved.
 
-Include the unchanged learner, random/coverage exploration with the same revision machinery, and an ordinary regression reference. Specify a no-revision-needed control and an unexplainable case without starting a broad sweep. Review the design with Claude and another agent before implementation; fix meaningful success criteria before runs.
+Inspect the saved check-versus-external discrepancies to distinguish limited checking horizons, intervention coverage and representation limits. Claude proposes longer checks and default abstention; those remain proposals. Two-step checks can still observe delayed effects of earlier actions, so horizon alone is not an established cause. Any changed rule needs a prospective budget and fresh internal evidence, not evaluator feedback. Replaying logs cannot establish what a different policy would have collected.
 
-This is a proposed capability milestone, not implemented functionality or a novelty claim. Preserve all controls and failures. No extra spending.
+Preserve useful approximation without labeling adoption as true-law recovery. Do not add the stress world's exact missing lag, widen the suite, or tune another threshold automatically. Review the next bounded design before implementation. No extra spending.

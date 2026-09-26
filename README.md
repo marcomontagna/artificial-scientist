@@ -8,9 +8,9 @@ The ambition is an unexpected, useful insight—a “Move 37” moment. That is 
 
 One persistent physical laboratory: first a single object moving in 2D, with hidden motion rules. The agent can observe, push, wait and reset. It keeps a notebook, proposes executable models from declared building blocks, makes predictions before acting, and revises models that fail. We supply an interface and learning machinery, not a catalogue containing the correct world explanations.
 
-**Current status: the first connected learner is implemented and its bounded demonstration is complete.** It proposes formulas, predicts before acting, chooses tools and revises its explanations. Thirty-two tests pass. No experiment is currently running. Conditioning its guided proposals makes a useful model appear earlier, but does not improve harder-world prediction. Both guided modes remain optional; enumeration stays the default. No discovery or novelty claim.
+**Current status: the agent can detect failed predictions, test competing model revisions and adopt one before refitting.** Fifty-nine tests pass; 45 bounded runs are finished. On the new coupled-motion world, all three active runs added cross-coordinate motion and improved unused predictions. One simple-control run revised unnecessarily, and the delayed-effect stress case remains unresolved. These are capability demonstrations within supplied operators, not a novelty or general-discovery claim.
 
-[Latest: are we actually improving?](research/progress_assessment.md) · [Last experiment](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [First-loop results](research/tool_lab_result.md)
+[Latest revision-loop results](research/revision_loop_result.md) · [Revision replay](results/revision_v1/replay.html) · [Exact design](research/revision_loop_design.md) · [Earlier progress assessment](research/progress_assessment.md)
 
 The earlier disconnected studies remain in the [archive](archive/README.md); their raw runs are untouched.
 
@@ -31,5 +31,13 @@ Run the local prototype from the repository root (Python 3.9+, no runtime depend
 ```
 
 Use a new output directory; the laboratory command runs active, random and coverage exploration and generates their saved replays. For evidence-guided local proposals, add `--proposal guided --policies active`; use `--proposal guided-partial` for the conditioned variant. The default remains `enumerate`. [Guided design and limitations](research/guided_proposal_design.md) · [Implementation assumptions](research/tool_lab_implementation.md) · [Workflow](research/workflow.md). [Lessons retained](research/lessons.md) · [Closest references](research/references.md).
+
+Run the new revision loop with a fresh output directory:
+
+```sh
+.venv/bin/python -m artificial_scientist.revision_run --variant challenge --policy active --seed 270001 --output results/runs/my_fresh_revision
+```
+
+The original laboratory command remains available and unchanged.
 
 MIT; see [LICENSE](LICENSE). Archived third-party references keep their original attribution.

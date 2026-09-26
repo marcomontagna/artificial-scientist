@@ -1,8 +1,16 @@
 # Results
 
-**Latest: one proposal-scoring failure repaired, without a harder-world prediction gain.** The useful motion-plus-push model enters at step 11 instead of 39, but final harder-world error rises slightly (0.053171 → 0.053795). Simple-world error improves slightly; noise error worsens slightly. Keep the repair optional. Thirty-two tests passed; six runs completed without tuning.
+**Latest: an evidence-driven modeling-assumption revision works on the declared coupled-motion challenge.** Mean active error is 0.000679 versus 0.087390 without revision, 0.000971 with random revision and 0.000920 with coverage revision. These are three sensor-noise seeds per world, not generalization evidence. One active simple control expanded unnecessarily; all active delayed-stress runs remain unresolved and their mean error worsens versus no revision.
 
-[Latest report](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [Next step](NEXT_STEPS.md).
+59 tests passed; all 45 fixed runs completed without tuning. Claude critiqued design and results; independent agents reviewed code and recomputed recorded errors/decisions.
+
+[Latest report](research/revision_loop_result.md) · [Saved revision replay](results/revision_v1/replay.html) · [Next step](NEXT_STEPS.md).
+
+## Earlier proposal-conditioning repair
+
+**One proposal-scoring failure repaired, without a harder-world prediction gain.** The useful motion-plus-push model enters at step 11 instead of 39, but final harder-world error rises slightly (0.053171 → 0.053795). Simple-world error improves slightly; noise error worsens slightly. Keep the repair optional. Thirty-two tests passed; six runs completed without tuning.
+
+[Earlier report](research/partial_proposal_result.md) · [Harder-world replay](results/partial_v1/replay.html) · [Next step](NEXT_STEPS.md).
 
 ## Earlier observation-guided comparison
 

@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-5-5",
+  "scope": "Post-run critique of coordinator-supplied results, not independent source or numerical audit",
+  "access": "Previously verified subscription with extra usage off; API credentials removed, no paid fallback",
+  "is_error": false,
+  "sha256": {
+    "results/runs/revision_result_claude_20260926/request.txt": "5ae4ac2d0114e2efa277f3e8e03c79eb53b51a8006993c56bc8a30f252aec347",
+    "results/runs/revision_result_claude_20260926/response.json": "af213a542cf4b37e7e3d1afa26909917911ca96522415fe0e30fa51d3382113d",
+    "research/claude_revision_result.md": "16cc559079521499d7dd6ba24f92a276473b49430a700d37cf7deebc759e882a"
+  }
+}

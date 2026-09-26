@@ -1,0 +1,2729 @@
+{
+  "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+  "runs": [
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0008730864882593968,
+        "vector_linear": 0.0014341098547338968
+      },
+      "formula": "delta_x = 0.71243*v + 0.39202*u + -0.164784*other_v; delta_y = 0.639743*v + 0.391872*u + 0.206401*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7124298042311142,
+            0.3920204074208187,
+            -0.16478422120979103
+          ],
+          [
+            0.6397425234624758,
+            0.39187178932581823,
+            0.20640117878610667
+          ]
+        ],
+        "formula": "delta_x = 0.71243*v + 0.39202*u + -0.164784*other_v; delta_y = 0.639743*v + 0.391872*u + 0.206401*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13716
+      },
+      "cpu_seconds": 0.07476400000000005
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0008068352609623235,
+        "vector_linear": 0.042662211022493235
+      },
+      "formula": "delta_x = 0.713967*v + 0.388344*u + -0.169156*other_v; delta_y = 0.643676*v + 0.40443*u + 0.187654*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7139671937519672,
+            0.38834350880510166,
+            -0.1691556897594499
+          ],
+          [
+            0.6436758373421722,
+            0.404430168830554,
+            0.18765394840429075
+          ]
+        ],
+        "formula": "delta_x = 0.713967*v + 0.388344*u + -0.169156*other_v; delta_y = 0.643676*v + 0.40443*u + 0.187654*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13716
+      },
+      "cpu_seconds": 0.07472299999999965
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "legacy",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 62,
+      "experiments": 62,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.06707516241432805,
+        "vector_linear": 0.0014181264975696494
+      },
+      "formula": "delta = 0.679319*v + 0.385815*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.679319*v + 0.385815*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.6793188270218151,
+          0.3858149984554247
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.016235894124995324,
+        "validated_predictions": 58
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 3230,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 448
+      },
+      "cpu_seconds": 1.1545099999999997
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "no-revision",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.08825323352841513,
+        "vector_linear": 0.042662211022493235
+      },
+      "formula": "delta_x = 0.682646*v + 0.444628*u; delta_y = 0.682646*v + 0.444628*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6826457261085694,
+          0.4446281969569061
+        ],
+        "formula": "delta_x = 0.682646*v + 0.444628*u; delta_y = 0.682646*v + 0.444628*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05546400000000018
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.000690783074784916,
+        "vector_linear": 0.0006998775789989712
+      },
+      "formula": "delta_x = 0.702158*v + 0.386273*u + -0.161796*other_v; delta_y = 0.636145*v + 0.389638*u + 0.218525*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7021580617181147,
+            0.3862727231589868,
+            -0.1617956040844919
+          ],
+          [
+            0.6361445265487304,
+            0.3896384460141564,
+            0.21852542594839974
+          ]
+        ],
+        "formula": "delta_x = 0.702158*v + 0.386273*u + -0.161796*other_v; delta_y = 0.636145*v + 0.389638*u + 0.218525*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13716
+      },
+      "cpu_seconds": 0.07406099999999993
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.00025220452700448884,
+        "vector_linear": 0.001077211331780309
+      },
+      "formula": "delta_x = 0.709145*v + 0.383983*u + -0.178347*other_v; delta_y = 0.654026*v + 0.373884*u + 0.226387*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7091451441519196,
+            0.3839827595969138,
+            -0.17834670227132296
+          ],
+          [
+            0.654026205700126,
+            0.3738844703317443,
+            0.22638724979131616
+          ]
+        ],
+        "formula": "delta_x = 0.709145*v + 0.383983*u + -0.178347*other_v; delta_y = 0.654026*v + 0.373884*u + 0.226387*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 24212
+      },
+      "cpu_seconds": 0.0909450000000005
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.00048666637938809686,
+        "vector_linear": 0.04301362080506209
+      },
+      "formula": "delta_x = 0.706056*v + 0.392513*u + -0.168372*other_v; delta_y = 0.646412*v + 0.378199*u + 0.221759*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7060563982054877,
+            0.3925130721171615,
+            -0.16837185691777237
+          ],
+          [
+            0.6464115556433062,
+            0.37819921509495175,
+            0.2217588607822906
+          ]
+        ],
+        "formula": "delta_x = 0.706056*v + 0.392513*u + -0.168372*other_v; delta_y = 0.646412*v + 0.378199*u + 0.221759*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 24212
+      },
+      "cpu_seconds": 0.09026699999999988
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "legacy",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 55,
+      "experiments": 55,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.07132353054521161,
+        "vector_linear": 0.042792165740666334
+      },
+      "formula": "delta = 0.69014*v + 0.380884*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.69014*v + 0.380884*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.6901404265353407,
+          0.3808841622245621
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.009860544912360684,
+        "validated_predictions": 51
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 3056,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 400
+      },
+      "cpu_seconds": 0.8669260000000003
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "no-revision",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.08635176011354456,
+        "vector_linear": 0.04301362080506209
+      },
+      "formula": "delta_x = 0.682707*v + 0.438782*u; delta_y = 0.682707*v + 0.438782*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6827066667229551,
+          0.43878168474319423
+        ],
+        "formula": "delta_x = 0.682707*v + 0.438782*u; delta_y = 0.682707*v + 0.438782*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05496500000000015
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0009166161107895398,
+        "vector_linear": 0.0010778625603176197
+      },
+      "formula": "delta_x = 0.713145*v + 0.364116*u + -0.171934*other_v; delta_y = 0.647997*v + 0.379503*u + 0.203646*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7131448825930529,
+            0.36411553781498945,
+            -0.17193446428669393
+          ],
+          [
+            0.647997262622287,
+            0.3795029252421941,
+            0.20364553017915907
+          ]
+        ],
+        "formula": "delta_x = 0.713145*v + 0.364116*u + -0.171934*other_v; delta_y = 0.647997*v + 0.379503*u + 0.203646*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 14264
+      },
+      "cpu_seconds": 0.07488099999999953
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "active",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0009108777260297739,
+        "vector_linear": 0.0033866168736098067
+      },
+      "formula": "delta_x = 0.713211*v + 0.379237*u + -0.183732*other_v; delta_y = 0.649192*v + 0.377422*u + 0.199168*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7132108917678786,
+            0.379237415223269,
+            -0.1837315540366464
+          ],
+          [
+            0.6491921250095676,
+            0.37742182486292203,
+            0.1991684759251904
+          ]
+        ],
+        "formula": "delta_x = 0.713211*v + 0.379237*u + -0.183732*other_v; delta_y = 0.649192*v + 0.377422*u + 0.199168*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13164
+      },
+      "cpu_seconds": 0.07575099999999946
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "coverage",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.001467395773790992,
+        "vector_linear": 0.04562248314939572
+      },
+      "formula": "delta_x = 0.719771*v + 0.377694*u + -0.187176*other_v; delta_y = 0.64481*v + 0.360513*u + 0.231771*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7197713268343578,
+            0.3776938757223669,
+            -0.1871763298448375
+          ],
+          [
+            0.6448096749056347,
+            0.3605129001250541,
+            0.2317713457207609
+          ]
+        ],
+        "formula": "delta_x = 0.719771*v + 0.377694*u + -0.187176*other_v; delta_y = 0.64481*v + 0.360513*u + 0.231771*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13164
+      },
+      "cpu_seconds": 0.07493399999999983
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "legacy",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 61,
+      "experiments": 61,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.09574074032880454,
+        "vector_linear": 0.0036458360536125636
+      },
+      "formula": "delta = 0.379859*u + 0.239504*lag_u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "u+lag_u",
+        "formula": "delta = 0.379859*u + 0.239504*lag_u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.3798586023220943,
+          0.239504246239273
+        ],
+        "terms": [
+          "u",
+          "lag_u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.0414511939018352,
+        "validated_predictions": 55
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 3402,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 452
+      },
+      "cpu_seconds": 1.1400560000000004
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "no-revision",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.08756561377873491,
+        "vector_linear": 0.04562248314939572
+      },
+      "formula": "delta_x = 0.687618*v + 0.427545*u; delta_y = 0.687618*v + 0.427545*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.687617841069659,
+          0.4275445186070204
+        ],
+        "formula": "delta_x = 0.687618*v + 0.427545*u; delta_y = 0.687618*v + 0.427545*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05501899999999971
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "challenge",
+      "policy": "random",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0013063151031759677,
+        "vector_linear": 0.003630678969890878
+      },
+      "formula": "delta_x = 0.707696*v + 0.381604*u + -0.187868*other_v; delta_y = 0.631619*v + 0.385337*u + 0.209461*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7076962774298414,
+            0.381603877188762,
+            -0.18786804367453866
+          ],
+          [
+            0.6316189834309514,
+            0.3853371155687847,
+            0.20946118393043678
+          ]
+        ],
+        "formula": "delta_x = 0.707696*v + 0.381604*u + -0.187868*other_v; delta_y = 0.631619*v + 0.385337*u + 0.209461*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 13164
+      },
+      "cpu_seconds": 0.07457699999999967
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0009571999707940105,
+        "vector_linear": 0.10601670675414794
+      },
+      "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8094931095013724,
+          0.42935588170333744
+        ],
+        "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05523700000000001
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0009571999707940105,
+        "vector_linear": 0.10601670675414794
+      },
+      "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8094931095013724,
+          0.42935588170333744
+        ],
+        "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05856900000000001
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "legacy",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 42,
+      "experiments": 42,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.003115762265522842,
+        "vector_linear": 0.02576542774188007
+      },
+      "formula": "delta = 0.807774*v + 0.41661*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.807774*v + 0.41661*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.8077738011011888,
+          0.416610252909442
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.009824147421727452,
+        "validated_predictions": 38
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 1970,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 288
+      },
+      "cpu_seconds": 0.44416599999999995
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "no-revision",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0009571999707940105,
+        "vector_linear": 0.10601670675414794
+      },
+      "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8094931095013724,
+          0.42935588170333744
+        ],
+        "formula": "delta_x = 0.809493*v + 0.429356*u; delta_y = 0.809493*v + 0.429356*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05461799999999997
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0008611750272120389,
+        "vector_linear": 0.0007612634983311421
+      },
+      "formula": "delta_x = 0.810485*v + 0.42864*u; delta_y = 0.810485*v + 0.42864*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8104850240867827,
+          0.42863959252901057
+        ],
+        "formula": "delta_x = 0.810485*v + 0.42864*u; delta_y = 0.810485*v + 0.42864*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 15392
+      },
+      "cpu_seconds": 0.07188500000000002
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.000990715703709142,
+        "vector_linear": 0.004224073440466792
+      },
+      "formula": "delta_x = 0.812087*v + 0.4217*u; delta_y = 0.812087*v + 0.4217*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8120871371085121,
+          0.42170011438811067
+        ],
+        "formula": "delta_x = 0.812087*v + 0.4217*u; delta_y = 0.812087*v + 0.4217*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 23632
+      },
+      "cpu_seconds": 0.08824600000000005
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0013207904437579825,
+        "vector_linear": 0.11267351448054701
+      },
+      "formula": "delta_x = 0.783223*v + 0.430857*u + 0.0191697*other_u + -0.00625015*(u*p); delta_y = 0.815973*v + 0.413867*u + 0.00248306*other_u + 0.00297838*(u*p)",
+      "selected_model": {
+        "id": "untied:v+u+other_u+(u*p)",
+        "terms": [
+          "v",
+          "u",
+          "other_u",
+          [
+            "mul",
+            "u",
+            "p"
+          ]
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.7832229641596389,
+            0.43085710514182196,
+            0.019169664160025766,
+            -0.006250152594675707
+          ],
+          [
+            0.8159726470918264,
+            0.41386703304787154,
+            0.0024830558774594706,
+            0.0029783774864898427
+          ]
+        ],
+        "formula": "delta_x = 0.783223*v + 0.430857*u + 0.0191697*other_u + -0.00625015*(u*p); delta_y = 0.815973*v + 0.413867*u + 0.00248306*other_u + 0.00297838*(u*p)",
+        "parameter_count": 8
+      },
+      "cycles": 2,
+      "adoptions": 2,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 31804
+      },
+      "cpu_seconds": 0.09737099999999999
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "legacy",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 48,
+      "experiments": 48,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.000302640079739643,
+        "vector_linear": 0.13098100481689487
+      },
+      "formula": "delta = 0.82001*v + 0.41804*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.82001*v + 0.41804*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.820009785499575,
+          0.41803985220534984
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.010803269032229848,
+        "validated_predictions": 44
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 2522,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 338
+      },
+      "cpu_seconds": 0.6956720000000001
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "no-revision",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0016626263806461153,
+        "vector_linear": 0.11267351448054701
+      },
+      "formula": "delta_x = 0.808554*v + 0.422381*u; delta_y = 0.808554*v + 0.422381*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8085537181336833,
+          0.42238149502824474
+        ],
+        "formula": "delta_x = 0.808554*v + 0.422381*u; delta_y = 0.808554*v + 0.422381*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.056129000000000095
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0012435748678721289,
+        "vector_linear": 0.0026452127334810963
+      },
+      "formula": "delta_x = 0.819034*v + 0.404348*u; delta_y = 0.81636*v + 0.418046*u",
+      "selected_model": {
+        "id": "untied:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.8190338685705914,
+            0.40434815982858785
+          ],
+          [
+            0.8163599150618631,
+            0.4180457687555462
+          ]
+        ],
+        "formula": "delta_x = 0.819034*v + 0.404348*u; delta_y = 0.81636*v + 0.418046*u",
+        "parameter_count": 4
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 23632
+      },
+      "cpu_seconds": 0.08746799999999999
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "active",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.003861699735923245,
+        "vector_linear": 0.06072392061254672
+      },
+      "formula": "delta_x = 0.814653*v + 0.419982*u; delta_y = 0.811944*v + 0.401565*u",
+      "selected_model": {
+        "id": "untied:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.8146528650310465,
+            0.41998169154740733
+          ],
+          [
+            0.8119438876969922,
+            0.40156546650558234
+          ]
+        ],
+        "formula": "delta_x = 0.814653*v + 0.419982*u; delta_y = 0.811944*v + 0.401565*u",
+        "parameter_count": 4
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 15392
+      },
+      "cpu_seconds": 0.073237
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "coverage",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0038912222210442985,
+        "vector_linear": 0.11140906316662573
+      },
+      "formula": "delta_x = 0.814116*v + 0.420219*u; delta_y = 0.81169*v + 0.401837*u",
+      "selected_model": {
+        "id": "untied:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.8141160642157101,
+            0.42021921671408385
+          ],
+          [
+            0.8116897555972599,
+            0.4018372104451002
+          ]
+        ],
+        "formula": "delta_x = 0.814116*v + 0.420219*u; delta_y = 0.81169*v + 0.401837*u",
+        "parameter_count": 4
+      },
+      "cycles": 1,
+      "adoptions": 1,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 15392
+      },
+      "cpu_seconds": 0.07196499999999983
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "legacy",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 50,
+      "experiments": 50,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0023934655483702962,
+        "vector_linear": 0.05357938539927731
+      },
+      "formula": "delta = 0.813594*v + 0.411407*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.813594*v + 0.411407*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.8135935405131254,
+          0.41140670625038483
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.0016340712470971908,
+        "validated_predictions": 46
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 2702,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 364
+      },
+      "cpu_seconds": 0.6740369999999998
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "no-revision",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.002703959481071298,
+        "vector_linear": 0.11140906316662573
+      },
+      "formula": "delta_x = 0.812788*v + 0.41101*u; delta_y = 0.812788*v + 0.41101*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8127876864546779,
+          0.4110103908075588
+        ],
+        "formula": "delta_x = 0.812788*v + 0.41101*u; delta_y = 0.812788*v + 0.41101*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.053845999999999616
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "control",
+      "policy": "random",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0010029521062813527,
+        "vector_linear": 0.00848355376154516
+      },
+      "formula": "delta_x = 0.810432*v + 0.424962*u; delta_y = 0.810432*v + 0.424962*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.8104317863020964,
+          0.4249619776834125
+        ],
+        "formula": "delta_x = 0.810432*v + 0.424962*u; delta_y = 0.810432*v + 0.424962*u",
+        "parameter_count": 2
+      },
+      "cycles": 1,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 26,
+        "refits": 37,
+        "feature_evaluations": 10656
+      },
+      "cpu_seconds": 0.06982099999999991
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.029065205889322585,
+        "vector_linear": 0.06388177028746606
+      },
+      "formula": "delta_x = 0.57912*v + 0.311048*u + -0.00143033*lag_u; delta_y = 0.533458*v + 0.303013*u + 0.0400421*lag_u",
+      "selected_model": {
+        "id": "untied:v+u+lag_u",
+        "terms": [
+          "v",
+          "u",
+          "lag_u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.5791199407500687,
+            0.311047815794932,
+            -0.0014303294772922582
+          ],
+          [
+            0.5334578886253125,
+            0.30301279075829607,
+            0.040042102565881754
+          ]
+        ],
+        "formula": "delta_x = 0.57912*v + 0.311048*u + -0.00143033*lag_u; delta_y = 0.533458*v + 0.303013*u + 0.0400421*lag_u",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 31184
+      },
+      "cpu_seconds": 0.09374000000000038
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.023457736182996004,
+        "vector_linear": 0.17717579373540593
+      },
+      "formula": "delta_x = 0.526079*v + 0.307932*u + 0.066671*lag_u; delta_y = 0.534043*v + 0.310375*u + 0.0844504*lag_u",
+      "selected_model": {
+        "id": "untied:v+u+lag_u",
+        "terms": [
+          "v",
+          "u",
+          "lag_u"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.5260785823369996,
+            0.3079318593804484,
+            0.06667095542382204
+          ],
+          [
+            0.5340428117890692,
+            0.3103749563897038,
+            0.08445042099448055
+          ]
+        ],
+        "formula": "delta_x = 0.526079*v + 0.307932*u + 0.066671*lag_u; delta_y = 0.534043*v + 0.310375*u + 0.0844504*lag_u",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 31184
+      },
+      "cpu_seconds": 0.09414500000000015
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "legacy",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 71,
+      "experiments": 71,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.07351711698072859,
+        "vector_linear": 0.2784333660167771
+      },
+      "formula": "delta = 0.283663*u + 0.159686*lag_u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "u+lag_u",
+        "formula": "delta = 0.283663*u + 0.159686*lag_u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.2836628548092413,
+          0.1596855754676724
+        ],
+        "terms": [
+          "u",
+          "lag_u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.030111786746889982,
+        "validated_predictions": 63
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 3740,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 522
+      },
+      "cpu_seconds": 1.5406099999999991
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "no-revision",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.022702550584455902,
+        "vector_linear": 0.17717579373540593
+      },
+      "formula": "delta_x = 0.630949*v + 0.309282*u; delta_y = 0.630949*v + 0.309282*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6309486009558732,
+          0.3092819714318106
+        ],
+        "formula": "delta_x = 0.630949*v + 0.309282*u; delta_y = 0.630949*v + 0.309282*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05432000000000059
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 270001,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.021136631894273488,
+        "vector_linear": 0.026774071378391398
+      },
+      "formula": "delta_x = 0.65243*v + 0.308*u; delta_y = 0.65243*v + 0.308*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6524302886954328,
+          0.3079996958341453
+        ],
+        "formula": "delta_x = 0.65243*v + 0.308*u; delta_y = 0.65243*v + 0.308*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 23040
+      },
+      "cpu_seconds": 0.08781499999999998
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.02391148354826595,
+        "vector_linear": 0.034081259268412926
+      },
+      "formula": "delta_x = 0.660782*v + 0.299254*u + -0.037279*other_v; delta_y = 0.617162*v + 0.300155*u + 0.000556088*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6607819167115415,
+            0.29925442109569406,
+            -0.03727899710777921
+          ],
+          [
+            0.6171615038345438,
+            0.300155214342954,
+            0.0005560878352117648
+          ]
+        ],
+        "formula": "delta_x = 0.660782*v + 0.299254*u + -0.037279*other_v; delta_y = 0.617162*v + 0.300155*u + 0.000556088*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 29916
+      },
+      "cpu_seconds": 0.09361700000000006
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.07334586202397231,
+        "vector_linear": 0.17106402916845184
+      },
+      "formula": "delta_x = 0.628851*v + 0.263557*u + -0.248113*other_v; delta_y = 0.630798*v + 0.243219*u + 0.231268*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6288514138411334,
+            0.263557297381204,
+            -0.24811310274672949
+          ],
+          [
+            0.6307979231448877,
+            0.24321882526221952,
+            0.23126767509362048
+          ]
+        ],
+        "formula": "delta_x = 0.628851*v + 0.263557*u + -0.248113*other_v; delta_y = 0.630798*v + 0.243219*u + 0.231268*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 50,
+        "refits": 34,
+        "feature_evaluations": 29916
+      },
+      "cpu_seconds": 0.09403299999999959
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "legacy",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 64,
+      "experiments": 64,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.032794123237345235,
+        "vector_linear": 0.1685602130819287
+      },
+      "formula": "delta = 0.552808*v + 0.309241*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.552808*v + 0.309241*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.5528083562730624,
+          0.3092408998324369
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.02297370694506259,
+        "validated_predictions": 60
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 3230,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 476
+      },
+      "cpu_seconds": 1.168488
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "no-revision",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.02319909268420746,
+        "vector_linear": 0.17106402916845184
+      },
+      "formula": "delta_x = 0.629174*v + 0.30385*u; delta_y = 0.629174*v + 0.30385*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6291740505026419,
+          0.30384982522918125
+        ],
+        "formula": "delta_x = 0.629174*v + 0.30385*u; delta_y = 0.629174*v + 0.30385*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.054858000000001184
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 270002,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.027155864593541704,
+        "vector_linear": 0.020510391862750797
+      },
+      "formula": "delta_x = 0.612797*v + 0.292492*u; delta_y = 0.612797*v + 0.292492*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6127973429003748,
+          0.292492131290574
+        ],
+        "formula": "delta_x = 0.612797*v + 0.292492*u; delta_y = 0.612797*v + 0.292492*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 21856
+      },
+      "cpu_seconds": 0.08844400000000086
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "active",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.030591872994616003,
+        "vector_linear": 0.027133614952415102
+      },
+      "formula": "delta_x = 0.597854*v + 0.293355*u; delta_y = 0.597854*v + 0.293355*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.5978542303001586,
+          0.2933550010219535
+        ],
+        "formula": "delta_x = 0.597854*v + 0.293355*u; delta_y = 0.597854*v + 0.293355*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 19488
+      },
+      "cpu_seconds": 0.08646399999999943
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "coverage",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.08358737310510339,
+        "vector_linear": 0.18528213688562553
+      },
+      "formula": "delta_x = 0.636735*v + 0.247537*u + -0.271872*other_v; delta_y = 0.621197*v + 0.226768*u + 0.23873*other_v",
+      "selected_model": {
+        "id": "untied:v+u+other_v",
+        "terms": [
+          "v",
+          "u",
+          "other_v"
+        ],
+        "shared": false,
+        "coefficients": [
+          [
+            0.6367353386619932,
+            0.24753721101235182,
+            -0.27187174991124635
+          ],
+          [
+            0.6211968910945092,
+            0.22676822870252503,
+            0.23872959017944506
+          ]
+        ],
+        "formula": "delta_x = 0.636735*v + 0.247537*u + -0.271872*other_v; delta_y = 0.621197*v + 0.226768*u + 0.23873*other_v",
+        "parameter_count": 6
+      },
+      "cycles": 2,
+      "adoptions": 1,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 22008
+      },
+      "cpu_seconds": 0.08958500000000136
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "legacy",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 59,
+      "experiments": 59,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.020974152192748854,
+        "vector_linear": 0.05694622415129177
+      },
+      "formula": "delta = 0.69797*v + 0.297459*u; p_next = p + delta; v_next = delta (per axis)",
+      "selected_model": {
+        "id": "v+u",
+        "formula": "delta = 0.69797*v + 0.297459*u; p_next = p + delta; v_next = delta (per axis)",
+        "coefficients": [
+          0.6979700275959724,
+          0.2974589018726024
+        ],
+        "terms": [
+          "v",
+          "u"
+        ],
+        "complexity": 7,
+        "prequential_mse": 0.015983321136861618,
+        "validated_predictions": 55
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "not_instrumented_legacy",
+      "work": {
+        "candidate_fits": 2880,
+        "feature_evaluations": 0,
+        "projection_feature_evaluations": 0,
+        "projection_calls": 0,
+        "refits": 426
+      },
+      "cpu_seconds": 0.9508279999999996
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "no-revision",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.026494638406893603,
+        "vector_linear": 0.18528213688562553
+      },
+      "formula": "delta_x = 0.626838*v + 0.29274*u; delta_y = 0.626838*v + 0.29274*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6268384146109741,
+          0.2927403133486448
+        ],
+        "formula": "delta_x = 0.626838*v + 0.29274*u; delta_y = 0.626838*v + 0.29274*u",
+        "parameter_count": 2
+      },
+      "cycles": 0,
+      "adoptions": 0,
+      "explanation_status": "unresolved",
+      "work": {
+        "candidate_fits": 0,
+        "refits": 40,
+        "feature_evaluations": 6560
+      },
+      "cpu_seconds": 0.05541099999999943
+    },
+    {
+      "source_commit": "3dc00a2075c02c7db7db2bf25cd1034a546f52fb",
+      "git_status": "",
+      "source_sha256": {
+        "artificial_scientist/lab_agent.py": "9b6e194aae3f9bd6b3c678b20a44c15ef42893c6f0e58fc9e4f9ac1fd2c0f5ec",
+        "artificial_scientist/lab_api.py": "25fc22d731533d231a8baba5886cac7887a77814b38fa86722343d99f2341bb4",
+        "artificial_scientist/lab_guided.py": "4a8871a85d5b3c39d6f00ae70350776832df3151c9834e52f7d46d6581203fe2",
+        "artificial_scientist/lab_models.py": "5f6e41a083991455de3d0006ad4231969b85213dd22a7f843bc5f63034d25da2",
+        "artificial_scientist/lab_replay.py": "527509654312a98e8b949c6d06881fae5a56cfb02d3fd55e56b6d684676dce76",
+        "artificial_scientist/lab_run.py": "0967d51277ba69394f23d848ac4b706df02185b9a5eea77c6523d988bfff48a9",
+        "artificial_scientist/lab_world.py": "81f9bf4eeaa2d750aefcbdd429c66e1def509fa079c476137c917fd2511ceb74",
+        "artificial_scientist/revision_agent.py": "cbd18ae78c019966ef255c7d99047699a227fa62c5338e885a56781ed9234383",
+        "artificial_scientist/revision_models.py": "efc0657f4968bba8992bcfda2d0466f14cb78a0da9d4b56a78eb7b4d6fa63ce1",
+        "artificial_scientist/revision_replay.py": "628c66966482fc8437f73e17e6e75c0f2e80b7772664b62f0d9e3092d1f92eb6",
+        "artificial_scientist/revision_run.py": "459d87874ebf9ddbfbeddfca24dfaee829fdf14753f069106b370507613e80ee",
+        "artificial_scientist/revision_world.py": "ee81c8450b623c02cad13a687ce57cde9128a6ac14455678c6c76ec55184278d"
+      },
+      "variant": "stress",
+      "policy": "random",
+      "seed": 270003,
+      "status": "budget_complete",
+      "training_cost": 80,
+      "tool_actions": 80,
+      "experiments": 40,
+      "evaluation_cost": 68,
+      "metrics": {
+        "learned": 0.0229672447283388,
+        "vector_linear": 0.08270178266264111
+      },
+      "formula": "delta_x = 0.64404*v + 0.304904*u; delta_y = 0.64404*v + 0.304904*u",
+      "selected_model": {
+        "id": "shared:v+u",
+        "terms": [
+          "v",
+          "u"
+        ],
+        "shared": true,
+        "coefficients": [
+          0.6440404600889122,
+          0.3049036986602688
+        ],
+        "formula": "delta_x = 0.64404*v + 0.304904*u; delta_y = 0.64404*v + 0.304904*u",
+        "parameter_count": 2
+      },
+      "cycles": 2,
+      "adoptions": 0,
+      "explanation_status": "no_recent_failure_detected",
+      "work": {
+        "candidate_fits": 52,
+        "refits": 34,
+        "feature_evaluations": 19488
+      },
+      "cpu_seconds": 0.08633999999999986
+    }
+  ],
+  "means": {
+    "control": {
+      "active": 0.0019365384701421325,
+      "random": 0.0010359006671218402,
+      "coverage": 0.0020564042118654305,
+      "no-revision": 0.001774595277503808,
+      "legacy": 0.0019372892978775937
+    },
+    "challenge": {
+      "active": 0.0006787229137645532,
+      "random": 0.0009712380962501412,
+      "coverage": 0.0009202991380471375,
+      "no-revision": 0.08739020247356487,
+      "legacy": 0.0780464777627814
+    },
+    "stress": {
+      "active": 0.02785618747740151,
+      "random": 0.023753247072051332,
+      "coverage": 0.060130323770690566,
+      "no-revision": 0.02413209389185232,
+      "legacy": 0.042428464136940895
+    }
+  },
+  "challenge_active_pairwise_wins": {
+    "random": 2,
+    "coverage": 2,
+    "no-revision": 3,
+    "legacy": 3
+  },
+  "screens": {
+    "functional_loop_all_three_challenge": true,
+    "useful_revision": true,
+    "useful_experiment_selection": true,
+    "control_non_regression": true,
+    "no_unnecessary_control_adoption": false,
+    "credit_beyond_declared_vector_reference": true
+  },
+  "active_external_agreement": {
+    "control": [
+      {
+        "seed": 270001,
+        "checks": 0,
+        "same_accept_reject": 0,
+        "same_selected_model": 0
+      },
+      {
+        "seed": 270002,
+        "checks": 2,
+        "same_accept_reject": 2,
+        "same_selected_model": 2
+      },
+      {
+        "seed": 270003,
+        "checks": 1,
+        "same_accept_reject": 0,
+        "same_selected_model": 0
+      }
+    ],
+    "challenge": [
+      {
+        "seed": 270001,
+        "checks": 1,
+        "same_accept_reject": 1,
+        "same_selected_model": 1
+      },
+      {
+        "seed": 270002,
+        "checks": 2,
+        "same_accept_reject": 1,
+        "same_selected_model": 1
+      },
+      {
+        "seed": 270003,
+        "checks": 1,
+        "same_accept_reject": 1,
+        "same_selected_model": 1
+      }
+    ],
+    "stress": [
+      {
+        "seed": 270001,
+        "checks": 2,
+        "same_accept_reject": 0,
+        "same_selected_model": 0
+      },
+      {
+        "seed": 270002,
+        "checks": 2,
+        "same_accept_reject": 2,
+        "same_selected_model": 1
+      },
+      {
+        "seed": 270003,
+        "checks": 2,
+        "same_accept_reject": 0,
+        "same_selected_model": 0
+      }
+    ]
+  },
+  "totals": {
+    "runs": 45,
+    "training_cost": 3600,
+    "evaluation_cost": 3060,
+    "tool_actions": 3392,
+    "cpu_seconds": 11.322808
+  },
+  "limitations": "Three sensor-noise seeds per fixed world; capability-aligned operators/worlds; descriptive practical screens, not generalization/significance/novelty evidence."
+}
